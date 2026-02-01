@@ -192,9 +192,9 @@ The breakout container has `10%` inline padding and a max-width of `calc(10% + 6
 
 The package includes reusable Liquid templates in the `bricks/` directory. These are useful for common web development patterns.
 
-### Base HTML Template (`__html-begin.liquid` and `__html-end.liquid`)
+### Base HTML Template (`__html.liquid`)
 
-Base HTML templates that provide the essential document structure with built-in support for modern web best practices. Split into begin and end files to wrap around your content.
+A unified base HTML template that provides the essential document structure with built-in support for modern web best practices.
 
 **Features:**
 
@@ -212,17 +212,18 @@ Base HTML templates that provide the essential document structure with built-in 
 **Usage:**
 
 ```liquid
-{% render 'bricks/__html-begin', site: site, title: title, content_for_header: content_for_header %}
+{% capture page_content %}
+  <!-- Your page content -->
+{% endcapture %}
 
-<!-- Your page content -->
-
-{% render 'bricks/__html-end' %}
+{% render 'bricks/__html', site: site, title: title, content_for_header: content_for_header, body: page_content %}
 ```
 
 Note: Google Tag Manager is automatically included in both `<head>` and `<body>` (via the `_gtm.liquid` template) when `site.prod` and `site.gtm_id` are set.
 
 **Variables:**
 
+- `body` - The page content to be rendered inside the `<body>` tag (required)
 - `title` - Page title (optional, will be stripped of HTML tags)
 - `site.title` - Site title for the title suffix
 - `site.lang` - Language code (optional, defaults to `'en'`)
@@ -278,7 +279,7 @@ A template for embedding Google Tag Manager scripts in your pages.
 - `site.prod` - Boolean flag to enable GTM only in production
 - `for_body` - Boolean flag (default: `false`). When `false`, renders the script tag for the `<head>`. When `true`, renders the noscript fallback for the `<body>`.
 
-**Note:** This template is automatically included when using `__html-begin.liquid` and `__html-end.liquid`. You only need to manually render it if you're not using those base templates.
+**Note:** This template is automatically included when using `__html.liquid`. You only need to manually render it if you're not using that base template.
 
 **Manual Usage:**
 
