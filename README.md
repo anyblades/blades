@@ -22,7 +22,9 @@ Then import in your CSS:
 @import "@anydigital/bricks";
 ```
 
-## Features
+<!--section:css-->
+
+## CSS Bricks
 
 ### Overflow Control
 
@@ -188,7 +190,9 @@ Includes [breakout-css](https://github.com/anydigital/breakout-css) utilities fo
 
 The breakout container has `10%` inline padding and a max-width of `calc(10% + 65ch + 10%)`. The breakout utilities support images, pictures, figures, canvas, audio, video, tables, pre, iframe, and other media elements. Tables inside `.breakout` are specifically enhanced for horizontal scrolling and full-bleed mobile display. This is automatically included when you import the stylesheet.
 
-## Bricks (Template Components)
+<!--section:njk-liquid-->
+
+## Template Bricks (Components)
 
 The package includes reusable Liquid templates in the `bricks/` directory. These are useful for common web development patterns.
 
@@ -311,6 +315,8 @@ In your base template's `<body>` (right after the opening tag):
 ```
 
 **Rendering Logic:** The GTM script is only rendered when both `site.prod` is `true` and `site.gtm_id` is set. The template uses a capture block to strip whitespace from the output.
+
+<!--section-->
 
 ## License
 
