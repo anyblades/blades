@@ -192,11 +192,11 @@ The breakout container has `10%` inline padding and a max-width of `calc(10% + 6
 
 <!--section:njk-liquid-->
 
-## Template Bricks (Components)
+## Generic Components (Template Bricks)
 
 The package includes reusable Liquid templates in the `bricks/` directory. These are useful for common web development patterns.
 
-### Base HTML Template (`__html.liquid`)
+### Base HTML Template (`__html.*`)
 
 A unified base HTML template that provides the essential document structure with built-in support for modern web best practices.
 
@@ -239,7 +239,7 @@ Note: Google Tag Manager is automatically included in both `<head>` and `<body>`
 - `site.gtm_id` - Google Tag Manager ID (optional)
 - `site.prod` - Boolean flag for production environment (optional)
 
-### Navigation (`_nav.liquid`)
+### Navigation (`_nav.*`)
 
 A navigation template that renders a list of navigation links with proper accessibility attributes.
 
@@ -273,7 +273,7 @@ A navigation template that renders a list of navigation links with proper access
 
 **Compatibility:** Compatible with [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually).
 
-### Google Tag Manager (`_gtm.liquid`)
+### Google Tag Manager (`_gtm.*`)
 
 A template for embedding Google Tag Manager scripts in your pages.
 
