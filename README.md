@@ -24,7 +24,7 @@ Then import in your CSS:
 
 <!--section:css-h2-->
 
-## CSS Bricks
+## CSS 'Bricks'
 
 ### Overflow Control
 
@@ -192,13 +192,42 @@ The breakout container has `10%` inline padding and a max-width of `calc(10% + 6
 
 <!--section:njk-liquid-h2-->
 
-## Generic Components (Template Bricks)
+## Universal Template 'Bricks' <small>(`.njk` & `.liquid`)</small> <sub>from https://github.com/anydigital/bricks</sub>
 
-The package includes reusable Liquid templates in the `bricks/` directory. These are useful for common web development patterns.
+The package includes reusable templates in the `bricks/` directory. These are useful for common web development patterns.
 
-### Base HTML Template (`__html.*`)
+### Quick Setup
 
-A unified base HTML template that provides the essential document structure with built-in support for modern web best practices.
+```sh
+npm install @anydigital/bricks
+ln -s ./node_modules/@anydigital/bricks/bricks ./YOUR_INCLUDES_DIR/bricks
+```
+
+### Base HTML Template <small>(`__html.*`)</small>
+
+A unified base HTML template `bricks/__html.{njk|liquid}` that provides the essential document structure with built-in support for modern web best practices.
+
+**Usage:**
+
+```jinja2 {data-caption="in .njk layout:"}
+{% extends 'bricks/__html.njk' %}
+
+{% block body %}
+  <!-- YOUR page content -->
+{% endblock %}
+```
+
+Ref: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.njk
+
+```liquid {data-caption="in .liquid layout:"}
+{% capture body %}
+  <!-- YOUR page content -->
+{% endcapture %}
+
+{% include 'bricks/__html' %}
+```
+
+Ref: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.liquid
 
 **Features:**
 
@@ -211,19 +240,7 @@ A unified base HTML template that provides the essential document structure with
 - Automatic script loading from `site.scripts` array (with `defer` attribute)
 - Inline module scripts from `site.inline_scripts` array (joined with newlines in a `<script type="module">` tag)
 - Custom header content via `content_for_header`
-- Google Tag Manager integration (automatically rendered via `_gtm.liquid` template for both `<head>` and `<body>`)
-
-**Usage:**
-
-```liquid
-{% capture page_content %}
-  <!-- Your page content -->
-{% endcapture %}
-
-{% render 'bricks/__html', site: site, title: title, content_for_header: content_for_header, body: page_content %}
-```
-
-Note: Google Tag Manager is automatically included in both `<head>` and `<body>` (via the `_gtm.liquid` template) when `site.prod` and `site.gtm_id` are set.
+- Google Tag Manager integration (automatically rendered via `_gtm.{njk|liquid}` template for both `<head>` and `<body>` when `site.prod` and `site.gtm_id` are set)
 
 **Variables:**
 
@@ -239,9 +256,9 @@ Note: Google Tag Manager is automatically included in both `<head>` and `<body>`
 - `site.gtm_id` - Google Tag Manager ID (optional)
 - `site.prod` - Boolean flag for production environment (optional)
 
-### Navigation (`_nav.*`)
+### Navigation <small>(`_nav.*`)</small>
 
-A navigation template that renders a list of navigation links with proper accessibility attributes.
+A navigation template `bricks/_nav.{njk|liquid}` that renders a list of navigation links with proper accessibility attributes.
 
 **Parameters:**
 
@@ -273,9 +290,9 @@ A navigation template that renders a list of navigation links with proper access
 
 **Compatibility:** Compatible with [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually).
 
-### Google Tag Manager (`_gtm.*`)
+### Google Tag Manager <small>(`_gtm.*`)</small>
 
-A template for embedding Google Tag Manager scripts in your pages.
+A template `bricks/_gtm.{njk|liquid}` for embedding Google Tag Manager scripts in your pages.
 
 **Parameters:**
 
