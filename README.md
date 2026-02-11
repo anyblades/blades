@@ -217,7 +217,7 @@ A unified base HTML template `bricks/__html.{njk|liquid}` that provides the esse
 {% endblock %}
 ```
 
-Ref: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.njk
+Example: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.njk
 
 ```liquid {data-caption="in .liquid layout:"}
 {% capture body %}
@@ -227,7 +227,7 @@ Ref: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.njk
 {% include 'bricks/__html' %}
 ```
 
-Ref: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.liquid
+Example: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.liquid
 
 **Features:**
 
@@ -265,17 +265,11 @@ A navigation template `bricks/_nav.{njk|liquid}` that renders a list of navigati
 - `nav_pages` - Array of navigation page objects with `url` and `title` properties
 - `current_url` - The URL of the current page (used to set `aria-current="page"`)
 
-**Usage:**
+**Usage example with [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually):**
 
-```liquid
-{% render 'bricks/_nav', nav_pages: navPages, current_url: page.url %}
-```
-
-**Example:**
-
-```liquid
-{% assign navPages = site.pages | where: "nav", true %}
-{% render 'bricks/_nav', nav_pages: navPages, current_url: page.url %}
+```liquid {data-caption="in .liquid:"}
+{% assign nav_pages = collections.all | eleventyNavigation %}
+{% render 'bricks/_nav', nav_pages: nav_pages, current_url: page.url %}
 ```
 
 **Output:**
@@ -287,8 +281,6 @@ A navigation template `bricks/_nav.{njk|liquid}` that renders a list of navigati
   <a href="/contact">Contact</a>
 </nav>
 ```
-
-**Compatibility:** Compatible with [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually).
 
 ### Google Tag Manager <small>(`_gtm.*`)</small>
 
