@@ -1,4 +1,4 @@
-# *Any*bricks
+# `bricks[.css]` <br><sup>by *Any*digital</sup>
 
 Framework-agnostic, Tailwind-compatible CSS utilities and single-file `bricks` for modern web development.
 
