@@ -8,7 +8,7 @@
     "./dist": "./dist/bricks.css"
   },
   "scripts": {
-    "postcss": "postcss src/bricks.css -o dist/bricks.css",
+    "postcss": "postcss src/bricks.css -o assets/bricks.css",
     "build": "npm run postcss -- --no-map",
     "start": "npm run postcss -- --watch",
     "prepublishOnly": "npm run build"

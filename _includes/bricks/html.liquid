@@ -10,7 +10,7 @@
     <link rel="icon" href="/favicon.ico">
 
     {%- for href in site.styles %}
-      <link rel="stylesheet" href="{{ href }}">
+      <link rel="stylesheet" href="{{ href | relative_url }}">
     {%- endfor %}
     <style>
       {{ site.inline_styles | join: '\n' }}

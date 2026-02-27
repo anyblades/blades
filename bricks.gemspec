@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/anydigital/bricks"
   spec.license       = "MIT"
 
-  spec.files = Dir.glob("{_includes}/**/*")
+  spec.files = Dir.glob("{_includes,assets}/**/*")
   # puts "spec.files: #{spec.files.inspect}"
 
   spec.add_runtime_dependency "jekyll", ">= 3.5", "< 5.0"
