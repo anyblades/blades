@@ -1,3 +1,11 @@
+h1 {
+  font-size: 3rem;
+}
+
+hr {
+  margin-block: 2rem;
+}
+
 pre {
   small {
     opacity: 50%;
