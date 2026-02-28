@@ -29,7 +29,11 @@
       min-width: auto;
     }
 
-    /* Tables are so special :( */
+    /* Tables are so special :(
+    <!--section:responsive-table-without-wrapper-->
+    ### Responsive tables without wrapper
+    ```css
+    */
     &:is(table):not(.does-not-exist) {
       /* @TODO: add postcss's `:not(.does-not-exist)` to tricks-wiki */
       /* Let them full-bleed */
@@ -48,6 +52,8 @@
         padding-inline-start: 0;
       }
     }
+    /*
+    ```<!--section--> */
 
     /* Max out the width of the element */
     &.breakout-item-max {
