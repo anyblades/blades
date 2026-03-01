@@ -5,6 +5,7 @@
   "style": "./src/bricks.css",
   "exports": {
     ".": "./src/bricks.css",
+    "./theme": "./src/bricks.theme.css",
     "./dist": "./dist/bricks.css"
   },
   "scripts": {

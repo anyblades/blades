@@ -1,8 +1,4 @@
 .prose {
-  /* Container-like behavior with auto margins */
-  width: 100%;
-  margin-inline: auto;
-
   /* Helper for multi-line subtitles */
   sub {
     vertical-align: top;
@@ -23,22 +19,6 @@
     }
     &:hover {
       text-decoration-thickness: 2px;
-    }
-
-    /* Helper to insert icons in links */
-    i {
-      height: 1em;
-      margin-right: 0.25em;
-      font-style: normal;
-      /* Workaround to prevent underline */
-      display: inline-block;
-
-      img {
-        height: 100%;
-        margin: 0;
-        position: relative;
-        bottom: -0.15em;
-      }
     }
   }
 
@@ -77,8 +57,6 @@
     }
   }
   h1 {
-    margin-bottom: 0.5em !important;
-
     sub {
       font-size: 50%;
     }

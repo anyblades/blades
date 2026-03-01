@@ -1,6 +1,7 @@
 /* Breakout CSS - Framework-agnostic utilities for breaking out images and figures */
 
-.breakout {
+.breakout,
+.breakout-all {
   /* Prepare the container for breakout elements */
   padding-inline: 10%;
   max-width: calc(10% + 65ch + 10%);
