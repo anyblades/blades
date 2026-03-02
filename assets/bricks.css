@@ -135,7 +135,7 @@ pre {
       background: linear-gradient(to left, gray, transparent);
     }
 
-    &:where(hr + &) {
+    &:where(hr + *) {
       &::before {
         display: none !important;
       }
