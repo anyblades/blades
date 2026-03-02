@@ -79,7 +79,7 @@
     &::before {
       width: 10em;
       right: 100%;
-      margin-right: 1rem;
+      margin-right: 0.8ch;
       height: 0.25em;
       top: 50%;
       transform: translateY(-50%);

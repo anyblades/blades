@@ -5,6 +5,31 @@ table.borderless {
   }
 }
 
+/* Header anchors @TODO: add to tricks-wiki */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+
+  [data-is-anchor] {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    padding-right: 0.2ch;
+    color: silver;
+    text-decoration: none;
+  }
+  &:hover {
+    [data-is-anchor] {
+      visibility: visible;
+    }
+  }
+}
+
 /* Favicons in links @TODO: add to tricks-wiki */
 a[data-has-favicon] {
   display: inline-block;

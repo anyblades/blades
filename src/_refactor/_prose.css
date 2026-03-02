@@ -29,33 +29,6 @@
     }
   }
 
-  /* Support for markdown anchors */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    position: relative;
-
-    .header-anchor {
-      display: none;
-      position: absolute;
-      right: 100%;
-      top: 0;
-      padding-right: 0.2ch;
-      color: rgba(0, 0, 0, 0.25);
-    }
-    &:hover {
-      .header-anchor {
-        display: block;
-      }
-      /* Support for `breakout-css` headings */
-      &::before {
-        margin-right: 1.5ch !important;
-      }
-    }
-  }
   h1 {
     sub {
       font-size: 50%;
