@@ -86,6 +86,7 @@
       background: linear-gradient(to left, gray, transparent);
     }
 
+    /* @TODO: add to tricks-wiki why `*` works here, but `&` fails */
     &:where(hr + *) {
       &::before {
         display: none !important;
