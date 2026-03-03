@@ -40,3 +40,10 @@ table {
     border-color: black;
   }
 }
+
+.breakout,
+.breakout-all {
+  > img {
+    margin-bottom: 1rem;
+  }
+}
