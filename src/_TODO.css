@@ -1,15 +1,4 @@
 .prose {
-  /* Helper for multi-line subtitles */
-  sub {
-    vertical-align: top;
-    bottom: -0.05em;
-    line-height: 1.1;
-    font-weight: 300;
-    /* Workaround to prevent underline inside links */
-    display: inline-block;
-    width: 100%;
-  }
-
   img {
     &:not(:where(.prose > img, .prose > p > img)) {
       margin-top: 0;
