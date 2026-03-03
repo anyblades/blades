@@ -6,6 +6,7 @@
   "exports": {
     ".": "./src/bricks.css",
     "./theme": "./src/bricks.theme.css",
+    "./unreduce-motion": "./src/_unreduce-motion.css",
     "./dist": "./dist/bricks.css"
   },
   "scripts": {

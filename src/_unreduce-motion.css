@@ -1,0 +1,12 @@
+/* @TODO: tricks-wiki */
+@utility unreduce-animation-* {
+  @media (prefers-reduced-motion: reduce) {
+    &:not([aria-busy="true"]) {
+      animation-duration: --value([ *]) !important;
+      animation-delay: 0 !important;
+      animation-iteration-count: infinite !important;
+    }
+  }
+}
+
+/* Overrides https://github.com/picocss/pico/blob/main/scss/utilities/_reduce-motion.scss */
