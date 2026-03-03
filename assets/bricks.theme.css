@@ -1,3 +1,12 @@
+a {
+  &:not([href^="#"]) {
+    text-decoration-thickness: 1px;
+    &:hover {
+      text-decoration-thickness: 2px;
+    }
+  }
+}
+
 h1 {
   font-size: 2.5em; /* for pico.css & tw-typography */
   margin-bottom: 1rem; /* for tw-typography */
@@ -5,6 +14,12 @@ h1 {
 
 hr {
   margin-block: 2em; /* for pico.css & tw-typography */
+}
+
+ul {
+  ul {
+    font-size: 90%;
+  }
 }
 
 pre {
@@ -20,5 +35,30 @@ table {
   }
   pre {
     margin-bottom: 0.25rem;
+  }
+}
+
+[data-jump-to="top"] {
+  > i {
+    display: inline-block;
+    padding: 0.25rem;
+    margin: 0.5rem;
+    font-size: 0.75rem;
+    color: black;
+    border-color: black;
+  }
+}
+
+[data-is-toc] {
+  > ul > * > a {
+    font-weight: 500;
+  }
+}
+
+.breakout,
+.breakout-all {
+  > img,
+  > figure {
+    margin-bottom: 1rem;
   }
 }

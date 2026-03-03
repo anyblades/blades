@@ -45,8 +45,6 @@ pre {
   }
 }
 
-/* @import "./_prose"; */
-
 /* Breakout CSS - Framework-agnostic utilities for breaking out images and figures */
 
 .breakout,
@@ -61,8 +59,7 @@ pre {
       table,
       pre,
       figure, video, iframe, canvas,
-      /* Only breakout img/picture wrapped in <p> to avoid breaking badges, etc. */
-      p > img, p > picture,
+      img, picture,
       /* Custom utility classes for other tags that need to be broken out */
       .breakout-item,
       .breakout-item-max
@@ -75,7 +72,7 @@ pre {
     }
 
     /* Respect img/picture min-width */
-    &:is(p > img, p > picture) {
+    &:is(img, picture) {
       min-width: auto;
     }
 
@@ -135,6 +132,7 @@ pre {
       background: linear-gradient(to left, gray, transparent);
     }
 
+    /* @TODO: add to tricks-wiki why `*` works here, but `&` fails */
     &:where(hr + *) {
       &::before {
         display: none !important;
@@ -171,8 +169,6 @@ pre {
   }
 }
 
-/* @import "./_util"; */
-
 table.borderless {
   th,
   td {
@@ -206,6 +202,14 @@ h6 {
   }
 }
 
+/* Helper to handle icons in links */
+
+a > i {
+  display: inline-block;
+  margin-inline-end: 0.375ch; /* =3/8 */
+  font-style: normal;
+}
+
 /* Favicons in links @TODO: add to tricks-wiki */
 
 a[data-has-favicon] {
@@ -214,7 +218,7 @@ a[data-has-favicon] {
   > img {
     max-height: 1.25em;
     margin-top: calc(-0.25em / 2);
-    margin-inline-end: 0.25em;
+    margin-inline-end: 0.375ch; /* =3/8 */
 
     /* for tw-typography (.prose) */
     display: inline-block;
@@ -228,5 +232,31 @@ a[data-has-favicon] {
   /* Fix the scrollbar color when inverted */
   ::-webkit-scrollbar {
     filter: invert(1) !important;
+  }
+}
+
+/* Jump to top trick */
+
+[data-jump-to="top"] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-top: 50vh;
+  opacity: 25%;
+
+  &:hover {
+    opacity: 75%;
+  }
+}
+
+/* Table of contents */
+
+[data-is-toc] {
+  a {
+    text-decoration: none;
+  }
+  > ul {
+    columns: 2;
+    font-size: 90%;
   }
 }
