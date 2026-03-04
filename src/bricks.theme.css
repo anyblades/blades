@@ -62,3 +62,9 @@ table {
     margin-bottom: 1rem;
   }
 }
+
+.faded {
+  a {
+    text-decoration-style: dotted;
+  }
+}
