@@ -18,20 +18,24 @@ hr {
 
 ul {
   ul {
-    font-size: 90%;
+    font-size: 87.5%;
   }
 }
 
 pre {
   small {
-    opacity: 50%;
+    opacity: 75%;
     font-weight: lighter;
   }
 }
 
 table {
   th {
+    vertical-align: bottom;
     font-weight: bold;
+  }
+  td {
+    vertical-align: top;
   }
   pre {
     margin-bottom: 0.25rem;
@@ -60,5 +64,11 @@ table {
   > img,
   > figure {
     margin-bottom: 1rem;
+  }
+}
+
+.faded {
+  a {
+    text-decoration-style: dotted;
   }
 }

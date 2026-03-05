@@ -45,6 +45,13 @@ pre {
   }
 }
 
+small {
+  [role="button"] {
+    padding: 0.75em 1em;
+    font-size: inherit;
+  }
+}
+
 /* Breakout CSS - Framework-agnostic utilities for breaking out images and figures */
 
 .breakout,
@@ -169,6 +176,18 @@ pre {
   }
 }
 
+table {
+  /* Workaround to widen particular columns @TODO: add to tricks-wiki */
+  th {
+    hr {
+      width: 12ch; /* min ~65/12 = ~5 cols */
+      height: 0;
+      margin: 0;
+      visibility: hidden;
+    }
+  }
+}
+
 table.borderless {
   th,
   td {
@@ -226,6 +245,16 @@ a[data-has-favicon] {
   }
 }
 
+code[data-caption] {
+  &::before {
+    content: attr(data-caption);
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 50%;
+    font-style: italic;
+  }
+}
+
 /* Tailwind tricks */
 
 .invert {
@@ -266,4 +295,19 @@ a[data-has-favicon] {
 
 .columns {
   columns: 20ch auto; /* 3 cols max for 65ch container */
+}
+
+/* @TODO: to TRICKS */
+
+ul {
+  li[data-marker]::marker {
+    content: attr(data-marker) " ";
+  }
+}
+
+.faded {
+  opacity: 50%;
+  &:hover {
+    opacity: 87.5%;
+  }
 }
