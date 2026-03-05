@@ -25,11 +25,11 @@
     </script>{# prettier-ignore-end #}
 
     {{ content_for_header }}
-    {% include 'bricks/gtm.njk' %}
+    {% include 'blades/gtm.njk' %}
   </head>
 
   <body>
-    {% set for_body = true %}{% include 'bricks/gtm.njk' %}
+    {% set for_body = true %}{% include 'blades/gtm.njk' %}
     {% block body %}
     {% endblock %}
   </body>

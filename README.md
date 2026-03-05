@@ -1,27 +1,27 @@
-# `bricks`<sub><sup>`[.css|.njk|.liquid]`</sup></sub>
+# `blades`<sub><sup>`[.css|.njk|.liquid]`</sup></sub>
 
 A graceful, semantic CSS extension for Pico or Tailwind, with Nunjucks/Liquid batteries included 🥷
 
 <!--section:css-h2-->
 
-## CSS 'Bricks' <br><sub>from https://github.com/anydigital/bricks</sub> <a id="bricks"></a>
+## CSS 'blades' <br><sub>from https://github.com/anydigital/blades</sub> <a id="blades"></a>
 
 ### Install CSS
 
 Via CDN:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/@anydigital/bricks@0/dist/bricks.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@0/dist/blades.min.css" rel="stylesheet" />
 ```
 
 Or import source styles via npm:
 
 ```sh
-npm install @anydigital/bricks
+npm install @anydigital/blades
 ```
 
 ```css {data-caption=.css}
-@import "@anydigital/bricks";
+@import "@anydigital/blades";
 ```
 
 <details><summary>
@@ -210,26 +210,26 @@ The breakout container has `10%` inline padding and a max-width of `calc(10% + 6
 
 <!--section:njk-liquid-h2-->
 
-## Universal Template 'Bricks' <small>(`.njk` & `.liquid`)</small> <br><sub>from https://github.com/anydigital/bricks</sub>
+## Universal Template 'blades' <small>(`.njk` & `.liquid`)</small> <br><sub>from https://github.com/anydigital/blades</sub>
 
-The package includes reusable templates in the `./src/bricks/` directory. These are useful for common web development patterns.
+The package includes reusable templates in the `./src/blades/` directory. These are useful for common web development patterns.
 
 ### Install Templates
 
 ```sh
-npm install @anydigital/bricks
+npm install @anydigital/blades
 cd ./src/_includes
-ln -s ../../node_modules/@anydigital/bricks/src/bricks
+ln -s ../../node_modules/@anydigital/blades/src/blades
 ```
 
 ### Base HTML Template <small>(`__html.*`)</small>
 
-A unified base HTML template `bricks/__html.{njk|liquid}` that provides the essential document structure with built-in support for modern web best practices.
+A unified base HTML template `blades/__html.{njk|liquid}` that provides the essential document structure with built-in support for modern web best practices.
 
 **Usage:**
 
 ```jinja2 {data-caption="in .njk layout:"}
-{% extends 'bricks/__html.njk' %}
+{% extends 'blades/__html.njk' %}
 
 {% block body %}
   <!-- YOUR page content -->
@@ -243,7 +243,7 @@ Example: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.nj
   <!-- YOUR page content -->
 {% endcapture %}
 
-{% include 'bricks/__html' %}
+{% include 'blades/__html' %}
 ```
 
 Example: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.liquid
@@ -277,7 +277,7 @@ Example: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.li
 
 ### Navigation <small>(`_nav.*`)</small>
 
-A navigation template `bricks/_nav.{njk|liquid}` that renders a list of navigation links with proper accessibility attributes.
+A navigation template `blades/_nav.{njk|liquid}` that renders a list of navigation links with proper accessibility attributes.
 
 **Parameters:**
 
@@ -288,7 +288,7 @@ A navigation template `bricks/_nav.{njk|liquid}` that renders a list of navigati
 
 ```liquid {data-caption="in .liquid:"}
 {% assign nav_pages = collections.all | eleventyNavigation %}
-{% render 'bricks/_nav', nav_pages: nav_pages, current_url: page.url %}
+{% render 'blades/_nav', nav_pages: nav_pages, current_url: page.url %}
 ```
 
 **Output:**
@@ -307,7 +307,7 @@ A navigation template `bricks/_nav.{njk|liquid}` that renders a list of navigati
 
 </summary>
 
-A template `bricks/_gtm.{njk|liquid}` for embedding Google Tag Manager scripts in your pages.
+A template `blades/_gtm.{njk|liquid}` for embedding Google Tag Manager scripts in your pages.
 
 **Parameters:**
 
@@ -317,7 +317,7 @@ A template `bricks/_gtm.{njk|liquid}` for embedding Google Tag Manager scripts i
 
 **Note:** This template is automatically included when using `__html.liquid`. You only need to manually render it if you're not using that base template, see examples:
 
-- https://github.com/anydigital/bricks/blob/main/bricks/__html.njk
-- https://github.com/anydigital/bricks/blob/main/bricks/__html.liquid
+- https://github.com/anydigital/blades/blob/main/blades/__html.njk
+- https://github.com/anydigital/blades/blob/main/blades/__html.liquid
 
 </details>

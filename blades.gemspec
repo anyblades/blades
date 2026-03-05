@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "bricks"
+  spec.name          = "blades"
   spec.version       = "0.27.0-alpha.10"
   spec.authors       = ["Anton Staroverov"]
 
-  spec.summary       = "Framework-agnostic CSS utilities and single-file Liquid 'bricks' for modern web development."
-  spec.homepage      = "https://github.com/anydigital/bricks"
+  spec.summary       = "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development."
+  spec.homepage      = "https://github.com/anydigital/blades"
   spec.license       = "MIT"
 
   spec.files = Dir.glob("{_includes,assets}/**/*")

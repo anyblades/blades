@@ -1,13 +1,13 @@
 {
-  "name": "@anydigital/bricks",
+  "name": "@anydigital/blades",
   "version": "0.27.0-alpha.10",
-  "description": "Framework-agnostic CSS utilities and single-file Liquid 'bricks' for modern web development.",
-  "style": "./src/bricks.css",
+  "description": "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development.",
+  "style": "./src/blades.css",
   "exports": {
-    ".": "./src/bricks.css",
-    "./theme": "./src/bricks.theme.css",
+    ".": "./src/blades.css",
+    "./theme": "./src/blades.theme.css",
     "./unreduce-motion": "./src/_unreduce-motion.css",
-    "./dist": "./dist/bricks.css"
+    "./dist": "./dist/blades.css"
   },
   "scripts": {
     "postcss": "postcss './src/!(_)*.css' --dir ./assets",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anydigital/bricks.git"
+    "url": "git+https://github.com/anydigital/blades.git"
   },
   "keywords": [
     "css",
