@@ -299,7 +299,8 @@ code[data-caption] {
 
 /* @TODO: to TRICKS */
 
-ul {
+ul,
+ol {
   li[data-marker]::marker {
     content: attr(data-marker) " ";
   }
@@ -309,5 +310,13 @@ ul {
   opacity: 50%;
   &:hover {
     opacity: 87.5%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    .dark-auto {
+      filter: invert(100%) hue-rotate(180deg);
+    }
   }
 }
