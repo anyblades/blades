@@ -1,4 +1,4 @@
-# <code>blades<sub><sup>.css</sup></sub></code>
+# 🥷 <code>blades<sub><sup>.css</sup></sub></code>
 
 A framework-agnostic, pure-CSS blade kit. Use with Pico, Tailwind, or any other framework; Nunjucks/Liquid batteries included (for 11ty/Build Awesome/Jekyll) 🥷
 
