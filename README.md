@@ -1,6 +1,6 @@
-# `blades`<sub><sup>`[.css|.njk|.liquid]`</sup></sub>
+# <code>blades<sub><sup>.css</sup></sub></code>
 
-A graceful, semantic CSS extension for Pico or Tailwind, with Nunjucks/Liquid batteries included 🥷
+A framework-agnostic, pure-CSS blade kit. Use with Pico, Tailwind, or any other framework; Nunjucks/Liquid batteries included (for 11ty/Build Awesome/Jekyll) 🥷
 
 <!--section:css-h2-->
 
