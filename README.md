@@ -1,4 +1,4 @@
-# 🥷 <code>blades<sub><sup>.css</sup></sub></code>
+# 🥷 Blades <sup>![](https://img.shields.io/github/v/release/anydigital/blades?label=&color=white&include_prereleases)</sup>
 
 <!--section:hero-->
 
