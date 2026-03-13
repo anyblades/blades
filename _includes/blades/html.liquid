@@ -1,3 +1,6 @@
+{% comment %} <!--section:docs-->
+### Liquid version
+```liquid {% endcomment %}
 <!doctype html>
 <html lang="{{ site.lang | default: 'en' }}">
   <head>
@@ -34,3 +37,18 @@
     {{ body }}
   </body>
 </html>
+{% comment %}```
+
+#### How to use in your layout
+
+```liquid
+{% capture body %}
+  ...
+{% endcapture %}
+
+{% include blades/html.liquid %}
+```
+
+Living example: https://github.com/anydigital/bladeswitch/blob/main/_includes/default.liquid
+
+<!--section--> {% endcomment %}

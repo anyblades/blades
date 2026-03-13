@@ -1,3 +1,6 @@
+{# <!--section:docs-->
+### Nunjucks version
+```jinja2 #}
 <!doctype html>
 <html lang="{{ site.lang | d('en') }}">
   <head>
@@ -34,3 +37,18 @@
     {% endblock %}
   </body>
 </html>
+{#```
+
+#### How to use in your layout
+
+```jinja2
+{% extends 'blades/html.njk' %}
+
+{% block body %}
+  ...
+{% endblock %}
+```
+
+Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_includes/default.njk
+
+<!--section--> #}
