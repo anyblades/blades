@@ -34,10 +34,13 @@ table {
 
 `.borderless` removes all default borders:
 
+| Less | Borders |
+| ---- | ------- |
+| More | Fun     |
+{.borderless}
+
 ```html
-<table class="borderless">
-  ...
-</table>
+<table class="borderless">...</table>
 ```
 <!--section--> */
 table.borderless {
