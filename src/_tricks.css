@@ -42,6 +42,9 @@ table {
 ```html
 <table class="borderless">...</table>
 ```
+
+Living example: https://bladeswitch.com/#minimal-dependencies table
+
 <!--section--> */
 table.borderless {
   th,
