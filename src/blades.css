@@ -1,9 +1,17 @@
 /**
- * @anydigital/blades
- * Framework-agnostic CSS utility helpers
+ * Follows the structure of https://github.com/picocss/pico/blob/main/scss/_index.scss
  */
 
 @import "./_classless";
+
+/* Layout */
 @import "./breakout";
-@import "./_prism";
+
+/* Content */
+@import "./_table";
+
+/* Utilities */
 @import "./_tricks";
+
+/* 3rd-party */
+@import "./_prism";
