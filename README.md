@@ -4,7 +4,7 @@
 
 <hgroup>A framework-agnostic,<wbr> class-light CSS blade kit.</hgroup>
 
-<big>Use with Pico, Tailwind, or any other framework.</big>
+<big>Use with Pico, Tailwind, or any other CSS reset/framework.</big>
 
 <!--section-->
 
