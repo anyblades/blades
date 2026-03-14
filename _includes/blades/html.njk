@@ -37,6 +37,8 @@
 </html>
 {#```
 
+- `title | string` avoids error with `| striptags` when you pass a pure number.
+
 #### How to use in your layout
 
 ```jinja2 {data-caption=default.njk}
@@ -48,9 +50,5 @@
 ```
 
 Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_includes/default.njk
-
-#### Tricks
-
-- `title | string` avoids error with `| striptags` when you pass a pure number
 
 <!--section--> #}
