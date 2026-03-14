@@ -1,4 +1,4 @@
-{# <!--section:docs-->```jinja2 #}
+{# <!--section:code-->```jinja2 #}
 <!doctype html>
 <html lang="{{ site.lang | d('en') }}">
   <head>
@@ -39,14 +39,14 @@
 
 - `title | string` avoids error with `| striptags` when you pass a pure number.
 
-#### How to use in your layout
+<!--section:docs-->
+
+To use in your layout:
 
 ```jinja2 {data-caption=default.njk}
 {% extends 'blades/html.njk' %}
 
-{% block body %}
-  ...
-{% endblock %}
+{% block body %}...{% endblock %}
 ```
 
 Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_includes/default.njk

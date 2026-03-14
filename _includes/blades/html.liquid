@@ -1,4 +1,4 @@
-{% comment %} <!--section:docs-->```liquid {% endcomment %}
+{% comment %} <!--section:code-->```liquid {% endcomment %}
 <!doctype html>
 <html lang="{{ site.lang | default: 'en' }}">
   <head>
@@ -37,12 +37,12 @@
 </html>
 {% comment %}```
 
-#### How to use in your layout
+<!--section:docs-->
+
+To use in your layout:
 
 ```liquid {data-caption=default.liquid}
-{% capture body %}
-  ...
-{% endcapture %}
+{% capture body %}...{% endcapture %}
 
 {% include blades/html.liquid %}
 ```
