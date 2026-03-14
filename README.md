@@ -1,4 +1,4 @@
-# 🥷 Blades <sup>![](https://img.shields.io/github/v/release/anydigital/blades?label=&color=white&include_prereleases)</sup>
+# 🥷 Blades <sup>![](https://img.shields.io/github/v/release/anydigital/blades?label=&color=black&include_prereleases)</sup>
 
 <!--section:hero-->
 
