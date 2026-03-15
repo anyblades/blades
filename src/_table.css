@@ -2,23 +2,20 @@
 ### Horizontal expanders
 
 Simply insert `<hr>` inside `<th>` to forcibly widen too narrow columns (especially useful in markdown):
-
 ```html
 <th>Col <hr></th>
 ```
 Example table:
-
 | SSG <hr> | Description |
 | --- | --- |
 | Build Awesome | Simple, flexible Static Site Generator (SSG) written in JavaScript. It is designed to be a faster, modern alternative to Jekyll, known for its "zero-config" philosophy and focus on performance. |
 
 Same table without `<hr>`-expander would render as:
-
 | SSG | Description |
 | --- | --- |
 | Build Awesome | Simple, flexible Static Site Generator (SSG) written in JavaScript. It is designed to be a faster, modern alternative to Jekyll, known for its "zero-config" philosophy and focus on performance. |
 
-#### How it works
+###### How it works
 ```css */
 table {
   th {
@@ -27,28 +24,29 @@ table {
       height: 0;
       margin: 0;
       visibility: hidden;
+
+      &.x2 {
+        width: 24ch;
+      }
     }
   }
 }
 /*```
 ---
-
 ### Borderless table
 
 `.borderless` removes all default borders:
-
-| Less | Borders |
-| ---- | ------- |
-| More | Fun     |
+| Less |            | Borders |
+| ---- | ---------- | ------- |
+|      | ↖ ↗<br>↙ ↘ |         |
+| More |            | Fun     |
 
 {.borderless}
 
 ```html
 <table class="borderless">...</table>
 ```
-
 Living example: https://bladeswitch.com/#minimal-dependencies table
-
 <!--section--> */
 table.borderless {
   th,

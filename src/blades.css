@@ -9,6 +9,7 @@
 
 /* Content */
 @import "./_table";
+@import "./responsive-table";
 
 /* Utilities */
 @import "./_tricks";
