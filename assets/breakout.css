@@ -29,11 +29,6 @@
       min-width: auto;
     }
 
-    /* #TODO: add <!--section:tricks-->
-    #### Soft-increase selector specificity
-    `&:is(table):not(.does-not-exist)` trick (inspired by postcss) was used here to increase specificity to (0,1,1) against (0,1,0) of selectors like `&:is(table, .table)`
-    <!--section--> */
-
     /* Max out the width of the element */
     &.breakout-item-max {
       width: 125% !important; /* !important is for cases like figure.breakout-item-max @TODO */

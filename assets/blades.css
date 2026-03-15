@@ -84,11 +84,6 @@ small {
       min-width: auto;
     }
 
-    /* #TODO: add <!--section:tricks-->
-    #### Soft-increase selector specificity
-    `&:is(table):not(.does-not-exist)` trick (inspired by postcss) was used here to increase specificity to (0,1,1) against (0,1,0) of selectors like `&:is(table, .table)`
-    <!--section--> */
-
     /* Max out the width of the element */
     &.breakout-item-max {
       width: 125% !important; /* !important is for cases like figure.breakout-item-max @TODO */
@@ -207,8 +202,8 @@ table.borderless {
 ```css */
 
 table.responsive,
-.breakout > table,
-.breakout-all > table {
+.breakout > table:not(.does-not-exist),
+.breakout-all > table:not(.does-not-exist) {
   /* Center horizontally */
   margin-left: 50%;
   transform: translateX(-50%);
@@ -230,7 +225,10 @@ table.responsive,
   }
 }
 
-/*```
+/*```<!--#TODO:css-blade-->
+Soft-increase selector specificity trick:
+
+`table:not(.does-not-exist)` (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 <!--section:docs-->
 ### Responsive table without wrapper
 `.responsive` allows a table to full-bleed and scroll on mobile:
