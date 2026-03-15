@@ -1,6 +1,5 @@
 /**
- * @anydigital/blades
- * Framework-agnostic CSS utility helpers
+ * Follows the structure of https://github.com/picocss/pico/blob/main/scss/_index.scss
  */
 
 html {
@@ -52,6 +51,8 @@ small {
   }
 }
 
+/* Layout */
+
 /* Breakout CSS - Framework-agnostic utilities for breaking out images and figures */
 
 .breakout,
@@ -83,29 +84,9 @@ small {
       min-width: auto;
     }
 
-    /* <!--section:table-->
-    ### Responsive table without wrapper
-    ```css */
-    &:is(table):not(.does-not-exist) {
-      /* Let them full-bleed */
-      width: max-content;
-      min-width: auto;
-      max-width: 100vw;
-      padding-inline: 7.5%;
-
-      /* Let them scroll */
-      display: block;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
-
-      th,
-      td {
-        padding-inline-start: 0;
-      }
-    }
-    /*```
+    /* #TODO: add <!--section:tricks-->
     #### Soft-increase selector specificity
-    `&:is(table):not(.does-not-exist)` trick (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
+    `&:is(table):not(.does-not-exist)` trick (inspired by postcss) was used here to increase specificity to (0,1,1) against (0,1,0) of selectors like `&:is(table, .table)`
     <!--section--> */
 
     /* Max out the width of the element */
@@ -116,7 +97,7 @@ small {
 }
 
 .breakout-all > * {
-  &:is(h2, h3, h4, hr):not([class]) {
+  &:is(h2, h3, h4, h5, h6, hr):not([class]) {
     position: relative;
 
     &::before {
@@ -128,7 +109,7 @@ small {
     }
   }
 
-  &:is(h2, h3, h4):not([class]) {
+  &:is(h2, h3, h4, h5, h6):not([class]) {
     &::before {
       width: 10em;
       right: 100%;
@@ -160,39 +141,26 @@ small {
   }
 }
 
-/* Prism.js */
+/* Content */
 
-.token.treeview-part {
-  .entry-line {
-    width: 2.5em !important;
-    opacity: 25%;
-  }
-  .entry-name:last-child {
-    opacity: 50%;
+/* <!--section:docs-->
+### Horizontal expanders
 
-    &::before {
-      display: none !important;
-    }
-  }
-}
-
-/* <!--section:table-->
-### Wider columns
-
-Simply insert `<hr>` to forcibly widen too narrow columns (especially useful in markdown):
-
+Simply insert `<hr>` inside `<th>` to forcibly widen too narrow columns (especially useful in markdown):
 ```html
-<table>
-  <tr>
-    <th>Title <hr> </th>
-    <th>Description</th>
-  </tr>
-  ...
-</table>
+<th>Col <hr></th>
 ```
+Example table:
+| SSG <hr> | Description |
+| --- | --- |
+| Build Awesome | Simple, flexible Static Site Generator (SSG) written in JavaScript. It is designed to be a faster, modern alternative to Jekyll, known for its "zero-config" philosophy and focus on performance. |
 
-How it works:
+Same table without `<hr>`-expander would render as:
+| SSG | Description |
+| --- | --- |
+| Build Awesome | Simple, flexible Static Site Generator (SSG) written in JavaScript. It is designed to be a faster, modern alternative to Jekyll, known for its "zero-config" philosophy and focus on performance. |
 
+###### How it works
 ```css */
 
 table {
@@ -202,23 +170,30 @@ table {
       height: 0;
       margin: 0;
       visibility: hidden;
+
+      &.x2 {
+        width: 24ch;
+      }
     }
   }
 }
 
 /*```
-<!--section--> */
-
-/* <!--section:table-->
+---
 ### Borderless table
 
 `.borderless` removes all default borders:
+| Less |            | Borders |
+| ---- | ---------- | ------- |
+|      | ↖ ↗<br>↙ ↘ |         |
+| More |            | Fun     |
+
+{.borderless}
 
 ```html
-<table class="borderless">
-  ...
-</table>
+<table class="borderless">...</table>
 ```
+Living example: https://bladeswitch.com/#minimal-dependencies table
 <!--section--> */
 
 table.borderless {
@@ -227,6 +202,51 @@ table.borderless {
     border: none;
   }
 }
+
+/* <!--section:code-->
+```css */
+
+table.responsive,
+.breakout > table,
+.breakout-all > table {
+  /* Center horizontally */
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  /* Let them full-bleed */
+  width: max-content;
+  min-width: auto;
+  max-width: 100vw;
+  padding-inline: 7.5%;
+
+  /* Let them scroll */
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
+
+  th,
+  td {
+    padding-inline-start: 0;
+  }
+}
+
+/*```
+<!--section:docs-->
+### Responsive table without wrapper
+`.responsive` allows a table to full-bleed and scroll on mobile:
+<div>
+
+| Term | Description <hr class="x2"> | Link |
+| --- | --- | --- |
+| Responsive design | Approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction. | https://en.wikipedia.org/wiki/Responsive_web_design |
+
+{.responsive}
+</div>
+
+Tables inside `.breakout[-all]` are responsive by default.
+<!--section--> */
+
+/* Utilities */
 
 /* Header anchors @TODO: add to tricks-wiki */
 
@@ -350,6 +370,24 @@ ol {
   :root:not([data-theme="light"]) {
     .dark-auto {
       filter: invert(100%) hue-rotate(180deg);
+    }
+  }
+}
+
+/* 3rd-party */
+
+/* Prism.js */
+
+.token.treeview-part {
+  .entry-line {
+    width: 2.5em !important;
+    opacity: 25%;
+  }
+  .entry-name:last-child {
+    opacity: 50%;
+
+    &::before {
+      display: none !important;
     }
   }
 }
