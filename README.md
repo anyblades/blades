@@ -19,22 +19,18 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
   <h2>Living examples</h2><i></i>
 </hgroup>
 
-<ul class="grid">
-  <li>
-    <a role="button" class="outline" href="https://github.com/anydigital/build-awesome-starter">
-      <big>Blades with Tailwind</big><br>
-      using Eleventy and Nunjucks <br>
-      <small>(Build Awesome Starter)</small>
-    </a>
-  </li>
-  <li>
-    <a role="button" class="outline" href="https://github.com/anydigital/bladeswitch">
-      <big>Blades with Pico</big><br>
-      using Jekyll and Liquid <br>
-      <small>(Bladeswitch Starter)</small>
-    </a>
-  </li>
-</ul>
+<nav class="grid">
+  <a role="button" class="outline" href="https://github.com/anydigital/build-awesome-starter">
+    <big>Blades with Tailwind</big><br>
+    using Eleventy and Nunjucks <br>
+    <small>(Build Awesome Starter)</small>
+  </a>
+  <a role="button" class="outline" href="https://github.com/anydigital/bladeswitch">
+    <big>Blades with Pico</big><br>
+    using Jekyll and Liquid <br>
+    <small>(Bladeswitch Starter)</small>
+  </a>
+</nav>
 
 ---
 
