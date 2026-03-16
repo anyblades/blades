@@ -288,59 +288,6 @@ cd ./src/_includes
 ln -s ../../node_modules/@anydigital/blades/src/blades
 ```
 
-### Base HTML Template <small>(`__html.*`)</small>
-
-A unified base HTML template `blades/__html.{njk|liquid}` that provides the essential document structure with built-in support for modern web best practices.
-
-**Usage:**
-
-```jinja2 {data-caption="in .njk layout:"}
-{% extends 'blades/__html.njk' %}
-
-{% block body %}
-  <!-- YOUR page content -->
-{% endblock %}
-```
-
-Example: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.njk
-
-```liquid {data-caption="in .liquid layout:"}
-{% capture body %}
-  <!-- YOUR page content -->
-{% endcapture %}
-
-{% include 'blades/__html' %}
-```
-
-Example: https://github.com/anydigital/sveleven/blob/main/src/_theme/__layout.liquid
-
-**Features:**
-
-- HTML5 DOCTYPE with language attribute (defaults to `en`, configurable via `site.lang`)
-- UTF-8 charset and comprehensive viewport meta tag with `viewport-fit=cover` for notched devices
-- Dynamic title generation with site title suffix (title is stripped of HTML tags and separated with `|`)
-- Favicon link (to `/favicon.ico`)
-- Automatic stylesheet linking from `site.styles` array
-- Inline styles from `site.inline_styles` array (joined with newlines in a `<style>` tag)
-- Automatic script loading from `site.scripts` array (with `defer` attribute)
-- Inline module scripts from `site.inline_scripts` array (joined with newlines in a `<script type="module">` tag)
-- Custom header content via `content_for_header`
-- Google Tag Manager integration (automatically rendered via `_gtm.{njk|liquid}` template for both `<head>` and `<body>` when `site.prod` and `site.gtm_id` are set)
-
-**Variables:**
-
-- `body` - The page content to be rendered inside the `<body>` tag (required)
-- `title` - Page title (optional, will be stripped of HTML tags)
-- `site.title` - Site title for the title suffix
-- `site.lang` - Language code (optional, defaults to `'en'`)
-- `site.styles` - Array of stylesheet URLs (optional)
-- `site.inline_styles` - Array of inline CSS strings (optional)
-- `site.scripts` - Array of script URLs (optional)
-- `site.inline_scripts` - Array of inline JavaScript strings (optional)
-- `content_for_header` - Custom HTML for the head section (optional)
-- `site.gtm_id` - Google Tag Manager ID (optional)
-- `site.prod` - Boolean flag for production environment (optional)
-
 ### Navigation <small>(`_nav.*`)</small>
 
 A navigation template `blades/_nav.{njk|liquid}` that renders a list of navigation links with proper accessibility attributes.
