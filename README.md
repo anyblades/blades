@@ -43,7 +43,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 <big>
 
 - [Layout <small>blades</small>](https://blades.ninja/layout/)
-  - Breakout elements
+- [Breakout <small>blades</small>](https://blades.ninja/breakout/)
 - [Typography <small>blades</small>](https://blades.ninja/typography/)
   - Header anchors
   - Link [fav]icons

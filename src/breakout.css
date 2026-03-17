@@ -1,5 +1,6 @@
-/* Breakout CSS - Framework-agnostic utilities for breaking out images and figures */
-
+/* <!--section:docs-->
+Framework-agnostic utilities for breaking out images and figures:
+```css */
 .breakout,
 .breakout-all {
   /* Prepare the container for breakout elements */
@@ -80,3 +81,4 @@
     }
   }
 }
+/*``` <!--section--> */

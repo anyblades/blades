@@ -1,4 +1,6 @@
-/* @TODO: tricks-wiki */
+/* <!--section:docs-->
+Overrides for https://github.com/picocss/pico/blob/main/scss/utilities/_reduce-motion.scss
+```css */
 @utility unreduce-animation-* {
   @media (prefers-reduced-motion: reduce) {
     &:not([aria-busy="true"]) {
@@ -8,5 +10,4 @@
     }
   }
 }
-
-/* Overrides https://github.com/picocss/pico/blob/main/scss/utilities/_reduce-motion.scss */
+/*``` <!--section--> */
