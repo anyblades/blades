@@ -1,3 +1,4 @@
+{% comment %}<!--section:code-->```liquid{% endcomment %}
 {% if site.prod and site.gtm_id %}
   {% capture _ %}
     {% unless for_body %}
@@ -21,3 +22,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   {% endcapture %}
   {{ _ | strip }}
 {% endif %}
+{% # prettier-ignore %}
+{% comment %}```
+<!--section:docs-->
+Usage in Liquid:
+```liquid
+    ...
+    {% include blades/gtm.liquid %}
+  </head>
+  <body>
+    {% include blades/gtm.liquid for_body=true %}
+    ...
+```
+
+Living example: https://github.com/anydigital/blades/blob/main/_includes/blades/html.liquid
+<!--section-->{% endcomment %}

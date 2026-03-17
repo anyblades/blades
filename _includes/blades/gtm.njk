@@ -1,3 +1,4 @@
+{# <!--section:code-->```jinja2 #}
 {% if site.prod and site.gtm_id %}
   {# prettier-ignore-start #}
     {% if not for_body %}
@@ -20,3 +21,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {% endif %}
   {# prettier-ignore-end #}
 {% endif %}
+{#```
+<!--section:docs-->
+Usage in Nunjucks:
+```jinja2
+    ...
+    {% include 'blades/gtm.njk' %}
+  </head>
+  <body>
+    {% set for_body = true %}{% include 'blades/gtm.njk' %}
+    ...
+```
+
+Living example: https://github.com/anydigital/blades/blob/main/_includes/blades/html.njk
+
+Parameters:
+- `site.gtm_id` - Your Google Tag Manager container ID (e.g., `GTM-XXXXXXX`)
+- `site.prod` - Boolean flag to enable GTM only in production
+- `for_body` - Boolean flag (default: `false`). When `false`, renders the script tag for the `<head>`. When `true`, renders the noscript fallback for the `<body>`.
+<!--section--> #}

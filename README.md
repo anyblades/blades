@@ -136,26 +136,3 @@ or:
 Featured by:
 
 - https://github.com/uhub/awesome-css
-
----
-
-<details><summary>
-
-### Google Tag Manager <small>(`_gtm.*`)</small>
-
-</summary>
-
-A template `blades/_gtm.{njk|liquid}` for embedding Google Tag Manager scripts in your pages.
-
-**Parameters:**
-
-- `site.gtm_id` - Your Google Tag Manager container ID (e.g., `GTM-XXXXXXX`)
-- `site.prod` - Boolean flag to enable GTM only in production
-- `for_body` - Boolean flag (default: `false`). When `false`, renders the script tag for the `<head>`. When `true`, renders the noscript fallback for the `<body>`.
-
-**Note:** This template is automatically included when using `__html.liquid`. You only need to manually render it if you're not using that base template, see examples:
-
-- https://github.com/anydigital/blades/blob/main/blades/__html.njk
-- https://github.com/anydigital/blades/blob/main/blades/__html.liquid
-
-</details>
