@@ -1,5 +1,7 @@
-/*** Extends https://github.com/picocss/pico/blob/main/scss/layout/_document.scss ***/
-
+/* <!--section:docs-->
+## Global document styles
+Extends https://github.com/picocss/pico/blob/main/scss/layout/_document.scss
+```css */
 html {
   /* Prevent horizontal overflow and scrolling, modern way */
   overflow-x: clip;
@@ -8,9 +10,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/*```
 
-/*** Extends https://github.com/picocss/pico/blob/main/scss/layout/_landmarks.scss ***/
-
+## Landmarks
+Extends https://github.com/picocss/pico/blob/main/scss/layout/_landmarks.scss
+```css */
 body {
   /* Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support) */
   min-height: 100dvh;
@@ -30,3 +34,4 @@ body {
     hyphens: none;
   }
 }
+/*``` <!--section--> */
