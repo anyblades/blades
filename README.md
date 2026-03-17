@@ -14,27 +14,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <!--section:index-->
 
-<hgroup>
-  <small>Open-source</small>
-  <h2>Living examples</h2><i></i>
-</hgroup>
-
-<nav class="grid">
-  <a role="button" class="outline" href="https://github.com/anydigital/build-awesome-starter">
-    <big>Blades with Tailwind</big><br>
-    using Eleventy and Nunjucks <br>
-    <small>(Build Awesome Starter)</small>
-  </a>
-  <a role="button" class="outline" href="https://github.com/anydigital/bladeswitch">
-    <big>Blades with Pico</big><br>
-    using Jekyll and Liquid <br>
-    <small>(Bladeswitch Starter)</small>
-  </a>
-</nav>
-
----
-
-<hgroup>
+<hgroup id="css">
   <small>Class-light</small>
   <h2>CSS blades</h2>
   <p>inspired by Pico.css</p>
@@ -42,16 +22,16 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <big>
 
-- [Layout <small>blades</small>](https://blades.ninja/layout/)
-- [Breakout <small>blades</small>](https://blades.ninja/breakout/)
-- [Typography <small>blades</small>](https://blades.ninja/typography/)
+- [Layout <small>blades</small>](https://blades.ninja/css/layout/)
+- [Breakout <small>blades</small>](https://blades.ninja/css/breakout/)
+- [Typography <small>blades</small>](https://blades.ninja/css/typography/)
   - Header anchors
   - Link [fav]icons
-- [Table <small>blades</small>](https://blades.ninja/table/)
-  - [Responsive table without wrapper](https://blades.ninja/table/#responsive-table-without-wrapper)
-- [Code <small>blades</small>](https://blades.ninja/code/)
+- [Table <small>blades</small>](https://blades.ninja/css/table/)
+  - [Responsive table without wrapper](https://blades.ninja/css/table/#responsive-table-without-wrapper)
+- [Code <small>blades</small>](https://blades.ninja/css/code/)
   - Prism.js treeview comments
-- [Utility <small>blades</small>](https://blades.ninja/utilities/)
+- [Utility <small>blades</small>](https://blades.ninja/css/utilities/)
   - Jump-to-top
   - Table-of-contents
   - Auto-columns
@@ -130,6 +110,26 @@ or:
 ```
 
 </details>
+
+---
+
+<hgroup>
+  <small>Open-source</small>
+  <h2>Starter blades</h2><i></i>
+</hgroup>
+
+<nav class="grid">
+  <a role="button" class="outline" href="https://github.com/anydigital/build-awesome-starter">
+    <big>Blades with Tailwind</big><br>
+    using Eleventy and Nunjucks <br>
+    <small>(Build Awesome Starter)</small>
+  </a>
+  <a role="button" class="outline" href="https://github.com/anydigital/bladeswitch">
+    <big>Blades with Pico</big><br>
+    using Jekyll and Liquid <br>
+    <small>(Bladeswitch Starter)</small>
+  </a>
+</nav>
 
 ---
 
