@@ -25,7 +25,7 @@ h5,
 h6 {
   position: relative;
 
-  /* Header anchors */
+  /* Heading anchors */
   [data-is-anchor] {
     visibility: hidden;
     position: absolute;
