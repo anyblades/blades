@@ -38,10 +38,9 @@ table {
 ### Borderless table
 
 `<table class="borderless">` removes all default borders:
-| Less |            | Borders |
-| ---- | ---------- | ------- |
-|      | ↖ ↗<br>↙ ↘ |         |
-| More |            | Fun     |
+| Less |     | Borders |
+| ---- | --- | ------- |
+| More |     | Fun     |
 
 {.borderless}
 
