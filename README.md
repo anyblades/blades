@@ -48,7 +48,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 </big></p>
 
-### Install <small>CSS blades</small>
+<details><summary role="button" class="outline">Install CSS blades</summary>
 
 <mark>Option 1.</mark> From CDN:
 
@@ -72,6 +72,8 @@ Then import in your .css:
 ```
 
 Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_styles/styles.css
+
+</details>
 
 ---
 
