@@ -22,13 +22,6 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <big>
 
-- [Layout](https://blades.ninja/css/layout/)
-  - [Breakout elements](https://blades.ninja/css/breakout/) {data-marker=🥷}
-- [Utilities](https://blades.ninja/css/utilities/)
-  - Jump-to-top
-  - Table-of-contents
-  - Auto-columns
-  - Auto-dark
 - [Typography](https://blades.ninja/css/typography/)
   - [Table](https://blades.ninja/css/table/)
   - [Responsive table without wrapper](https://blades.ninja/css/table/#responsive-table-without-wrapper) {data-marker=🥷}
@@ -36,6 +29,13 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
   - Link [fav]icons
   - List markers {data-marker=🥷}
   - [Code](https://blades.ninja/css/code/)
+- [Layout](https://blades.ninja/css/layout/)
+  - [Breakout elements](https://blades.ninja/css/breakout/) {data-marker=🥷}
+- [Utilities](https://blades.ninja/css/utilities/)
+  - Jump-to-top
+  - Table-of-contents
+  - Auto-columns
+  - Auto-dark
 
 {.columns}
 
