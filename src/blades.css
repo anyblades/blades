@@ -9,6 +9,9 @@
 @import "./_table";
 @import "./responsive-table";
 
+/* Components */
+@import "./_components";
+
 /* Utilities */
 @import "./_tricks";
 
