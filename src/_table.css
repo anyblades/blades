@@ -1,4 +1,6 @@
 /* <!--section:docs-->
+Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
+
 ### Horizontal expanders
 
 Simply insert `<hr>` inside `<th>` to forcibly widen too narrow columns (especially useful in markdown):

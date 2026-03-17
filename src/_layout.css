@@ -1,3 +1,5 @@
+/*** Extends https://github.com/picocss/pico/blob/main/scss/layout/_document.scss ***/
+
 html {
   /* Prevent horizontal overflow and scrolling, modern way */
   overflow-x: clip;
@@ -6,6 +8,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/*** Extends https://github.com/picocss/pico/blob/main/scss/layout/_landmarks.scss ***/
 
 body {
   /* Ensures body takes at least the full height of the viewport (using dynamic viewport height for better mobile support) */
@@ -24,25 +28,5 @@ body {
   a,
   table {
     hyphens: none;
-  }
-}
-
-pre {
-  padding: 1rem 1.5rem;
-  padding-inline-end: 2rem;
-
-  code {
-    padding: 0;
-  }
-
-  @media screen and (max-width: 767px) {
-    border-radius: 0;
-  }
-}
-
-small {
-  [role="button"] {
-    padding: 0.75em 1em;
-    font-size: inherit;
   }
 }
