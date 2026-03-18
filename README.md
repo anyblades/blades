@@ -138,7 +138,7 @@ or:
 Featured by:
 
 - https://github.com/uhub/awesome-css
-- https://github.com/anydigital/awesome-11ty-build-awesome
+- [awesome-11ty-build-awesome](https://github.com/anydigital/awesome-11ty-build-awesome)
 
 </div><div>
 
