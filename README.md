@@ -18,10 +18,8 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <!--section:index-->
 
-<hgroup id="css">
-  <small>Class-light</small>
-  <h2>CSS blades</h2>
-  <p>inspired by Pico.css</p>
+<hgroup id="css"><small>Class-light</small>
+  <h2>CSS blades</h2><p>inspired by Pico.css</p>
 </hgroup>
 
 <big>
@@ -74,10 +72,8 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
 
 ---
 
-<hgroup>
-  <small>Nunjucks / Liquid</small>
-  <h2>HTML blades</h2>
-  <p>for 11ty/Build Awesome, Jekyll, etc.</p>
+<hgroup><small>Nunjucks / Liquid</small>
+  <h2>HTML blades</h2><p>for 11ty/Build Awesome, Jekyll, etc.</p>
 </hgroup>
 
 <big>
@@ -117,23 +113,41 @@ or:
 
 ---
 
-<hgroup>
-  <small>Open-source</small>
-  <h2>Starter blades</h2><i></i>
+<hgroup><small>Old-school</small>
+  <h2>Jekyll blades</h2><p></p>
 </hgroup>
 
-<nav class="grid">
+Everything above (CSS+HTML blades) is available as Jekyll theme:
+
+<details><summary role="button" class="outline">Install as Jekyll theme</summary>
+
+In you `_config.yml`:
+
+```yaml
+remote_theme: anydigital/blades@v0.27.0-beta # or latest
+plugins:
+  - jekyll-remote-theme
+```
+
+Living example: https://github.com/anydigital/bladeswitch/blob/main/_config.yml
+
+</details>
+
+Or fully preconfigured:
+
+[Use Blades with Jekyll and Pico <small>&nbsp;(Bladeswitch Starter)</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
+
+---
+
+<hgroup><small>Open-source</small>
+  <h2>Starter blades</h2><p></p>
+</hgroup>
+
   <a role="button" class="outline" href="https://github.com/anydigital/build-awesome-starter">
     <big>Blades with Tailwind</big><br>
     using Eleventy and Nunjucks <br>
     <small>(Build Awesome Starter)</small>
   </a>
-  <a role="button" class="outline" href="https://github.com/anydigital/bladeswitch">
-    <big>Blades with Pico</big><br>
-    using Jekyll and Liquid <br>
-    <small>(Bladeswitch Starter)</small>
-  </a>
-</nav>
 
 ---
 
