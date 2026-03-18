@@ -135,15 +135,16 @@ or:
 
 <div class="grid"><div>
 
+Featured by:
+
+- https://github.com/uhub/awesome-css
+- https://github.com/anydigital/awesome-11ty-build-awesome
+
+</div><div>
+
 Credits:
 
 - https://picocss.com/ for inspiration
 - https://www.11ty.dev/ for build power
-
-</div><div>
-
-Featured by:
-
-- https://github.com/uhub/awesome-css
 
 </div>
