@@ -133,6 +133,16 @@ or:
 
 ---
 
+<div class="grid"><div>
+
 Featured by:
 
 - https://github.com/uhub/awesome-css
+
+</div><div>
+
+Credits:
+
+- https://picocss.com/ for inspiration
+
+</div>
