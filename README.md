@@ -1,10 +1,12 @@
-# 🥷 Blades <sup>![](https://img.shields.io/github/v/release/anydigital/blades?label=&color=black&include_prereleases)</sup>
+# 🥷 Blades
 
 <!--section:hero-->
 
 <hgroup>Framework-agnostic,<wbr> class-light CSS⁺ blade kit.</hgroup>
 
 <big>Use with Pico, Tailwind, or any other CSS reset/framework.</big>
+
+![](https://img.shields.io/github/v/release/anydigital/blades?label=&color=black&include_prereleases)
 
 <!--section-->
 
