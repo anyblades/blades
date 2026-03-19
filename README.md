@@ -14,8 +14,6 @@
 Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 [![](https://img.shields.io/badge/Docs_&_Demos-darkslategray?style=for-the-badge)](https://blades.ninja/)
-[![](https://img.shields.io/badge/Code-gainsboro?logo=github&logoColor=black&style=for-the-badge)](https://github.com/anydigital/blades)
-[![](https://img.shields.io/github/stars/anydigital/blades?label=Star&labelColor=gainsboro&color=silver&style=for-the-badge)](https://github.com/anydigital/blades)
 
 ---
 
