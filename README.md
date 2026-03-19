@@ -118,7 +118,7 @@ or:
 
 <hgroup><small>Old-school</small><h2>Jekyll blades</h2><p></p></hgroup>
 
-Everything above (CSS+HTML blades) is available as Jekyll theme:
+All CSS and HTML blades above are available as a Jekyll theme:
 
 <details><summary role="button" class="outline"><b>Install as Jekyll theme</b></summary>
 
