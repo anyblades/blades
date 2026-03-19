@@ -110,7 +110,11 @@ or:
 
 </details>
 
+<!--section:gh-only-->
+
 ---
+
+<!--section:appendix-->
 
 <hgroup><small>Old-school</small><h2>Jekyll blades</h2><p></p></hgroup>
 
@@ -134,11 +138,7 @@ Or use a fully preconfigured:
 
 [🥷 Bladeswitch Starter ↗ &nbsp;<small>Jekyll + Pico + Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
 
-<!--section:gh-only-->
-
 ---
-
-<!--section:appendix-->
 
 <div class="grid"><div>
 
