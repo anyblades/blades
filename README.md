@@ -45,7 +45,7 @@ inspired by Pico.css
 <li><a href="https://blades.ninja/css/#auto-dark">Auto-dark</a></li>
 <li><a href="https://blades.ninja/css/#misc">Misc</a></li></ul></li></ul>
 
-<!--section:index,install-->
+<!--section:index,install-css-->
 <details><summary role="button" class="outline"><b>Install CSS blades</b></summary>
 
 <mark>Option A.</mark> From CDN:
@@ -89,6 +89,7 @@ for 11ty/Build Awesome, Jekyll, etc.
 
 {.columns}
 
+<!--section:index,install-html-->
 <details><summary role="button" class="outline"><b>Install HTML blades</b></summary>
 
 ```sh
