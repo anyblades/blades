@@ -23,8 +23,9 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <div class="grid"><div>
 
-[**Typography**](     https://blades.ninja/css/typography/)
+[**Typography**](https://blades.ninja/css/typography/)
 
+<!--prettier-ignore-->
 - [Table](            https://blades.ninja/css/table/)
   - [Responsive table <br> without wrapper](
                        https://blades.ninja/css/table/#responsive-table-without-wrapper) {data-marker=🥷}
@@ -35,12 +36,13 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 </div><div>
 
-[**Layout**](         https://blades.ninja/css/layout/)
+[**Layout**](https://blades.ninja/css/layout/)
 
 - [Breakout elements](https://blades.ninja/css/breakout/) {data-marker=🥷}
 
-[**Utilities**](      https://blades.ninja/css/utilities/)
+[**Utilities**](https://blades.ninja/css/utilities/)
 
+<!--prettier-ignore-->
 - [Jump to top](      https://blades.ninja/css/utilities/#jump-to-top)
 - [Table of contents](https://blades.ninja/css/utilities/#table-of-contents)
 - [Auto-columns](     https://blades.ninja/css/utilities/#auto-columns)
@@ -137,7 +139,7 @@ Living example: https://github.com/anydigital/bladeswitch/blob/main/_config.yml
 
 Or use a preconfigured template:
 
-[🥷 Bladeswitch Starter ↗ &nbsp;<small>Jekyll + Pico + Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
+[🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">Jekyll﹢Pico﹢Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
 
 ---
 
