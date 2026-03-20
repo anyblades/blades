@@ -81,9 +81,9 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
 
 <hgroup><small>Nunjucks / Liquid</small><h2>HTML blades</h2><p>for 11ty/Build Awesome, Jekyll, etc.</p></hgroup>
 
-- [Base HTML](https://blades.ninja/html/) {data-marker=🥷}
-- [Links](https://blades.ninja/html/links/)
-- [Google Tag Manager](https://blades.ninja/html/gtm/)
+- [Base HTML](https://blades.ninja/html/#base) {data-marker=🥷}
+- [Links](https://blades.ninja/html/#links)
+- [Google Tag Manager](https://blades.ninja/html/#gtm)
 
 {.columns}
 
