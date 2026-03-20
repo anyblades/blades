@@ -79,7 +79,12 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
 
 ---
 
-<hgroup><small>Nunjucks / Liquid</small><h2>HTML blades</h2><p>for 11ty/Build Awesome, Jekyll, etc.</p></hgroup>
+<hgroup><small>Nunjucks / Liquid</small>
+
+## [HTML blades](https://blades.ninja/html/)
+for 11ty/Build Awesome, Jekyll, etc.
+
+</hgroup>
 
 - [Base HTML](https://blades.ninja/html/#base) {data-marker=🥷}
 - [Links](https://blades.ninja/html/#links)
