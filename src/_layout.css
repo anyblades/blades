@@ -1,4 +1,6 @@
-/* <!--section:docs-->
+/*
+<!--section:docs-->
+
 ### Document
 Extends https://github.com/picocss/pico/blob/main/scss/layout/_document.scss
 
@@ -24,4 +26,34 @@ body {
     flex-grow: 1;
   }
 }
-/*``` <!--section--> */
+/*```
+
+### Table of contents
+```css */
+[data-is-toc] {
+  font-size: 87.5%;
+
+  a {
+    text-decoration: none;
+  }
+  > ul {
+    columns: 30ch auto; /* 2 cols max for 65ch container */
+  }
+}
+/*```
+
+### Jump to top
+```css */
+[data-jump-to="top"] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-top: 50vh;
+  opacity: 25%;
+
+  &:hover {
+    opacity: 75%;
+  }
+}
+/*```
+<!--section--> */

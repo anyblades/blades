@@ -1,36 +1,7 @@
-/* <!--section:docs-->
+/*
+<!--section:docs-->
 
-## Jump to top
-```css */
-[data-jump-to="top"] {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding-top: 50vh;
-  opacity: 25%;
-
-  &:hover {
-    opacity: 75%;
-  }
-}
-/*```
-
-## Table of contents
-```css */
-[data-is-toc] {
-  font-size: 87.5%;
-
-  a {
-    text-decoration: none;
-  }
-  > ul {
-    columns: 30ch auto; /* 2 cols max for 65ch container */
-  }
-}
-
-/*```
-
-## Auto-columns
+### Auto-columns
 ```css */
 .columns {
   columns: 20ch auto; /* 3 cols max for 65ch container */
@@ -42,7 +13,7 @@
 }
 /*```
 
-## Auto-dark
+### Auto-dark
 ```css */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -53,7 +24,7 @@
 }
 /*```
 
-## Other
+### Misc
 ```css */
 .faded {
   opacity: 50%;
