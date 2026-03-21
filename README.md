@@ -146,18 +146,11 @@ Or use a preconfigured template:
 
 ---
 
-<div class="grid"><div>
+- Featured by:
+  - https://github.com/uhub/awesome-css
+  - [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome) list
+- Credits:
+  - https://picocss.com/ for inspiration
+  - https://11ty.dev/ for build power
 
-Featured by:
-
-- https://github.com/uhub/awesome-css
-- [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome) list
-
-</div><div>
-
-Credits:
-
-- https://picocss.com/ for inspiration
-- https://11ty.dev/ for build power
-
-</div></div>
+{.unlist .columns}
