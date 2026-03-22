@@ -95,20 +95,18 @@ for 11ty/Build Awesome, Jekyll, etc.
 
 ```sh
 npm install @anydigital/blades
-cd ./_includes  # or where your includes dir is
+cd ./_includes  # your includes dir
 ln -s ../node_modules/@anydigital/blades/_includes/blades
 ```
 
 That's it! Now you can use HTML blades in your templates like this:
 
 ```jinja2
+# Nunjucks:
 {% extends 'blades/html.njk' %}
 {% include 'blades/gtm.njk' %}
-```
 
-or:
-
-```liquid
+# Liquid:
 {% include blades/html.liquid %}
 {% include blades/gtm.liquid for_body=true %}
 {% render blades/links, links: site.links, current_url: page.url %}
