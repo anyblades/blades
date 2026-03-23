@@ -54,6 +54,11 @@ table {
 }
 
 [data-is-toc] {
+  font-size: 87.5%;
+
+  a {
+    text-decoration: none;
+  }
   > ul > * > a {
     font-weight: 500;
   }

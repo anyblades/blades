@@ -28,20 +28,6 @@ body {
 }
 /*```
 
-### Table of contents
-```css */
-[data-is-toc] {
-  font-size: 87.5%;
-
-  a {
-    text-decoration: none;
-  }
-  > ul {
-    columns: 30ch auto; /* 2 cols max for 65ch container */
-  }
-}
-/*```
-
 ### Jump to top
 ```css */
 [data-jump-to="top"] {
