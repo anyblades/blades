@@ -84,12 +84,12 @@ for 11ty/Build Awesome, Jekyll, etc.
 
 </hgroup>
 
-- [Base HTML](https://blades.ninja/html/#base) {data-marker=🥷}
+- [Base HTML](https://blades.ninja/html/#base) <!--{data-marker=🥷}-->
 - [Links](https://blades.ninja/html/#links)
 - [Sitemap](https://blades.ninja/html/#sitemap)
 - [Google Tag Manager](https://blades.ninja/html/#gtm)
 
-{.columns}
+<!--{.columns}-->
 
 <!--section:index,install-html-->
 <details><summary role="button" class="outline"><b>Install HTML blades</b></summary>
@@ -141,7 +141,7 @@ Living example: https://github.com/anydigital/bladeswitch/blob/main/_config.yml
 
 Or use a preconfigured template:
 
-[🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">Jekyll ⁺ Pico ⁺ Blades</small>](https://github.com/anydigital/bladeswitch){role=button .outline}
+[🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">Jekyll ⁺ Pico ⁺ Blades</small>](https://github.com/anydigital/bladeswitch)<!--{role=button .outline}-->
 
 ---
 
@@ -153,4 +153,4 @@ Or use a preconfigured template:
   - https://picocss.com/ for inspiration
   - https://11ty.dev/ for build power
 
-{.unlist .columns}
+<!--{.unlist .columns}-->
