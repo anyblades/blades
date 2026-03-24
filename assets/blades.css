@@ -193,9 +193,19 @@ h6 {
     color: silver;
     text-decoration: none;
   }
-  &:hover {
+  /* If hover is supported, show anchor on hover */
+  @media (hover: hover) {
+    &:hover {
+      [data-is-anchor] {
+        visibility: visible;
+      }
+    }
+  }
+  /* Otherwise always show anchors, but subtle */
+  @media (hover: none) {
     [data-is-anchor] {
       visibility: visible;
+      opacity: 37.5%;
     }
   }
 }
