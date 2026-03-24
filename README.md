@@ -86,6 +86,7 @@ for 11ty/Build Awesome, Jekyll, etc.
 
 - [Base HTML](https://blades.ninja/html/#base) {data-marker=🥷}
 - [Links](https://blades.ninja/html/#links)
+- [Sitemap](https://blades.ninja/html/#sitemap)
 - [Google Tag Manager](https://blades.ninja/html/#gtm)
 
 {.columns}
