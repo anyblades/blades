@@ -4,7 +4,7 @@
     {% if page.data.permalink != false %}
       <url>
         <loc>{{ site.base }}{{ page.url }}</loc>
-        <lastmod>{{ page.date }}</lastmod>
+        <lastmod>{{ page.date | iso_date }}</lastmod>
       </url>
     {% endif %}
   {%- endfor %}
