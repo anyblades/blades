@@ -12,6 +12,22 @@ h1 {
   margin-bottom: 1rem; /* for tw-typography */
 }
 
+/* Fix https://github.com/picocss/pico/blob/main/css/pico.css for the very first headings
+:where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: var(--pico-typography-spacing-top);
+}
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  & ~ & {
+    margin-top: 2rem;
+  }
+}
+
 hr {
   margin-block: 2em; /* for pico.css & tw-typography */
 }

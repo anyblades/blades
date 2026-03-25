@@ -1,22 +1,6 @@
 /*
 <!--section:docs-->
 
-### Auto-columns
-```css */
-.columns,
-[data-is-toc] > ul,
-[data-is-toc] > ol {
-  columns: 30ch auto; /* 2 cols max for 65ch container */
-
-  /* Avoid breaking inside elements, such as nested lists */
-  > * {
-    break-inside: avoid;
-  }
-}
-/*```
-
-Table of contents (`[data-is-toc]`) has auto-columns by default.
-
 ### Auto-dark
 ```css */
 @media (prefers-color-scheme: dark) {
@@ -28,7 +12,7 @@ Table of contents (`[data-is-toc]`) has auto-columns by default.
 }
 /*```
 
-### Misc
+### Faded
 ```css */
 .faded {
   opacity: 50%;
@@ -36,7 +20,10 @@ Table of contents (`[data-is-toc]`) has auto-columns by default.
     opacity: 87.5%;
   }
 }
+/*```
 
+### Invert
+```css */
 /* Extends https://tailwindcss.com/docs/filter-invert */
 .invert {
   /* Fix the scrollbar color when inverted */

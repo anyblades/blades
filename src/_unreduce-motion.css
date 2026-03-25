@@ -1,5 +1,7 @@
-/* <!--section:docs-->
-Overrides for https://github.com/picocss/pico/blob/main/scss/utilities/_reduce-motion.scss
+/* Overrides https://github.com/picocss/pico/blob/main/scss/utilities/_reduce-motion.scss
+<!--section:docs-->
+
+### Unreduce motion
 ```css */
 @utility unreduce-animation-* {
   @media (prefers-reduced-motion: reduce) {
@@ -10,4 +12,5 @@ Overrides for https://github.com/picocss/pico/blob/main/scss/utilities/_reduce-m
     }
   }
 }
-/*``` <!--section--> */
+/*```
+<!--section--> */
