@@ -68,8 +68,7 @@ Use `<li data-marker="🥷">` attribute to customize list markers:
 - really {data-marker=❄️}
 - cool {data-marker=🥶}
 - markers {data-marker=🧊}
-- with Blades CSS {data-marker=🥷}
-- using `data-marker` attribute.
+- with [Blades CSS](https://blades.ninja/css/) using `data-marker` attribute. {data-marker=🥷}
 </article>
 
 How it works:
@@ -89,5 +88,5 @@ ol {
   }
 }
 /*```
-> PRO TIP for Markdown: use https://github.com/arve0/markdown-it-attrs to enable power syntax like `- ... {data-marker=🥷}`
+> **PRO TIP** for Markdown: Set markers like `- ... {data-marker=🥷}` using https://github.com/arve0/markdown-it-attrs
 <!--section--> */
