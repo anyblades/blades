@@ -17,7 +17,13 @@ Same table after adding `<hr>`-expanders:
   <tr><th>Wide tables <hr></th><th>with many <hr></th><th>columns might <hr></th><th>get collapsed <hr></th><th>and be really <hr></th><th>hard to read! <hr></th></tr>
 </table></article>
 
-###### How it works
+Living examples of big tables with `<hr>`-expanders:
+- https://any.digital/insights/ai-ide/
+- https://any.digital/insights/css-frameworks/
+- https://any.digital/insights/ssg/
+- https://blades.ninja/build-awesome-11ty/#min-starters
+
+How it works:
 ```css */
 table {
   th {
@@ -35,16 +41,22 @@ table {
 }
 /*```
 ---
+
 ### Borderless table
 
 `<table class="borderless">` removes all default borders:
-| Less |     | Borders |
-| ---- | --- | ------- |
-| More |     | Fun     |
+
+<article>
+
+| Less | borders |
+| ---- | ------- |
+| more | fun     |
 
 {.borderless}
+</article>
 
 Living example: https://bladeswitch.com/#minimal-dependencies table
+
 <!--section--> */
 table.borderless {
   th,
