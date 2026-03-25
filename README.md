@@ -13,7 +13,7 @@
 
 Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
-[![](https://img.shields.io/badge/Docs_&_Demos-darkslategray?style=for-the-badge)](https://blades.ninja/)
+[![](https://img.shields.io/badge/Demo_&_Docs-darkslategray?style=for-the-badge)](https://blades.ninja/)
 
 ---
 
