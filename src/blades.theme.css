@@ -1,3 +1,5 @@
+/* <!--section:code-->
+```css */
 a {
   &:not([href^="#"]) {
     text-decoration-thickness: 1px;
@@ -93,3 +95,5 @@ table {
     text-decoration-style: dotted;
   }
 }
+/*```
+<!--section--> */
