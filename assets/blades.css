@@ -218,15 +218,15 @@ h6 {
 
 ### List markers
 
-Use `data-marker="🥷"` helper attribute to customize list markers:
+Use inline `style="--list-marker:'🥷 '"` on `<ul>/<ol>` or even individual `<li>` to customize list markers:
 <article>
 
-- You can make
-- really {data-marker=❄️}
-- cool {data-marker=🥶}
-- markers {data-marker=🧊}
-- with Blades CSS {data-marker=🥷}
-- using `data-marker` helper attribute.
+- Customize
+- list
+- markers
+- with [Blades CSS](https://blades.ninja/css/) {style="--list-marker:'🥷 '"}
+
+{style="--list-marker:'🧊 '"}
 </article>
 
 How it works:
@@ -234,10 +234,23 @@ How it works:
 
 ul,
 ol {
+  &[style*="--list-marker:"] {
+    list-style-type: var(--list-marker);
+
+    > li {
+      list-style-type: inherit;
+    }
+  }
+
+  li[style*="--list-marker:"] {
+    list-style-type: var(--list-marker);
+  }
   li[data-marker]::marker {
+    /* ⚠️ `data-marker` works only in Chrome and Firefox */
     content: attr(data-marker) " ";
   }
 
+  /* Helper class to remove list styling at all */
   &.unlist {
     padding-inline-start: 0;
 
