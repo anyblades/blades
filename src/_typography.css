@@ -76,7 +76,7 @@ How it works:
 ul,
 ol {
   li[data-marker]::marker {
-    content: attr(data-marker) " ";
+    content: attr(data-marker) " "; /* ⚠️ Chrome and Firefox only #TODO fallback for other browsers */
   }
 
   &.unlist {
