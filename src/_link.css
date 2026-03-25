@@ -10,7 +10,7 @@ Wrap icons inside links using `<i>...&nbsp;</i>` helper to avoid underline:
   <article>After:<br>  <big><a href="https://github.com/anydigital/blades"><i>🥷&nbsp;</i>Blades</a></big></article>
 </div>
 
-Use `[data-has-favicon]` helper on plain-text links containing `<img>`-favicons for better alignment:
+Use `data-has-favicon` helper attribute on plain-text links containing `<img>`-favicons for better alignment:
 
 <article>
 
