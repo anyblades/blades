@@ -115,13 +115,7 @@ That's it! Now you can use HTML blades in your templates like this:
 
 </details>
 
-<!--section:gh-only-->
-
 ---
-
-<!--section:appendix-->
-
-<hgroup><small>Old-school</small><h2>Jekyll blades</h2><p></p></hgroup>
 
 All CSS and HTML blades above are available as a Jekyll theme:
 
@@ -143,7 +137,11 @@ Or use a preconfigured template:
 
 [🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">Jekyll ⁺ Pico ⁺ Blades</small>](https://github.com/anydigital/bladeswitch)<!--{role=button .outline}-->
 
+<!--section:gh-only-->
+
 ---
+
+<!--section:appendix-->
 
 - Featured by:
   - https://github.com/uhub/awesome-css
