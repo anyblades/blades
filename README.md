@@ -19,13 +19,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 
 <!--section:index-->
 
-<hgroup id="css"><small>Class-light</small>
-
-## [CSS blades](https://blades.ninja/css/)
-
-inspired by Pico.css
-
-</hgroup>
+## <sup>Class-light</sup><br> [CSS blades](https://blades.ninja/css/) <br><sub>inspired by Pico.css</sub> <!--{#css}-->
 
 <!-- copy-paste of ToC from https://blades.ninja/css/ -->
 <ul class="unlist columns">
@@ -76,13 +70,7 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
 
 ---
 
-<hgroup><small>Nunjucks / Liquid</small>
-
-## [HTML blades](https://blades.ninja/html/)
-
-for 11ty/Build Awesome, Jekyll, etc.
-
-</hgroup>
+## <sup>Nunjucks / Liquid</sup><br> [HTML blades](https://blades.ninja/html/) <br><sub>for 11ty/Build Awesome, Jekyll, etc.</sub>
 
 - [Base HTML](https://blades.ninja/html/#base) <!--{data-marker=🥷}-->
 - [Links](https://blades.ninja/html/#links)
