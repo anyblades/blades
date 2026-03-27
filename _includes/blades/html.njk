@@ -9,7 +9,7 @@
       {{- title | string | striptags ~ ' | ' if title -}}
       {{- site.title -}}
     </title>
-    <meta name="description" content="{{ description | d(site.description) }}" />
+    <meta name="description" content="{{ summary }}" />
 
     {%- for href in site.styles %}
       <link rel="stylesheet" href="{{ href }}" />
