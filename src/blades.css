@@ -6,7 +6,7 @@
 
 /* Content */
 @import "./_typography";
-@import "./_link";
+@import "./link-icon";
 @import "./_table";
 @import "./responsive-table";
 @import "./_code";
