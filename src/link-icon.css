@@ -13,7 +13,7 @@ a {
   /* Helper to handle [fav]icons in links */
   > i {
     font-style: normal;
-    float: left; /*                ✅ Chrome ❌ Safari */
+    float: left; /*                 ✅ Chrome ❌ Safari */
     text-underline-offset: -2em; /* ❌ Chrome ✅ Safari - to clip it with overflow-y */
 
     /* Favicons */
@@ -27,8 +27,7 @@ a {
     &[class^="fa-"],
     &[class*=" fa-"] {
       line-height: inherit;
-      margin-inline-start: -0.25ch;
-      margin-inline-end: -0.125ch; /* =1/8 */
+      margin-inline: -0.125ch; /* =1/8 */
     }
     &.fa-lg {
       line-height: normal;
