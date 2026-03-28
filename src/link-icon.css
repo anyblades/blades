@@ -39,7 +39,7 @@ a {
 
 <!--section:docs-->
 
-Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underlines. Compare:
+Use Blades' `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links. It automatically handles sizing and alignment while preventing underline on icons. Compare:
 
 ---
 
