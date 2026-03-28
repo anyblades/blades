@@ -24,15 +24,15 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 <!-- copy-paste of ToC from https://blades.ninja/css/ -->
 <ul class="unlist columns">
 <li><a href="https://blades.ninja/css/#install">Install</a></li>
-<li><a href="https://blades.ninja/css/#layout">Layout</a><ul><li><a href="https://blades.ninja/css/breakout/">🥷 Breakout elements →</a></li>
+<li><a href="https://blades.ninja/css/#layout">Layout</a><ul><li><a href="https://blades.ninja/css/breakout/"><i>🥷</i> Breakout elements →</a></li>
 <li><a href="https://blades.ninja/css/#landmarks">Landmarks</a></li>
 <li><a href="https://blades.ninja/css/#auto-columns">Auto-columns</a></li>
 <li><a href="https://blades.ninja/css/#jump-to-top">Jump to top</a></li></ul></li>
 <li><a href="https://blades.ninja/css/#content">Content</a><ul><li><a href="https://blades.ninja/css/#heading-anchors">Heading anchors</a></li>
 <li><a href="https://blades.ninja/css/#list-markers">List markers</a></li>
-<li><a href="https://blades.ninja/css/link-icon/">🥷 Link [fav]icons →</a></li>
+<li><a href="https://blades.ninja/css/link-icon/"><i>🥷</i> Link [fav]icons →</a></li>
 <li><a href="https://blades.ninja/css/#code">Code</a></li></ul></li>
-<li><a href="https://blades.ninja/css/#table">Table</a><ul><li><a href="https://blades.ninja/css/responsive-table/">🥷 Responsive table without wrapper →</a></li>
+<li><a href="https://blades.ninja/css/#table">Table</a><ul><li><a href="https://blades.ninja/css/responsive-table/"><i>🥷</i> Responsive table without wrapper →</a></li>
 <li><a href="https://blades.ninja/css/#horizontal-expanders">Horizontal expanders</a></li>
 <li><a href="https://blades.ninja/css/#borderless-table">Borderless table</a></li></ul></li>
 <li><a href="https://blades.ninja/css/#utilities">Utilities</a><ul><li><a href="https://blades.ninja/css/#auto-dark">Auto-dark</a></li>
