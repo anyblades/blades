@@ -30,7 +30,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 <li><a href="https://blades.ninja/css/#jump-to-top">Jump to top</a></li></ul></li>
 <li><a href="https://blades.ninja/css/#content">Content</a><ul><li><a href="https://blades.ninja/css/#heading-anchors">Heading anchors</a></li>
 <li><a href="https://blades.ninja/css/#list-markers">List markers</a></li>
-<li><a href="https://blades.ninja/css/#link-fav-icons">Link [fav]icons</a></li>
+<li><a href="https://blades.ninja/css/link-icon/">🥷 Link [fav]icons →</a></li>
 <li><a href="https://blades.ninja/css/#code">Code</a></li></ul></li>
 <li><a href="https://blades.ninja/css/#table">Table</a><ul><li><a href="https://blades.ninja/css/responsive-table/">🥷 Responsive table without wrapper →</a></li>
 <li><a href="https://blades.ninja/css/#horizontal-expanders">Horizontal expanders</a></li>
