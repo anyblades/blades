@@ -64,7 +64,7 @@ table {
 [data-jump-to="top"] {
   > i {
     display: inline-block;
-    padding: 0.25rem;
+    padding: 0.25rem 0.375rem;
     margin: 0.5rem;
     font-size: 0.75rem;
     color: black;

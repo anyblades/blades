@@ -37,13 +37,14 @@ h6 {
   position: relative;
 
   [data-is-anchor] {
-    visibility: hidden;
     position: absolute;
-    top: 0;
     right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
     padding-right: 0.2ch;
     color: silver;
     text-decoration: none;
+    visibility: hidden;
   }
   /* Avoid double-tap on touch devices */
   @media (hover: hover) {
