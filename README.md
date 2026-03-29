@@ -136,7 +136,7 @@ Or use a preconfigured template:
 
 - Featured by:
   - https://github.com/uhub/awesome-css
-  - 🕶️ [Awesome-CSS-Frameworks-and-UI-Libraries](https://github.com/gabrielizalo/Awesome-CSS-Frameworks-and-UI-Libraries/tree/master/Lightweight)
+  - 🕶️ [@gabrielizalo/awesome-css](https://github.com/gabrielizalo/Awesome-CSS-Frameworks-and-UI-Libraries/tree/master/Lightweight)
   - 🕶️ [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome)
   - [https://jekyll-themes.com/](https://jekyll-themes.com/anydigital/blades)
   - 🚀 [build-awesome-starter](https://github.com/anydigital/build-awesome-starter)
