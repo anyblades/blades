@@ -43,9 +43,9 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 </ul>
 
 <!--section:index,install-css-->
-<details><summary role="button" class="outline"><b>Install CSS blades</b></summary>
+<details><summary role="button" class="outline"><b>Install CSS blades</b> via CDN or npm</summary>
 
-<mark>Option A.</mark> From CDN:
+<mark>Via CDN:</mark>
 
 <!--prettier-ignore-->
 ```html
@@ -53,7 +53,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 <link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-alpha/assets/blades.theme.min.css" rel="stylesheet" /><!-- optional -->
 ```
 
-<mark>Option B.</mark> Via npm:
+<mark>Via npm:</mark>
 
 ```sh
 npm install @anydigital/blades
@@ -83,7 +83,7 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
 <!--{.columns}-->
 
 <!--section:index,install-html-->
-<details><summary role="button" class="outline"><b>Install HTML blades</b></summary>
+<details><summary role="button" class="outline"><b>Install HTML blades</b> via npm</summary>
 
 ```sh
 npm install @anydigital/blades
@@ -93,12 +93,16 @@ ln -s ../node_modules/@anydigital/blades/_includes/blades
 
 That's it! Now you can use HTML blades in your templates like this:
 
-```jinja2 {data-caption=Nunjucks}
+<mark>In Nunjucks:</mark>
+
+```jinja2
 {% extends 'blades/html.njk' %}
 {% include 'blades/gtm.njk' %}
 ```
 
-```liquid {data-caption=Liquid}
+<mark>In Liquid:</mark>
+
+```liquid
 {% include blades/html.liquid %}
 {% include blades/gtm.liquid for_body=true %}
 {% render blades/links, links: site.links, current_url: page.url %}
