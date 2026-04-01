@@ -518,11 +518,16 @@ code {
 
 /* Forms */
 
+/* Moved here from https://github.com/anydigital/float-label-css
+<!--section:code-->
+```css */
+
 label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
 .has-float-label {
   display: block;
   position: relative;
 
+  /* Default/fallback state when float label is minimized */
   > span,
   label {
     position: absolute;
@@ -530,37 +535,44 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
     top: 0;
     cursor: text;
     font-size: 75%;
-    opacity: 1;
-    transition: all 0.2s;
-    padding-inline-start: calc(1rem + 1px); /* match Pico's padding + border */
-    padding-block-start: 0.25rem;
   }
 
-  input:not([type="checkbox"], [type="radio"], [type="range"]),
-  textarea,
-  select {
-    margin-block-start: 0;
-    padding-inline-start: 1rem; /* match Pico */
-    padding-block: 1.125rem 0.375rem; /* match Pico's total: 2 x 0.75rem = 1.5rem */
-
-    &::placeholder {
-      opacity: 1;
-      transition: all 0.2s;
-    }
-    &:placeholder-shown:not(:focus)::placeholder {
-      opacity: 0;
-    }
+  /* Modern browser ? enlarge float label instead of placeholder : otherwise, code below is ignored in favor of default state above */
+  *:placeholder-shown:not(:focus)::placeholder {
+    opacity: 0;
   }
-
-  &:has(:placeholder-shown:not(:focus)) {
+  &:has(*:placeholder-shown:not(:focus)) {
     > span,
     label {
       font-size: inherit;
-      opacity: 0.5;
-      padding-block: 0.75rem; /* match Pico */
+      opacity: 50%;
     }
   }
 }
+
+/*```
+<!--section:docs-->
+
+<form>
+  <label>
+    <span>Name</span>
+    <input placeholder="First Last"/>
+  </label>
+  <label>
+    <span>Bio</span>
+    <textarea placeholder="Write a professional short bio..."></textarea>
+  </label>
+  <label>
+    <span>Cuisine</span>
+    <select>
+      <option selected disabled value="">Select your favorite cuisine...</option>
+      <option>Italian</option><option>Japanese</option><option>Indian</option><option>Thai</option><option>French</option>
+    </select>
+  </label>
+  <input type="submit" value="Subscribe"/>
+</form>
+
+<!--section--> */
 
 /* Utilities */
 
