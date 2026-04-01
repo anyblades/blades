@@ -12,7 +12,7 @@
 @import "./_code";
 
 /* Forms */
-@import "./float-label";
+@import "./float-label.core";
 
 /* Utilities */
 @import "./_utilities";
