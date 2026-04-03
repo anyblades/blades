@@ -21,7 +21,6 @@
 
 <!-- copy-paste of ToC from https://blades.ninja/css/ -->
 <ul class="unlist columns">
-<li><a href="https://blades.ninja/css/#install">Install</a></li>
 <li><a href="https://blades.ninja/css/#layout">Layout</a><ul><li><a href="https://blades.ninja/css/breakout/"><i>🥷</i> Breakout elements</a></li>
 <li><a href="https://blades.ninja/css/#auto-columns">Auto-columns</a></li>
 <li><a href="https://blades.ninja/css/#jump-to-top">Jump to top</a></li></ul></li>
