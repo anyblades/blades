@@ -11,15 +11,13 @@
 
 <!--section:gh-only-->
 
-Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
-
 [![](https://img.shields.io/badge/Demo_&_Docs-darkslategray?style=for-the-badge)](https://blades.ninja/)
 
 ---
 
-## <sup>Class-light</sup><br> [CSS blades](https://blades.ninja/css/) <br><sub>inspired by Pico.css</sub> <!--{#css}-->
+## Documentation
 
-<!--section:css-->
+<!--section:docs-->
 
 <!-- copy-paste of ToC from https://blades.ninja/css/ -->
 <ul class="unlist columns">
@@ -42,14 +40,19 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 <li><a href="https://blades.ninja/css/#unreduce-motion">Unreduce motion</a></li></ul></li>
 <li><a href="https://blades.ninja/css/#theme-optional">Theme (optional)</a></li></ul>
 
-<!--section:css,css-install-->
-<details><summary role="button" class="outline"><b>Install CSS blades</b> via CDN or npm</summary>
+---
+
+## Install
+
+<!--section:docs,install-->
 
 <mark>Via CDN:</mark>
 
 <!--prettier-ignore-->
 ```html
-<link href="https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-beta/assets/blades.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="
+  https://cdn.jsdelivr.net/npm/@anydigital/blades@^0.27.0-beta/assets/blades.min.css
+">
 ```
 
 <mark>Via npm:</mark>
@@ -58,7 +61,7 @@ Nunjucks/Liquid batteries included (for 11ty/Build Awesome, Jekyll, etc.) 🥷
 npm install @anydigital/blades
 ```
 
-Then in your .css:
+Then in your `.css`:
 
 ```css
 @import "@anydigital/blades";
@@ -66,80 +69,18 @@ Then in your .css:
 
 Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_styles/styles.css
 
-</details>
-<!--section:gh-only-->
+<mark>Preconfigured:</mark>
+
+- 11ty: https://github.com/anydigital/build-awesome-starter
+- Jekyll: https://github.com/anydigital/bladeswitch or [as a theme](https://blades.ninja/jekyll/#install)
+
+##### Default theme <small>(optional)</small>
+
+`blades.css` includes default minimal styling; use `blades.core.css` to opt out.
+
+<!--section:docs-->
 
 ---
-
-<!--section:html-->
-
-## <sup>Nunjucks / Liquid</sup><br> [HTML blades](https://blades.ninja/html/) <br><sub>for 11ty/Build Awesome, Jekyll, etc.</sub>
-
-- [Base HTML](https://blades.ninja/html/#base) <!--{data-marker=🥷}-->
-- [Links](https://blades.ninja/html/#links)
-- [Sitemap](https://blades.ninja/html/#sitemap)
-- [Google Tag Manager](https://blades.ninja/html/#gtm)
-
-<!--{.columns}-->
-
-<!--section:html,html-install-->
-<details><summary role="button" class="outline"><b>Install HTML blades</b> via npm</summary>
-
-```sh
-npm install @anydigital/blades
-cd ./_includes  # your includes dir
-ln -s ../node_modules/@anydigital/blades/_includes/blades
-```
-
-That's it! Now you can use HTML blades in your templates like this:
-
-<mark>In Nunjucks:</mark>
-
-```jinja2
-{% extends 'blades/html.njk' %}
-{% include 'blades/gtm.njk' %}
-```
-
-<mark>In Liquid:</mark>
-
-```liquid
-{% include blades/html.liquid %}
-{% include blades/gtm.liquid for_body=true %}
-{% render blades/links, links: site.links, current_url: page.url %}
-```
-
-</details>
-<!--section:gh-only-->
-
----
-
-<!--section:jekyll-->
-
-All [CSS](https://blades.ninja/css/) and [HTML](https://blades.ninja/html/) blades are available as a Jekyll theme:
-
-<details><summary role="button" class="outline"><b>Install as Jekyll theme</b></summary>
-
-In you `_config.yml`:
-
-```yaml
-remote_theme: anydigital/blades@v0.27.0-beta # or latest
-plugins:
-  - jekyll-remote-theme
-```
-
-Living example: https://github.com/anydigital/bladeswitch/blob/main/_config.yml
-
-</details>
-
-Or use a preconfigured template:
-
-[🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">Jekyll ⁺ Pico ⁺ Blades</small>](https://github.com/anydigital/bladeswitch)<!--{role=button .outline}-->
-
-<!--section:gh-only-->
-
----
-
-<!--section:appendix-->
 
 - Featured by:
   - https://github.com/uhub/awesome-css
