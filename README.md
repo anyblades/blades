@@ -91,7 +91,7 @@ Living example: https://github.com/anydigital/build-awesome-starter/blob/main/_s
   - 🕶️ [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome)
   - [https://11tybundle.dev/](https://11tybundle.dev/showcase/)
   - [https://jekyll-themes.com/](https://jekyll-themes.com/anydigital/blades)
-  - https://sveltiacms.app/en/docs/start Sveltia CMS
+  - [https://sveltiacms.app/](https://sveltiacms.app/en/docs/start#starter-templates)
   - https://github.com/anydigital/build-awesome-starter
   - https://github.com/anydigital/bladeswitch starter
 - Showcase:
