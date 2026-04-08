@@ -14,7 +14,7 @@
 
 ## Documentation
 
-<!--section:docs-->
+<!--section:docs,toc-->
 
 <!-- copy-paste of ToC from https://blades.ninja/css/ -->
 <ul class="unlist columns">
@@ -35,6 +35,8 @@
 <li><a href="https://blades.ninja/css/#invert">Invert</a></li>
 <li><a href="https://blades.ninja/css/#unreduce-motion">Unreduce motion</a></li></ul></li>
 </ul>
+
+<!--section:docs-->
 
 ---
 

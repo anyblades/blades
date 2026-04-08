@@ -300,7 +300,7 @@ a {
     /* Favicons */
     > img {
       height: 1.25em;
-      margin-block: calc(-0.25em / 2);
+      margin-block-start: calc(-0.25em / 2);
       display: inline-block; /* for Tailwind CSS Typography */
     }
 
