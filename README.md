@@ -1,7 +1,6 @@
+# 🥷 Blades <sup>![](https://img.shields.io/github/v/release/anyblades/blades?label=&color=black&include_prereleases)</sup>
+
 <!--section:summary-->
-<h1 class="dark-auto">
-  🥷 Blades <sup><img src="https://img.shields.io/github/v/release/anyblades/blades?label=&color=black&include_prereleases"></sup>
-</h1>
 
 <hgroup>Framework-agnostic,<wbr> class-light CSS<a href="https://blades.ninja/html/" style="padding: 0"><i>⁺</i></a> blade kit.</hgroup>
 
