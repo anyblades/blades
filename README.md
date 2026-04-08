@@ -69,6 +69,7 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 <mark>Preconfigured:</mark>
 
+- Pico: https://github.com/anyblades/pico
 - 11ty: https://github.com/anyblades/build-awesome-starter
 - Jekyll: https://github.com/anyblades/bladeswitch or [as a theme](https://blades.ninja/jekyll/#install)
 
