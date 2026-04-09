@@ -7,8 +7,7 @@
     ".": "./src/blades.css",
     "./core": "./src/blades.core.css",
     "./theme": "./src/blades.theme.css",
-    "./float-label": "./src/float-label.css",
-    "./unreduce-motion": "./src/_unreduce-motion.css"
+    "./float-label": "./src/float-label.css"
   },
   "scripts": {
     "postcss": "postcss './src/!(_)*.css' --dir ./assets",
