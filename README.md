@@ -87,13 +87,14 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 - Featured by:
   - https://github.com/uhub/awesome-css
-  - 🕶️ [awesome-css-frameworks](https://github.com/gabrielizalo/Awesome-CSS-Frameworks-and-UI-Libraries/tree/master/Lightweight)
-  - 🕶️ [awesome-eleventy](https://github.com/anydigital/awesome-11ty-build-awesome)
+  - https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/lightweight
+  - https://github.com/anydigital/awesome-11ty-build-awesome
   - [https://11tybundle.dev/](https://11tybundle.dev/showcase/)
   - [https://jekyll-themes.com/](https://jekyll-themes.com/anyblades/blades)
   - [https://sveltiacms.app/](https://sveltiacms.app/en/docs/start#starter-templates)
-  - https://github.com/anyblades/build-awesome-starter
-  - https://github.com/anyblades/bladeswitch starter
+  - ✨ [pico.css](https://github.com/anyblades/pico) community fork
+  - 🚀 [build-awesome-starter](https://github.com/anyblades/build-awesome-starter)
+  - 🚀 [bladeswitch](https://github.com/anyblades/bladeswitch) starter
 - Showcase:
   - https://any.digital/ (Pico + Blades)
   - https://build.blades.ninja/ (Tailwind + Blades)
