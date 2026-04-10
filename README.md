@@ -89,7 +89,7 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
   - https://github.com/uhub/awesome-css
   - https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/lightweight
   - https://github.com/anydigital/awesome-11ty-build-awesome
-  - [https://11tybundle.dev/](https://11tybundle.dev/showcase/)
+  - https://11tybundle.dev/blog/11ty-bundle-88/
   - [https://jekyll-themes.com/](https://jekyll-themes.com/anyblades/blades)
   - [https://sveltiacms.app/](https://sveltiacms.app/en/docs/start#starter-templates)
   - ✨ [pico.css](https://github.com/anyblades/pico) community fork
