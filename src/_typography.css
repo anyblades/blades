@@ -100,11 +100,16 @@ ol {
 
 Helper class to remove list styling at all:
 ```css */
-.unlist {
-  padding-inline-start: 0;
+ul,
+ol {
+  &.unlist,
+  &.unlist-all,
+  .unlist-all & {
+    padding-inline-start: 0;
 
-  > li {
-    list-style: none;
+    > li {
+      list-style: none;
+    }
   }
 }
 /*```

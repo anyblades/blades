@@ -16,25 +16,26 @@
 
 <!--section:docs,toc-->
 
-<!-- copy-paste of ToC from https://blades.ninja/css/ -->
+<!--
+1. copy-paste ToC from https://blades.ninja/css/
+2. replace `href="` => `href="https://blades.ninja`
+-->
 <ul class="unlist columns">
-<li><a href="https://blades.ninja/css/#layout">Layout</a><ul><li><a href="https://blades.ninja/css/breakout/"><i>🥷</i> Breakout elements</a></li>
-<li><a href="https://blades.ninja/css/#auto-columns">Auto-columns</a></li>
-<li><a href="https://blades.ninja/css/#jump-to-top">Jump to top</a></li></ul></li>
-<li><a href="https://blades.ninja/css/#content">Content</a><ul><li><a href="https://blades.ninja/css/link-icon/"><i>🥷</i> Link [fav]icons</a></li>
-<li><a href="https://blades.ninja/css/#heading-anchors">Heading anchors</a></li>
-<li><a href="https://blades.ninja/css/#list-markers">List markers</a></li>
-<li><a href="https://blades.ninja/css/#unlist">Unlist</a></li>
-<li><a href="https://blades.ninja/css/#code">Code</a></li></ul></li>
-<li><a href="https://blades.ninja/css/#table">Table</a><ul><li><a href="https://blades.ninja/css/responsive-table/"><i>🥷</i> Responsive table without wrapper</a></li>
-<li><a href="https://blades.ninja/css/#horizontal-expanders">Horizontal expanders</a></li>
-<li><a href="https://blades.ninja/css/#borderless-table">Borderless table</a></li></ul></li>
-<li><a href="https://blades.ninja/css/#forms">Forms</a><ul><li><a href="https://blades.ninja/css/float-label/"><i>🥷</i> Float label without CSS classes</a></li></ul></li>
-<li><a href="https://blades.ninja/css/#utilities">Utilities</a><ul><li><a href="https://blades.ninja/css/#auto-dark">Auto-dark</a></li>
-<li><a href="https://blades.ninja/css/#faded">Faded</a></li>
-<li><a href="https://blades.ninja/css/#invert">Invert</a></li>
-<li><a href="https://blades.ninja/css/#unreduce-motion">Unreduce motion</a></li></ul></li>
-</ul>
+<li><a href="https://blades.ninja#layout" tabindex="-1">Layout</a><ul><li><a href="https://blades.ninja/css/breakout/" tabindex="-1">Breakout elements →</a></li>
+<li><a href="https://blades.ninja#auto-columns" tabindex="-1">Auto-columns</a></li>
+<li><a href="https://blades.ninja#jump-to-top" tabindex="-1">Jump to top</a></li></ul></li>
+<li><a href="https://blades.ninja#content" tabindex="-1">Content</a><ul><li><a href="https://blades.ninja/css/link-icon/" tabindex="-1">Link [fav]icons →</a></li>
+<li><a href="https://blades.ninja#heading-anchors" tabindex="-1">Heading anchors</a></li>
+<li><a href="https://blades.ninja#list-markers" tabindex="-1">List markers</a></li>
+<li><a href="https://blades.ninja#unlist" tabindex="-1">Unlist</a></li>
+<li><a href="https://blades.ninja#code" tabindex="-1">Code</a></li></ul></li>
+<li><a href="https://blades.ninja#table" tabindex="-1">Table</a><ul><li><a href="https://blades.ninja/css/responsive-table/" tabindex="-1">Responsive table without wrapper →</a></li>
+<li><a href="https://blades.ninja#horizontal-expanders" tabindex="-1">Horizontal expanders</a></li>
+<li><a href="https://blades.ninja#borderless-table" tabindex="-1">Borderless table</a></li></ul></li>
+<li><a href="https://blades.ninja#forms" tabindex="-1">Forms</a><ul><li><a href="https://blades.ninja/css/float-label/" tabindex="-1">Float label without CSS classes →</a></li></ul></li>
+<li><a href="https://blades.ninja#utilities" tabindex="-1">Utilities</a><ul><li><a href="https://blades.ninja#auto-dark" tabindex="-1">Auto-dark</a></li>
+<li><a href="https://blades.ninja#faded" tabindex="-1">Faded</a></li>
+<li><a href="https://blades.ninja#invert" tabindex="-1">Invert</a></li></ul></li></ul>
 
 <!--section:docs-->
 
@@ -100,8 +101,9 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
   - https://build.blades.ninja/ (Tailwind + Blades)
   - https://bladeswitch.com/ (Pico + Blades)
   - https://minform.hostfurl.com/ (Pico + Blades)
+
 - Credits:
   - https://picocss.com/ for inspiration
   - https://11ty.dev/ for build power
 
-<!--{.unlist .columns}-->
+<!--{.unlist-all .columns}-->
