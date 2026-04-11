@@ -12,7 +12,7 @@
 
 <!--section:docs-->
 
-## [Docs & Demos <i><small>→</small></i>](https://blades.ninja/css/)
+## [Docs & demos <i><small>→</small></i>](https://blades.ninja/css/)
 
 <!--section:docs,toc-->
 <!--
