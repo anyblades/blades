@@ -1,7 +1,5 @@
-/*
-<!--section:docs-->
-### Code
-Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
+<!--section:code-->
 ```css */
 pre {
   padding: 1rem 1.5rem;
@@ -44,4 +42,12 @@ code {
   }
 }
 /*```
+<!--section:docs-->
+### Code
+
+The `<pre><code>` blocks are Prism-compatible and can have a `data-caption` attribute to display a caption:
+
+```css {data-caption=your.css}
+@import "@anyblades/blades";
+```
 <!--section--> */
