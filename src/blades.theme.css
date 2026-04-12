@@ -2,7 +2,15 @@
 ```css */
 @import "./float-label.theme";
 
+html {
+  /* Prevent horizontal overflow and scrolling, modern way. */
+  overflow-x: clip;
+}
+
 body {
+  /* Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support). */
+  min-height: 100dvh;
+
   /* Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts. */
   display: flex;
   flex-direction: column;

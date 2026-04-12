@@ -1,17 +1,4 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-<!--section:docs-intro-->
-
-Global styles:
-```css */
-html {
-  /* Prevent horizontal overflow and scrolling, modern way. */
-  overflow-x: clip;
-}
-body {
-  /* Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support). */
-  min-height: 100dvh;
-}
-/*```
 <!--section:docs-->
 
 ### Auto-columns
