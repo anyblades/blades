@@ -39,7 +39,7 @@ h5,
 h6 {
   position: relative;
 
-  [data-is-anchor] {
+  a[href^="#"] {
     position: absolute;
     right: 100%;
     top: 50%;
@@ -49,10 +49,9 @@ h6 {
     text-decoration: none;
     visibility: hidden;
   }
-  /* Avoid double-tap on touch devices */
-  @media (hover: hover) {
+  @media /* to avoid double-tap on touch devices */ (hover: hover) {
     &:hover {
-      [data-is-anchor] {
+      a[href^="#"] {
         visibility: visible;
       }
     }
