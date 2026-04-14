@@ -85,6 +85,17 @@ ol {
 ### Unlist
 
 Helper class to remove list styling at all:
+
+<article>
+
+- One: <article>1</article>
+- Two: <article>2</article>
+- Three: <article>3</article>
+
+{.unlist .grid style=margin:0}
+</article>
+
+<details>How it works:
 ```css */
 ul,
 ol {
@@ -99,4 +110,5 @@ ol {
   }
 }
 /*```
+</details>
 <!--section--> */
