@@ -81,6 +81,11 @@ table {
 }
 
 [data-jump-to="top"] {
+  opacity: 25%;
+  &:hover {
+    opacity: 75%;
+  }
+
   > i {
     display: inline-block;
     padding: 0.25rem 0.375rem;
