@@ -5,41 +5,54 @@
 
 `.dark-auto` automatically creates a simple dark version of any element:
 
-<article class="dark-auto">
-  <button>Default button</button>
-  <button class="contrast">Contrast button</button>
+<article data-theme="dark">
+  <p>Look how cool <big class="dark-auto">🔥🕷️🐦‍⬛🐄🦓</big> can look in the dark!</p>
 </article>
 
 <details>How it works:
 ```css */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    .dark-auto {
-      filter: invert(100%) hue-rotate(180deg);
-    }
+/* Per https://picocss.com/docs/css-variables#css-variables-for-color-schemes */
+:root {
+  --blades-dark-filter: invert(100%) hue-rotate(180deg);
+}
+.dark-auto {
+  /* Dark color scheme (Auto) */
+  @media (prefers-color-scheme: dark) {
+    filter: var(--blades-dark-filter);
+  }
+  /* Dark color scheme (Forced) */
+  &[data-theme="dark"],
+  &:where([data-theme="dark"] *) {
+    filter: var(--blades-dark-filter);
   }
 }
 /*```
 </details>
 
 ### Faded
+
+`.faded` reduces the opacity of an element:
+
+<article class="faded">
+  Hover to unfade me!
+</article>
+
+<details>How it works:
 ```css */
 .faded {
   opacity: 50%;
+
   &:hover {
     opacity: 87.5%;
   }
 }
 /*```
+</details>
+<!--section--> */
 
-### Invert
-```css */
-/* Extends https://tailwindcss.com/docs/filter-invert */
+/* Fix the scrollbar color when inverted by https://tailwindcss.com/docs/filter-invert */
 .invert {
-  /* Fix the scrollbar color when inverted */
   ::-webkit-scrollbar {
     filter: invert(1) !important;
   }
 }
-/*```
-<!--section--> */
