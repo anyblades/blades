@@ -2,6 +2,15 @@
 <!--section:docs-->
 
 ### Auto-dark
+
+`.dark-auto` automatically creates a simple dark version of any element:
+
+<article class="dark-auto">
+  <button>Default button</button>
+  <button class="contrast">Contrast button</button>
+</article>
+
+How it works:
 ```css */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
