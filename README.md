@@ -30,7 +30,8 @@
 <li><a href="/css/#borderless-table" tabindex="-1">Borderless table</a></li></ul></li>
 <li><a href="/css/#forms" tabindex="-1">Forms</a><ul><li><a href="/css/#float-label">Float label CSS</a></li></ul></li>
 <li><a href="/css/#utilities" tabindex="-1">Utilities</a><ul><li><a href="/css/#auto-dark" tabindex="-1">Auto-dark</a></li>
-<li><a href="/css/#faded" tabindex="-1">Faded</a></li></ul></li></ul>
+<li><a href="/css/#faded" tabindex="-1">Faded</a></li></ul></li>
+<li><a href="/css/#appendix" tabindex="-1">Appendix</a><ul><li><a href="/css/#pico">Pico CSS ✨</a></li></ul></li></ul>
 <!--section:gh-only-->
 
 ---
