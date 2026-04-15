@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+{# Based on https://github.com/11ty/eleventy-base-blog/blob/main/content/sitemap.xml.njk
+<!--section:code-->```jinja2 #}<?xml
+version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {%- for page in collections.all %}
     {% if page.data.permalink != false %}
@@ -9,4 +11,15 @@
     {% endif %}
   {%- endfor %}
 </urlset>
-{# https://github.com/11ty/eleventy-base-blog/blob/main/content/sitemap.xml.njk #}
+{#```
+<!--section:docs-->
+Usage example for https://github.com/11ty/eleventy-plugin-rss:
+```jinja2 {data-caption=sitemap.xml.njk}
+---
+permalink: /sitemap.xml
+layout: false
+eleventyExcludeFromCollections: true
+---
+{% include 'blades/sitemap.xml.njk' %}
+```
+<!--section--> #}

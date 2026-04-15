@@ -29,12 +29,9 @@
     </script>
 
     {{ content_for_header }}
-    {% include blades/gtm.liquid %}
   </head>
 
   <body>
-    {% include blades/gtm.liquid for_body=true %}
-
     {{ body }}
   </body>
 </html>

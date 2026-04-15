@@ -12,16 +12,10 @@
 {% # prettier-ignore %}
 {% comment %}```
 <!--section:docs-->
-Usage with [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually):
+Usage example for https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually:
 
 ```liquid
 {% assign links = collections.all | eleventyNavigation %}
 {% render blades/links, links: links, current_url: page.url %}
-```
-
-Usage inside Pico's Navar:
-
-```jinja2
-TBD
 ```
 <!--section-->{% endcomment %}
