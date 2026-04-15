@@ -1,5 +1,1 @@
-module.exports = {
-  plugins: {
-    "postcss-import": {},
-  },
-};
+node_modules/@anyblades/pico/css/postcss.config.js
