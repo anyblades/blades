@@ -6,7 +6,7 @@
 
 <big>Use with Pico, Simple, Tailwind, or any other CSS reset/framework.</big>
 
-![](https://img.shields.io/github/v/release/anyblades/blades?label=&color=darkslategray&style=for-the-badge&include_prereleases)
+![](https://img.shields.io/github/v/release/anyblades/blades?label=&color=darkslategray&style=for-the-badge)
 [![](https://img.shields.io/badge/Code-gainsboro?logo=github&logoColor=black&style=for-the-badge)](https://github.com/anyblades/blades)
 [![](https://img.shields.io/github/stars/anyblades/blades?label=Star&labelColor=gainsboro&color=silver&style=for-the-badge)](https://github.com/anyblades/blades)
 
