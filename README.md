@@ -12,7 +12,7 @@
 
 <!--section:docs-->
 
-## [Docs & demos <i><small>→</small></i>](https://blades.ninja/css/)
+## [Documentation <i><small>→</small></i>](https://blades.ninja/css/)
 
 <!--section:docs,toc-->
 <!-- ToC from https://blades.ninja/css/ with `href="/css/#` instead of `href="#` -->
@@ -31,7 +31,9 @@
 <li><a href="/css/#forms" tabindex="-1">Forms</a><ul><li><a href="/css/#float-label">Float label CSS</a></li></ul></li>
 <li><a href="/css/#utilities" tabindex="-1">Utilities</a><ul><li><a href="/css/#auto-dark" tabindex="-1">Auto-dark</a></li>
 <li><a href="/css/#faded" tabindex="-1">Faded</a></li></ul></li>
-<li><a href="/css/#appendix" tabindex="-1">Appendix</a><ul><li><a href="/css/#pico">Pico CSS <i>✨</i></a></li></ul></li></ul>
+<li><a href="/css/#more" tabindex="-1">More</a><ul><li><a href="/css/#pico">Pico+Blades CSS ✨🥷</a></li>
+<li><a href="/css/#html">Blades HTML templates</a></li>
+<li><a href="/css/#jekyll">Blades for Jekyll</a></li></ul></li></ul>
 <!--section:gh-only-->
 
 ---
@@ -91,20 +93,15 @@ https://bladeswitch.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 [<i class="fa-solid fa-plus faded"></i>](https://github.com/anyblades/blades/edit/main/README.md)<!--{data-tooltip="add yours!" data-placement=bottom}-->
 
-</article><br>
+</article>
 
-##### Featured by:
+##### Featured by: <!--A-Z-->
 
-- https://github.com/uhub/awesome-css
-- https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/lightweight
-- https://github.com/anyblades/awesome-11ty-build-awesome
-- https://11tybundle.dev/blog/11ty-bundle-88/
-- [https://jekyll-themes.com/](https://jekyll-themes.com/anyblades/blades)
-- [https://sveltiacms.app/](https://sveltiacms.app/en/docs/start#starter-templates)
-- ✨ [pico.css](https://github.com/anyblades/pico) community fork
-- 🚀 [build-awesome-starter](https://github.com/anyblades/build-awesome-starter)
-- 🚀 [bladeswitch](https://github.com/anyblades/bladeswitch) starter
-- https://fosstodon.org/@pauleveritt/116387278969347700
+- [https://fosstodon.org/@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
+- [https://github.com/@gabrielizalo/awesome-css](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
+- [https://github.com/@uhub/awesome-css](https://github.com/uhub/awesome-css)
+- [https://github.com/awesome-11ty-build-awesome](https://github.com/anyblades/awesome-11ty-build-awesome)
+- [https://sveltiacms.app/docs/start](https://sveltiacms.app/en/docs/start#starter-templates)
 
 <!--{.unlist .columns}-->
 
