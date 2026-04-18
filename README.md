@@ -10,16 +10,12 @@
 [![](https://img.shields.io/badge/Code-gainsboro?logo=github&logoColor=black&style=for-the-badge)](https://github.com/anyblades/blades)
 [![](https://img.shields.io/github/stars/anyblades/blades?label=Star&labelColor=gainsboro&color=silver&style=for-the-badge)](https://github.com/anyblades/blades)
 
-<!--section:docs-->
+<!--section:gh-only-->
 
-## [Documentation <i><small>→</small></i>](https://blades.ninja/css/)
+## [Documentation ↗](https://blades.ninja/css/)
 
-<!--section:docs,toc-->
-<!-- ToC from https://blades.ninja/css/ with replaced:
-href="#
-href="https://blades.ninja/css/#
--->
-<ul class="columns"><li><a href="https://blades.ninja/css/#install" tabindex="-1">Install</a></li>
+<!-- ToC from https://blades.ninja/#documentation -->
+<ul class="columns"><li><a href="https://blades.ninja/css/#install" tabindex="-1">Install</a></li><p></p>
 <li><a href="https://blades.ninja/css/#layout" tabindex="-1">Layout</a><ul><li><a href="https://blades.ninja/css/#breakout">Breakout layout</a></li>
 <li><a href="https://blades.ninja/css/#auto-columns" tabindex="-1">Auto-columns</a></li>
 <li><a href="https://blades.ninja/css/#jump-to-top" tabindex="-1">Jump to top</a></li></ul></li>
@@ -35,15 +31,14 @@ href="https://blades.ninja/css/#
 <li><a href="https://blades.ninja/css/#utilities" tabindex="-1">Utilities</a><ul><li><a href="https://blades.ninja/css/#auto-dark" tabindex="-1">Auto-dark</a></li>
 <li><a href="https://blades.ninja/css/#faded" tabindex="-1">Faded</a></li></ul></li>
 <li><a href="https://blades.ninja/css/#more" tabindex="-1">More</a><ul><li><a href="https://blades.ninja/css/#pico">Pico+Blades CSS ✨🥷</a></li>
-<li><a href="https://blades.ninja/css/#html">Blades HTML templates</a></li>
+<li><a href="https://blades.ninja/css/#html">Blades HTML</a></li>
 <li><a href="https://blades.ninja/css/#jekyll">Blades for Jekyll</a></li></ul></li></ul>
-<!--section:gh-only-->
 
 ---
 
-## Install
-
 <!--section:install-->
+
+## Install
 
 ###### <mark>Via CDN</mark>
 
@@ -68,21 +63,17 @@ Then in your `.css`:
 
 Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_styles/styles.css
 
-<!--section:install,install-preconf-->
-
 ###### <mark>Preconfigured</mark>
 
 - Pico: https://github.com/anyblades/pico
 - 11ty: https://github.com/anyblades/build-awesome-starter
 - Jekyll: https://github.com/anyblades/bladeswitch or [as a theme](https://blades.ninja/jekyll/#install)
 
-<!--section:install-->
-
 ###### Theme <small>(optional)</small>
 
 `blades.css` includes default minimal styling; use `blades.core.css` to opt-out.
 
-<!--section:docs-->
+<!--section:info-->
 
 ---
 
