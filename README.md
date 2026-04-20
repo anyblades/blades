@@ -4,7 +4,7 @@
 
 <hgroup>Framework-agnostic,<wbr> class-light CSS<a href="https://blades.ninja/html/" style="padding: 0"><i>⁺</i></a> blade kit.</hgroup>
 
-<big>Use with Pico, Simple, Tailwind, or any other CSS reset/framework.</big>
+<big>Use with Tailwind, Pico, Simple, or any other CSS reset/framework.</big>
 
 ![](https://img.shields.io/github/v/release/anyblades/blades?label=&color=darkslategray&style=for-the-badge)
 [![](https://img.shields.io/badge/Code-gainsboro?logo=github&logoColor=black&style=for-the-badge)](https://github.com/anyblades/blades)
