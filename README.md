@@ -75,9 +75,11 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 <!--section:info-->
 
+## Info <!--{hidden}-->
+
 ---
 
-## Showcase
+### Showcase
 
 <article class="breakout-item-max"><!--A-Z-->
 
@@ -90,7 +92,7 @@ https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 
 </article>
 
-##### Featured by: <!--A-Z-->
+### Featured by <!--A-Z-->
 
 - [https://fosstodon.org/@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [https://github.com/@gabrielizalo/awesome-css](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
@@ -101,7 +103,7 @@ https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
 
 <!--{.unlist .columns}-->
 
-##### Credits:
+### Credits
 
 - https://picocss.com/ for inspiration
 - https://11ty.dev/ for build power
