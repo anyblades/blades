@@ -20,7 +20,7 @@ Useful for tables of contents and long lists.
 <details>How it works:
 ```css */
 .columns {
-  columns: 30ch auto; /* 2 cols max for 65ch container */
+  columns: 25ch auto; /* common container 65ch / 25ch => 2 columns max, with a buffer for list paddings */
 
   /* Avoid breaking inside elements, such as nested lists */
   > * {
