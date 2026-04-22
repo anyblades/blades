@@ -91,8 +91,6 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 - https://picocss.com/ for inspiration
 - https://11ty.dev/ for build power
 
-<!--{.unlist .columns}-->
-
 ## <sup>Showcase</sup>
 
 <article class="breakout-item-max"><!--A-Z-->
