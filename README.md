@@ -81,8 +81,8 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 - [https://github.com/@gabrielizalo/awesome-css](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [https://github.com/@uhub/awesome-css](https://github.com/uhub/awesome-css)
 - [https://github.com/awesome-11ty-build-awesome](https://github.com/anyblades/awesome-11ty-build-awesome)
-- [https://github.com/classless-css](https://github.com/dbohdan/classless-css#components) Float Label by *Bl*ades
-- [https://sveltiacms.app/docs/start](https://sveltiacms.app/en/docs/start#starter-templates) with *Bl*ades
+- [https://github.com/classless-css](https://github.com/dbohdan/classless-css#components) (Float Label)
+- [https://sveltiacms.app/docs/start](https://sveltiacms.app/en/docs/start#starter-templates)
 
 <!--{.unlist .columns}-->
 
@@ -90,6 +90,8 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 - https://picocss.com/ for inspiration
 - https://11ty.dev/ for build power
+
+<!--{.unlist}-->
 
 ## <sup>Showcase</sup>
 
