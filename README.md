@@ -2,15 +2,17 @@
 
 <!--section:summary-->
 
-<hgroup>Framework-agnostic,<wbr> class-light <span data-tooltip="or simply “Blades”" data-placement="bottom">CSS utilities</span></hgroup>
+<hgroup><mark>Minimal CSS&nbsp;Framework</mark> <br> for Semantic&nbsp;HTML</hgroup>
 
-<big>Use with Tailwind, Bootstrap, Pico, Simple, or any other reset/framework.</big>
+<big>Fully compatible and actively maintained successor to Pico CSS.</big>
+
+Includes [Float labels](https://blades.ninja/css/float-label/), [Breakout layout](https://blades.ninja/css/breakout/) and other modern helpers. Simply switch `pico.css` to `blades.css`, or add `blades.standalone.css` to other frameworks.
+
+<!--section:gh-only-->
 
 ![](https://img.shields.io/github/v/release/anyblades/blades?label=&color=darkslategray&style=for-the-badge)
 [![](https://img.shields.io/badge/Code-gainsboro?logo=github&logoColor=black&style=for-the-badge)](https://github.com/anyblades/blades)
 [![](https://img.shields.io/github/stars/anyblades/blades?label=Star&labelColor=gainsboro&color=silver&style=for-the-badge)](https://github.com/anyblades/blades)
-
-<!--section:gh-only-->
 
 ## [Documentation ↗](https://blades.ninja/css/)
 

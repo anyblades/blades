@@ -12,7 +12,7 @@
       {{- title | string | striptags ~ ' | ' if title -}}
       {{- site.title -}}
     </title>
-    <meta name="description" content="{{ summary | striptags }}" />
+    <meta name="description" content="{{ description | striptags }}" />
 
     {%- for href in site.styles %}
       <link rel="stylesheet" href="{{ href }}" />
