@@ -1,0 +1,862 @@
+/* Follows https://github.com/picocss/pico/blob/main/scss/_index.scss */
+
+/* Layout */
+
+/* Extends https://github.com/picocss/pico/blob/main/scss/layout/
+<!--section:docs-->
+
+### Auto-columns
+
+`.columns` automatically creates columns with at least 30 characters each:
+
+<article class="columns">
+  <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p>
+</article>
+
+The smaller the font size, the more columns will be created:
+
+<article class="columns" style="font-size: 65%">
+  <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+</article>
+
+Useful for tables of contents and long lists.
+
+<details>How it works:
+```css */
+
+.columns {
+  -moz-columns: 30ch auto;
+  columns: 30ch auto; /* 2 cols max for 65ch container */
+}
+
+/* Avoid breaking inside elements, such as nested lists */
+
+.columns > * {
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+/*```
+</details>
+
+### Jump to top
+
+`data-jump-to="top"` fixes element to the corner and adds extra top padding to make it easy to click:
+```css */
+
+[data-jump-to="top"] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-top: 50vh;
+}
+
+/*```
+<!--section--> */
+
+/*
+<!--section:code-->
+```css */
+
+.breakout,
+.breakout-all {
+  /* Prepare the container for breakout elements */
+  padding-inline: 10%;
+  max-width: calc(10% + 65ch + 10%);
+}
+
+/* Breakout direct children only */
+
+.breakout > *:is(
+      table,
+      pre,
+      figure, video, iframe, canvas,
+      img, picture,
+      
+      .breakout-item,
+      .breakout-item-max
+    ),
+      .breakout-all > *:is(
+      table,
+      pre,
+      figure, video, iframe, canvas,
+      img, picture,
+      
+      .breakout-item,
+      .breakout-item-max
+    ) {
+      width: -moz-fit-content;
+      width: fit-content;
+      min-width: 100%;
+      max-width: 125%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+
+/* Respect img/picture min-width */
+
+.breakout > *:is(img, picture), .breakout-all > *:is(img, picture) {
+      min-width: auto;
+    }
+
+/* Max out the width of the element */
+
+.breakout > *.breakout-item-max, .breakout-all > *.breakout-item-max {
+      width: 125% !important; /* !important is for cases like figure.breakout-item-max @TODO */
+    }
+
+.breakout-all > *:is(h2, h3, h4, h5, h6, hr):not([class]) {
+    position: relative;
+  }
+
+.breakout-all > *:is(h2, h3, h4, h5, h6, hr):not([class])::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: gray;
+      opacity: 12.5%;
+    }
+
+.breakout-all > *:is(h2, h3, h4, h5, h6):not([class])::before {
+      width: 10em;
+      right: 100%;
+      margin-right: 0.8ch;
+      height: 0.25em;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(to left, gray, transparent);
+    }
+
+/* @TODO: add to tricks-wiki why `*` works here, but `&` fails */
+
+.breakout-all > *:is(h2, h3, h4, h5, h6):not([class]):where(hr + *)::before {
+        display: none !important;
+      }
+
+.breakout-all > *:is(hr) {
+    height: 0.5rem;
+    border: none;
+    overflow: visible;
+  }
+
+.breakout-all > *:is(hr)::before {
+      width: 100vw;
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+
+/*```
+<!--section:summary-->
+
+The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
+
+<!--section:docs-->
+
+### Demo <!-- inside parent .breakout -->
+
+Break out a wide image from the text flow:
+
+<div><!-- Dummy div to avoid p tag in Markdown --></div><img
+  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3000' height='300'><rect width='100%' height='100%' fill='gray'/></svg>">
+
+Or table:
+
+| Imagine<hr> | a<hr> | really<hr> | wide<hr> | table<hr> | here<hr> |
+| ----------- | ----- | ---------- | -------- | --------- | -------- |
+| ...         |
+
+Or code block:
+
+```html
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+```
+
+Or anything else:
+
+<article class="breakout-item-max" data-theme="dark">
+
+  Using `.breakout-item` and `.breakout-item-max` helpers {style=margin:0}
+</article>
+
+<div><hr></div>
+
+`.breakout-all` also visually breaks out headings and horizontal rules:
+
+<h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>
+<hr>
+
+<!--section--> */
+
+/* Content */
+
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
+<!--section:docs-->
+
+### Heading anchors
+
+Links with `href="#..."` inside headings are automatically displayed as anchors:
+
+<article>
+  <h2 style="margin: 0 0 0 1.5rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
+</article>
+
+<details>How it works:
+```css */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+h1 a[href^="#"], h2 a[href^="#"], h3 a[href^="#"], h4 a[href^="#"], h5 a[href^="#"], h6 a[href^="#"] {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 0.2ch;
+    color: silver;
+    text-decoration: none;
+    visibility: hidden;
+  }
+
+@media /* to avoid double-tap on touch devices */ (hover: hover) {
+      h1:hover a[href^="#"], h2:hover a[href^="#"], h3:hover a[href^="#"], h4:hover a[href^="#"], h5:hover a[href^="#"], h6:hover a[href^="#"] {
+        visibility: visible;
+      }
+  }
+
+/*```
+</details>
+
+**PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
+
+### List markers
+
+Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or even individual `<li>`:
+
+<article>
+
+- you
+- can
+- make
+- really
+- cool markers {style="--list-marker:'🧊 '"}
+- with
+- *Bl*ades {style="--list-marker:'🥷 '"}
+
+{style="--list-marker:'→ '"}
+</article>
+
+<details>How it works:
+```css */
+
+ul[style*="--list-marker:"], ol[style*="--list-marker:"] {
+    list-style-type: var(--list-marker);
+  }
+
+ul[style*="--list-marker:"] > li, ol[style*="--list-marker:"] > li {
+      list-style-type: inherit;
+    }
+
+ul li[style*="--list-marker:"], ol li[style*="--list-marker:"] {
+    list-style-type: var(--list-marker);
+  }
+
+ul li[data-marker]::marker, ol li[data-marker]::marker {
+    content: attr(data-marker) " "; /* ⚠️ Chrome and Firefox only */
+  }
+
+/*```
+</details>
+
+### Unlist
+
+`.unlist` removes list styling:
+
+<article>
+
+- One: <article>1</article>
+- Two: <article>2</article>
+- Three: <article>3</article>
+
+{.unlist .grid style=margin:0}
+</article>
+
+`.unlist-all` also removes styling from all nested lists.
+
+<details>How it works:
+```css */
+
+ul.unlist,
+  ul.unlist-all,
+  .unlist-all ul,
+  ol.unlist,
+  ol.unlist-all,
+  .unlist-all ol {
+    padding-inline-start: 0;
+  }
+
+ul.unlist > li, ul.unlist-all > li, .unlist-all ul > li, ol.unlist > li, ol.unlist-all > li, .unlist-all ol > li {
+      list-style: none;
+    }
+
+/*```
+</details>
+<!--section--> */
+
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
+<!--section:code-->
+```css */
+
+/* Use inline flex only if link contains an icon */
+
+a:has(> i) {
+    display: inline-flex;
+    gap: 0.375ch; /* =3/8 */
+    overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
+  }
+
+a > i {
+    font-style: normal;
+    float: left; /*                 ✅ Chrome ❌ Safari */
+    text-underline-offset: -2em; /* ❌ Chrome ✅ Safari - to clip it with overflow-y */
+  }
+
+/* Favicons */
+
+a > i > img {
+      height: 1.25em;
+      margin-block-start: calc(-0.25em / 2);
+      max-width: none; /* to keep ratio safe */
+      display: inline-block; /* for Tailwind CSS Typography */
+    }
+
+a > i[class^="fa-"],
+    a > i[class*=" fa-"] {
+      line-height: inherit;
+      --fa-width: auto;
+    }
+
+/* Font Awesome */
+
+a > i.fa-lg {
+      line-height: normal;
+    }
+
+/*```
+<!--section:summary-->
+
+Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links.
+It automatically handles sizing and alignment while preventing underline on icons.
+
+<!--section:docs-->
+
+<article class="breakout-item">
+
+| Use `<i>`-helper with                                                                 | Clean HTML without `<span>ning`      |
+| ------------------------------------------------------------------------------------- | ------------------------------------ |
+| [<i>🥷</i> Emojis](#)                                                                 | `<a><i>🥷</i> Text</a>`              |
+| [<i>![](https://www.google.com/s2/favicons?domain=any.digital&sz=64)</i> Favicons](#) | `<a><i><img src="..."></i> Text</a>` |
+| [<i class="fa-brands fa-github fa-lg"></i> Font Awesome icons](#)                     | `<a><i class="fa-..."></i> Text</a>` |
+</article>
+
+Or even for:
+
+<article>
+  <a href="#" style="margin: 0 0 0 1rem"><i>🥷</i> very-very-very-very-very-<br>long-multiline-links</a>
+</article>
+
+How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237
+
+**PRO** example of automatic favicons for `11ty`: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
+
+<!--section--> */
+
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
+<!--section:docs-->
+
+### Column expanders
+
+Place `<hr>` element inside `<th>` column to expand it horizontally:
+
+<article>
+
+| Column with `<hr>`<hr> | Same column without `<hr>` | ... {style=width:100%} |
+| --- | --- | --- |
+| (012) 345-6789 | (012) 345-6789 |
+</article>
+
+Living examples of big tables with `<hr>`-expanders: <!--A-Z-->
+- https://blades.ninja/ai/ide/
+- https://blades.ninja/build-awesome-11ty/starters/
+- https://blades.ninja/css/frameworks/
+- https://blades.ninja/ssg/
+
+<details>How it works:
+```css */
+
+th hr {
+    width: 12ch; /* min ~65/12 = ~5 cols */
+    height: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+
+th hr.lg {
+      width: 18ch;
+    }
+
+th hr.x2 {
+      width: 24ch;
+    }
+
+/*```
+</details>
+
+### Borderless table
+
+`.borderless` removes all default borders:
+
+<article>
+
+| Less | borders |
+| ---- | ------- |
+| More | fun     |
+
+{.borderless}
+</article>
+
+Living example: https://bladeswitch.com/#minimal-dependencies table
+
+<!--section--> */
+
+table.borderless th,
+  table.borderless td {
+    border: none;
+  }
+
+/*
+<!--section:code-->
+```css */
+
+table.responsive,
+.breakout > table:not(.does-not-exist),
+.breakout-all > table:not(.does-not-exist) {
+  /* Center horizontally */
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  /* Let them full-bleed */
+  width: -moz-max-content;
+  width: max-content;
+  min-width: auto;
+  max-width: 100vw;
+  padding-inline: 7.5%;
+
+  /* Let them scroll */
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
+}
+
+table.responsive th,
+  table.responsive td,
+  .breakout > table:not(.does-not-exist) th,
+  .breakout > table:not(.does-not-exist) td,
+  .breakout-all > table:not(.does-not-exist) th,
+  .breakout-all > table:not(.does-not-exist) td {
+    padding-inline-start: 0;
+  }
+
+/*```
+`table:not(.does-not-exist)` trick (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
+
+<!--section:summary-->
+
+`.responsive` makes a table full-bleed and scroll on mobile, without a need for a redundant wrapper (finally).
+Tables inside https://blades.ninja/css/breakout/ are responsive by default.
+
+<!--section:docs-->
+
+### Demo table
+
+| Term              | Description <hr class="x2">                                                                                                                                                                  | Link                                                |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| Responsive design | Approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction. | https://en.wikipedia.org/wiki/Responsive_web_design |
+
+{.responsive}
+
+---
+
+Living examples: <!--A-Z-->
+- https://blades.ninja/ai/ide/
+- https://blades.ninja/build-awesome-11ty/starters/
+- https://blades.ninja/css/frameworks/
+- https://blades.ninja/ssg/
+
+<!--section--> */
+
+/* Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
+<!--section:docs-->
+
+### Code
+
+The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
+
+```treeview {data-caption="Blades CSS:"}
+./assets/
+├── blades.core.css     # reusable class-light utilities, unthemed
+├── blades.theme.css    # minimal opinionated theme
+└── blades.css          # above two together
+```
+<details>How it works:
+```css */
+
+pre {
+  padding: 1rem 1.5rem;
+  padding-inline-end: 2rem;
+}
+
+@media (max-width: 767px) {
+
+pre {
+    border-radius: 0
+}
+  }
+
+/* Code block caption via data-attr (to display filename, etc.) */
+
+code[data-caption]::before {
+      content: attr(data-caption);
+      display: block;
+      margin-bottom: 1rem;
+      opacity: 50%;
+      font-style: italic;
+    }
+
+code:where(pre > *) {
+    padding: 0;
+  }
+
+/* Extends https://github.com/PrismJS/prism/blob/master/plugins/treeview/prism-treeview.css */
+
+.token.treeview-part .entry-line {
+    width: 2.5em !important;
+    opacity: 25%;
+  }
+
+.token.treeview-part .entry-name:last-child {
+    opacity: 50%;
+  }
+
+.token.treeview-part .entry-name:last-child::before {
+      display: none !important;
+    }
+
+/*```
+</details>
+<!--section--> */
+
+/* Forms */
+
+/* Moved here from https://github.com/anyblades/float-label-css for easier maintenance
+<!--section:docs-->
+
+First, we target either:
+1. `<label>` which `:has` inner form inputs (classless approach)
+2. or explicit `.has-float-label` class (alternative approach)
+```css */
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
+.has-float-label {
+  display: block;
+  position: relative;
+}
+
+/*
+```
+Then, we define the default/fallback state (when the float label should be minimized):
+```css */
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
+  label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
+  .has-float-label > span,
+  .has-float-label label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: text;
+    font-size: 75%;
+  }
+
+/*
+```
+Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
+```css */
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::-moz-placeholder, .has-float-label *:placeholder-shown:not(:focus)::-moz-placeholder {
+    opacity: 0;
+  }
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:-moz-placeholder:not(:focus)::placeholder, .has-float-label *:-moz-placeholder:not(:focus)::placeholder {
+    opacity: 0;
+  }
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::placeholder, .has-float-label *:placeholder-shown:not(:focus)::placeholder {
+    opacity: 0;
+  }
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) > span, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) label, .has-float-label:has(*:-moz-placeholder:not(:focus)) > span, .has-float-label:has(*:-moz-placeholder:not(:focus)) label {
+      font-size: inherit;
+      opacity: 50%;
+    }
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) > span,
+    label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) label,
+    .has-float-label:has(*:placeholder-shown:not(:focus)) > span,
+    .has-float-label:has(*:placeholder-shown:not(:focus)) label {
+      font-size: inherit;
+      opacity: 50%;
+    }
+
+/*
+```
+The `:has(*:placeholder-shown:not(:focus))` trick allows this input state information to *propagate* to the parent level. This enables modern CSS to target inner float label (`<span>` or `<label>`) regardless of its position relative to the input field.
+
+Historically, this was not possible: the float label had to be placed after the input field to be targeted using the `input:focus + label` selector.
+<!--section--> */
+
+/* Utilities */
+
+/* Extends https://github.com/picocss/pico/tree/main/scss/utilities
+<!--section:docs-->
+
+### Auto-dark
+
+`.dark-auto` automatically creates a simple dark version of any element:
+
+<article data-theme="dark">
+  <p>Look how cool <big class="dark-auto">🔥🕷️🐦‍⬛🐄🦓</big> can look in the dark!</p>
+</article>
+
+<details>How it works:
+```css */
+
+/* Per https://picocss.com/docs/css-variables#css-variables-for-color-schemes */
+
+:root {
+  --blades-dark-filter: invert(100%) hue-rotate(180deg);
+}
+
+.dark-auto {
+  /* Dark color scheme (Forced) */
+}
+
+/* Dark color scheme (Auto) */
+
+@media (prefers-color-scheme: dark) {
+
+.dark-auto {
+    filter: var(--blades-dark-filter)
+}
+  }
+
+.dark-auto[data-theme="dark"],
+  .dark-auto:where([data-theme="dark"] *) {
+    filter: var(--blades-dark-filter);
+  }
+
+/*```
+</details>
+
+### Faded
+
+`.faded` reduces the opacity of an element:
+
+<article class="faded">
+  Hover to unfade me!
+</article>
+
+<details>How it works:
+```css */
+
+.faded {
+  opacity: 50%;
+}
+
+.faded:hover {
+    opacity: 87.5%;
+  }
+
+/*```
+</details>
+<!--section--> */
+
+/* Fix the scrollbar color when inverted by https://tailwindcss.com/docs/filter-invert */
+
+.invert ::-webkit-scrollbar {
+    filter: invert(1) !important;
+  }
+
+/*
+<!--section:code-->
+```css */
+
+/* Default/fallback state */
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
+  label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
+  .has-float-label > span,
+  .has-float-label label {
+    padding-inline-start: calc(1rem + 1px); /* match Pico's padding + border */
+    padding-block-start: 0.25rem;
+    opacity: 75%;
+    transition: all 0.25s;
+  }
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) input,
+  label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) textarea,
+  label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) select,
+  .has-float-label input,
+  .has-float-label textarea,
+  .has-float-label select {
+    margin-block-start: 0; /* reset Pico */
+    padding-inline-start: 1rem; /* match Pico */
+    padding-block: 1.125rem 0.375rem; /* match Pico's total: 2 x 0.75rem = 1.5rem */
+  }
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) input::-moz-placeholder, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) textarea::-moz-placeholder, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) select::-moz-placeholder, .has-float-label input::-moz-placeholder, .has-float-label textarea::-moz-placeholder, .has-float-label select::-moz-placeholder {
+      opacity: 100%;
+      -moz-transition: all 0.25s;
+      transition: all 0.25s;
+    }
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) input::placeholder, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) textarea::placeholder, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) select::placeholder, .has-float-label input::placeholder, .has-float-label textarea::placeholder, .has-float-label select::placeholder {
+      opacity: 100%;
+      transition: all 0.25s;
+    }
+
+/* Enlarged state */
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) > span, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) label, .has-float-label:has(*:-moz-placeholder:not(:focus)) > span, .has-float-label:has(*:-moz-placeholder:not(:focus)) label {
+      padding-block: 0.75rem; /* match Pico */
+    }
+
+label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) > span,
+    label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) label,
+    .has-float-label:has(*:placeholder-shown:not(:focus)) > span,
+    .has-float-label:has(*:placeholder-shown:not(:focus)) label {
+      padding-block: 0.75rem; /* match Pico */
+    }
+
+html {
+  /* Prevent horizontal overflow and scrolling, modern way. */
+  overflow-x: clip;
+
+  /* Enable font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* Ensure `body` takes at least the full height of the viewport (using dynamic viewport height for better mobile support). */
+  min-height: 100dvh;
+
+  /* Make the `body` a flex container with column layout, and `main` to automatically fill available space. This is useful for creating sticky footers and full-height layouts. */
+  display: flex;
+  flex-direction: column;
+
+  /* Evaluates the last ~4 lines of text blocks to prevent a single word from sitting on the final line. */
+
+  /* Enable global hyphenation */
+  /* ... except for links and tables which are better (safer) without hyphenation */
+}
+
+body > main {
+    flex-grow: 1;
+  }
+
+body {
+  text-wrap: pretty;
+  hyphens: auto;
+}
+
+body a,
+  body table {
+    hyphens: none;
+  }
+
+a:not([href^="#"]) {
+    text-decoration-thickness: 1px;
+  }
+
+a:not([href^="#"]):hover {
+      text-decoration-thickness: 2px;
+    }
+
+h1 {
+  font-size: 2.5em; /* for pico.css & tw-typography */
+  margin-bottom: 1rem; /* for tw-typography */
+}
+
+hr {
+  margin-block: 2em; /* for pico.css & tw-typography */
+}
+
+ul ul {
+    font-size: 87.5%;
+  }
+
+pre small {
+    opacity: 75%;
+    font-weight: lighter;
+  }
+
+table th {
+    vertical-align: bottom;
+    font-weight: bold;
+  }
+
+table td {
+    vertical-align: top;
+  }
+
+table pre {
+    margin-bottom: 0.25rem;
+  }
+
+[data-jump-to="top"] {
+  opacity: 25%;
+}
+
+[data-jump-to="top"]:hover {
+    opacity: 75%;
+  }
+
+[data-jump-to="top"] > i {
+    display: inline-block;
+    padding: 0.25rem 0.375rem;
+    margin: 0.5rem;
+    font-size: 0.75rem;
+    color: black;
+    border-color: black;
+  }
+
+.breakout > img,
+  .breakout > figure,
+  .breakout-all > img,
+  .breakout-all > figure {
+    margin-bottom: 1rem;
+  }
+
+.faded a {
+    text-decoration-style: dotted;
+  }
+
+/*```
+<!--section--> */
