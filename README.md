@@ -40,7 +40,7 @@ Includes [Float labels](https://blades.ninja/css/float-label/), [Breakout layout
 
 ## Quick start
 
-<!--section:install-->
+<!--section:install--><!-- for https://blades.ninja/css/ and https://blades.ninja/css/standalone/ -->
 
 There are 4 ways to get started:
 
@@ -68,14 +68,15 @@ Living examples: https://github.com/anyblades/subtle/blob/main/.subtle/package.j
 ### Install with NPM
 
 ```sh
-npm install @anyblades/blades @anyblades/pico
+npm install @anyblades/pico # optional
+npm install @anyblades/blades
 ```
 
-Then, import Pico and *Bl*ades into your CSS:
+Then, import [Pico and] *Bl*ades into your CSS:
 
 ```css
-@import "@anyblades/pico";
-@import "@anyblades/blades";
+@import "@anyblades/pico"; /* optional */
+@import "@anyblades/blades"; /* can be used standalone */
 ```
 
 Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_styles/styles.css
