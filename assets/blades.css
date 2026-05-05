@@ -477,7 +477,7 @@ progress::-moz-progress-bar{background-color:var(--pico-progress-color)}
 /* Follows https://github.com/picocss/pico/blob/main/scss/_index.scss */
 /* Layout */
 /* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-<!--section:docs-->
+<!--section:docs,columns-->
 
 ### Auto-columns
 
@@ -495,11 +495,11 @@ The smaller the font size, the more columns will be created:
 
 Useful for tables of contents and long lists.
 
-<details>How it works:
+How it works:
 ```css */
 .columns {
-  -moz-columns: 30ch auto;
-  columns: 30ch auto; /* 2 cols max for 65ch container */
+  -moz-columns: 25ch auto;
+  columns: 25ch auto; /* common container 65ch / 25ch => 2 columns max, with a buffer for list paddings */
 }
 /* Avoid breaking inside elements, such as nested lists */
 .columns > * {
@@ -507,7 +507,7 @@ Useful for tables of contents and long lists.
     break-inside: avoid;
   }
 /*```
-</details>
+<!--section:docs,jump-->
 
 ### Jump to top
 
@@ -641,7 +641,7 @@ Or anything else:
 <!--section--> */
 /* Content */
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-<!--section:docs-->
+<!--section:docs,h-anchor-->
 
 ### Heading anchors
 
@@ -651,7 +651,7 @@ Links with `href="#..."` inside headings are automatically displayed as anchors:
   <h2 style="margin: 0 0 0 1.5rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 h1,
 h2,
@@ -677,9 +677,10 @@ h1 a[href^="#"], h2 a[href^="#"], h3 a[href^="#"], h4 a[href^="#"], h5 a[href^="
       }
   }
 /*```
-</details>
 
 **PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
+
+<!--section:docs,list-->
 
 ### List markers
 
@@ -698,7 +699,7 @@ Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or eve
 {style="--list-marker:'→ '"}
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 ul[style*="--list-marker:"], ol[style*="--list-marker:"] {
     list-style-type: var(--list-marker);
@@ -713,7 +714,6 @@ ul li[data-marker]::marker, ol li[data-marker]::marker {
     content: attr(data-marker) " "; /* ⚠️ Chrome and Firefox only */
   }
 /*```
-</details>
 
 ### Unlist
 
@@ -730,7 +730,7 @@ ul li[data-marker]::marker, ol li[data-marker]::marker {
 
 `.unlist-all` also removes styling from all nested lists.
 
-<details>How it works:
+How it works:
 ```css */
 ul.unlist,
   ul.unlist-all,
@@ -744,7 +744,6 @@ ul.unlist > li, ul.unlist-all > li, .unlist-all ul > li, ol.unlist > li, ol.unli
       list-style: none;
     }
 /*```
-</details>
 <!--section--> */
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
 <!--section:code-->
@@ -824,7 +823,7 @@ Living examples of big tables with `<hr>`-expanders: <!--A-Z-->
 - https://blades.ninja/css/frameworks/
 - https://blades.ninja/ssg/
 
-<details>How it works:
+How it works:
 ```css */
 th hr {
     width: 12ch; /* min ~65/12 = ~5 cols */
@@ -839,7 +838,6 @@ th hr.x2 {
       width: 24ch;
     }
 /*```
-</details>
 
 ### Borderless table
 
@@ -931,7 +929,7 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 ├── blades.theme.css    # minimal opinionated theme
 └── blades.css          # above two together
 ```
-<details>How it works:
+How it works:
 ```css */
 pre {
   padding: 1rem 1.5rem;
@@ -965,7 +963,6 @@ code:where(pre > *) {
       display: none !important;
     }
 /*```
-</details>
 <!--section--> */
 /* Forms */
 /* Moved here from https://github.com/anyblades/float-label-css for easier maintenance
@@ -1036,7 +1033,7 @@ Historically, this was not possible: the float label had to be placed after the 
   <p>Look how cool <big class="dark-auto">🔥🕷️🐦‍⬛🐄🦓</big> can look in the dark!</p>
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 /* Per https://picocss.com/docs/css-variables#css-variables-for-color-schemes */
 :root {
@@ -1056,7 +1053,6 @@ Historically, this was not possible: the float label had to be placed after the 
     filter: var(--blades-dark-filter);
   }
 /*```
-</details>
 
 ### Faded
 
@@ -1066,7 +1062,7 @@ Historically, this was not possible: the float label had to be placed after the 
   Hover to unfade me!
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 .faded {
   opacity: 50%;
@@ -1075,7 +1071,6 @@ Historically, this was not possible: the float label had to be placed after the 
     opacity: 87.5%;
   }
 /*```
-</details>
 <!--section--> */
 /* Fix the scrollbar color when inverted by https://tailwindcss.com/docs/filter-invert */
 .invert ::-webkit-scrollbar {

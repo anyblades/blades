@@ -3,7 +3,7 @@
 /* Layout */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-<!--section:docs-->
+<!--section:docs,columns-->
 
 ### Auto-columns
 
@@ -21,12 +21,12 @@ The smaller the font size, the more columns will be created:
 
 Useful for tables of contents and long lists.
 
-<details>How it works:
+How it works:
 ```css */
 
 .columns {
-  -moz-columns: 30ch auto;
-  columns: 30ch auto; /* 2 cols max for 65ch container */
+  -moz-columns: 25ch auto;
+  columns: 25ch auto; /* common container 65ch / 25ch => 2 columns max, with a buffer for list paddings */
 }
 
 /* Avoid breaking inside elements, such as nested lists */
@@ -37,7 +37,7 @@ Useful for tables of contents and long lists.
   }
 
 /*```
-</details>
+<!--section:docs,jump-->
 
 ### Jump to top
 
@@ -191,7 +191,7 @@ Or anything else:
 /* Content */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-<!--section:docs-->
+<!--section:docs,h-anchor-->
 
 ### Heading anchors
 
@@ -201,7 +201,7 @@ Links with `href="#..."` inside headings are automatically displayed as anchors:
   <h2 style="margin: 0 0 0 1.5rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 
 h1,
@@ -231,9 +231,10 @@ h1 a[href^="#"], h2 a[href^="#"], h3 a[href^="#"], h4 a[href^="#"], h5 a[href^="
   }
 
 /*```
-</details>
 
 **PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
+
+<!--section:docs,list-->
 
 ### List markers
 
@@ -252,7 +253,7 @@ Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or eve
 {style="--list-marker:'→ '"}
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 
 ul[style*="--list-marker:"], ol[style*="--list-marker:"] {
@@ -272,7 +273,6 @@ ul li[data-marker]::marker, ol li[data-marker]::marker {
   }
 
 /*```
-</details>
 
 ### Unlist
 
@@ -289,7 +289,7 @@ ul li[data-marker]::marker, ol li[data-marker]::marker {
 
 `.unlist-all` also removes styling from all nested lists.
 
-<details>How it works:
+How it works:
 ```css */
 
 ul.unlist,
@@ -306,7 +306,6 @@ ul.unlist > li, ul.unlist-all > li, .unlist-all ul > li, ol.unlist > li, ol.unli
     }
 
 /*```
-</details>
 <!--section--> */
 
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
@@ -397,7 +396,7 @@ Living examples of big tables with `<hr>`-expanders: <!--A-Z-->
 - https://blades.ninja/css/frameworks/
 - https://blades.ninja/ssg/
 
-<details>How it works:
+How it works:
 ```css */
 
 th hr {
@@ -416,7 +415,6 @@ th hr.x2 {
     }
 
 /*```
-</details>
 
 ### Borderless table
 
@@ -514,7 +512,7 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 ├── blades.theme.css    # minimal opinionated theme
 └── blades.css          # above two together
 ```
-<details>How it works:
+How it works:
 ```css */
 
 pre {
@@ -559,7 +557,6 @@ code:where(pre > *) {
     }
 
 /*```
-</details>
 <!--section--> */
 
 /* Forms */
@@ -644,7 +641,7 @@ Historically, this was not possible: the float label had to be placed after the 
   <p>Look how cool <big class="dark-auto">🔥🕷️🐦‍⬛🐄🦓</big> can look in the dark!</p>
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 
 /* Per https://picocss.com/docs/css-variables#css-variables-for-color-schemes */
@@ -672,7 +669,6 @@ Historically, this was not possible: the float label had to be placed after the 
   }
 
 /*```
-</details>
 
 ### Faded
 
@@ -682,7 +678,7 @@ Historically, this was not possible: the float label had to be placed after the 
   Hover to unfade me!
 </article>
 
-<details>How it works:
+How it works:
 ```css */
 
 .faded {
@@ -694,7 +690,6 @@ Historically, this was not possible: the float label had to be placed after the 
   }
 
 /*```
-</details>
 <!--section--> */
 
 /* Fix the scrollbar color when inverted by https://tailwindcss.com/docs/filter-invert */
