@@ -1,5 +1,5 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
-<!--section:code-->
+\3c !--section:code-->
 ```css */
 /* Use inline flex only if link contains an icon */
 a:has(> i) {
@@ -29,12 +29,12 @@ a > i.fa-lg {
       line-height: normal;
     }
 /*```
-<!--section:summary-->
+\3c !--section:summary-->
 
 Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links.
 It automatically handles sizing and alignment while preventing underline on icons.
 
-<!--section:docs-->
+\3c !--section:docs-->
 
 <article class="breakout-item">
 
@@ -55,4 +55,4 @@ How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e
 
 **PRO** example of automatic favicons for `11ty`: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
 
-<!--section--> */
+\3c !--section--> */

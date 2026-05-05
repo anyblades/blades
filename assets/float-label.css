@@ -1,6 +1,6 @@
 /* Float Label CSS v2.0.0-alpha */
 /* Moved here from https://github.com/anyblades/float-label-css for easier maintenance
-<!--section:docs-->
+\3c !--section:docs-->
 
 First, we target either:
 1. `<label>` which `:has` inner form inputs (classless approach)
@@ -54,7 +54,7 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
 The `:has(*:placeholder-shown:not(:focus))` trick allows this input state information to *propagate* to the parent level. This enables modern CSS to target inner float label (`<span>` or `<label>`) regardless of its position relative to the input field.
 
 Historically, this was not possible: the float label had to be placed after the input field to be targeted using the `input:focus + label` selector.
-<!--section--> */
+\3c !--section--> */
 /* Default/fallback state */
 label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
   label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,

@@ -1,5 +1,5 @@
 /*
-<!--section:code-->
+\3c !--section:code-->
 ```css */
 table.responsive,
 .breakout > table:not(.does-not-exist),
@@ -31,12 +31,12 @@ table.responsive th,
 /*```
 `table:not(.does-not-exist)` trick (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 
-<!--section:summary-->
+\3c !--section:summary-->
 
 `.responsive` makes a table full-bleed and scroll on mobile, without a need for a redundant wrapper (finally).
 Tables inside https://blades.ninja/css/breakout/ are responsive by default.
 
-<!--section:docs-->
+\3c !--section:docs-->
 
 ### Demo table
 
@@ -48,10 +48,10 @@ Tables inside https://blades.ninja/css/breakout/ are responsive by default.
 
 ---
 
-Living examples: <!--A-Z-->
+Living examples: \3c !--A-Z-->
 - https://blades.ninja/ai/ide/
 - https://blades.ninja/build-awesome-11ty/starters/
 - https://blades.ninja/css/frameworks/
 - https://blades.ninja/ssg/
 
-<!--section--> */
+\3c !--section--> */

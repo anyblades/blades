@@ -1,5 +1,5 @@
 /*
-<!--section:code-->
+\3c !--section:code-->
 ```css */
 /* Default/fallback state */
 label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
@@ -126,4 +126,4 @@ table pre {
     text-decoration-style: dotted;
   }
 /*```
-<!--section--> */
+\3c !--section--> */

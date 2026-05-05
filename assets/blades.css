@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Pico+Blades CSS ✨🥷
+ * Blades+Pico CSS ✨🥷
  * Copyright 2026 - Licensed under MIT
  */
 /*!
@@ -477,7 +477,7 @@ progress::-moz-progress-bar{background-color:var(--pico-progress-color)}
 /* Follows https://github.com/picocss/pico/blob/main/scss/_index.scss */
 /* Layout */
 /* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-<!--section:docs,columns-->
+\3c !--section:docs,columns-->
 
 ### Auto-columns
 
@@ -507,7 +507,7 @@ How it works:
     break-inside: avoid;
   }
 /*```
-<!--section:docs,jump-->
+\3c !--section:docs,jump-->
 
 ### Jump to top
 
@@ -520,9 +520,9 @@ How it works:
   padding-top: 50vh;
 }
 /*```
-<!--section--> */
+\3c !--section--> */
 /*
-<!--section:code-->
+\3c !--section:code-->
 ```css */
 .breakout,
 .breakout-all {
@@ -599,17 +599,17 @@ How it works:
       transform: translateX(-50%);
     }
 /*```
-<!--section:summary-->
+\3c !--section:summary-->
 
 The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
 
-<!--section:docs-->
+\3c !--section:docs-->
 
-### Demo <!-- inside parent .breakout -->
+### Demo \3c !-- inside parent .breakout -->
 
 Break out a wide image from the text flow:
 
-<div><!-- Dummy div to avoid p tag in Markdown --></div><img
+<div>\3c !-- Dummy div to avoid p tag in Markdown --></div><img
   src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3000' height='300'><rect width='100%' height='100%' fill='gray'/></svg>">
 
 Or table:
@@ -638,10 +638,10 @@ Or anything else:
 <h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>
 <hr>
 
-<!--section--> */
+\3c !--section--> */
 /* Content */
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-<!--section:docs,h-anchor-->
+\3c !--section:docs,h-anchor-->
 
 ### Heading anchors
 
@@ -680,7 +680,7 @@ h1 a[href^="#"], h2 a[href^="#"], h3 a[href^="#"], h4 a[href^="#"], h5 a[href^="
 
 **PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
 
-<!--section:docs,list-->
+\3c !--section:docs,list-->
 
 ### List markers
 
@@ -744,9 +744,9 @@ ul.unlist > li, ul.unlist-all > li, .unlist-all ul > li, ol.unlist > li, ol.unli
       list-style: none;
     }
 /*```
-<!--section--> */
+\3c !--section--> */
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
-<!--section:code-->
+\3c !--section:code-->
 ```css */
 /* Use inline flex only if link contains an icon */
 a:has(> i) {
@@ -776,12 +776,12 @@ a > i.fa-lg {
       line-height: normal;
     }
 /*```
-<!--section:summary-->
+\3c !--section:summary-->
 
 Use *Bl*ades `<i>`-helper to wrap emojis, favicons, or simply drop Font Awesome icons inside links.
 It automatically handles sizing and alignment while preventing underline on icons.
 
-<!--section:docs-->
+\3c !--section:docs-->
 
 <article class="breakout-item">
 
@@ -802,9 +802,9 @@ How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e
 
 **PRO** example of automatic favicons for `11ty`: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
 
-<!--section--> */
+\3c !--section--> */
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
-<!--section:docs-->
+\3c !--section:docs-->
 
 ### Column expanders
 
@@ -817,7 +817,7 @@ Place `<hr>` element inside `<th>` column to expand it horizontally:
 | (012) 345-6789 | (012) 345-6789 |
 </article>
 
-Living examples of big tables with `<hr>`-expanders: <!--A-Z-->
+Living examples of big tables with `<hr>`-expanders: \3c !--A-Z-->
 - https://blades.ninja/ai/ide/
 - https://blades.ninja/build-awesome-11ty/starters/
 - https://blades.ninja/css/frameworks/
@@ -854,13 +854,13 @@ th hr.x2 {
 
 Living example: https://bladeswitch.com/#minimal-dependencies table
 
-<!--section--> */
+\3c !--section--> */
 table.borderless th,
   table.borderless td {
     border: none;
   }
 /*
-<!--section:code-->
+\3c !--section:code-->
 ```css */
 table.responsive,
 .breakout > table:not(.does-not-exist),
@@ -892,12 +892,12 @@ table.responsive th,
 /*```
 `table:not(.does-not-exist)` trick (inspired by postcss) is used here to increase specificity against selectors like `&:is(table, .table)`
 
-<!--section:summary-->
+\3c !--section:summary-->
 
 `.responsive` makes a table full-bleed and scroll on mobile, without a need for a redundant wrapper (finally).
 Tables inside https://blades.ninja/css/breakout/ are responsive by default.
 
-<!--section:docs-->
+\3c !--section:docs-->
 
 ### Demo table
 
@@ -909,15 +909,15 @@ Tables inside https://blades.ninja/css/breakout/ are responsive by default.
 
 ---
 
-Living examples: <!--A-Z-->
+Living examples: \3c !--A-Z-->
 - https://blades.ninja/ai/ide/
 - https://blades.ninja/build-awesome-11ty/starters/
 - https://blades.ninja/css/frameworks/
 - https://blades.ninja/ssg/
 
-<!--section--> */
+\3c !--section--> */
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
-<!--section:docs-->
+\3c !--section:docs-->
 
 ### Code
 
@@ -963,10 +963,10 @@ code:where(pre > *) {
       display: none !important;
     }
 /*```
-<!--section--> */
+\3c !--section--> */
 /* Forms */
 /* Moved here from https://github.com/anyblades/float-label-css for easier maintenance
-<!--section:docs-->
+\3c !--section:docs-->
 
 First, we target either:
 1. `<label>` which `:has` inner form inputs (classless approach)
@@ -1020,10 +1020,10 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
 The `:has(*:placeholder-shown:not(:focus))` trick allows this input state information to *propagate* to the parent level. This enables modern CSS to target inner float label (`<span>` or `<label>`) regardless of its position relative to the input field.
 
 Historically, this was not possible: the float label had to be placed after the input field to be targeted using the `input:focus + label` selector.
-<!--section--> */
+\3c !--section--> */
 /* Utilities */
 /* Extends https://github.com/picocss/pico/tree/main/scss/utilities
-<!--section:docs-->
+\3c !--section:docs-->
 
 ### Auto-dark
 
@@ -1071,13 +1071,13 @@ How it works:
     opacity: 87.5%;
   }
 /*```
-<!--section--> */
+\3c !--section--> */
 /* Fix the scrollbar color when inverted by https://tailwindcss.com/docs/filter-invert */
 .invert ::-webkit-scrollbar {
     filter: invert(1) !important;
   }
 /*
-<!--section:code-->
+\3c !--section:code-->
 ```css */
 /* Default/fallback state */
 label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
@@ -1203,4 +1203,4 @@ table pre {
     text-decoration-style: dotted;
   }
 /*```
-<!--section--> */
+\3c !--section--> */
