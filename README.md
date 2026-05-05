@@ -81,7 +81,7 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 - [https://github.com/@gabrielizalo/awesome-css](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [https://github.com/@uhub/awesome-css](https://github.com/uhub/awesome-css)
 - [https://github.com/awesome-11ty-build-awesome](https://github.com/anyblades/awesome-11ty-build-awesome)
-- [https://github.com/classless-css](https://github.com/dbohdan/classless-css#components) (Float Label)
+- [https://github.com/classless-css](https://github.com/dbohdan/classless-css#components) &nbsp;<small>🥷 *Fl*oat labels</small>
 - [https://sveltiacms.app/docs/start](https://sveltiacms.app/en/docs/start#starter-templates)
 
 <!--{.unlist .columns}-->
@@ -92,16 +92,3 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 - https://11ty.dev/ for build power
 
 <!--{.unlist}-->
-
-## <sup>Showcase</sup>
-
-<article class="breakout-item-max"><!--A-Z-->
-
-https://any.digital/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
-https://build.blades.ninja/<!--{data-tooltip="Tailwind 💨+🥷 Blades"}-->
-https://blades.ninja/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
-https://bladeswitch.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
-https://minform.hostfurl.com/<!--{data-tooltip="Pico ✨+🥷 Blades"}-->
-[<i class="fa-solid fa-plus faded"></i>](https://github.com/anyblades/blades/edit/main/README.md)<!--{data-tooltip="Add yours!" data-placement=bottom}-->
-
-</article>
