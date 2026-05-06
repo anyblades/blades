@@ -165,9 +165,9 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 - [https://github.com/@gabrielizalo/awesome-css](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [https://github.com/@uhub/awesome-css](https://github.com/uhub/awesome-css)
 - [https://github.com/awesome-11ty-build-awesome](https://github.com/anyblades/awesome-11ty-build-awesome)
-- [https://github.com/classless-css](https://github.com/dbohdan/classless-css#components) &nbsp;<small>🥷 *Fl*oat labels</small>
+- [https://github.com/classless-css#float-label](https://github.com/dbohdan/classless-css#components:~:text=Float%20Label)
 - [https://sveltiacms.app/docs/start](https://sveltiacms.app/en/docs/start#starter-templates)
-- [https://www.youtube.com/@GithubSignals](https://www.youtube.com/shorts/FxtvnBCse8w)
+- [https://www.youtube.com/@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w)
 
 <!--{.unlist .columns}-->
 
