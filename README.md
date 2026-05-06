@@ -1,4 +1,4 @@
-# 🥷 *Bl*ades
+# 🥷 *Bl*ades &nbsp;![](https://img.shields.io/github/v/release/anyblades/blades?label=&color=darkslategray)
 
 <!--section:summary-->
 
@@ -9,10 +9,6 @@
 Includes [Float labels](https://blades.ninja/css/float-label/), [Breakout layout](https://blades.ninja/css/breakout/) and other modern helpers. Simply switch `pico.css` to `blades.css` or add `blades.standalone.css` to other frameworks.
 
 <!--section:gh-only-->
-
-![](https://img.shields.io/github/v/release/anyblades/blades?label=&color=darkslategray&style=for-the-badge)
-[![](https://img.shields.io/badge/Code-gainsboro?logo=github&logoColor=black&style=for-the-badge)](https://github.com/anyblades/blades)
-[![](https://img.shields.io/github/stars/anyblades/blades?label=Star&labelColor=gainsboro&color=silver&style=for-the-badge)](https://github.com/anyblades/blades)
 
 ## [Documentation ↗](https://blades.ninja/css/)
 
