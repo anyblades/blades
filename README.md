@@ -33,7 +33,7 @@ Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblade
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
-  https://cdn.jsdelivr.net/npm/@anyblades/blades@0/assets/blades.min.css
+  https://cdn.jsdelivr.net/npm/@anyblades/blades@2/assets/blades.min.css
 "/>
 ```
 
