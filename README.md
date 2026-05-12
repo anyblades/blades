@@ -20,7 +20,7 @@ There are 4 ways to get started:
 
 ### Install manually
 
-[Download *Bl*ades](https://github.com/anyblades/pico/archive/refs/heads/main.zip) and link `assets/blades.css` in the `<head>` of your website.
+[Download Pico+*Bl*ades](https://github.com/anyblades/blades/archive/refs/heads/main.zip) and link `assets/blades.css` in the `<head>` of your website.
 
 ```html
 <link rel="stylesheet" href="assets/blades.css" />
@@ -28,7 +28,7 @@ There are 4 ways to get started:
 
 ### Usage from CDN
 
-Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@0/) to link `blades.min.css`:
+Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/) to link `assets/blades.min.css`:
 
 <!--prettier-ignore-->
 ```html
@@ -46,7 +46,7 @@ npm install @anyblades/pico # optional
 npm install @anyblades/blades
 ```
 
-Then, import [Pico and] *Bl*ades into your CSS:
+Then, import [Pico] and *Bl*ades into your CSS:
 
 ```css
 @import "@anyblades/pico"; /* optional */
