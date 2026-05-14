@@ -2,7 +2,6 @@
   "name": "@anyblades/blades",
   "version": "2.2.0",
   "description": "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development.",
-  "style": "./assets/blades.css",
   "exports": {
     ".": "./src/blades.standalone.css",
     "./core": "./src/blades.standalone.core.css",
