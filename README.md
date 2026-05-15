@@ -171,7 +171,7 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 ## <sup>Credits</sup>
 
-- https://picocss.com/ for [80% of Blades](https://blades.ninja/css/pico/)
+- https://picocss.com/ as a [first-class citizen](https://blades.ninja/css/pico/)
 - https://11ty.dev/ for [this site generation](https://github.com/anyblades/blades.ninja)
 
 <!--{.unlist}-->
