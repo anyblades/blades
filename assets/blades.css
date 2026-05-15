@@ -661,7 +661,7 @@ h5,
 h6 {
   position: relative;
 }
-h1 a[href^="#"], h2 a[href^="#"], h3 a[href^="#"], h4 a[href^="#"], h5 a[href^="#"], h6 a[href^="#"] {
+h1 a[aria-hidden="true"], h2 a[aria-hidden="true"], h3 a[aria-hidden="true"], h4 a[aria-hidden="true"], h5 a[aria-hidden="true"], h6 a[aria-hidden="true"] {
     position: absolute;
     right: 100%;
     top: 50%;
@@ -672,7 +672,7 @@ h1 a[href^="#"], h2 a[href^="#"], h3 a[href^="#"], h4 a[href^="#"], h5 a[href^="
     visibility: hidden;
   }
 @media /* to avoid double-tap on touch devices */ (hover: hover) {
-      h1:hover a[href^="#"], h2:hover a[href^="#"], h3:hover a[href^="#"], h4:hover a[href^="#"], h5:hover a[href^="#"], h6:hover a[href^="#"] {
+      h1:hover a[aria-hidden="true"], h2:hover a[aria-hidden="true"], h3:hover a[aria-hidden="true"], h4:hover a[aria-hidden="true"], h5:hover a[aria-hidden="true"], h6:hover a[aria-hidden="true"] {
         visibility: visible;
       }
   }
