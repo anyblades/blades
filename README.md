@@ -79,6 +79,8 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 ## Documentation
 
+If you know Pico — you know *Bl*ades already:
+
 <!-- ToC as is from https://blades.ninja/#docs -->
 <ul class="columns">
   
