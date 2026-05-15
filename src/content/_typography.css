@@ -19,7 +19,7 @@ h5,
 h6 {
   position: relative;
 
-  a[href^="#"] {
+  a[aria-hidden="true"] {
     position: absolute;
     right: 100%;
     top: 50%;
@@ -31,7 +31,7 @@ h6 {
   }
   @media /* to avoid double-tap on touch devices */ (hover: hover) {
     &:hover {
-      a[href^="#"] {
+      a[aria-hidden="true"] {
         visibility: visible;
       }
     }
