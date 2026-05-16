@@ -20,7 +20,7 @@ There are 4 ways to get started:
 
 ### Install manually
 
-[Download Pico+*Bl*ades](https://github.com/anyblades/blades/archive/refs/heads/main.zip) and link `assets/blades.css` in the `<head>` of your website.
+[Download *Bl*ades+Pico](https://github.com/anyblades/blades/archive/refs/heads/main.zip) and link `assets/blades.css` in the `<head>` of your website.
 
 ```html
 <link rel="stylesheet" href="assets/blades.css" />
