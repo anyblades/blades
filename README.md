@@ -6,7 +6,7 @@
 
 <big>Fully compatible and actively maintained successor to Pico CSS.</big>
 
-Includes [Float labels](https://blades.ninja/css/float-label/), [Breakout layout](https://blades.ninja/css/breakout/) and other modern helpers. Simply switch `pico.css` to `blades.css` or use `blades.standalone.css` with other frameworks.
+Includes [Float labels](//blades.ninja/css/float-label/), [Breakout layout](//blades.ninja/css/breakout/) and other modern helpers. Simply switch `pico.css` to `blades.css` or use `blades.standalone.css` with other frameworks.
 
 <!--section:gh-only-->
 
@@ -157,23 +157,23 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 
 <!--section:info-->
 
-## <sup>Featured by</sup><!--A-Z-->
+## <sup>Featured by</sup><!--awesome,sites,social/Z-A-->
 
-- [https://fosstodon.org/@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
-- [https://github.com/@gabrielizalo/awesome-css](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
-- [https://github.com/@uhub/awesome-css](https://github.com/uhub/awesome-css)
-- [https://github.com/awesome-11ty-build-awesome](https://github.com/anyblades/awesome-11ty-build-awesome)
-- [https://sveltiacms.app/docs/start](https://sveltiacms.app/en/docs/start#starter-templates)
-- [https://www.youtube.com/@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w)
-- [https://dummy.my/](https://dummy.my/frameworks/fw-blades-css/)
-- [https://github.com/classless-css](https://github.com/dbohdan/classless-css#components:~:text=Float%20Label) for [Float label](https://blades.ninja/css/float-label/)
-- [https://trendshift.io/](https://trendshift.io/repositories/29875) for [Pico fork](https://blades.ninja/css/pico/)
+- https://github.com/uhub/awesome-css
+- [classless-css](https://github.com/dbohdan/classless-css#components:~:text=float%20label) [#float-label](//blades.ninja/css/float-label/){.faded}
+- [awesome-css-frameworks-and-ui-libraries](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
+- [awesome-11ty-build-awesome](https://github.com/anyblades/awesome-11ty-build-awesome)
+- https://dummy.my/frameworks/
+- [sveltiacms.app](https://sveltiacms.app/en/docs/start#starter-templates)
+- [https://trendshift.io/](https://trendshift.io/repositories/29875) [#pico-fork](//blades.ninja/css/pico/){.faded}
+- [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
+- [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w)
 
 <!--{.markerless .columns}-->
 
 ## <sup>Credits</sup>
 
-- https://picocss.com/ as a [first-class citizen](https://blades.ninja/css/pico/)
-- https://11ty.dev/ for [this site generation](https://github.com/anyblades/blades.ninja)
+- https://picocss.com/ for [inspiration](//blades.ninja/css/pico/)
+- https://11ty.dev/ for [this site generation ↗](https://github.com/anyblades/blades.ninja)
 
 <!--{.markerless}-->
