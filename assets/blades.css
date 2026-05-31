@@ -715,9 +715,32 @@ ul li[data-marker]::marker, ol li[data-marker]::marker {
   }
 /*```
 
+### Markerless
+
+`.markerless` removes markers and reduces padding:
+
+<article>
+
+- 1️⃣ so you can use
+- 2️⃣ emojis or images
+- 3️⃣ instead of bullets
+
+{.markerless}
+</article>
+
+How it works:
+```css */
+ul.markerless, ol.markerless {
+    padding-inline-start: 1.25rem;
+  }
+ul.markerless li, ol.markerless li {
+      list-style: none;
+    }
+/*```
+
 ### Unlist
 
-`.unlist` removes list styling:
+`.unlist` removes list styling at all:
 
 <article>
 
@@ -728,7 +751,7 @@ ul li[data-marker]::marker, ol li[data-marker]::marker {
 {.unlist .grid style=margin:0}
 </article>
 
-`.unlist-all` also removes styling from all nested lists.
+`.unlist-all` removes styling from all nested lists too.
 
 How it works:
 ```css */
@@ -752,6 +775,7 @@ ul.unlist > li, ul.unlist-all > li, .unlist-all ul > li, ol.unlist > li, ol.unli
 a:has(> i) {
     display: inline-flex;
     gap: 0.375ch; /* =3/8 */
+    text-wrap: balance;
     overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
   }
 a > i {
