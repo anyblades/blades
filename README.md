@@ -169,11 +169,11 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 - [https://github.com/classless-css](https://github.com/dbohdan/classless-css#components:~:text=Float%20Label) for [Float label](https://blades.ninja/css/float-label/)
 - [https://trendshift.io/](https://trendshift.io/repositories/29875) for [Pico fork](https://blades.ninja/css/pico/)
 
-<!--{.unlist .columns}-->
+<!--{.markerless .columns}-->
 
 ## <sup>Credits</sup>
 
 - https://picocss.com/ as a [first-class citizen](https://blades.ninja/css/pico/)
 - https://11ty.dev/ for [this site generation](https://github.com/anyblades/blades.ninja)
 
-<!--{.unlist}-->
+<!--{.markerless}-->

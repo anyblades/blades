@@ -80,9 +80,36 @@ ol {
 }
 /*```
 
+### Markerless
+
+`.markerless` removes markers and reduces padding:
+
+<article>
+
+- 1️⃣ so you can use
+- 2️⃣ emojis or images
+- 3️⃣ instead of bullets
+
+{.markerless}
+</article>
+
+How it works:
+```css */
+ul,
+ol {
+  &.markerless {
+    padding-inline-start: 1.25rem;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+/*```
+
 ### Unlist
 
-`.unlist` removes list styling:
+`.unlist` removes list styling at all (`.unlist-all` for nested lists too):
 
 <article>
 
