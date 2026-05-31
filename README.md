@@ -2,7 +2,7 @@
 
 <!--section:summary-->
 
-<h1><mark>Minimal CSS Framework</mark> for Semantic HTML</h1>
+<h1><mark>Minimal CSS Framework</mark> <small>for</small> Semantic HTML</h1>
 
 <big>Fully compatible and actively maintained successor to Pico CSS.</big>
 
