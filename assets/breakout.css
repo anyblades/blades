@@ -7,6 +7,13 @@
   padding-inline: 10%;
   max-width: calc(10% + 65ch + 10%);
 }
+@media (width < 768px) {
+.breakout,
+.breakout-all {
+    padding-inline: 1rem;
+    max-width: calc(1rem + 65ch + 1rem)
+}
+  }
 /* Breakout direct children only */
 .breakout > *:is(
       table,
@@ -29,7 +36,7 @@
       width: -moz-fit-content;
       width: fit-content;
       min-width: 100%;
-      max-width: 125%;
+      max-width: min(125%, 100dvw);
       margin-left: 50%;
       transform: translateX(-50%);
     }
@@ -39,7 +46,7 @@
     }
 /* Max out the width of the element */
 .breakout > *.breakout-item-max, .breakout-all > *.breakout-item-max {
-      width: 125% !important; /* !important is for cases like figure.breakout-item-max @TODO */
+      width: min(125%, 100dvw) !important; /* !important is for cases like figure.breakout-item-max @TODO */
     }
 .breakout-all > *:is(h2, h3, h4, h5, h6, hr):not([class]) {
     position: relative;
@@ -70,7 +77,7 @@
     overflow: visible;
   }
 .breakout-all > *:is(hr)::before {
-      width: 100vw;
+      width: 100dvw;
       left: 50%;
       height: 100%;
       transform: translateX(-50%);
