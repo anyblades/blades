@@ -1,7 +1,7 @@
 {
   "name": "@anyblades/blades",
-  "version": "2.2.4",
-  "description": "Framework-agnostic CSS utilities and single-file Liquid 'blades' for modern web development.",
+  "version": "2.3.0",
+  "description": "Fully compatible and actively maintained successor to Pico CSS.",
   "exports": {
     ".": "./src/blades.standalone.css",
     "./core": "./src/blades.standalone.core.css",
