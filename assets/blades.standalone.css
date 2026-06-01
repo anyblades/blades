@@ -577,21 +577,6 @@ code:where(pre > *) {
     padding: 0;
   }
 
-/* Extends https://github.com/PrismJS/prism/blob/master/plugins/treeview/prism-treeview.css */
-
-.token.treeview-part .entry-line {
-    width: 2.5em !important;
-    opacity: 25%;
-  }
-
-.token.treeview-part .entry-name:last-child {
-    opacity: 50%;
-  }
-
-.token.treeview-part .entry-name:last-child::before {
-      display: none !important;
-    }
-
 /*```
 \3c !--section--> */
 
