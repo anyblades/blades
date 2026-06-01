@@ -28,7 +28,7 @@ There are 4 ways to get started:
 
 ### Usage from CDN
 
-Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/) to link `css/blades.min.css`:
+Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/):
 
 <!--prettier-ignore-->
 ```html
@@ -37,23 +37,21 @@ Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblade
 "/>
 ```
 
-Living examples: https://github.com/anyblades/subtle/blob/main/.subtle/package.json
-
 ### Install with NPM
 
 ```sh
-npm install @anyblades/pico # optional
+npm install @anyblades/pico # or other CSS framework
 npm install @anyblades/blades
 ```
 
 Then, import [Pico] and *Bl*ades into your CSS:
 
 ```css
-@import "@anyblades/pico"; /* optional */
-@import "@anyblades/blades"; /* can be used standalone */
+@import "@anyblades/pico"; /* or other CSS framework */
+@import "@anyblades/blades";
 ```
 
-Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_styles/styles.css
+A live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://github.com/anyblades/buildawesome-starters/blob/main/site-tailwind/styles.css
 
 ### Starter HTML template <!-- from index.html -->
 
