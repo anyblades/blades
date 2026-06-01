@@ -160,12 +160,12 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
 ## <sup>Featured by</sup><!--awesome,sites,social/Z-A-->
 
 - https://github.com/uhub/awesome-css
-- [classless-css](https://github.com/dbohdan/classless-css#components:~:text=float%20label) [#float-label](//blades.ninja/css/float-label/){.faded}
+- [classless-css](https://github.com/dbohdan/classless-css#components:~:text=float%20label) [#float-label](//blades.ninja/css/float-label/)<!--{.faded}-->
 - [awesome-css-frameworks-and-ui-libraries](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [awesome-11ty-build-awesome](https://github.com/anyblades/awesome-11ty-build-awesome)
 - https://dummy.my/frameworks/
 - [sveltiacms.app](https://sveltiacms.app/en/docs/start#starter-templates)
-- [https://trendshift.io/](https://trendshift.io/repositories/29875) [#pico-fork](//blades.ninja/css/pico/){.faded}
+- [https://trendshift.io/](https://trendshift.io/repositories/29875) [#pico-fork](//blades.ninja/css/pico/)<!--{.faded}-->
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w)
 
