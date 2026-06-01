@@ -73,6 +73,13 @@ A live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https:/
 </html>
 ```
 
+### More ways to get started
+
+- https://blades.ninja/css/standalone/ version
+- https://subtle.blades.ninja/ 11ty micro-starter
+- https://tw.11ty.blades.ninja/ Tailwind CLI starter
+- https://jekyll.blades.ninja/ starter <!--{.faded}-->
+
 <!--section:gh-only-->
 
 ## Documentation
