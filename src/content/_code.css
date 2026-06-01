@@ -6,7 +6,7 @@
 The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
 
 ```treeview {data-caption="Blades CSS:"}
-./assets/
+./css/
 ├── blades.core.css     # reusable class-light utilities, unthemed
 ├── blades.theme.css    # minimal opinionated theme
 └── blades.css          # above two together

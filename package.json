@@ -9,7 +9,7 @@
     "./float-label": "./src/float-label.css"
   },
   "scripts": {
-    "postcss": "postcss './src/!(_)*.css' --dir ./assets",
+    "postcss": "postcss './src/!(_)*.css' --dir ./css/",
     "build": "npm run postcss -- --no-map",
     "start": "npm run postcss -- --watch",
     "prepublishOnly": "npm run build"

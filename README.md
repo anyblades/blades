@@ -20,20 +20,20 @@ There are 4 ways to get started:
 
 ### Install manually
 
-[Download *Bl*ades](https://github.com/anyblades/blades/archive/refs/heads/main.zip) and link `assets/blades.css` in the `<head>` of your website.
+[Download *Bl*ades](https://github.com/anyblades/blades/archive/refs/heads/main.zip) and link `css/blades.css` in the `<head>` of your website.
 
 ```html
-<link rel="stylesheet" href="assets/blades.css" />
+<link rel="stylesheet" href="css/blades.css" />
 ```
 
 ### Usage from CDN
 
-Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/) to link `assets/blades.min.css`:
+Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/) to link `css/blades.min.css`:
 
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
-  https://cdn.jsdelivr.net/npm/@anyblades/blades@2/assets/blades.min.css
+  https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/blades.min.css
 "/>
 ```
 
@@ -64,7 +64,7 @@ Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_st
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="stylesheet" href="assets/blades.css" />
+    <link rel="stylesheet" href="css/blades.css" />
     <title>Hello world!</title>
   </head>
   <body>
