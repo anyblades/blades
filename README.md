@@ -169,6 +169,7 @@ https://blades.ninja/css/standalone/
 ## <sup>Featured by</sup><!--projects,awesome,sites,social/Z-A-->
 
 - https://github.com/getgrav/grav-theme-quark2 🚀
+- [minform](https://github.com/johnheenan/minform#css-and-performance)
 - https://github.com/uhub/awesome-css
 - [classless-css](https://github.com/dbohdan/classless-css#components:~:text=float%20label) [#float-label](//blades.ninja/css/float-label/)<!--{.faded}-->
 - [awesome-css-frameworks-and-ui-libraries](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
