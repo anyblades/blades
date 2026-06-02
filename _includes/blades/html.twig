@@ -1,0 +1,52 @@
+{# <!--section:code-->```twig #}
+<!doctype html>
+<html lang="{{ site.lang|default('en') }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <link rel="icon" href="{{ site.favicon|default('/favicon.svg') }}" />
+    {% if site.favicon_alt %}
+      <link rel="alternate icon" href="{{ site.favicon_alt }}" type="image/png" />
+    {% endif %}
+    <title>
+      {{- title ? title|striptags ~ ' | ' -}}
+      {{- site.title -}}
+    </title>
+    <meta name="description" content="{{ description|striptags }}" />
+
+    {%- for href in site.styles %}
+      <link rel="stylesheet" href="{{ href }}" />
+    {%- endfor %}
+    <style>
+      {{ site.inline_styles|default([])|join('\n')|raw }}
+    </style>
+
+    {%- for src in site.scripts %}
+      <script src="{{ src }}" defer></script>
+    {%- endfor %}
+    <script type="module">
+      {{ site.inline_scripts|default([])|join('\n')|raw }}
+    </script>
+
+    {{ content_for_header|default('')|raw }}
+  </head>
+
+  <body>
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>
+{#```
+- `title ? …` renders the prefix only when a title is set, mirroring the Nunjucks `if title` guard.
+
+<!--section:docs-->
+Usage in Twig layout:
+
+```twig
+{% extends 'blades/html.twig' %}
+
+{% block body %}...{% endblock %}
+```
+
+Pass `site`, `title` and `description` via the render context.
+<!--section--> #}

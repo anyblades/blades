@@ -1,0 +1,23 @@
+{#- Based on https://github.com/11ty/eleventy-base-blog/blob/main/content/sitemap.xml.njk
+<!--section:code-->```twig -#}
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {%- for page in collections.all %}
+    {% if page.data.permalink != false %}
+      <url>
+        <loc>{{ site.base }}{{ page.url }}</loc>
+        <lastmod>{{ page.date|date('c') }}</lastmod>
+      </url>
+    {% endif %}
+  {%- endfor %}
+</urlset>
+{#```
+<!--section:docs-->
+Render from a standalone route/template that outputs `application/xml`:
+
+```twig
+{% include 'blades/sitemap.xml.twig' %}
+```
+
+`date('c')` emits an ISO-8601 `lastmod`, which is what the sitemap spec expects.
+<!--section--> #}
