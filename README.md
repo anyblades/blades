@@ -18,7 +18,7 @@ Includes [Float labels](//blades.ninja/css/float-label/), [Breakout layout](//bl
 
 There are 4 ways to get started:
 
-### Install manually
+### <mark>A.</mark> Install manually
 
 [Download *Bl*ades](https://github.com/anyblades/blades/archive/refs/heads/main.zip) and link `css/blades.css` in the `<head>` of your website.
 
@@ -26,7 +26,7 @@ There are 4 ways to get started:
 <link rel="stylesheet" href="css/blades.css" />
 ```
 
-### Usage from CDN
+### <mark>B.</mark> Usage from CDN
 
 Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/):
 
@@ -37,7 +37,7 @@ Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblade
 "/>
 ```
 
-### Install with NPM
+### <mark>C.</mark> Install with NPM
 
 ```sh
 npm install @anyblades/pico # or other CSS framework
@@ -52,6 +52,13 @@ Then, import [Pico] and *Bl*ades into your CSS:
 ```
 
 A live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://github.com/anyblades/buildawesome-starters/blob/main/site-tailwind/styles.css
+
+### <mark>D.</mark> Starter projects
+
+- https://blades.ninja/css/standalone/ version
+- https://subtle.blades.ninja/ 11ty micro-starter
+- https://tw.11ty.blades.ninja/ Tailwind CLI starter
+- https://jekyll.blades.ninja/ starter <!--{.faded}-->
 
 ### Starter HTML template <!-- from index.html -->
 
@@ -72,13 +79,6 @@ A live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https:/
   </body>
 </html>
 ```
-
-### More ways to get started
-
-- https://blades.ninja/css/standalone/ version
-- https://subtle.blades.ninja/ 11ty micro-starter
-- https://tw.11ty.blades.ninja/ Tailwind CLI starter
-- https://jekyll.blades.ninja/ starter <!--{.faded}-->
 
 <!--section:gh-only-->
 
