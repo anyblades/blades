@@ -57,7 +57,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 - https://subtle.blades.ninja/ 11ty micro-starter
 - https://github.com/anyblades/buildawesome-starters 11ty Tailwind CLI starter(s)
-- https://github.com/getgrav/grav-theme-quark2 for Grav CMS 2.0
+- https://github.com/getgrav/grav-theme-quark2 for Grav CMS v2
 - https://jekyll.blades.ninja/ starter <!--{.faded}-->
 
 ### Standalone version
