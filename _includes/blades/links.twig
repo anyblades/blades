@@ -1,0 +1,18 @@
+{# <!--section:code-->```twig #}
+<ul>
+  {%- for link in links %}
+    <li>
+      <a href="{{ link.url }}" {% if link.url == current_url %}aria-current="page"{% endif %}>
+        {{- link.title -}}
+      </a>
+    </li>
+  {%- endfor %}
+</ul>
+{#```
+<!--section:docs-->
+Pass the links and the current URL explicitly so nothing else leaks into scope:
+
+```twig
+{% include 'blades/links.twig' with { links: menu, current_url: app.request.pathInfo } only %}
+```
+<!--section--> #}
