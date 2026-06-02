@@ -171,7 +171,7 @@ https://blades.ninja/css/standalone/
 - https://github.com/uhub/awesome-css
 - [classless-css](https://github.com/dbohdan/classless-css#components:~:text=float%20label) [#float-label](//blades.ninja/css/float-label/)<!--{.faded}-->
 - [awesome-css-frameworks-and-ui-libraries](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
-- [awesome-11ty-build-awesome](https://github.com/anyblades/awesome-11ty-build-awesome)
+- [awesome-11ty-buildawesome](https://github.com/anyblades/awesome-11ty-buildawesome)
 - https://dummy.my/frameworks/
 - [sveltiacms.app](https://sveltiacms.app/en/docs/start#starter-templates)
 - [https://trendshift.io/](https://trendshift.io/repositories/29875) [#pico-fork](//blades.ninja/css/pico/)<!--{.faded}-->
