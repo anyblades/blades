@@ -51,7 +51,7 @@ Then, import [Pico] and *Bl*ades into your CSS:
 @import "@anyblades/blades";
 ```
 
-A live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://github.com/anyblades/buildawesome-starters/blob/main/site-tailwind/styles.css
+Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://github.com/anyblades/buildawesome-starters/blob/main/site-tailwind/styles.css
 
 ### <mark>D.</mark> Starter projects
 
