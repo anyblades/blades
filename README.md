@@ -178,8 +178,7 @@ https://blades.ninja/css/standalone/
 - [sveltiacms.app](https://sveltiacms.app/en/docs/start#starter-templates)
 - [https://trendshift.io/](https://trendshift.io/repositories/29875) [#pico-fork](//blades.ninja/css/pico/)<!--{.faded}-->
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
-- [@githubsignals on IG](https://www.instagram.com/reel/DXOSTpajG4f/)
-  + [on YT](https://www.youtube.com/shorts/FxtvnBCse8w)
+- [@githubsignals on IG](https://www.instagram.com/reel/DXOSTpajG4f/) + [on YT](https://www.youtube.com/shorts/FxtvnBCse8w)
 
 <!--{.markerless .columns}-->
 
