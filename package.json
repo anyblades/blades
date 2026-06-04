@@ -28,8 +28,9 @@
   "author": "Anton Staroverov",
   "license": "MIT",
   "devDependencies": {
-    "@anyblades/pico": "^2.2.0-alpha.6",
+    "@anyblades/pico": "^2.3.0",
     "autoprefixer": "^10.5.0",
+    "css-declaration-sorter": "^7.4.0",
     "postcss": "^8.4.33",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.1",
