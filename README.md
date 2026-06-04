@@ -1,4 +1,4 @@
-# 🥷 *Bl*ades &nbsp;![](https://img.shields.io/github/v/release/anyblades/blades?label=&color=darkslategray)
+# 🥷 *Bl*ades &nbsp;<img src='https://img.shields.io/npm/v/@anyblades/blades?label=&color=white'>
 
 <!--section:summary-->
 
