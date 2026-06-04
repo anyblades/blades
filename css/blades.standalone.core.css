@@ -46,8 +46,8 @@ How it works:
 
 [data-jump-to="top"] {
   position: fixed;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   padding-top: 50vh;
 }
 
@@ -60,17 +60,17 @@ How it works:
 
 .breakout,
 .breakout-all {
+  max-width: calc(10% + 65ch + 10%);
   /* Prepare the container for breakout elements */
   padding-inline: 10%;
-  max-width: calc(10% + 65ch + 10%);
 }
 
 @media (width < 768px) {
 
 .breakout,
 .breakout-all {
-    padding-inline: 1rem;
-    max-width: calc(1rem + 65ch + 1rem)
+    max-width: calc(1rem + 65ch + 1rem);
+    padding-inline: 1rem
 }
   }
 
@@ -119,19 +119,19 @@ How it works:
   }
 
 .breakout-all > *:is(h2, h3, h4, h5, h6, hr):not([class])::before {
-      content: "";
       display: block;
       position: absolute;
       background: gray;
+      content: "";
       opacity: 12.5%;
     }
 
 .breakout-all > *:is(h2, h3, h4, h5, h6):not([class])::before {
-      width: 10em;
-      right: 100%;
-      margin-right: 0.8ch;
-      height: 0.25em;
       top: 50%;
+      right: 100%;
+      width: 10em;
+      height: 0.25em;
+      margin-right: 0.8ch;
       transform: translateY(-50%);
       background: linear-gradient(to left, gray, transparent);
     }
@@ -144,13 +144,13 @@ How it works:
 
 .breakout-all > *:is(hr) {
     height: 0.5rem;
-    border: none;
     overflow: visible;
+    border: none;
   }
 
 .breakout-all > *:is(hr)::before {
-      width: 100dvw;
       left: 50%;
+      width: 100dvw;
       height: 100%;
       transform: translateX(-50%);
     }
@@ -223,14 +223,14 @@ h6 {
 }
 
 h1 a[aria-hidden="true"], h2 a[aria-hidden="true"], h3 a[aria-hidden="true"], h4 a[aria-hidden="true"], h5 a[aria-hidden="true"], h6 a[aria-hidden="true"] {
+    visibility: hidden;
     position: absolute;
-    right: 100%;
     top: 50%;
-    transform: translateY(-50%);
+    right: 100%;
     padding-right: 0.2ch;
+    transform: translateY(-50%);
     color: silver;
     text-decoration: none;
-    visibility: hidden;
   }
 
 @media /* to avoid double-tap on touch devices */ (hover: hover) {
@@ -351,24 +351,24 @@ ul.unlist > li, ul.unlist-all > li, .unlist-all ul > li, ol.unlist > li, ol.unli
 
 a:has(> i) {
     display: inline-flex;
+    overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
     gap: 0.375ch; /* =3/8 */
     text-wrap: balance;
-    overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
   }
 
 a > i {
-    font-style: normal;
     float: left; /*                 ✅ Chrome ❌ Safari */
+    font-style: normal;
     text-underline-offset: -2em; /* ❌ Chrome ✅ Safari - to clip it with overflow-y */
   }
 
 /* Favicons */
 
 a > i > img {
+      display: inline-block; /* for Tailwind CSS Typography */
+      max-width: none; /* to keep ratio safe */
       height: 1.25em;
       margin-block-start: calc(-0.25em / 2);
-      max-width: none; /* to keep ratio safe */
-      display: inline-block; /* for Tailwind CSS Typography */
     }
 
 a > i[class^="fa-"],
@@ -436,10 +436,10 @@ How it works:
 ```css */
 
 th hr {
+    visibility: hidden;
     width: 12ch; /* min ~65/12 = ~5 cols */
     height: 0;
     margin: 0;
-    visibility: hidden;
   }
 
 th hr.lg {
@@ -481,20 +481,20 @@ table.borderless th,
 table.responsive,
 .breakout > table:not(.does-not-exist),
 .breakout-all > table:not(.does-not-exist) {
-  /* Center horizontally */
-  margin-left: 50%;
-  transform: translateX(-50%);
+
+  /* Let them scroll */
+  display: block;
 
   /* Let them full-bleed */
   width: -moz-max-content;
   width: max-content;
   min-width: auto;
   max-width: 100dvw;
+  /* Center horizontally */
+  margin-left: 50%;
   padding-inline: 7.5%;
-
-  /* Let them scroll */
-  display: block;
   overflow-x: auto;
+  transform: translateX(-50%);
   -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
 }
 
@@ -566,11 +566,11 @@ pre {
 /* Code block caption via data-attr (to display filename, etc.) */
 
 code[data-caption]::before {
-      content: attr(data-caption);
       display: block;
       margin-bottom: 1rem;
-      opacity: 50%;
+      content: attr(data-caption);
       font-style: italic;
+      opacity: 50%;
     }
 
 code:where(pre > *) {
@@ -606,10 +606,10 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
   .has-float-label > span,
   .has-float-label label {
     position: absolute;
-    left: 0;
     top: 0;
-    cursor: text;
+    left: 0;
     font-size: 75%;
+    cursor: text;
   }
 
 /*

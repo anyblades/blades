@@ -4,20 +4,20 @@
 table.responsive,
 .breakout > table:not(.does-not-exist),
 .breakout-all > table:not(.does-not-exist) {
-  /* Center horizontally */
-  margin-left: 50%;
-  transform: translateX(-50%);
+
+  /* Let them scroll */
+  display: block;
 
   /* Let them full-bleed */
   width: -moz-max-content;
   width: max-content;
   min-width: auto;
   max-width: 100dvw;
+  /* Center horizontally */
+  margin-left: 50%;
   padding-inline: 7.5%;
-
-  /* Let them scroll */
-  display: block;
   overflow-x: auto;
+  transform: translateX(-50%);
   -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
 }
 table.responsive th,

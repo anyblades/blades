@@ -19,10 +19,10 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
   .has-float-label > span,
   .has-float-label label {
     position: absolute;
-    left: 0;
     top: 0;
-    cursor: text;
+    left: 0;
     font-size: 75%;
+    cursor: text;
   }
 /*
 ```

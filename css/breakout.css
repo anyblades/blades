@@ -3,15 +3,15 @@
 ```css */
 .breakout,
 .breakout-all {
+  max-width: calc(10% + 65ch + 10%);
   /* Prepare the container for breakout elements */
   padding-inline: 10%;
-  max-width: calc(10% + 65ch + 10%);
 }
 @media (width < 768px) {
 .breakout,
 .breakout-all {
-    padding-inline: 1rem;
-    max-width: calc(1rem + 65ch + 1rem)
+    max-width: calc(1rem + 65ch + 1rem);
+    padding-inline: 1rem
 }
   }
 /* Breakout direct children only */
@@ -52,18 +52,18 @@
     position: relative;
   }
 .breakout-all > *:is(h2, h3, h4, h5, h6, hr):not([class])::before {
-      content: "";
       display: block;
       position: absolute;
       background: gray;
+      content: "";
       opacity: 12.5%;
     }
 .breakout-all > *:is(h2, h3, h4, h5, h6):not([class])::before {
-      width: 10em;
-      right: 100%;
-      margin-right: 0.8ch;
-      height: 0.25em;
       top: 50%;
+      right: 100%;
+      width: 10em;
+      height: 0.25em;
+      margin-right: 0.8ch;
       transform: translateY(-50%);
       background: linear-gradient(to left, gray, transparent);
     }
@@ -73,12 +73,12 @@
       }
 .breakout-all > *:is(hr) {
     height: 0.5rem;
-    border: none;
     overflow: visible;
+    border: none;
   }
 .breakout-all > *:is(hr)::before {
-      width: 100dvw;
       left: 50%;
+      width: 100dvw;
       height: 100%;
       transform: translateX(-50%);
     }
