@@ -172,15 +172,16 @@ https://blades.ninja/css/standalone/
 - https://github.com/pallets/website 🐍
 - [minform](https://github.com/johnheenan/minform#css-and-performance)
 
-## <sup>Featured by</sup><!--projects,awesome,sites,social/Z-A-->
+<!--{.markerless .columns}-->
 
-- https://github.com/uhub/awesome-css
-- [awesome-css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
-- [awesome-11ty](https://github.com/anyblades/awesome-11ty-buildawesome)
-- https://dummy.my/frameworks/
-- [sveltiacms.app](https://sveltiacms.app/en/docs/start#starter-templates)
+## <sup>Featured by</sup>
+
+- [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
+- [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
+- [dummy<em>.</em>my/frameworks](https://dummy.my/frameworks/)
+- [sveltiacms<em>.</em>app/docs](https://sveltiacms.app/en/docs/start#starter-templates)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
-- [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) + [ ](https://www.instagram.com/reel/DXOSTpajG4f/)<!--{.faded}-->
+- [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
 
 <!--{.markerless .columns}-->
 
