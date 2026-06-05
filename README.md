@@ -166,11 +166,14 @@ https://blades.ninja/css/standalone/
 
 <!--section:info-->
 
-## <sup>Featured by</sup><!--projects,awesome,sites,social/Z-A-->
+## <sup>Trusted by</sup>
 
 - https://github.com/getgrav/grav-theme-quark2 <i class="fa-solid fa-user-astronaut"></i>
 - https://github.com/pallets/website 🐍
 - [minform](https://github.com/johnheenan/minform#css-and-performance)
+
+## <sup>Featured by</sup><!--projects,awesome,sites,social/Z-A-->
+
 - https://github.com/uhub/awesome-css
 - [awesome-css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [awesome-11ty](https://github.com/anyblades/awesome-11ty-buildawesome)
