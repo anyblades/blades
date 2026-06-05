@@ -176,10 +176,10 @@ https://blades.ninja/css/standalone/
 
 ## <sup>Featured by</sup>
 
+- [sveltiacms<em>.</em>app/docs](https://sveltiacms.app/en/docs/start#starter-templates)
 - [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
 - [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [dummy<em>.</em>my/frameworks](https://dummy.my/frameworks/)
-- [sveltiacms<em>.</em>app/docs](https://sveltiacms.app/en/docs/start#starter-templates)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
 
