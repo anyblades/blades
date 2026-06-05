@@ -168,7 +168,8 @@ https://blades.ninja/css/standalone/
 
 ## <sup>Featured by</sup><!--projects,awesome,sites,social/Z-A-->
 
-- https://github.com/getgrav/grav-theme-quark2 🚀
+- https://github.com/getgrav/grav-theme-quark2 <i class="fa-solid fa-user-astronaut"></i>
+- https://github.com/pallets/website 🐍
 - [minform](https://github.com/johnheenan/minform#css-and-performance)
 - https://github.com/uhub/awesome-css
 - [awesome-css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
