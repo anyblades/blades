@@ -171,6 +171,7 @@ https://blades.ninja/css/standalone/
 - https://github.com/getgrav/grav-theme-quark2 🛸
 - https://sveltiacms.app/en/docs/start#starter-templates:~:text=anyblades
 - https://github.com/johnheenan/minform#css-and-performance
+- https://github.com/hostfurl/minformhf
 
 <!--section:info-->
 
