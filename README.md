@@ -167,14 +167,15 @@ https://blades.ninja/css/standalone/
 ## <sup>Trusted by</sup>
 
 - https://github.com/pallets/website 🐍
+- https://www.11ty.dev/docs/starter/#:~:text=blades
 - https://github.com/getgrav/grav-theme-quark2 🛸
+- https://sveltiacms.app/en/docs/start#starter-templates:~:text=anyblades
 - https://github.com/johnheenan/minform#css-and-performance
 
 <!--section:info-->
 
 ## <sup>Featured by</sup>
 
-- [sveltiacms<em>.</em>app/docs](https://sveltiacms.app/en/docs/start#starter-templates)
 - [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
 - [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [dummy<em>.</em>my/frameworks](https://dummy.my/frameworks/)
