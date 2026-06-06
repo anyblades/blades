@@ -164,15 +164,13 @@ https://blades.ninja/css/standalone/
 
 ---
 
-<!--section:info-->
-
 ## <sup>Trusted by</sup>
 
-- https://github.com/getgrav/grav-theme-quark2 <i class="fa-solid fa-user-astronaut"></i>
 - https://github.com/pallets/website 🐍
-- [minform](https://github.com/johnheenan/minform#css-and-performance)
+- https://github.com/getgrav/grav-theme-quark2 🛸
+- https://github.com/johnheenan/minform#css-and-performance
 
-<!--{.markerless .columns}-->
+<!--section:info-->
 
 ## <sup>Featured by</sup>
 
