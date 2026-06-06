@@ -167,8 +167,8 @@ https://blades.ninja/css/standalone/
 ## <sup>Trusted by</sup>
 
 - https://github.com/pallets/website 🐍
-- https://www.11ty.dev/docs/starter/#:~:text=blades
 - https://github.com/getgrav/grav-theme-quark2 🛸
+- https://www.11ty.dev/docs/starter/#:~:text=blades
 - https://sveltiacms.app/en/docs/start#starter-templates:~:text=anyblades
 - https://github.com/johnheenan/minform#css-and-performance
 - https://github.com/hostfurl/minformhf
