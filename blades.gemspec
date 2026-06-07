@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "blades"
-  spec.version       = "2.3.1"
+  spec.version       = "2.3.2"
   spec.authors       = ["Anton Staroverov"]
 
   spec.summary       = "Fully compatible and actively maintained successor to Pico CSS."

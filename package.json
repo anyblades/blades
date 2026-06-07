@@ -1,6 +1,6 @@
 {
   "name": "@anyblades/blades",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Fully compatible and actively maintained successor to Pico CSS.",
   "exports": {
     ".": "./src/blades.css",
