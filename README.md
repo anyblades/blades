@@ -44,10 +44,9 @@ npm install @anyblades/pico # or other CSS framework
 npm install @anyblades/blades
 ```
 
-Then, import [Pico] and *Bl*ades into your CSS:
+Then, import *Bl*ades into your CSS:
 
 ```css
-@import "@anyblades/pico"; /* or other CSS framework */
 @import "@anyblades/blades";
 ```
 
@@ -62,7 +61,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 ### Standalone version
 
-https://blades.ninja/css/standalone/
+- https://blades.ninja/css/standalone/
 
 ### Starter HTML template <!-- from index.html -->
 
