@@ -3,9 +3,10 @@
   "version": "2.3.1",
   "description": "Fully compatible and actively maintained successor to Pico CSS.",
   "exports": {
-    ".": "./src/blades.standalone.css",
-    "./core": "./src/blades.standalone.core.css",
-    "./theme": "./src/blades.standalone.theme.css",
+    ".": "./src/blades.css",
+    "./standalone": "./src/blades.standalone.css",
+    "./standalone/core": "./src/blades.standalone.core.css",
+    "./standalone/theme": "./src/blades.standalone.theme.css",
     "./float-label": "./src/float-label.css"
   },
   "scripts": {
