@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "blades"
-  spec.version       = "2.3.2"
+  spec.version       = "2.3.3"
+  
   spec.authors       = ["Anton Staroverov"]
-
-  spec.summary       = "Fully compatible and actively maintained successor to Pico CSS."
-  spec.homepage      = "https://github.com/anyblades/blades"
+  spec.homepage      = "https://blades.ninja/"
   spec.license       = "MIT"
+  spec.summary       = "Fully compatible and actively maintained successor to Pico CSS."
 
   spec.files = Dir.glob("{_includes,css}/**/*")
   # puts "spec.files: #{spec.files.inspect}"

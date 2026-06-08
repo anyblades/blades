@@ -1,7 +1,6 @@
 {
   "name": "@anyblades/blades",
-  "version": "2.3.2",
-  "description": "Fully compatible and actively maintained successor to Pico CSS.",
+  "version": "2.3.3",
   "exports": {
     ".": "./src/blades.css",
     "./standalone": "./src/blades.standalone.css",
@@ -9,25 +8,13 @@
     "./standalone/theme": "./src/blades.standalone.theme.css",
     "./float-label": "./src/float-label.css"
   },
+  "=== DEV ONLY": "===",
   "scripts": {
     "postcss": "postcss './src/!(_)*.css' --dir ./css/",
     "build": "npm run postcss -- --no-map",
     "start": "npm run postcss -- --watch",
     "prepublishOnly": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anyblades/blades.git"
-  },
-  "keywords": [
-    "css",
-    "utilities",
-    "helpers",
-    "atomic",
-    "cdn"
-  ],
-  "author": "Anton Staroverov",
-  "license": "MIT",
   "devDependencies": {
     "@anyblades/pico": "^2.3.0",
     "autoprefixer": "^10.5.0",
@@ -37,5 +24,25 @@
     "postcss-import": "^16.1.1",
     "postcss-nested": "^7.0.2",
     "prettier-plugin-jinja-template": "^2.1.0"
+  },
+  "=== METADATA": "A-Z",
+  "author": "Anton Staroverov",
+  "description": "Fully compatible and actively maintained successor to Pico CSS.",
+  "keywords": [
+    "blades",
+    "classless",
+    "css-framework",
+    "css",
+    "dark-mode",
+    "dark-theme",
+    "lightweight",
+    "minimal",
+    "native-html",
+    "semantic"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anyblades/blades.git"
   }
 }
