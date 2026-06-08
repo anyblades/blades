@@ -1,7 +1,6 @@
-# 🥷 *Bl*ades &nbsp;![][B_NPM] ![][B_GEM]
+# 🥷 *Bl*ades &nbsp;![][B_NPM]
 
 [B_NPM]: https://img.shields.io/npm/v/@anyblades/blades
-[B_GEM]: https://img.shields.io/gem/v/blades
 
 <!--section:summary-->
 
