@@ -1,4 +1,7 @@
-# 🥷 *Bl*ades &nbsp;<img src='https://img.shields.io/npm/v/@anyblades/blades?label=&color=white'>
+# 🥷 *Bl*ades &nbsp;![][B_NPM] ![][B_GEM]
+
+[B_NPM]: https://img.shields.io/npm/v/@anyblades/blades
+[B_GEM]: https://img.shields.io/gem/v/blades
 
 <!--section:summary-->
 
