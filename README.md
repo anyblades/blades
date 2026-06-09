@@ -61,7 +61,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 - https://github.com/getgrav/grav-theme-quark2 for Grav CMS v2
 - https://jekyll.blades.ninja/ starter <!--{.faded}-->
 
-### Standalone version
+### Standalone versions
 
 - https://blades.ninja/css/standalone/
 
