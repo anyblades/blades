@@ -1,4 +1,4 @@
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
+label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
 .has-float-label {
   /* Default/fallback state */
   > span,

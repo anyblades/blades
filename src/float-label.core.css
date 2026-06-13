@@ -3,9 +3,9 @@
 
 First, we target either:
 1. `<label>` which `:has` inner form inputs (classless approach)
-2. or explicit `.has-float-label` class (alternative approach)
+2. or explicit `.has-float-label` class (explicit approach)
 ```css */
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
+label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
 .has-float-label {
   display: block;
   position: relative;
