@@ -1,0 +1,30 @@
+/*<!--section:docs-->
+
+### `sup`er &nbsp; and &nbsp; `sub`headings
+
+<article><br>
+
+# <sup style>Parent page</sup> Page title <sub style>Subtitle</sub>
+
+</article>
+
+How it works:
+```css */
+sup[style] {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+sub[style] {
+  display: block;
+  line-height: 1.1;
+  bottom: 0;
+  font-weight: 300;
+  opacity: 75%;
+
+  &:where(h1 > *) {
+    font-size: 50%;
+  }
+}
+/*```*/
