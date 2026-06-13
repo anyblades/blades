@@ -551,12 +551,7 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 How it works:
 ```css */
 
-pre {
-  padding: 1rem 1.5rem;
-  padding-inline-end: 2rem;
-}
-
-@media (max-width: 767px) {
+@media (width < 768px) {
 
 pre {
     border-radius: 0
@@ -573,10 +568,6 @@ code[data-caption]::before {
       opacity: 50%;
     }
 
-code:where(pre > *) {
-    padding: 0;
-  }
-
 /*```
 \3c !--section--> */
 
@@ -587,10 +578,10 @@ code:where(pre > *) {
 
 First, we target either:
 1. `<label>` which `:has` inner form inputs (classless approach)
-2. or explicit `.has-float-label` class (alternative approach)
+2. or explicit `.has-float-label` class (explicit approach)
 ```css */
 
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
+label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
 .has-float-label {
   display: block;
   position: relative;
@@ -601,8 +592,8 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
 Then, we define the default/fallback state (when the float label should be minimized):
 ```css */
 
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
-  label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
+label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
+  label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
   .has-float-label > span,
   .has-float-label label {
     position: absolute;
@@ -617,25 +608,25 @@ label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea
 Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
 ```css */
 
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::-moz-placeholder, .has-float-label *:placeholder-shown:not(:focus)::-moz-placeholder {
+label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::-moz-placeholder, .has-float-label *:placeholder-shown:not(:focus)::-moz-placeholder {
     opacity: 0;
   }
 
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:-moz-placeholder:not(:focus)::placeholder, .has-float-label *:-moz-placeholder:not(:focus)::placeholder {
+label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:-moz-placeholder:not(:focus)::placeholder, .has-float-label *:-moz-placeholder:not(:focus)::placeholder {
     opacity: 0;
   }
 
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::placeholder, .has-float-label *:placeholder-shown:not(:focus)::placeholder {
+label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::placeholder, .has-float-label *:placeholder-shown:not(:focus)::placeholder {
     opacity: 0;
   }
 
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) > span, label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) label, .has-float-label:has(*:-moz-placeholder:not(:focus)) > span, .has-float-label:has(*:-moz-placeholder:not(:focus)) label {
+label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) > span, label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) label, .has-float-label:has(*:-moz-placeholder:not(:focus)) > span, .has-float-label:has(*:-moz-placeholder:not(:focus)) label {
       font-size: inherit;
       opacity: 50%;
     }
 
-label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) > span,
-    label:has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) label,
+label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) > span,
+    label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) label,
     .has-float-label:has(*:placeholder-shown:not(:focus)) > span,
     .has-float-label:has(*:placeholder-shown:not(:focus)) label {
       font-size: inherit;
@@ -648,6 +639,33 @@ The `:has(*:placeholder-shown:not(:focus))` trick allows this input state inform
 
 Historically, this was not possible: the float label had to be placed after the input field to be targeted using the `input:focus + label` selector.
 \3c !--section--> */
+
+/* Components */
+
+/*\3c !--section:docs-->
+
+Use `dl.timeline` or wrap a `<dl>` with `.has-timeline` to style it as a
+vertical timeline — each `<dd>` gets a left border strip acting as the track:
+
+<article class="has-timeline">
+
+May 11, 2026
+: First Blades CSS stable release (v2.2.0).
+
+Mar 15, 2025
+: Last Pico CSS update (v2.1.1).
+
+</article>
+
+\3c !--section:code-->```css */
+
+dl.timeline dd, .has-timeline > dl dd {
+    margin-block: 0;
+    padding: 0.25rem 0 0.75rem 1rem;
+    border-inline-start: 0.25rem solid gray;
+  }
+
+/*```*/
 
 /* Utilities */
 

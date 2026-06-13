@@ -1,6 +1,6 @@
 {
   "name": "@anyblades/blades",
-  "version": "2.3.3",
+  "version": "2.4.0",
   "exports": {
     ".": "./src/blades.css",
     "./standalone": "./src/blades.standalone.css",
@@ -44,5 +44,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anyblades/blades.git"
-  }
+  },
+  "===": "==="
 }

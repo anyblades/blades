@@ -1,0 +1,54 @@
+/*\3c !--section:docs-->
+
+### `sup`er &nbsp; and &nbsp; `sub`headings
+
+<article><br>
+
+# <sup style>Parent page</sup> Page title <sub style>Subtitle</sub>
+
+</article>
+
+How it works:
+```css */
+sup[style] {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+sub[style] {
+  display: block;
+  bottom: 0;
+  font-weight: 300;
+  line-height: 1.1;
+  opacity: 75%;
+}
+sub[style]:where(h1 > *) {
+    font-size: 50%;
+  }
+/*```
+
+### `.opt`ional content
+
+How it works:
+```css */
+@media (width < 1024px) {
+.opt {
+    display: none
+}
+  }
+/*```
+
+### Nicer GitHub favicons
+
+How it works:
+```css */
+img[src*="?domain=github.com&"] {
+  border-radius: 50%;
+}
+@media (prefers-color-scheme: dark) {
+img[src*="?domain=github.com&"] {
+    filter: invert(1)
+}
+  }
+/*```*/
