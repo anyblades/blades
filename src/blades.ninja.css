@@ -27,4 +27,28 @@ sub[style] {
     font-size: 50%;
   }
 }
+/*```
+
+### `.opt`ional content
+
+How it works:
+```css */
+.opt {
+  @media (width < 1024px) {
+    display: none;
+  }
+}
+/*```
+
+### Nicer GitHub favicons
+
+How it works:
+```css */
+img[src*="?domain=github.com&"] {
+  border-radius: 50%;
+
+  @media (prefers-color-scheme: dark) {
+    filter: invert(1);
+  }
+}
 /*```*/
