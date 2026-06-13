@@ -14,10 +14,7 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 How it works:
 ```css */
 pre {
-  padding: 1rem 1.5rem;
-  padding-inline-end: 2rem;
-
-  @media (max-width: 767px) {
+  @media (width < 768px) {
     border-radius: 0;
   }
 }
@@ -32,10 +29,6 @@ code {
       opacity: 50%;
       font-style: italic;
     }
-  }
-
-  &:where(pre > *) {
-    padding: 0;
   }
 }
 /*```
