@@ -1,0 +1,9 @@
+<ul>
+  {%- for link in links %}
+    <li>
+      <a href="{{ link.url }}" {% if link.url == current_url %}aria-current="page"{% endif %}>
+        {{- link.title | safe -}}
+      </a>
+    </li>
+  {%- endfor %}
+</ul>
