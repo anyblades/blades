@@ -60,6 +60,12 @@ ul {
   }
 }
 
+dl {
+  dt {
+    margin-block: 0.25rem;
+  }
+}
+
 pre {
   small {
     opacity: 75%;
