@@ -63,6 +63,7 @@ ul {
 dl {
   dt {
     margin-block: 0.25rem;
+    font-weight: 500;
   }
   dd {
     margin-block-end: 1rem;

@@ -1,3 +1,19 @@
+/*<!--section:docs-->
+
+Use `dl.timeline` or wrap a `<dl>` with `.has-timeline` to style it as a
+vertical timeline — each `<dd>` gets a left border strip acting as the track:
+
+<article class="has-timeline">
+
+May 11, 2026
+: First Blades CSS stable release (v2.2.0).
+
+Mar 15, 2025
+: Last Pico CSS update (v2.1.1).
+
+</article>
+
+<!--section:code-->```css */
 dl.timeline,
 .has-timeline > dl {
   dd {
@@ -6,3 +22,4 @@ dl.timeline,
     border-inline-start: 0.25rem solid gray;
   }
 }
+/*```*/
