@@ -14,5 +14,8 @@
 /* Forms */
 @import "./float-label.core";
 
+/* Components */
+@import "./components/_timeline";
+
 /* Utilities */
 @import "./_utilities";
