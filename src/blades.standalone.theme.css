@@ -64,6 +64,9 @@ dl {
   dt {
     margin-block: 0.25rem;
   }
+  dd {
+    margin-block-end: 1rem;
+  }
 }
 
 pre {
