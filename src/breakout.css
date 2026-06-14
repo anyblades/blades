@@ -30,7 +30,7 @@
     }
 
     /* Respect img/picture min-width */
-    &:is(img, picture) {
+    &:is(img, picture):not(.does-not-exist) /* soft win specificity over .breakout-item above */ {
       min-width: auto;
     }
 
