@@ -41,7 +41,7 @@
       transform: translateX(-50%);
     }
 /* Respect img/picture min-width */
-.breakout > *:is(img, picture), .breakout-all > *:is(img, picture) {
+.breakout > *:is(img, picture):not(.does-not-exist), .breakout-all > *:is(img, picture):not(.does-not-exist) /* soft win specificity over .breakout-item above */ {
       min-width: auto;
     }
 /* Max out the width of the element */
