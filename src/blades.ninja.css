@@ -29,6 +29,24 @@ sub[style] {
 }
 /*```
 
+### Teasers
+
+<article style="padding-inline: 2rem">
+  <a href="https://blades.ninja/" role="button" class="outline">
+    <h4>Blades CSS</h4>
+    Fully compatible and actively maintained successor to Pico CSS.
+  </a>
+</article>
+
+How it works:
+```css */
+a[role="button"]:has(h1, h2, h3, h4, h5, h6) {
+  text-align: start;
+  border-width: 1px 0 0 1px;
+  margin: 0 0 0.5rem -1rem;
+}
+/*```
+
 ### `.opt`ional content
 
 How it works:
@@ -41,6 +59,12 @@ How it works:
 /*```
 
 ### Nicer GitHub favicons
+
+<article>
+
+https://github.com/anyblades/blades
+
+</article>
 
 How it works:
 ```css */
