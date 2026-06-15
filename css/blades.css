@@ -4,7 +4,7 @@
  * Copyright 2026 - Licensed under MIT
  */
 /*!
- * Pico CSS ✨ v2.3
+ * Pico CSS ✨ v2.4
  * Copyright 2019-2025 (https://picocss.com)
  * Copyright 2026 (https://blades.ninja/css/pico/)
  * Licensed under MIT
@@ -411,13 +411,7 @@ details summary[role="button"]:not(.outline)::after {
     --pico-contrast-hover-underline: var(--pico-contrast-hover);
     --pico-contrast-focus: rgba(207, 213, 226, 0.25);
     --pico-contrast-inverse: #000;
-    --pico-box-shadow:
-      0.0145rem 0.029rem 0.174rem rgba(7, 8.5, 12, 0.01698),
-      0.0335rem 0.067rem 0.402rem rgba(7, 8.5, 12, 0.024),
-      0.0625rem 0.125rem 0.75rem rgba(7, 8.5, 12, 0.03),
-      0.1125rem 0.225rem 1.35rem rgba(7, 8.5, 12, 0.036),
-      0.2085rem 0.417rem 2.502rem rgba(7, 8.5, 12, 0.04302),
-      0.5rem 1rem 6rem rgba(7, 8.5, 12, 0.06), 0 0 0 0.0625rem rgba(7, 8.5, 12, 0.015);
+    --pico-box-shadow: 0 0.5rem 2.5rem rgba(7, 8.5, 12, 0.2);
     --pico-h1-color: #f0f1f3;
     --pico-h2-color: #e0e3e7;
     --pico-h3-color: #c2c7d0;
@@ -1231,9 +1225,11 @@ audio:not([controls]) {
 :where(iframe) {
   border-style: none;
 }
-img {
-  max-width: 100%;
-  height: auto;
+img:not([height]) {
+    max-width: 100%;
+    height: auto;
+  }
+img{
   border-style: none;
 }
 :where(svg:not([fill])) {
@@ -1248,6 +1244,7 @@ svg:not(:host) {
  */
 pre,
 code,
+var,
 kbd,
 samp {
   font-size: 0.875em;
@@ -1264,6 +1261,7 @@ pre {
 }
 pre,
 code,
+var,
 kbd,
 samp {
   border-radius: var(--pico-border-radius);
@@ -1273,6 +1271,7 @@ samp {
   line-height: initial;
 }
 code,
+var,
 kbd,
 samp {
   display: inline-block;
@@ -1397,6 +1396,7 @@ input:not([type="checkbox"], [type="radio"], [type="range"]) {
 }
 fieldset {
   width: 100%;
+  min-width: 0;
   margin: 0;
   margin-bottom: var(--pico-spacing);
   padding: 0;
