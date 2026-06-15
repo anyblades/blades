@@ -364,7 +364,7 @@ a > i {
 
 /* Favicons */
 
-a > i > img {
+a > i > img:not(.does-not-exist) /* soft win specificity over img:not([height]) */ {
       display: inline-block; /* for Tailwind CSS Typography */
       max-width: none; /* to keep ratio safe */
       height: 1.25em;
