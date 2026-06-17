@@ -17,16 +17,9 @@
     {%- for href in site.styles %}
       <link rel="stylesheet" href="{{ href }}" />
     {%- endfor %}
-    {# prettier-ignore-start #}<style>
-      {{ site.inline_styles | d([]) | join('\n') | safe }}
-    </style>{# prettier-ignore-end #}
-
     {%- for src in site.scripts %}
       <script src="{{ src }}" defer></script>
     {%- endfor %}
-    {# prettier-ignore-start #}<script type="module">
-      {{ site.inline_scripts | d([]) | join('\n') | safe }}
-    </script>{# prettier-ignore-end #}
 
     {{ content_for_header | safe }}
   </head>

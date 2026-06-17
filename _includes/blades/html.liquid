@@ -17,16 +17,9 @@
     {%- for href in site.styles %}
       <link rel="stylesheet" href="{{ href | relative_url }}">
     {%- endfor %}
-    <style>
-      {{ site.inline_styles | join: '\n' }}
-    </style>
-
     {%- for src in site.scripts %}
       <script src="{{ src }}" defer></script>
     {%- endfor %}
-    <script type="module">
-      {{ site.inline_scripts | join: '\n' }}
-    </script>
 
     {{ content_for_header }}
   </head>
