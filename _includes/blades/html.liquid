@@ -18,11 +18,13 @@
       <script src="{{ src }}" defer></script>
     {%- endfor %}
 
-    {{ content_for_header }}
+    {{ site.head_extras | default: '' | join: '\n' | append: content_for_header }}
   </head>
 
   <body>
     {{ body }}
+
+    {{ site.body_extras | default: '' | join: '\n' }}
   </body>
 </html>
 {% # prettier-ignore %}

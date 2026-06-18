@@ -18,12 +18,14 @@
       <script src="{{ src }}" defer></script>
     {%- endfor %}
 
-    {{ content_for_header|default('')|raw }}
+    {{ (site.head_extras|default([])|join('\n') ~ content_for_header)|raw }}
   </head>
 
   <body>
     {% block body %}
     {% endblock %}
+
+    {{ (site.body_extras|default([])|join('\n'))|raw }}
   </body>
 </html>
 {#```
