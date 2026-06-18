@@ -6,6 +6,7 @@
     "./standalone": "./src/blades.standalone.css",
     "./standalone/core": "./src/blades.standalone.core.css",
     "./standalone/theme": "./src/blades.standalone.theme.css",
+    "./ninja": "./src/blades.ninja.css",
     "./float-label": "./src/float-label.css"
   },
   "=== DEV ONLY": "===",
