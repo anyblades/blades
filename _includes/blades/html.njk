@@ -1,19 +1,16 @@
-{# <!--section:code-->```jinja2 #}
+{#<!--section:code-->```jinja2 #}
 <!doctype html>
 <html lang="{{ site.lang | d('en') }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
-    <link rel="icon" href="{{ site.favicon | d('/favicon.svg') }}" />
-    {% if site.favicon_alt %}
-      <link rel="alternate icon" href="{{ site.favicon_alt }}" type="image/png" />
-    {% endif %}
     <title>
       {{- title | string | striptags ~ ' | ' if title -}}
       {{- site.title -}}
     </title>
     <meta name="description" content="{{ description | striptags }}" />
 
+    <link rel="icon" href="{{ site.favicon | d('/favicon.ico') }}" />
     {%- for href in site.styles %}
       <link rel="stylesheet" href="{{ href }}" />
     {%- endfor %}
@@ -30,9 +27,10 @@
   </body>
 </html>
 {#```
-- `title | string` avoids error with `| striptags` when you pass a pure number.
+- `title | string` to avoid error with `| striptags` when you pass a pure number.
 
 <!--section:docs-->
+
 Usage in Nunjucks layout:
 
 ```jinja2
@@ -41,5 +39,8 @@ Usage in Nunjucks layout:
 {% block body %}...{% endblock %}
 ```
 
-Living example: https://github.com/anyblades/build-awesome-starter/blob/main/_includes/default.njk
-<!--section--> #}
+Live examples:
+- https://github.com/anyblades/buildawesome-starters/blob/main/_includes/default.njk
+- https://github.com/anyblades/subtle/blob/main/.11ty/_includes/default.njk
+
+#}
