@@ -1,19 +1,16 @@
-{% comment %}<!--section:code-->```liquid{% endcomment %}
+{% comment %}<!--section:code-->```liquid {% endcomment %}
 <!doctype html>
 <html lang="{{ site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-    <link rel="icon" href="{{ site.favicon | default: '/favicon.svg' }}">
-    {% if site.favicon_alt %}
-      <link rel="alternate icon" href="{{ site.favicon_alt }}" type="image/png">
-    {% endif %}
     <title>
       {%- if title %}{{ title | strip_html | append: ' | ' }}{% endif -%}
       {{- site.title -}}
     </title>
     <meta name="description" content="{{ description | strip_html }}">
 
+    <link rel="icon" href="{{ site.favicon | default: '/favicon.ico' }}">
     {%- for href in site.styles %}
       <link rel="stylesheet" href="{{ href | relative_url }}">
     {%- endfor %}
@@ -21,15 +18,19 @@
       <script src="{{ src }}" defer></script>
     {%- endfor %}
 
-    {{ content_for_header }}
+    {{ site.head_extras | default: '' | join: '\n' | append: content_for_header }}
   </head>
 
   <body>
     {{ body }}
+
+    {{ site.body_extras | default: '' | join: '\n' }}
   </body>
 </html>
+{% # prettier-ignore %}
 {% comment %}```
 <!--section:docs-->
+
 Usage in Liquid layout:
 
 ```liquid
@@ -38,5 +39,6 @@ Usage in Liquid layout:
 {% include blades/html.liquid %}
 ```
 
-Living example: https://github.com/anyblades/bladeswitch/blob/main/_includes/default.liquid
-<!--section-->{% endcomment %}
+Live example: https://github.com/anyblades/buildawesome-starters/blob/main/site-liquid/_includes/default.liquid
+
+{% endcomment %}
