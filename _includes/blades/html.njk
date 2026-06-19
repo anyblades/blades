@@ -4,10 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
-    <title>
-      {{- title | string | striptags ~ ' | ' if title -}}
-      {{- site.title -}}
-    </title>
+    <title>{{- [title | string | striptags, site.title] | join(' | ') -}}</title>
     <meta name="description" content="{{ description | striptags }}" />
 
     <link rel="icon" href="{{ site.favicon | d('/favicon.ico') }}" />
@@ -18,14 +15,19 @@
       <script src="{{ src }}" defer></script>
     {%- endfor %}
 
-    {{ (site.head_extras | d([]) | join('\n') ~ content_for_header) | safe }}
+    {{ content_for_header | safe }}
+    {{ site.head_extras | d([]) | join('\n') | safe }}
   </head>
 
-  <body>
+  <body {{ site.body_attrs | safe }}>
     {% block body %}
+      <main>
+        <h1>{{ title }}</h1>
+        {{ content | safe }}
+      </main>
     {% endblock %}
 
-    {{ (site.body_extras | d([]) | join('\n')) | safe }}
+    {{ site.body_extras | d([]) | join('\n') | safe }}
   </body>
 </html>
 {#```
