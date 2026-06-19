@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
 
-    <title>{{ [title | string | striptags, site.title] | join(' | ') }}</title>
+    <title>{{ [title | string | striptags, site.title] | select | join(' | ') }}</title>
     <meta name="description" content="{{ description | striptags }}" />
 
     <link rel="icon" href="{{ site.favicon | d('/favicon.ico') }}" />
