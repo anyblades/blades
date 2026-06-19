@@ -4,10 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-    <title>
-      {%- if title %}{{ title | strip_html | append: ' | ' }}{% endif -%}
-      {{- site.title -}}
-    </title>
+    {% # prettier-ignore %}
+    <title>{{ title | strip_html }}{% if title and site.title %} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ description | strip_html }}">
 
     <link rel="icon" href="{{ site.favicon | default: '/favicon.ico' }}">
@@ -18,11 +16,19 @@
       <script src="{{ src }}" defer></script>
     {%- endfor %}
 
-    {{ site.head_extras | default: '' | join: '\n' | append: content_for_header }}
+    {{ content_for_header }}
+    {{ site.head_extras | default: '' | join: '\n' }}
   </head>
 
-  <body>
-    {{ body }}
+  <body {{ site.body_attrs }}>
+    {% if body %}
+      {{ body }}
+    {% else %}
+      <main>
+        <h1>{{ title }}</h1>
+        {{ content }}
+      </main>
+    {% endif %}
 
     {{ site.body_extras | default: '' | join: '\n' }}
   </body>

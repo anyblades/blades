@@ -4,10 +4,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
-    <title>
-      {{- title ? title|striptags ~ ' | ' -}}
-      {{- site.title -}}
-    </title>
+
+    <title>{{ [title|striptags, site.title]|join(' | ') }}</title>
     <meta name="description" content="{{ description|striptags }}" />
 
     <link rel="icon" href="{{ site.favicon|default('/favicon.ico') }}" />
@@ -18,14 +16,19 @@
       <script src="{{ src }}" defer></script>
     {%- endfor %}
 
-    {{ (site.head_extras|default([])|join('\n') ~ content_for_header)|raw }}
+    {{ content_for_header|raw }}
+    {{ site.head_extras|default([])|join('\n')|raw }}
   </head>
 
-  <body>
+  <body {{ site.body_attrs|raw }}>
     {% block body %}
+      <main>
+        <h1>{{ title }}</h1>
+        {{ content|raw }}
+      </main>
     {% endblock %}
 
-    {{ (site.body_extras|default([])|join('\n'))|raw }}
+    {{ site.body_extras|default([])|join('\n')|raw }}
   </body>
 </html>
 {#```
