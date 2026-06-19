@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
 
-    <title>{{ [title|striptags, site.title]|filter|join(' | ') }}</title>
+    <title>{{ title|striptags }}{% if title and site.title %} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ description|striptags }}" />
 
     <link rel="icon" href="{{ site.favicon|default('/favicon.ico') }}" />
@@ -32,8 +32,6 @@
   </body>
 </html>
 {#```
-- `title ? …` renders the prefix only when a title is set, mirroring the Nunjucks `if title` guard.
-
 <!--section:docs-->
 
 Usage in Twig layout:
