@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "blades"
-  spec.version       = "2.4.5"
+  spec.version       = "2.4.6"
   
   spec.authors       = ["Anton Staroverov"]
   spec.homepage      = "https://blades.ninja/"
