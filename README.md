@@ -180,7 +180,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 - [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
 - [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
-- [dummy<em>.</em>my/frameworks](https://dummy.my/frameworks/)
+- [dummy.my/frameworks](https://dummy.my/frameworks/)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
 
