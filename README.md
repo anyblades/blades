@@ -165,7 +165,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 ---
 
-## <sup>Trusted by</sup>
+## <sup style>Trusted by</sup>
 
 - https://github.com/pallets/website 🐍
 - https://github.com/getgrav/grav-theme-quark2 🛸
@@ -176,7 +176,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 <!--section:info-->
 
-## <sup>Featured by</sup>
+## <sup style>Featured by</sup>
 
 - [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
 - [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
@@ -186,7 +186,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 <!--{.markerless .columns}-->
 
-## <sup>Credits</sup>
+## <sup style>Credits</sup>
 
 - https://picocss.com/ for [inspiration](//blades.ninja/css/pico/)
 - https://11ty.dev/ for [site generation ↗](https://github.com/anyblades/blades.ninja)
