@@ -1,9 +1,9 @@
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
 <!--section:code-->
 ```css */
-a {
+a:not(.does-not-exist) /* soft win specificity over Pico's `a[role="button"]` and inner `img:not([height])` */ {
   /* Use inline flex only if link contains an icon */
-  &:has(> i):not(.does-not-exist) /* soft win specificity over Pico's `a[role="button"]` and inner `img:not([height])` */ {
+  &:has(> i) {
     display: inline-flex;
     gap: 0.375ch; /* =3/8 */
     text-wrap: balance;
