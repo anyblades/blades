@@ -349,7 +349,7 @@ ul.unlist > li, ul.unlist-all > li, .unlist-all ul > li, ol.unlist > li, ol.unli
 
 /* Use inline flex only if link contains an icon */
 
-a:has(> i) {
+a:has(> i):not(.does-not-exist) /* soft win specificity over Pico's `a[role="button"]` and inner `img:not([height])` */ {
     display: inline-flex;
     overflow-y: clip; /* to work in pair with text-underline-offset in Safari */
     gap: 0.375ch; /* =3/8 */
@@ -364,7 +364,7 @@ a > i {
 
 /* Favicons */
 
-a > i > img:not(.does-not-exist) /* soft win specificity over img:not([height]) */ {
+a > i > img {
       display: inline-block; /* for Tailwind CSS Typography */
       max-width: none; /* to keep ratio safe */
       height: 1.25em;
