@@ -13,8 +13,10 @@ Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with oth
 
 <nav>
 
-- [Get started &nbsp;✨](//blades.ninja/css/)<!--{role=button}-->
-- [Standalone <i class="fa-brands fa-tailwind-css"></i><i class="fa-brands fa-bootstrap"></i>](//blades.ninja/css/standalone/)<!--{role=button .outline}-->
+[Get started &nbsp;✨](//blades.ninja/css/)<!--{role=button}-->
+&nbsp;
+[Standalone <i class="fa-brands fa-tailwind-css"></i><i class="fa-brands fa-bootstrap"></i>](//blades.ninja/css/standalone/)<!--{role=button .outline}-->
+
 </nav>
 
 <!--section:gh-only-->
