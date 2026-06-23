@@ -6,9 +6,15 @@
 
 <h1><mark>Minimal CSS Framework</mark> <small>for</small> Semantic HTML</h1>
 
-<big>Fully compatible and actively maintained successor to Pico CSS.</big>
+<big>Fully compatible and actively maintained successor to [Pico CSS](//blades.ninja/css/pico/).</big>
 
-Includes [Float labels](//blades.ninja/css/float-label/), [Breakout layout](//blades.ninja/css/breakout/) and other modern helpers. Simply switch `pico.css` to `blades.css`, or use `blades.standalone.css` with other frameworks.
+Introduces [float labels](//blades.ninja/css/float-label/), [breakout container](//blades.ninja/css/breakout/) and other modern, opt-out helpers. Simply switch `pico.css` to `blades.css`, or use `blades.standalone.css` with other frameworks.
+
+<nav>
+
+- [Get started &nbsp;✨](//blades.ninja/css/)<!--{role=button}-->
+- [Standalone <i class="fa-brands fa-tailwind-css"></i><i class="fa-brands fa-bootstrap"></i>](//blades.ninja/css/standalone/)<!--{role=button .outline}-->
+</nav>
 
 <!--section:gh-only-->
 
