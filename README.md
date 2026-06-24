@@ -127,11 +127,11 @@ This is exactly how *Bl*ades CSS is built itself: https://github.com/anyblades/b
 </html>
 ```
 
-<!--section:gh-only-->
+<!--section:install-->
 
 #### Standalone versions
 
-<!--section:standalone-->
+<!--section:install,standalone-->
 
 Most of internal Blades CSS modules are available as standalone helpers, giving you flexibility to use them with other CSS frameworks:
 
