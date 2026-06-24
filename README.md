@@ -31,7 +31,7 @@ Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with oth
 
 ### <mark>A.</mark> Install manually
 
-[Download *Bl*ades](https://github.com/anyblades/blades/archive/refs/heads/main.zip) and link `css/blades.css` in the `<head>` of your website.
+[Download CSS archive](https://github.com/anyblades/blades/archive/refs/heads/main.zip) and link `css/blades.css` in the `<head>` of your website.
 
 ```html
 <link rel="stylesheet" href="css/blades.css" />
@@ -50,7 +50,7 @@ Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with oth
 
 Live example: https://github.com/pallets/website/blob/main/src/pallets/templates/layout.html
 
-Full list of Blades CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/
+Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/
 
 ---
 
@@ -69,7 +69,7 @@ Full list of Blades CSS files available on CDN: https://cdn.jsdelivr.net/npm/@an
 npm install @anyblades/blades
 ```
 
-Then you can use fully precompiled *Bl*ades CSS files (same as CDN version):
+You can use precompiled Pico+Blades CSS (same as CDN version):
 
 <!--prettier-ignore-->
 ```html
@@ -80,7 +80,7 @@ Then you can use fully precompiled *Bl*ades CSS files (same as CDN version):
 
 <div><hr></div>
 
-Or import raw [standalone](//blades.ninja/css/standalone/) sources into your CSS file (without [Pico CSS](//blades.ninja/css/pico/)):
+Or import [standalone](//blades.ninja/css/standalone/) Blades CSS sources (without [Pico CSS](//blades.ninja/css/pico/)):
 
 ```css
 @import "@anyblades/blades/standalone";
@@ -90,7 +90,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 <div><hr></div>
 
-To install and import both Pico+*Bl*ades CSS at once:
+To install and import both Pico+Blades CSS sources at once:
 
 ```sh
 npm install @anyblades/pico @anyblades/blades
