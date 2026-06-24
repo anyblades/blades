@@ -37,6 +37,8 @@ Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with oth
 <link rel="stylesheet" href="css/blades.css" />
 ```
 
+---
+
 ### <mark>B.</mark> Usage from CDN
 
 Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/):
@@ -48,27 +50,56 @@ Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblade
 "/>
 ```
 
-### <mark>C.</mark> Install with NPM
+---
 
-```sh
-npm install @anyblades/pico # or other CSS framework
-npm install @anyblades/blades
-```
-
-Then, import *Bl*ades into your CSS:
-
-```css
-@import "@anyblades/blades";
-```
-
-Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://github.com/anyblades/buildawesome-starters/blob/main/site-tailwind/styles.css
-
-### <mark>D.</mark> Starter projects
+### <mark>C.</mark> Starter projects
 
 - https://subtle.blades.ninja/ 11ty micro-starter
 - https://start.11ty.blades.ninja/ 7-in-1 starter (including Tailwind)
 - https://getgrav.org/ v2 now features Blades CSS in its default theme (Quark2)
 - https://jekyll.blades.ninja/ starter <!--{.faded}-->
+
+---
+
+### <mark>D.</mark> Install with NPM
+
+```sh
+npm install @anyblades/blades
+```
+
+Then you can use fully precompiled *Bl*ades CSS files (same as CDN version):
+
+<!--prettier-ignore-->
+```html
+<link rel="stylesheet" href="
+  node_modules/@anyblades/blades/css/blades.css
+" />
+```
+
+<div><hr></div>
+
+Or import raw [standalone](//blades.ninja/css/standalone/) sources into your CSS file (without [Pico CSS](//blades.ninja/css/pico/)):
+
+```css
+@import "@anyblades/blades/standalone";
+```
+
+Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://github.com/anyblades/buildawesome-starters/blob/main/site-tailwind/styles.css
+
+<div><hr></div>
+
+To install and import both Pico+*Bl*ades CSS at once:
+
+```sh
+npm install @anyblades/pico @anyblades/blades
+```
+
+```css
+@import "@anyblades/pico";
+@import "@anyblades/blades/standalone";
+```
+
+This is exactly how *Bl*ades CSS is built itself: https://github.com/anyblades/blades/blob/main/src/blades.css
 
 ---
 
@@ -196,7 +227,7 @@ Most of internal Blades CSS modules are available as standalone helpers, giving 
 
 ## <sup style>Featured by</sup><!--Z-A-->
 
-- [sveltiacms.app](https://sveltiacms.app/en/docs/start#starter-templates:~:text=anyblades)
+- [sveltiacms.app](https://sveltiacms.app/en/docs/start#:~:text=anyblades)
 - [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades) + [↗](https://github.com/getgrav/grav-theme-quark2)
 - [dummy.my/frameworks](https://dummy.my/frameworks/)
 - [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
