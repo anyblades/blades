@@ -41,7 +41,7 @@ Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with oth
 
 ### <mark>B.</mark> Usage from CDN
 
-Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/):
+Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/):
 
 <!--prettier-ignore-->
 ```html
@@ -127,7 +127,11 @@ This is exactly how *Bl*ades CSS is built itself: https://github.com/anyblades/b
 </html>
 ```
 
+<!--section:gh-only-->
+
 #### Standalone versions
+
+<!--section:standalone-->
 
 Most of internal Blades CSS modules are available as standalone helpers, giving you flexibility to use them with other CSS frameworks:
 

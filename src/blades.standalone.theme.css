@@ -1,6 +1,4 @@
-/*
-<!--section:code-->
-```css */
+/*<!--section:code-->```css */
 @import "./float-label.theme";
 
 html {
@@ -130,5 +128,3 @@ table {
     text-decoration-style: dotted;
   }
 }
-/*```
-<!--section--> */
