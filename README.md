@@ -27,7 +27,7 @@ Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with oth
 
 <!--section:install--><!-- for https://blades.ninja/css/ and https://blades.ninja/css/standalone/ -->
 
-There are 4 ways to get started:
+<big>There are 4 ways to get started:</big>
 
 ### <mark>A.</mark> Install manually
 
@@ -66,15 +66,15 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 ### <mark>D.</mark> Starter projects
 
 - https://subtle.blades.ninja/ 11ty micro-starter
-- https://github.com/anyblades/buildawesome-starters 11ty Tailwind CLI starter(s)
-- https://github.com/getgrav/grav-theme-quark2 for Grav CMS v2
+- https://start.11ty.blades.ninja/ 7-in-1 starter (including Tailwind)
+- https://getgrav.org/ v2 now features Blades CSS in its default theme (Quark2)
 - https://jekyll.blades.ninja/ starter <!--{.faded}-->
 
-### Standalone versions
+---
 
-- https://blades.ninja/css/standalone/
+### <sup style>Appendix</sup>
 
-### Starter HTML template <!-- from index.html -->
+#### Starter HTML template <!-- from index.html -->
 
 ```html
 <!doctype html>
@@ -93,6 +93,20 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
   </body>
 </html>
 ```
+
+#### Standalone versions
+
+Most of internal Blades CSS modules are available as standalone helpers, giving you flexibility to use them with other CSS frameworks:
+
+| Module                                                                              | CDN                                                                            | Import from NPM                                                                 |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| [Breakout container](/css/breakout/)                                                | https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/breakout.min.css          | N/A                                                                             |
+| [Link icon](/css/link-icon/)                                                        | https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/link-icon.min.css         | N/A                                                                             |
+| [Responsive table](/css/responsive-table/)                                          | https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/responsive-table.min.css  | N/A                                                                             |
+| [Float labels](/css/float-label/) <br> https://github.com/anyblades/float-label-css | https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/float-label.min.css       | `npm install @anyblades/blades` <br> `@import "@anyblades/blades/float-label";` |
+| [All above together](/css/standalone/)                                              | https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/blades.standalone.min.css | `npm install @anyblades/blades` <br> `@import "@anyblades/blades/standalone";`  |
+| [Reset/normalizer](/css/pico/) <br> https://github.com/anyblades/pico               | https://cdn.jsdelivr.net/npm/@anyblades/pico@2/css/pico.min.css                | `npm install @anyblades/pico` <br> `@import "@anyblades/pico";`                 |
+| [Experimental "ninja" add-ons](/css/ninja/)                                         | https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/blades.ninja.min.css      | `npm install @anyblades/blades` <br> `@import "@anyblades/blades/ninja";`       |
 
 <!--section:gh-only-->
 
