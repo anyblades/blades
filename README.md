@@ -41,8 +41,6 @@ Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with oth
 
 ### <mark>B.</mark> Usage from CDN
 
-Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/):
-
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
@@ -51,6 +49,8 @@ Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblade
 ```
 
 Live example: https://github.com/pallets/website/blob/main/src/pallets/templates/layout.html
+
+Full list of Blades CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/
 
 ---
 
