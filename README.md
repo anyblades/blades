@@ -50,6 +50,8 @@ Alternatively, you can use [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@anyblade
 "/>
 ```
 
+Live example: https://github.com/pallets/website/blob/main/src/pallets/templates/layout.html
+
 ---
 
 ### <mark>C.</mark> Starter projects
