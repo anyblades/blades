@@ -188,30 +188,29 @@ Most of internal Blades CSS modules are available as standalone helpers, giving 
 
 ---
 
-## <sup style>Trusted by</sup>
+## <sup style>Trusted by</sup><!--DRY with featured-->
 
 - https://github.com/pallets/website 🐍
-- https://github.com/getgrav/grav-theme-quark2 🛸
-- https://www.11ty.dev/docs/starter/#:~:text=blades
-- https://sveltiacms.app/en/docs/start#starter-templates:~:text=anyblades
-- https://github.com/johnheenan/minform#css-and-performance
-- https://github.com/hostfurl/minformhf
 
 <!--section:info-->
 
-## <sup style>Featured by</sup>
+## <sup style>Featured by</sup><!--Z-A-->
 
-- [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
-- [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
+- [sveltiacms.app](https://sveltiacms.app/en/docs/start#starter-templates:~:text=anyblades)
+- [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades) + [↗](https://github.com/getgrav/grav-theme-quark2)
 - [dummy.my/frameworks](https://dummy.my/frameworks/)
+- [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
+- [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
+- [11ty.dev](https://www.11ty.dev/docs/starter/#:~:text=blades) + [↗](https://www.11ty.dev/docs/plugins/community/#:~:text=blades)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
-- [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
+- [@johnheenan](https://github.com/johnheenan/minform#css-and-performance)
+- [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) + [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
 
 <!--{.markerless .columns}-->
 
 ## <sup style>Credits</sup>
 
 - https://picocss.com/ for [inspiration](//blades.ninja/css/pico/)
-- https://11ty.dev/ for [site generation ↗](https://github.com/anyblades/blades.ninja)
+- https://11ty.dev/ for [site generation](https://github.com/anyblades/blades.ninja)
 
 <!--{.markerless}-->
