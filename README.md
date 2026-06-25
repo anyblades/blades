@@ -248,6 +248,6 @@ Most of internal Blades CSS modules are available as standalone helpers, giving 
 ## <sup style>Credits</sup>
 
 - https://picocss.com/ for [inspiration](//blades.ninja/css/pico/)
-- https://11ty.dev/ for [site generation](https://github.com/anyblades/blades.ninja)
+- https://11ty.dev/ for [site generation](//github.com/anyblades/blades.ninja)
 
 <!--{.markerless}-->
