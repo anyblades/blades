@@ -234,14 +234,14 @@ Most of internal Blades CSS modules are available as standalone helpers, giving 
 ## <sup style>Featured by</sup><!--Z-A-->
 
 - [sveltiacms.app](https://sveltiacms.app/en/docs/start#:~:text=anyblades)
-- [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades) + [↗](https://github.com/getgrav/grav-theme-quark2)
+- [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades) [↗](https://github.com/getgrav/grav-theme-quark2)
 - [dummy.my/frameworks](https://dummy.my/frameworks/)
 - [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
-- [11ty.dev](https://www.11ty.dev/docs/starter/#:~:text=blades) + [↗](https://www.11ty.dev/docs/plugins/community/#:~:text=blades)
+- [11ty.dev](https://www.11ty.dev/docs/starter/#:~:text=blades) [↗](https://www.11ty.dev/docs/plugins/community/#:~:text=blades)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [@johnheenan](https://github.com/johnheenan/minform#css-and-performance)
-- [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) + [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
+- [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
 
 <!--{.markerless .columns}-->
 
