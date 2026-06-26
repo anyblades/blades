@@ -1,11 +1,10 @@
+/*\3c !--section:code-->```css */
+
 /* Follows https://github.com/picocss/pico/blob/main/scss/_index.scss */
 
 /* Layout */
 
-/* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-\3c !--section:docs,columns-->
-
-### Auto-columns
+/*\3c !--section:columns-->
 
 `.columns` automatically creates columns with at least 30 characters each:
 
@@ -36,10 +35,7 @@ How it works:
     break-inside: avoid;
   }
 
-/*```
-\3c !--section:docs,jump-->
-
-### Jump to top
+/*```\3c !--section:jump-->
 
 `data-jump-to="top"` fixes element to the corner and adds extra top padding to make it easy to click:
 ```css */
@@ -50,9 +46,6 @@ How it works:
   bottom: 0;
   padding-top: 50vh;
 }
-
-/*```
-\3c !--section--> */
 
 /*
 \3c !--section:code-->
@@ -199,15 +192,12 @@ Or anything else:
 
 /* Content */
 
-/* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-\3c !--section:docs,h-anchor-->
-
-### Heading anchors
+/*\3c !--section:h-anchor-->
 
 Links with `href="#..."` inside headings are automatically displayed as anchors:
 
 <article>
-  <h2 style="margin: 0 0 0 1.5rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
+  <h2 style="margin: 0 0 0 1.5rem">Heading with anchor <a aria-hidden="true" style="visibility: visible">#</a></h2>
 </article>
 
 How it works:
@@ -243,9 +233,7 @@ h1 a[aria-hidden="true"], h2 a[aria-hidden="true"], h3 a[aria-hidden="true"], h4
 
 **PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
 
-\3c !--section:docs,list-->
-
-### List markers
+\3c !--section:list-->
 
 Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or even individual `<li>`:
 
@@ -340,9 +328,6 @@ ul.unlist > li, ul.unlist-all > li, .unlist-all ul > li, ol.unlist > li, ol.unli
       list-style: none;
     }
 
-/*```
-\3c !--section--> */
-
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
 \3c !--section:code-->
 ```css */
@@ -412,10 +397,9 @@ How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e
 
 \3c !--section--> */
 
-/* Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
-\3c !--section:docs-->
+/*\3c !--section:docs-->
 
-### Column expanders
+## Column expanders
 
 Place `<hr>` element inside `<th>` column to expand it horizontally:
 
@@ -452,7 +436,7 @@ th hr.x2 {
 
 /*```
 
-### Borderless table
+## Borderless table
 
 `.borderless` removes all default borders:
 
@@ -465,9 +449,7 @@ th hr.x2 {
 {.borderless}
 </article>
 
-Living example: https://bladeswitch.com/#minimal-dependencies table
-
-\3c !--section--> */
+\3c !--section-->*/
 
 table.borderless th,
   table.borderless td {
@@ -535,10 +517,7 @@ Living examples: \3c !--A-Z-->
 
 \3c !--section--> */
 
-/* Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
-\3c !--section:docs-->
-
-### Code
+/*\3c !--section:docs-->
 
 The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
 
@@ -548,7 +527,8 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 ├── blades.theme.css    # minimal opinionated theme
 └── blades.css          # above two together
 ```
-How it works:
+
+\3c !--section:code-->
 ```css */
 
 @media (width < 768px) {
@@ -568,17 +548,15 @@ code[data-caption]::before {
       opacity: 50%;
     }
 
-/*```
-\3c !--section--> */
-
 /* Forms */
 
-/* Moved here from https://github.com/anyblades/float-label-css for easier maintenance
+/* Sources moved here from https://github.com/anyblades/float-label-css for easier maintenance
 \3c !--section:docs-->
 
 First, we target either:
 1. `<label>` which `:has` inner form inputs (classless approach)
 2. or explicit `.has-float-label` class (explicit approach)
+
 ```css */
 
 label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
@@ -587,10 +565,9 @@ label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"
   position: relative;
 }
 
-/*
-```
-Then, we define the default/fallback state (when the float label should be minimized):
-```css */
+/*```
+  Then, we define the default/fallback state (when the float label should be minimized):
+  ```css */
 
 label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
   label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
@@ -603,10 +580,9 @@ label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"
     cursor: text;
   }
 
-/*
-```
-Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
-```css */
+/*```
+  Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
+  ```css */
 
 label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::-moz-placeholder, .has-float-label *:placeholder-shown:not(:focus)::-moz-placeholder {
     opacity: 0;
@@ -633,12 +609,13 @@ label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"
       opacity: 50%;
     }
 
-/*
-```
+/*```
+
 The `:has(*:placeholder-shown:not(:focus))` trick allows this input state information to *propagate* to the parent level. This enables modern CSS to target inner float label (`<span>` or `<label>`) regardless of its position relative to the input field.
 
 Historically, this was not possible: the float label had to be placed after the input field to be targeted using the `input:focus + label` selector.
-\3c !--section--> */
+
+\3c !--section-->*/
 
 /* Components */
 
@@ -665,14 +642,11 @@ dl.timeline dd, .has-timeline > dl dd {
     border-inline-start: 0.25rem solid gray;
   }
 
-/*```*/
-
 /* Utilities */
 
-/* Extends https://github.com/picocss/pico/tree/main/scss/utilities
-\3c !--section:docs-->
+/*\3c !--section:docs-->
 
-### Auto-dark
+## Auto-dark
 
 `.dark-auto` automatically creates a simple dark version of any element:
 
@@ -709,7 +683,7 @@ How it works:
 
 /*```
 
-### Faded
+## Faded
 
 `.faded` reduces the opacity of an element:
 

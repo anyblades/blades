@@ -1,19 +1,19 @@
-/* Moved here from https://github.com/anyblades/float-label-css for easier maintenance
+/* Sources moved here from https://github.com/anyblades/float-label-css for easier maintenance
 \3c !--section:docs-->
 
 First, we target either:
 1. `<label>` which `:has` inner form inputs (classless approach)
 2. or explicit `.has-float-label` class (explicit approach)
+
 ```css */
 label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
 .has-float-label {
   display: block;
   position: relative;
 }
-/*
-```
-Then, we define the default/fallback state (when the float label should be minimized):
-```css */
+/*```
+  Then, we define the default/fallback state (when the float label should be minimized):
+  ```css */
 label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
   label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
   .has-float-label > span,
@@ -24,10 +24,9 @@ label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"
     font-size: 75%;
     cursor: text;
   }
-/*
-```
-Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
-```css */
+/*```
+  Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
+  ```css */
 label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::-moz-placeholder, .has-float-label *:placeholder-shown:not(:focus)::-moz-placeholder {
     opacity: 0;
   }
@@ -48,9 +47,10 @@ label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"
       font-size: inherit;
       opacity: 50%;
     }
-/*
-```
+/*```
+
 The `:has(*:placeholder-shown:not(:focus))` trick allows this input state information to *propagate* to the parent level. This enables modern CSS to target inner float label (`<span>` or `<label>`) regardless of its position relative to the input field.
 
 Historically, this was not possible: the float label had to be placed after the input field to be targeted using the `input:focus + label` selector.
-\3c !--section--> */
+
+\3c !--section-->*/

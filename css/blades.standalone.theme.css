@@ -1,6 +1,4 @@
-/*
-\3c !--section:code-->
-```css */
+/*\3c !--section:code-->```css */
 /* Default/fallback state */
 label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
   label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
@@ -143,5 +141,3 @@ table pre {
 .faded a {
     text-decoration-style: dotted;
   }
-/*```
-\3c !--section--> */
