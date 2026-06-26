@@ -25,7 +25,7 @@ Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with oth
 
 ## Quick start
 
-<!--section:install--><!-- for https://blades.ninja/css/ and https://blades.ninja/css/standalone/ -->
+<!--section:install-all,install--><!-- for https://blades.ninja/css/ and https://blades.ninja/css/standalone/ -->
 
 <big>There are 4 ways to get started:</big>
 
@@ -127,11 +127,11 @@ This is exactly how *Bl*ades CSS is built itself: https://github.com/anyblades/b
 </html>
 ```
 
-<!--section:install-->
+<!--section:install-all-->
 
 #### Standalone versions
 
-<!--section:install,standalone-->
+<!--section:install-all,standalone-->
 
 Most of internal Blades CSS modules are available as standalone helpers, giving you flexibility to use them with other CSS frameworks:
 
