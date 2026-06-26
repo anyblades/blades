@@ -1,7 +1,4 @@
-/* Extends https://github.com/picocss/pico/blob/main/scss/content/_code.scss
-<!--section:docs-->
-
-### Code
+/*<!--section:docs-->
 
 The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
 
@@ -11,7 +8,8 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 ├── blades.theme.css    # minimal opinionated theme
 └── blades.css          # above two together
 ```
-How it works:
+
+<!--section:code-->
 ```css */
 pre {
   @media (width < 768px) {
@@ -31,5 +29,3 @@ code {
     }
   }
 }
-/*```
-<!--section--> */

@@ -1,7 +1,6 @@
-/* Extends https://github.com/picocss/pico/tree/main/scss/utilities
-<!--section:docs-->
+/*<!--section:docs-->
 
-### Auto-dark
+## Auto-dark
 
 `.dark-auto` automatically creates a simple dark version of any element:
 
@@ -28,7 +27,7 @@ How it works:
 }
 /*```
 
-### Faded
+## Faded
 
 `.faded` reduces the opacity of an element:
 

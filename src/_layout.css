@@ -1,7 +1,4 @@
-/* Extends https://github.com/picocss/pico/blob/main/scss/layout/
-<!--section:docs,columns-->
-
-### Auto-columns
+/*<!--section:columns-->
 
 `.columns` automatically creates columns with at least 30 characters each:
 
@@ -27,10 +24,7 @@ How it works:
     break-inside: avoid;
   }
 }
-/*```
-<!--section:docs,jump-->
-
-### Jump to top
+/*```<!--section:jump-->
 
 `data-jump-to="top"` fixes element to the corner and adds extra top padding to make it easy to click:
 ```css */
@@ -40,5 +34,3 @@ How it works:
   right: 0;
   padding-top: 50vh;
 }
-/*```
-<!--section--> */

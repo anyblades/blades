@@ -1,12 +1,9 @@
-/* Extends https://github.com/picocss/pico/blob/main/scss/content/_typography.scss
-<!--section:docs,h-anchor-->
-
-### Heading anchors
+/*<!--section:h-anchor-->
 
 Links with `href="#..."` inside headings are automatically displayed as anchors:
 
 <article>
-  <h2 style="margin: 0 0 0 1.5rem">Heading with anchor <a href="#hwa" style="visibility: visible">#</a></h2>
+  <h2 style="margin: 0 0 0 1.5rem">Heading with anchor <a aria-hidden="true" style="visibility: visible">#</a></h2>
 </article>
 
 How it works:
@@ -41,9 +38,7 @@ h6 {
 
 **PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
 
-<!--section:docs,list-->
-
-### List markers
+<!--section:list-->
 
 Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or even individual `<li>`:
 
@@ -136,5 +131,3 @@ ol {
     }
   }
 }
-/*```
-<!--section--> */

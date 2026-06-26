@@ -1,7 +1,6 @@
-/* Extends https://github.com/picocss/pico/blob/main/scss/content/_table.scss
-<!--section:docs-->
+/*<!--section:docs-->
 
-### Column expanders
+## Column expanders
 
 Place `<hr>` element inside `<th>` column to expand it horizontally:
 
@@ -37,7 +36,7 @@ th {
 }
 /*```
 
-### Borderless table
+## Borderless table
 
 `.borderless` removes all default borders:
 
@@ -50,9 +49,7 @@ th {
 {.borderless}
 </article>
 
-Living example: https://bladeswitch.com/#minimal-dependencies table
-
-<!--section--> */
+<!--section-->*/
 table.borderless {
   th,
   td {
