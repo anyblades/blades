@@ -8,7 +8,7 @@
 
 <big>Fully compatible and actively maintained successor to [Pico CSS](//blades.ninja/css/pico/).</big>
 
-Introduces [float labels](//blades.ninja/css/float-label/), [breakout container](//blades.ninja/css/breakout/) and other modern, opt-out helpers.
+Introduces [float labels](//blades.ninja/css/float-label/), [breakout container](//blades.ninja/css/breakout/) and other modern, opt-out [helpers](//blades.ninja/#docs).
 Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with other frameworks.
 
 <nav>
