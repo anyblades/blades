@@ -145,6 +145,10 @@ Most of internal Blades CSS modules are available as standalone helpers, giving 
 | [Reset/normalizer](/css/pico/) <br> https://github.com/anyblades/pico               | https://cdn.jsdelivr.net/npm/@anyblades/pico@2/css/pico.min.css                | `npm install @anyblades/pico` <br> `@import "@anyblades/pico";`                 |
 | [Experimental "ninja" add-ons](/css/ninja/)                                         | https://cdn.jsdelivr.net/npm/@anyblades/blades@2/css/blades.ninja.min.css      | `npm install @anyblades/blades` <br> `@import "@anyblades/blades/ninja";`       |
 
+Live examples:
+
+- https://www.mattanger.dev/ (Link icon via CDN)
+
 <!--section:gh-only-->
 
 ## Documentation
