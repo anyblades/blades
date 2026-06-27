@@ -1,0 +1,16 @@
+:scope,
+:host {
+  /**
+   * Design Tokens !!! NAMING NOT FINALIZED YET !!!
+   * `--in-pico: *` props below are for reference only (not to be used)
+   */
+  --blades-token-primary: var(--pico-primary, dodgerblue);
+  --in-pico: #01aaff;
+  --blades-token-secondary: var(--pico-secondary, lightslategray);
+  --in-pico: #969eaf;
+
+  /**
+   * Inherited Variables
+   */
+  --blades-timeline-border-color: color-mix(in srgb, var(--blades-token-secondary) 50%, transparent);
+}
