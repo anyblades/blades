@@ -1,0 +1,7 @@
+/**
+ * Design Tokens
+ */
+:scope,
+:host {
+  --blades-timeline-border-color: var(--pico-secondary-border, gray);
+}

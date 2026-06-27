@@ -2,6 +2,9 @@
 
 /* Follows https://github.com/picocss/pico/blob/main/scss/_index.scss */
 
+/* Variables */
+@import "./_tokens";
+
 /* Layout */
 @import "./_layout";
 @import "./breakout";
