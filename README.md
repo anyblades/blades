@@ -242,7 +242,7 @@ Live examples:
 - [dummy.my/frameworks](https://dummy.my/frameworks/)
 - [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
-- [11ty.dev](https://www.11ty.dev/docs/starter/#:~:text=blades) [↗](https://www.11ty.dev/docs/plugins/community/#:~:text=blades)
+- [11ty.dev](https://www.11ty.dev/authors/anydigital/#anydigitals-starter-projects) [↗](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [@johnheenan](https://github.com/johnheenan/minform#css-and-performance)
 - [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
