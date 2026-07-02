@@ -246,6 +246,7 @@ Live examples:
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [@johnheenan](https://github.com/johnheenan/minform#css-and-performance)
 - [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
+- https://news.ycombinator.com/item?id=48729467
 
 <!--{.markerless .columns}-->
 
