@@ -247,6 +247,7 @@ Live examples:
 - [@johnheenan](https://github.com/johnheenan/minform#css-and-performance)
 - [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
 - https://news.ycombinator.com/item?id=48729467
+- https://context7.com/websites/blades_ninja
 
 <!--{.markerless .columns}-->
 
