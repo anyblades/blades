@@ -239,6 +239,7 @@ Live examples:
 
 - [sveltiacms.app](https://sveltiacms.app/en/docs/start#:~:text=anyblades)
 - [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades) [↗](https://github.com/getgrav/grav-theme-quark2)
+- https://github.com/getgrav/grav-plugin-devtools
 - [dummy.my/frameworks](https://dummy.my/frameworks/)
 - [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
