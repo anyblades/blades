@@ -12,10 +12,10 @@ Introduces [float labels](//blades.ninja/css/float-label/), [breakout container]
 Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with other frameworks.
 
 <nav>
-  <a href="//blades.ninja/css/" role="button">Get started &nbsp;✨</a>
-  <span hidden>•</span>
+  <a href="//blades.ninja/css/" role="button">Get started <i>✨</i></a>
+  <b hidden>|</b>
   <a href="//blades.ninja/css/standalone/" role="button" class="outline">
-    Standalone <i class="fa-brands fa-tailwind-css"></i><i class="fa-brands fa-bootstrap"></i>
+    Standalone <i><i class="fa-brands fa-tailwind-css"></i><i class="fa-brands fa-bootstrap"></i></i>
   </a>
 </nav>
 
