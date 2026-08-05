@@ -235,27 +235,24 @@ Live examples:
 
 <!--section:info-->
 
-## <sup style>Featured by</sup><!--Z-A-->
+## <sup style>Featured by</sup>
 
-- [sveltiacms.app](https://sveltiacms.app/en/docs/start#:~:text=anyblades)
-- [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades) [↗](https://github.com/getgrav/grav-theme-quark2)
-- https://github.com/getgrav/grav-plugin-devtools
-- [dummy.my/frameworks](https://dummy.my/frameworks/)
-- [awesome-css-frameworks _@gabrielizalo_](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
-- [awesome-css _@uhub_](https://github.com/uhub/awesome-css)
-- [11ty.dev](https://www.11ty.dev/authors/anydigital/#anydigitals-starter-projects) [↗](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
+- [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades)
+- [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
+- [sveltiacms.app](https://sveltiacms.app/en/docs/start#:~:text=anyblades) <!--Z-A-->
+- [libhunt.com](https://www.libhunt.com/r/blades)
+- [context7.com](https://context7.com/anyblades/blades)
+- [awesome-css](https://github.com/uhub/awesome-css)
+- [awesome-css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
-- [@johnheenan](https://github.com/johnheenan/minform#css-and-performance)
-- [@githubsignals](https://www.youtube.com/shorts/FxtvnBCse8w) [↗](https://www.instagram.com/reel/DXOSTpajG4f/)
-- https://news.ycombinator.com/item?id=48729467
-- https://context7.com/anyblades/blades [↗](https://context7.com/websites/blades_ninja)
-- https://www.libhunt.com/r/blades
+- [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
 
 <!--{.markerless .columns}-->
+<!--[hostfurl.com, @johnheenan]-->
 
 ## <sup style>Credits</sup>
 
 - https://picocss.com/ for [inspiration](//blades.ninja/css/pico/)
-- https://11ty.dev/ for [site generation](//github.com/anyblades/blades.ninja)
+- https://11ty.dev/ for site generation
 
 <!--{.markerless}-->
