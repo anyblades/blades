@@ -1,2 +1,2 @@
-@import "./blades.standalone.core";
-@import "./blades.standalone.theme";
+@import "./standalone/_index";
+@import "./standalone/_theme";

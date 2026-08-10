@@ -1,5 +1,5 @@
 /*<!--section:code-->```css */
-@import "./float-label.theme";
+@import "./forms/_float-label.theme";
 
 html {
   /* Prevent horizontal overflow and scrolling, modern way. */

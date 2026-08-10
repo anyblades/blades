@@ -5,20 +5,20 @@
 @import "./_variables";
 
 /* Layout */
-@import "./_layout";
-@import "./breakout";
+@import "./layout/_utilities";
+@import "./layout/_breakout";
 
 /* Content */
 @import "./content/_typography";
-@import "./link-icon";
-@import "./content/_table";
-@import "./responsive-table";
+@import "./content/_table-utilities";
+@import "./content/_table-responsive";
 @import "./content/_code";
 
 /* Forms */
-@import "./float-label.core";
+@import "./forms/_float-label.core";
 
 /* Components */
+@import "./components/_icon-helper";
 @import "./components/_timeline";
 
 /* Utilities */
