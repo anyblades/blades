@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- Based on https://github.com/picocss/examples/blob/master/v2-conditional-styling/index.html -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Conditional Styling • Pico CSS</title>
+    <meta name="description" content="A minimal example with the conditional version." />
+    <link rel="stylesheet" href="css/pico.conditional.min.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Styled -->
+      <section class="pico">
+        <h2>Styled section</h2>
+        <form>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="First name"
+            aria-label="First name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            aria-label="Email address"
+            autocomplete="email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+      <!-- ./ Styled -->
+
+      <!-- Unstyled -->
+      <section>
+        <h2>Unstyled section</h2>
+        <form>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="First name"
+            aria-label="First name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            aria-label="Email address"
+            autocomplete="email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+      <!-- ./ Unstyled -->
+    </main>
+  </body>
+</html>

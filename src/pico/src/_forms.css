@@ -1,0 +1,747 @@
+/**
+ * Basics form elements
+ */
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-size: 1rem;
+  line-height: var(--pico-line-height);
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+
+input {
+  overflow: visible;
+}
+
+select {
+  text-transform: none;
+}
+
+legend {
+  max-width: 100%;
+  padding: 0;
+  color: inherit;
+  white-space: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  padding: 0;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+:-moz-focusring {
+  outline: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+::-ms-expand {
+  display: none;
+}
+
+[type="file"],
+[type="range"] {
+  padding: 0;
+  border-width: 0;
+}
+
+input:not([type="checkbox"], [type="radio"], [type="range"]) {
+  height: calc(
+    1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 +
+      var(--pico-border-width) * 2
+  );
+}
+
+fieldset {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  margin-bottom: var(--pico-spacing);
+  padding: 0;
+  border: 0;
+}
+
+label,
+fieldset legend {
+  display: block;
+  margin-bottom: calc(var(--pico-spacing) * 0.375);
+  color: var(--pico-color);
+  font-weight: var(--pico-form-label-font-weight, var(--pico-font-weight));
+}
+
+fieldset legend {
+  margin-bottom: calc(var(--pico-spacing) * 0.5);
+}
+
+input:not([type="checkbox"], [type="radio"]),
+button[type="submit"],
+select,
+textarea {
+  width: 100%;
+}
+
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal);
+}
+
+input,
+select,
+textarea {
+  --pico-background-color: var(--pico-form-element-background-color);
+  --pico-border-color: var(--pico-form-element-border-color);
+  --pico-color: var(--pico-form-element-color);
+  --pico-box-shadow: none;
+  border: var(--pico-border-width) solid var(--pico-border-color);
+  border-radius: var(--pico-border-radius);
+  outline: none;
+  background-color: var(--pico-background-color);
+  box-shadow: var(--pico-box-shadow);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  transition:
+    background-color var(--pico-transition),
+    border-color var(--pico-transition),
+    color var(--pico-transition),
+    box-shadow var(--pico-transition);
+}
+
+input:not(
+    [type="submit"],
+    [type="button"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"],
+    [readonly]
+  ):is(:active, :focus),
+:where(select, textarea):not([readonly]):is(:active, :focus) {
+  --pico-background-color: var(--pico-form-element-active-background-color);
+}
+
+input:not([type="submit"], [type="button"], [type="reset"], [role="switch"], [readonly]):is(
+    :active,
+    :focus
+  ),
+:where(select, textarea):not([readonly]):is(:active, :focus) {
+  --pico-border-color: var(--pico-form-element-active-border-color);
+}
+
+input:not(
+    [type="submit"],
+    [type="button"],
+    [type="reset"],
+    [type="range"],
+    [type="file"],
+    [readonly]
+  ):focus,
+:where(select, textarea):not([readonly]):focus {
+  --pico-box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-form-element-focus-color);
+}
+
+input:not([type="submit"], [type="button"], [type="reset"])[disabled],
+select[disabled],
+textarea[disabled],
+label[aria-disabled="true"],
+:where(fieldset[disabled])
+  :is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {
+  opacity: var(--pico-form-element-disabled-opacity);
+  pointer-events: none;
+}
+
+label[aria-disabled="true"] input[disabled] {
+  opacity: 1;
+}
+
+:where(input, select, textarea):not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"],
+    [type="range"]
+  )[aria-invalid] {
+  padding-right: calc(var(--pico-form-element-spacing-horizontal) + 1.5rem) !important;
+  padding-left: var(--pico-form-element-spacing-horizontal);
+  padding-inline-start: var(--pico-form-element-spacing-horizontal) !important;
+  padding-inline-end: calc(var(--pico-form-element-spacing-horizontal) + 1.5rem) !important;
+  background-position: center right 0.75rem;
+  background-size: 1rem auto;
+  background-repeat: no-repeat;
+}
+:where(input, select, textarea):not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"],
+    [type="range"]
+  )[aria-invalid="false"]:not(select) {
+  background-image: var(--pico-icon-valid);
+}
+:where(input, select, textarea):not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"],
+    [type="range"]
+  )[aria-invalid="true"]:not(select) {
+  background-image: var(--pico-icon-invalid);
+}
+:where(input, select, textarea)[aria-invalid="false"] {
+  --pico-border-color: var(--pico-form-element-valid-border-color);
+}
+:where(input, select, textarea)[aria-invalid="false"]:is(:active, :focus) {
+  --pico-border-color: var(--pico-form-element-valid-active-border-color) !important;
+}
+:where(input, select, textarea)[aria-invalid="false"]:is(:active, :focus):not(
+    [type="checkbox"],
+    [type="radio"]
+  ) {
+  --pico-box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-form-element-valid-focus-color) !important;
+}
+:where(input, select, textarea)[aria-invalid="true"] {
+  --pico-border-color: var(--pico-form-element-invalid-border-color);
+}
+:where(input, select, textarea)[aria-invalid="true"]:is(:active, :focus) {
+  --pico-border-color: var(--pico-form-element-invalid-active-border-color) !important;
+}
+:where(input, select, textarea)[aria-invalid="true"]:is(:active, :focus):not(
+    [type="checkbox"],
+    [type="radio"]
+  ) {
+  --pico-box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-form-element-invalid-focus-color) !important;
+}
+
+[dir="rtl"]
+  :where(input, select, textarea):not([type="checkbox"], [type="radio"]):is(
+    [aria-invalid],
+    [aria-invalid="true"],
+    [aria-invalid="false"]
+  ) {
+  background-position: center left 0.75rem;
+}
+
+input::placeholder,
+input::-webkit-input-placeholder,
+textarea::placeholder,
+textarea::-webkit-input-placeholder,
+select:invalid {
+  color: var(--pico-form-element-placeholder-color);
+  opacity: 1;
+}
+
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+  margin-bottom: var(--pico-spacing);
+}
+
+select::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+select:not([multiple], [size]) {
+  padding-right: calc(var(--pico-form-element-spacing-horizontal) + 1.5rem);
+  padding-left: var(--pico-form-element-spacing-horizontal);
+  padding-inline-start: var(--pico-form-element-spacing-horizontal);
+  padding-inline-end: calc(var(--pico-form-element-spacing-horizontal) + 1.5rem);
+  background-image: var(--pico-icon-chevron);
+  background-position: center right 0.75rem;
+  background-size: 1rem auto;
+  background-repeat: no-repeat;
+}
+select[multiple] option:checked {
+  background: var(--pico-form-element-selected-background-color);
+  color: var(--pico-form-element-color);
+}
+
+[dir="rtl"] select:not([multiple], [size]) {
+  background-position: center left 0.75rem;
+}
+
+textarea {
+  display: block;
+  resize: vertical;
+}
+textarea[aria-invalid] {
+  --pico-icon-height: calc(
+    1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 +
+      var(--pico-border-width) * 2
+  );
+  background-position: top right 0.75rem !important;
+  background-size: 1rem var(--pico-icon-height) !important;
+}
+
+:where(input, select, textarea, fieldset, .grid) + small {
+  display: block;
+  width: 100%;
+  margin-top: calc(var(--pico-spacing) * -0.75);
+  margin-bottom: var(--pico-spacing);
+  color: var(--pico-muted-color);
+}
+:where(input, select, textarea, fieldset, .grid)[aria-invalid="false"] + small {
+  color: var(--pico-ins-color);
+}
+:where(input, select, textarea, fieldset, .grid)[aria-invalid="true"] + small {
+  color: var(--pico-del-color);
+}
+
+label > :where(input, select, textarea) {
+  margin-top: calc(var(--pico-spacing) * 0.25);
+}
+
+/**
+ * Checkboxes, Radios and Switches
+ */
+label:has([type="checkbox"], [type="radio"]) {
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: -0.125em;
+  margin-inline-end: 0.5em;
+  border-width: var(--pico-border-width);
+  vertical-align: middle;
+  cursor: pointer;
+}
+[type="checkbox"]::-ms-check,
+[type="radio"]::-ms-check {
+  display: none;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:checked:active,
+[type="checkbox"]:checked:focus,
+[type="radio"]:checked,
+[type="radio"]:checked:active,
+[type="radio"]:checked:focus {
+  --pico-background-color: var(--pico-primary-background);
+  --pico-border-color: var(--pico-primary-border);
+  background-image: var(--pico-icon-checkbox);
+  background-position: center;
+  background-size: 0.75em auto;
+  background-repeat: no-repeat;
+}
+[type="checkbox"] ~ label,
+[type="radio"] ~ label {
+  display: inline-block;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+[type="checkbox"] ~ label:not(:last-of-type),
+[type="radio"] ~ label:not(:last-of-type) {
+  margin-inline-end: 1em;
+}
+
+[type="checkbox"]:indeterminate {
+  --pico-background-color: var(--pico-primary-background);
+  --pico-border-color: var(--pico-primary-border);
+  background-image: var(--pico-icon-minus);
+  background-position: center;
+  background-size: 0.75em auto;
+  background-repeat: no-repeat;
+}
+
+[type="radio"] {
+  border-radius: 50%;
+}
+[type="radio"]:checked,
+[type="radio"]:checked:active,
+[type="radio"]:checked:focus {
+  --pico-background-color: var(--pico-primary-inverse);
+  border-width: 0.35em;
+  background-image: none;
+}
+
+[type="checkbox"][role="switch"] {
+  --pico-background-color: var(--pico-switch-background-color);
+  --pico-color: var(--pico-switch-color);
+  width: 2.25em;
+  height: 1.25em;
+  border: var(--pico-border-width) solid var(--pico-border-color);
+  border-radius: 1.25em;
+  background-color: var(--pico-background-color);
+  line-height: 1.25em;
+}
+[type="checkbox"][role="switch"]:not([aria-invalid]) {
+  --pico-border-color: var(--pico-switch-background-color);
+}
+[type="checkbox"][role="switch"]:before {
+  display: block;
+  aspect-ratio: 1;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--pico-color);
+  box-shadow: var(--pico-switch-thumb-box-shadow);
+  content: "";
+  transition: margin 0.1s ease-in-out;
+}
+[type="checkbox"][role="switch"]:focus {
+  --pico-background-color: var(--pico-switch-background-color);
+  --pico-border-color: var(--pico-switch-background-color);
+}
+[type="checkbox"][role="switch"]:checked {
+  --pico-background-color: var(--pico-switch-checked-background-color);
+  --pico-border-color: var(--pico-switch-checked-background-color);
+  background-image: none;
+}
+[type="checkbox"][role="switch"]:checked::before {
+  margin-inline-start: calc(2.25em - 1.25em);
+}
+[type="checkbox"][role="switch"][disabled] {
+  --pico-background-color: var(--pico-border-color);
+}
+
+[type="checkbox"][aria-invalid="false"]:checked,
+[type="checkbox"][aria-invalid="false"]:checked:active,
+[type="checkbox"][aria-invalid="false"]:checked:focus,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked:active,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked:focus {
+  --pico-background-color: var(--pico-form-element-valid-border-color);
+}
+[type="checkbox"]:checked[aria-invalid="true"],
+[type="checkbox"]:checked:active[aria-invalid="true"],
+[type="checkbox"]:checked:focus[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked:active[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked:focus[aria-invalid="true"] {
+  --pico-background-color: var(--pico-form-element-invalid-border-color);
+}
+
+[type="checkbox"][aria-invalid="false"]:checked,
+[type="checkbox"][aria-invalid="false"]:checked:active,
+[type="checkbox"][aria-invalid="false"]:checked:focus,
+[type="radio"][aria-invalid="false"]:checked,
+[type="radio"][aria-invalid="false"]:checked:active,
+[type="radio"][aria-invalid="false"]:checked:focus,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked:active,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked:focus {
+  --pico-border-color: var(--pico-form-element-valid-border-color);
+}
+[type="checkbox"]:checked[aria-invalid="true"],
+[type="checkbox"]:checked:active[aria-invalid="true"],
+[type="checkbox"]:checked:focus[aria-invalid="true"],
+[type="radio"]:checked[aria-invalid="true"],
+[type="radio"]:checked:active[aria-invalid="true"],
+[type="radio"]:checked:focus[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked:active[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked:focus[aria-invalid="true"] {
+  --pico-border-color: var(--pico-form-element-invalid-border-color);
+}
+
+/**
+ * Input type color
+ */
+[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+[type="color"]::-moz-focus-inner {
+  padding: 0;
+}
+[type="color"]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--pico-border-radius) * 0.5);
+}
+[type="color"]::-moz-color-swatch {
+  border: 0;
+  border-radius: calc(var(--pico-border-radius) * 0.5);
+}
+
+/**
+ * Input type datetime
+ */
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]):is(
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"]
+  ) {
+  --pico-icon-position: 0.75rem;
+  --pico-icon-width: 1rem;
+  padding-right: calc(var(--pico-icon-width) + var(--pico-icon-position));
+  background-image: var(--pico-icon-date);
+  background-position: center right var(--pico-icon-position);
+  background-size: var(--pico-icon-width) auto;
+  background-repeat: no-repeat;
+  min-width: 0;
+}
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type="time"] {
+  background-image: var(--pico-icon-time);
+}
+
+[type="date"]::-webkit-calendar-picker-indicator,
+[type="datetime-local"]::-webkit-calendar-picker-indicator,
+[type="month"]::-webkit-calendar-picker-indicator,
+[type="time"]::-webkit-calendar-picker-indicator,
+[type="week"]::-webkit-calendar-picker-indicator {
+  width: var(--pico-icon-width);
+  margin-right: calc(var(--pico-icon-width) * -1);
+  margin-left: var(--pico-icon-position);
+  opacity: 0;
+}
+
+@-moz-document url-prefix() {
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="time"],
+  [type="week"] {
+    padding-right: var(--pico-form-element-spacing-horizontal) !important;
+    background-image: none !important;
+  }
+}
+[dir="rtl"]
+  :is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {
+  text-align: end;
+}
+
+/**
+ * Input type file
+ */
+[type="file"] {
+  --pico-color: var(--pico-muted-color);
+  margin-left: calc(var(--pico-outline-width) * -1);
+  padding: calc(var(--pico-form-element-spacing-vertical) * 0.5) 0;
+  padding-left: var(--pico-outline-width);
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+[type="file"]::file-selector-button {
+  margin-right: calc(var(--pico-spacing) / 2);
+  padding: calc(var(--pico-form-element-spacing-vertical) * 0.5)
+    var(--pico-form-element-spacing-horizontal);
+}
+[type="file"]:is(:hover, :active, :focus)::file-selector-button {
+  --pico-background-color: var(--pico-secondary-hover-background);
+  --pico-border-color: var(--pico-secondary-hover-border);
+}
+[type="file"]:focus::file-selector-button {
+  --pico-box-shadow:
+    var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+    0 0 0 var(--pico-outline-width) var(--pico-secondary-focus);
+}
+
+/**
+ * Input type range
+ */
+[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1.25rem;
+  background: none;
+}
+[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.375rem;
+  border-radius: var(--pico-border-radius);
+  background-color: var(--pico-range-border-color);
+  -webkit-transition:
+    background-color var(--pico-transition),
+    box-shadow var(--pico-transition);
+  transition:
+    background-color var(--pico-transition),
+    box-shadow var(--pico-transition);
+}
+[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 0.375rem;
+  border-radius: var(--pico-border-radius);
+  background-color: var(--pico-range-border-color);
+  -moz-transition:
+    background-color var(--pico-transition),
+    box-shadow var(--pico-transition);
+  transition:
+    background-color var(--pico-transition),
+    box-shadow var(--pico-transition);
+}
+[type="range"]::-ms-track {
+  width: 100%;
+  height: 0.375rem;
+  border-radius: var(--pico-border-radius);
+  background-color: var(--pico-range-border-color);
+  -ms-transition:
+    background-color var(--pico-transition),
+    box-shadow var(--pico-transition);
+  transition:
+    background-color var(--pico-transition),
+    box-shadow var(--pico-transition);
+}
+[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.4375rem;
+  border: 2px solid var(--pico-range-thumb-border-color);
+  border-radius: 50%;
+  background-color: var(--pico-range-thumb-color);
+  cursor: pointer;
+  -webkit-transition:
+    background-color var(--pico-transition),
+    transform var(--pico-transition);
+  transition:
+    background-color var(--pico-transition),
+    transform var(--pico-transition);
+}
+[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.4375rem;
+  border: 2px solid var(--pico-range-thumb-border-color);
+  border-radius: 50%;
+  background-color: var(--pico-range-thumb-color);
+  cursor: pointer;
+  -moz-transition:
+    background-color var(--pico-transition),
+    transform var(--pico-transition);
+  transition:
+    background-color var(--pico-transition),
+    transform var(--pico-transition);
+}
+[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.4375rem;
+  border: 2px solid var(--pico-range-thumb-border-color);
+  border-radius: 50%;
+  background-color: var(--pico-range-thumb-color);
+  cursor: pointer;
+  -ms-transition:
+    background-color var(--pico-transition),
+    transform var(--pico-transition);
+  transition:
+    background-color var(--pico-transition),
+    transform var(--pico-transition);
+}
+[type="range"]:active,
+[type="range"]:focus-within {
+  --pico-range-border-color: var(--pico-range-active-border-color);
+  --pico-range-thumb-color: var(--pico-range-thumb-active-color);
+}
+[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.25);
+}
+[type="range"]:active::-moz-range-thumb {
+  transform: scale(1.25);
+}
+[type="range"]:active::-ms-thumb {
+  transform: scale(1.25);
+}
+
+/**
+ * Input type search
+ */
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type="search"] {
+  padding-inline-start: calc(var(--pico-form-element-spacing-horizontal) + 1.75rem);
+  background-image: var(--pico-icon-search);
+  background-position: center left calc(var(--pico-form-element-spacing-horizontal) + 0.125rem);
+  background-size: 1rem auto;
+  background-repeat: no-repeat;
+}
+input:not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="range"],
+    [type="file"]
+  )[type="search"][aria-invalid] {
+  padding-inline-start: calc(var(--pico-form-element-spacing-horizontal) + 1.75rem) !important;
+  background-position:
+    center left 1.125rem,
+    center right 0.75rem;
+}
+input:not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="range"],
+    [type="file"]
+  )[type="search"][aria-invalid="false"] {
+  background-image: var(--pico-icon-search), var(--pico-icon-valid);
+}
+input:not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="range"],
+    [type="file"]
+  )[type="search"][aria-invalid="true"] {
+  background-image: var(--pico-icon-search), var(--pico-icon-invalid);
+}
+
+[dir="rtl"]
+  :where(input):not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="range"],
+    [type="file"]
+  )[type="search"] {
+  background-position: center right 1.125rem;
+}
+[dir="rtl"]
+  :where(input):not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="range"],
+    [type="file"]
+  )[type="search"][aria-invalid] {
+  background-position:
+    center right 1.125rem,
+    center left 0.75rem;
+}

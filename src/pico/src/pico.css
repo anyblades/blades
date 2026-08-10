@@ -1,0 +1,12 @@
+/*!
+ * Pico CSS ✨ v2.5
+ * Copyright 2019-2025 (https://picocss.com)
+ * Copyright 2026 (https://blades.ninja/css/pico/)
+ * Licensed under MIT
+ */
+@import "./_variables";
+@import "./_layout";
+@import "./_content";
+@import "./_forms";
+@import "./_components";
+@import "./_utilities";
