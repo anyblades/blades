@@ -15,7 +15,7 @@
 @import "./content/_code";
 
 /* Forms */
-@import "./forms/_float-label.core";
+@import "./forms/_float-label.index";
 
 /* Components */
 @import "./components/_icon-helper";

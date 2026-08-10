@@ -12,7 +12,7 @@
     "src/pico/"
   ],
   "scripts": {
-    "build": "npm run lint && npm run build:css && npm run build:minify && npm run build:conditional",
+    "build": "clear; npm run lint && npm run build:css && npm run build:minify && npm run build:conditional",
     "lint": "prettier --write --log-level silent ./src/**/*.css",
     "build:css": "postcss --config css './src/!(_)*.css' --dir css --no-map",
     "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix .min ./css/*.css !./css/*.min.css !./css/pico.conditional.*",
