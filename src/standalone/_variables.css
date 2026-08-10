@@ -12,5 +12,9 @@
   /**
    * Inherited Variables
    */
-  --blades-timeline-border-color: color-mix(in srgb, var(--blades-token-secondary) 50%, transparent);
+  --blades-timeline-border-color: color-mix(
+    in srgb,
+    var(--blades-token-secondary) 50%,
+    transparent
+  );
 }
