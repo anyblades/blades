@@ -3,27 +3,32 @@
   "version": "2.4.9",
   "exports": {
     ".": "./src/blades.css",
+    "./pico": "./src/pico.css",
     "./standalone": "./src/blades.standalone.css",
-    "./standalone/core": "./src/blades.standalone.core.css",
-    "./standalone/theme": "./src/blades.standalone.theme.css",
-    "./ninja": "./src/blades.ninja.css",
-    "./float-label": "./src/float-label.css"
+    "./ninja": "./src/ninja.css"
   },
   "=== DEV ONLY": "===",
+  "workspaces": [
+    "src/pico/"
+  ],
   "scripts": {
-    "postcss": "postcss './src/!(_)*.css' --dir ./css/",
-    "build": "npm run postcss -- --no-map",
+    "build": "npm run lint && npm run build:css && npm run build:minify && npm run build:conditional",
+    "lint": "prettier --write --log-level silent ./src/**/*.css",
+    "build:css": "postcss --config css './src/!(_)*.css' --dir css --no-map",
+    "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix .min ./css/*.css !./css/*.min.css !./css/pico.conditional.*",
+    "build:conditional": "for f in '' .min; do { printf '@scope (.pico) {\\n'; cat ./css/pico${f}.css; printf '\\n}\\n'; } > ./css/pico.conditional${f}.css; done",
     "start": "npm run postcss -- --watch",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@anyblades/pico": "^2.4.1",
     "autoprefixer": "^10.5.0",
+    "clean-css-cli": "^5.6.3",
     "css-declaration-sorter": "^7.4.0",
     "postcss": "^8.4.33",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.1",
     "postcss-nested": "^7.0.2",
+    "prettier": "^3.5.3",
     "prettier-plugin-jinja-template": "^2.1.0"
   },
   "=== METADATA": "A-Z",

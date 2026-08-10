@@ -35,24 +35,8 @@
   "bugs": {
     "url": "https://github.com/anyblades/blades/issues"
   },
-  "scripts": {
-    "build": "npm run lint && npm run build:css && npm run build:minify && npm run build:conditional",
-    "lint": "prettier --write --log-level silent ./src/**/*.css",
-    "build:css": "postcss --config css './src/!(_)*.css' --dir css --no-map",
-    "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix .min ./css/*.css !./css/*.min.css !./css/pico.conditional.*",
-    "build:conditional": "for f in '' .min; do { printf '@scope (.pico) {\\n'; cat ./css/pico${f}.css; printf '\\n}\\n'; } > ./css/pico.conditional${f}.css; done"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "clean-css-cli": "^5.6.3",
-    "css-declaration-sorter": "^7.2.0",
-    "postcss": "^8.5.3",
-    "postcss-cli": "^11.0.1",
-    "postcss-import": "^16.1.1",
-    "postcss-nested": "^7.0.2",
-    "prettier": "^3.5.3"
-  },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "===": "==="
 }
