@@ -7,13 +7,14 @@
     "Anton Staroverov"
   ],
   "exports": {
-    ".": "./src/pico.css"
+    ".": "./_index.css"
   },
   "homepage": "https://blades.ninja/css/pico/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anyblades/pico.git"
+    "url": "git+https://github.com/anyblades/blades.git",
+    "directory": "src/pico/"
   },
   "publishConfig": {
     "tag": "next"
@@ -32,7 +33,7 @@
     "semantic"
   ],
   "bugs": {
-    "url": "https://github.com/anyblades/pico/issues"
+    "url": "https://github.com/anyblades/blades/issues"
   },
   "scripts": {
     "build": "npm run lint && npm run build:css && npm run build:minify && npm run build:conditional",
