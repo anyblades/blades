@@ -12,7 +12,7 @@ How it works:
 ```css */
 sup[style] {
   display: block;
-  font-size: 0.75rem;
+  font-size: min(50%, 0.75rem);
   letter-spacing: 0.0625em;
   text-transform: uppercase;
 }
@@ -51,7 +51,7 @@ a[role="button"]:has(h1, h2, h3, h4, h5, h6) {
 How it works:
 ```css */
 @media (width < 1024px) {
-.opt {
+.opt:not(.does-not-exist) {
     display: none
 }
   }
