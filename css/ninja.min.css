@@ -1,1 +1,5 @@
-sup[style]{display:block;font-size:min(50%, .75rem);letter-spacing:.0625em;text-transform:uppercase}sub[style]{display:block;bottom:0;font-weight:300;line-height:1.1;opacity:75%}sub[style]:where(h1 > *){font-size:50%}a[role=button]:has(h1,h2,h3,h4,h5,h6){margin:0 0 .5rem -1rem;border-width:1px 0 0 1px;text-align:start}@media (width < 1024px){.opt:not(.does-not-exist){display:none}}img[src*="?domain=github.com&"]{border-radius:50%}@media (prefers-color-scheme:dark){img[src*="?domain=github.com&"]{filter:invert(1)}}
+/*!
+ * Blades CSS' ninja add-ons (experimental) 🥷🧪
+ * Copyright 2026 (https://blades.ninja/css/ninja/)
+ * Licensed under MIT
+ */sup[style]{display:block;font-size:min(50%, .75rem);letter-spacing:.0625em;text-transform:uppercase}sub[style]{display:block;bottom:0;font-weight:300;line-height:1.1;opacity:75%}sub[style]:where(h1 > *){font-size:50%}a[role=button]:has(h1,h2,h3,h4,h5,h6){margin:0 0 .5rem -1rem;border-width:1px 0 0 1px;text-align:start}@media (width < 1024px){.opt:not(.does-not-exist){display:none}}img[src*="?domain=github.com&"]{border-radius:50%}@media (prefers-color-scheme:dark){img[src*="?domain=github.com&"]{filter:invert(1)}}

@@ -1,6 +1,7 @@
 /*!
- * Blades CSS v3 ✨🥷
- * Copyright 2026 - Licensed under MIT
+ * Blades CSS standalone kit v3 🥷
+ * Copyright 2026 (https://blades.ninja/css/standalone/)
+ * Licensed under MIT
  */:host,:scope{--blades-token-primary:var(--pico-primary, dodgerblue);--in-pico:#01aaff;--blades-token-secondary:var(--pico-secondary, lightslategray);--in-pico:#969eaf;--blades-timeline-border-color:color-mix(
     in srgb,
     var(--blades-token-secondary) 50%,
