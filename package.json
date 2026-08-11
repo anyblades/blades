@@ -7,10 +7,7 @@
     "./standalone": "./src/blades.standalone.css",
     "./ninja": "./src/ninja.css"
   },
-  "=== DEV ONLY": "===",
-  "workspaces": [
-    "src/pico/"
-  ],
+  "=== DEV ONLY": "Z-A",
   "scripts": {
     "build": "clear; npm run lint && npm run build:css && npm run build:minify && npm run build:conditional",
     "lint": "prettier --write --log-level silent ./src/**/*.css",
@@ -19,6 +16,9 @@
     "build:conditional": "for f in '' .min; do { printf '@scope (.pico) {\\n'; cat ./css/pico${f}.css; printf '\\n}\\n'; } > ./css/pico.conditional${f}.css; done",
     "start": "npm run postcss -- --watch",
     "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "tag": "next"
   },
   "devDependencies": {
     "autoprefixer": "^10.5.0",
@@ -31,9 +31,19 @@
     "prettier": "^3.5.3",
     "prettier-plugin-jinja-template": "^2.1.0"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "=== METADATA": "A-Z",
-  "author": "Anton Staroverov",
+  "bugs": {
+    "url": "https://github.com/anyblades/blades/issues"
+  },
+  "contributors": [
+    "Lucas Larroche (https://picocss.com/)",
+    "Anton Staroverov (https://blades.ninja/)"
+  ],
   "description": "Fully compatible and actively maintained successor to Pico CSS.",
+  "homepage": "https://blades.ninja/",
   "keywords": [
     "blades",
     "classless",
