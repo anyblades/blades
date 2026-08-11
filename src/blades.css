@@ -1,6 +1,7 @@
 /*!
- * Blades+Pico CSS ✨🥷
- * Copyright 2026 - Licensed under MIT
+ * Blades CSS v3 with Pico CSS 🥷✨
+ * Copyright 2026 (https://blades.ninja/)
+ * Licensed under MIT
  */
-@import "@anyblades/pico";
+@import "./pico";
 @import "./blades.standalone";
