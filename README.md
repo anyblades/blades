@@ -82,7 +82,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 ---
 
-## <sup style>APPENDIX</sup>
+## Base HTML
 
 ### Static HTML template <!-- from /index.html -->
 
@@ -106,12 +106,13 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 <div><hr></div>
 
-<a href="//blades.ninja/html/base/" role="button" class="outline">
-  <h3>Dynamic HTML template</h3>
-  Nunjucks, Twig or Liquid &nbsp;›
-</a>
+### Dynamic HTML template
+
+[Available for Nunjucks, Twig or Liquid ↗](https://blades.ninja/html/base/)<!--{role=button .outline}-->
 
 <!--section:gh-only-->
+
+---
 
 ## Documentation
 
