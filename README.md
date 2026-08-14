@@ -82,9 +82,9 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 ---
 
-### <sup style>Appendix</sup>
+## <sup style>Appendix</sup>
 
-#### Starter HTML template <!-- from index.html -->
+### Static HTML template <!-- from /index.html -->
 
 ```html
 <!doctype html>
@@ -104,27 +104,12 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 </html>
 ```
 
-<!--section:install-all-->
+<div><hr></div>
 
-#### Standalone versions
-
-<!--section:install-all,standalone-->
-
-Most of internal Blades CSS modules are available as standalone helpers, giving you flexibility to use them with other CSS frameworks:
-
-| Module                                                                              | CDN                                                                            | Import from NPM                                                                 |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| [Breakout container](/css/breakout/)                                                | https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/breakout.min.css          | N/A                                                                             |
-| [Link icon](/css/link-icon/)                                                        | https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/link-icon.min.css         | N/A                                                                             |
-| [Responsive table](/css/responsive-table/)                                          | https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/responsive-table.min.css  | N/A                                                                             |
-| [Float labels](/css/float-label/) <br> https://github.com/anyblades/float-label-css | https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/float-label.min.css       | `npm install @anyblades/blades` <br> `@import "@anyblades/blades/float-label";` |
-| [All above together](/css/standalone/)                                              | https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/blades.standalone.min.css | `npm install @anyblades/blades` <br> `@import "@anyblades/blades/standalone";`  |
-| [Reset/normalizer](/css/pico/) <br> https://github.com/anyblades/pico               | https://cdn.jsdelivr.net/npm/@anyblades/pico@3/css/pico.min.css                | `npm install @anyblades/pico` <br> `@import "@anyblades/pico";`                 |
-| [Experimental "ninja" add-ons](/css/ninja/)                                         | https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/blades.ninja.min.css      | `npm install @anyblades/blades` <br> `@import "@anyblades/blades/ninja";`       |
-
-Live examples:
-
-- https://www.mattanger.dev/ (Link icon via CDN)
+<a href="//blades.ninja/html/base/" role="button" class="outline">
+  <h3>Dynamic HTML template</h3>
+  Nunjucks, Twig or Liquid &nbsp;›
+</a>
 
 <!--section:gh-only-->
 
@@ -206,9 +191,9 @@ Live examples:
 
 ---
 
-## <sup style>Trusted by</sup><!--DRY with featured-->
+## <sup style>Trusted by</sup><!-- DRY with featured -->
 
-- https://github.com/pallets/website 🐍
+- <b hidden>🐍</b> [Flask & Jinja community website](https://palletsprojects.com/)
 
 <!--section:info-->
 
