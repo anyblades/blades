@@ -104,8 +104,6 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 </html>
 ```
 
-<div><hr></div>
-
 ### Dynamic HTML template
 
 [Available for Nunjucks, Twig or Liquid ↗](https://blades.ninja/html/base/)<!--{role=button .outline}-->
