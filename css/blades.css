@@ -3305,7 +3305,8 @@ How it works:
     }
 /* Max out the width of the element */
 .breakout > *.breakout-item-max, .breakout-all > *.breakout-item-max {
-      width: min(125%, 100dvw) !important; /* !important is for cases like figure.breakout-item-max @TODO */
+      width: min(125%, 100dvw) !important;
+      /* !important is for cases like figure.breakout-item-max @TODO */
     }
 
 .breakout-all > *:is(h2, h3, h4, h5, h6, hr):not([class]) {
@@ -3349,13 +3350,9 @@ How it works:
       transform: translateX(-50%);
     }
 /*```
-\3c !--section:summary-->
-
-The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
-
 \3c !--section:docs-->
 
-### Demo \3c !-- inside parent .breakout -->
+The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
 
 Break out a wide image from the text flow:
 
@@ -3391,7 +3388,9 @@ Or anything else:
 \3c !--section--> */
 
 /* Content */
-/*\3c !--section:h-anchor-->
+/*\3c !--section:docs-->
+
+## Heading anchors
 
 Links with `href="#..."` inside headings are automatically displayed as anchors:
 
@@ -3424,11 +3423,9 @@ h1 a[aria-hidden="true"], h2 a[aria-hidden="true"], h3 a[aria-hidden="true"], h4
         visibility: visible;
       }
   }
-/*```
+/*\3c !--section:docs-->
 
-**PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
-
-\3c !--section:list-->
+## Custom markers
 
 Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or even individual `<li>`:
 
@@ -3461,7 +3458,7 @@ ul li[data-marker]::marker, ol li[data-marker]::marker {
   }
 /*```
 
-### Markerless
+## Markerless
 
 `.markerless` removes markers and reduces padding:
 
@@ -3484,7 +3481,7 @@ ul.markerless li, ol.markerless li {
     }
 /*```
 
-### Unlist
+## Unlist
 
 `.unlist` removes list styling at all:
 
@@ -3626,11 +3623,12 @@ Living examples: \3c !--A-Z-->
 
 The `<pre><code>` blocks are Prism-compatible and support captions via `data-caption="..."` attribute:
 
-```treeview {data-caption="Blades CSS:"}
-./css/
-├── blades.core.css     # reusable class-light utilities, unthemed
-├── blades.theme.css    # minimal opinionated theme
-└── blades.css          # above two together
+```treeview {data-caption="Blades CSS ships:"}
+/css/
+├── blades.css  (Pico CSS successor)
+├── blades.standalone.css  (framework-agnostic)
+├── ninja.css  (experimental add-ons)
+└── pico.css  (underlying fork)
 ```
 
 \3c !--section:code-->
@@ -3766,8 +3764,6 @@ Or even for:
 
 How we made it: https://codepen.io/editor/anydigital/pen/019d2b94-5616-75dc-a23e-e111869d5237
 
-**PRO** example of automatic favicons for `11ty`: https://blades.ninja/build-awesome-11ty/processors/#auto-link-favicons
-
 \3c !--section--> */
 /*\3c !--section:docs-->
 
@@ -3794,7 +3790,7 @@ dl.timeline dd, .has-timeline > dl dd {
 /* Utilities */
 /*\3c !--section:docs-->
 
-## Auto-dark
+## Dark auto
 
 `.dark-auto` automatically creates a simple dark version of any element:
 
