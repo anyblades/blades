@@ -1,6 +1,6 @@
-# 🥷 *Bl*ades &nbsp;![][B_NPM]
+# 🥷 *Bl*ades &nbsp;![][NPM_V]
 
-[B_NPM]: https://img.shields.io/npm/v/@anyblades/blades?label=&color=white
+[NPM_V]: https://img.shields.io/npm/v/@anyblades/blades?label=&color=darkslategray
 
 <!--section:summary-->
 
