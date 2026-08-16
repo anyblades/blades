@@ -36,7 +36,8 @@
 
     /* Max out the width of the element */
     &.breakout-item-max {
-      width: min(125%, 100dvw) !important; /* !important is for cases like figure.breakout-item-max @TODO */
+      width: min(125%, 100dvw) !important;
+      /* !important is for cases like figure.breakout-item-max @TODO */
     }
   }
 }
@@ -86,13 +87,9 @@
   }
 }
 /*```
-<!--section:summary-->
-
-The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
-
 <!--section:docs-->
 
-### Demo <!-- inside parent .breakout -->
+The `.breakout` layout allows images, tables, and other figures to automatically extend or bleed beyond their parent container’s width.
 
 Break out a wide image from the text flow:
 
