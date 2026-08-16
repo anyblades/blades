@@ -15,12 +15,13 @@
 
 /* Content */
 @import "./content/_typography";
-@import "./content/_table-utilities";
+@import "./content/_list";
+@import "./content/_table";
 @import "./content/_table-responsive";
 @import "./content/_code";
 
 /* Forms */
-@import "./forms/_float-label.index";
+@import "./forms/_float-label.core";
 
 /* Components */
 @import "./components/_icon-helper";
