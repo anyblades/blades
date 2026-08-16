@@ -36,8 +36,6 @@ h6 {
 }
 /*```
 
-**PRO** example of automatic anchors for `11ty`+`markdown-it-anchor`: https://github.com/anyblades/eleventy-blades/blob/main/src/eleventy.config.js
-
 <!--section:list-->
 
 Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or even individual `<li>`:
