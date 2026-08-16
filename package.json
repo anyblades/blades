@@ -5,6 +5,7 @@
     ".": "./src/blades.css",
     "./pico": "./src/pico.css",
     "./standalone": "./src/blades.standalone.css",
+    "./float-label": "./src/standalone/forms/_float-label.css",
     "./ninja": "./src/ninja.css"
   },
   "=== DEV ONLY": "Z-A",
