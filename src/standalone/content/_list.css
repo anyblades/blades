@@ -1,0 +1,95 @@
+/*<!--section:docs-->
+
+## Custom markers
+
+Customize markers using inline `style="--list-marker:..."` on `<ul>/<ol>` or even individual `<li>`:
+
+<article>
+
+- you
+- can
+- make
+- really
+- cool markers {style="--list-marker:'🧊 '"}
+- with
+- *Bl*ades {style="--list-marker:'🥷 '"}
+
+{style="--list-marker:'→ '"}
+</article>
+
+How it works:
+```css */
+ul,
+ol {
+  &[style*="--list-marker:"] {
+    list-style-type: var(--list-marker);
+
+    > li {
+      list-style-type: inherit;
+    }
+  }
+  li[style*="--list-marker:"] {
+    list-style-type: var(--list-marker);
+  }
+  li[data-marker]::marker {
+    content: attr(data-marker) " "; /* ⚠️ Chrome and Firefox only */
+  }
+}
+/*```
+
+## Markerless
+
+`.markerless` removes markers and reduces padding:
+
+<article>
+
+- 1️⃣ so you can use
+- 2️⃣ emojis or images
+- 3️⃣ instead of bullets
+
+{.markerless}
+</article>
+
+How it works:
+```css */
+ul,
+ol {
+  &.markerless {
+    padding-inline-start: 1.25rem;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+/*```
+
+## Unlist
+
+`.unlist` removes list styling at all:
+
+<article>
+
+- One: <article>1</article>
+- Two: <article>2</article>
+- Three: <article>3</article>
+
+{.unlist .grid style=margin:0}
+</article>
+
+`.unlist-all` removes styling from all nested lists too.
+
+How it works:
+```css */
+ul,
+ol {
+  &.unlist,
+  &.unlist-all,
+  .unlist-all & {
+    padding-inline-start: 0;
+
+    > li {
+      list-style: none;
+    }
+  }
+}
