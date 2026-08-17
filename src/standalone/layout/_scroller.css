@@ -1,6 +1,6 @@
 /*```<!--section:docs-->
 
-`data-jump-to="top"` fixes element to the corner and adds extra top padding to make it easy to click:
+`<a href="#top">` is automatically fixed to the bottom-right corner with extra top padding for easier clicking:
 ```css */
 [href="#top"] {
   position: fixed;
