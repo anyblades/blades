@@ -1,4 +1,4 @@
-/*<!--section:columns-->
+/*<!--section:docs-->
 
 `.columns` automatically creates columns with at least 30 characters each:
 
@@ -14,7 +14,7 @@ The smaller the font size, the more columns will be created:
 
 Useful for tables of contents and long lists.
 
-How it works:
+<!--section:code-->
 ```css */
 .columns {
   columns: 25ch auto; /* common container 65ch / 25ch => 2 columns max, with a buffer for list paddings */
@@ -23,14 +23,4 @@ How it works:
   > * {
     break-inside: avoid;
   }
-}
-/*```<!--section:jump-->
-
-`data-jump-to="top"` fixes element to the corner and adds extra top padding to make it easy to click:
-```css */
-[data-jump-to="top"] {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding-top: 50vh;
 }
