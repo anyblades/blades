@@ -99,7 +99,7 @@ table {
   }
 }
 
-[data-jump-to="top"] {
+[href="#top"] {
   opacity: 25%;
   &:hover {
     opacity: 75%;

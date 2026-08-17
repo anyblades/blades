@@ -2,7 +2,7 @@
 
 `data-jump-to="top"` fixes element to the corner and adds extra top padding to make it easy to click:
 ```css */
-[data-jump-to="top"] {
+[href="#top"] {
   position: fixed;
   bottom: 0;
   right: 0;
