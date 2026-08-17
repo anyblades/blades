@@ -29,43 +29,6 @@
 }
 
 /* Layout */
-/*\3c !--section:columns-->
-
-`.columns` automatically creates columns with at least 30 characters each:
-
-<article class="columns">
-  <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p>
-</article>
-
-The smaller the font size, the more columns will be created:
-
-<article class="columns" style="font-size: 65%">
-  <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
-</article>
-
-Useful for tables of contents and long lists.
-
-How it works:
-```css */
-.columns {
-  -moz-columns: 25ch auto;
-  columns: 25ch auto; /* common container 65ch / 25ch => 2 columns max, with a buffer for list paddings */
-}
-/* Avoid breaking inside elements, such as nested lists */
-.columns > * {
-    -moz-column-break-inside: avoid;
-    break-inside: avoid;
-  }
-/*```\3c !--section:jump-->
-
-`data-jump-to="top"` fixes element to the corner and adds extra top padding to make it easy to click:
-```css */
-[data-jump-to="top"] {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  padding-top: 50vh;
-}
 /*
 \3c !--section:code-->
 ```css */
@@ -195,6 +158,43 @@ Or anything else:
 <hr>
 
 \3c !--section--> */
+/*\3c !--section:docs-->
+
+`.columns` automatically creates columns with at least 30 characters each:
+
+<article class="columns">
+  <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p>
+</article>
+
+The smaller the font size, the more columns will be created:
+
+<article class="columns" style="font-size: 65%">
+  <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+</article>
+
+Useful for tables of contents and long lists.
+
+\3c !--section:code-->
+```css */
+.columns {
+  -moz-columns: 25ch auto;
+  columns: 25ch auto; /* common container 65ch / 25ch => 2 columns max, with a buffer for list paddings */
+}
+/* Avoid breaking inside elements, such as nested lists */
+.columns > * {
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+/*```\3c !--section:docs-->
+
+`<a href="#top">` is automatically fixed to the bottom-right corner with extra top padding for easier clicking:
+```css */
+[href="#top"] {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding-top: 50vh;
+}
 
 /* Content */
 /*\3c !--section:docs-->
@@ -459,24 +459,43 @@ code[data-caption]::before {
     }
 
 /* Forms */
-/* Sources moved here from https://github.com/anyblades/float-label-css for easier maintenance
-\3c !--section:docs-->
+/*!
+ * Float Label CSS v2 by Blades CSS 🥷🏷️
+ * Copyright 2016–2026 (https://blades.ninja/css/float-label/)
+ * Licensed under MIT
+ */
+/*\3c !--section:docs-->
 
 First, we target either:
 1. `<label>` which `:has` inner form inputs (classless approach)
 2. or explicit `.has-float-label` class (explicit approach)
 
 ```css */
-label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select),
+label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ),
 .has-float-label {
   display: block;
   position: relative;
+  /*```
+  Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
+  ```css */
 }
 /*```
   Then, we define the default/fallback state (when the float label should be minimized):
   ```css */
-label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) > span,
-  label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) label,
+label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ) > span,
+  label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ) label,
   .has-float-label > span,
   .has-float-label label {
     position: absolute;
@@ -485,24 +504,49 @@ label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"
     font-size: 75%;
     cursor: text;
   }
-/*```
-  Finally, we detect if placeholder is shown, but not in focus. That means we can safely hide it, and enlarge the float label instead:
-  ```css */
-label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::-moz-placeholder, .has-float-label *:placeholder-shown:not(:focus)::-moz-placeholder {
+label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ) *:placeholder-shown:not(:focus)::-moz-placeholder, .has-float-label *:placeholder-shown:not(:focus)::-moz-placeholder {
     opacity: 0;
   }
-label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:-moz-placeholder:not(:focus)::placeholder, .has-float-label *:-moz-placeholder:not(:focus)::placeholder {
+label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ) *:-moz-placeholder:not(:focus)::placeholder, .has-float-label *:-moz-placeholder:not(:focus)::placeholder {
     opacity: 0;
   }
-label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select) *:placeholder-shown:not(:focus)::placeholder, .has-float-label *:placeholder-shown:not(:focus)::placeholder {
+label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ) *:placeholder-shown:not(:focus)::placeholder, .has-float-label *:placeholder-shown:not(:focus)::placeholder {
     opacity: 0;
   }
-label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) > span, label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:-moz-placeholder:not(:focus)) label, .has-float-label:has(*:-moz-placeholder:not(:focus)) > span, .has-float-label:has(*:-moz-placeholder:not(:focus)) label {
+label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ):has(*:-moz-placeholder:not(:focus)) > span, label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ):has(*:-moz-placeholder:not(:focus)) label, .has-float-label:has(*:-moz-placeholder:not(:focus)) > span, .has-float-label:has(*:-moz-placeholder:not(:focus)) label {
       font-size: inherit;
       opacity: 50%;
     }
-label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) > span,
-    label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select):has(*:placeholder-shown:not(:focus)) label,
+label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ):has(*:placeholder-shown:not(:focus)) > span,
+    label:has(> span):has(
+    input:not([type="checkbox"], [type="radio"], [type="range"]),
+    textarea,
+    select
+  ):has(*:placeholder-shown:not(:focus)) label,
     .has-float-label:has(*:placeholder-shown:not(:focus)) > span,
     .has-float-label:has(*:placeholder-shown:not(:focus)) label {
       font-size: inherit;
@@ -514,7 +558,7 @@ The `:has(*:placeholder-shown:not(:focus))` trick allows this input state inform
 
 Historically, this was not possible: the float label had to be placed after the input field to be targeted using the `input:focus + label` selector.
 
-\3c !--section-->*/
+*/
 
 /* Components */
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
@@ -789,15 +833,15 @@ table pre {
     margin-bottom: 0.25rem;
   }
 
-[data-jump-to="top"] {
+[href="#top"] {
   opacity: 25%;
 }
 
-[data-jump-to="top"]:hover {
+[href="#top"]:hover {
     opacity: 75%;
   }
 
-[data-jump-to="top"] > i {
+[href="#top"] > i {
     display: inline-block;
     margin: 0.5rem;
     padding: 0.25rem 0.375rem;
