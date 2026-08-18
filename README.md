@@ -4,7 +4,7 @@
 
 <!--section:summary-->
 
-<h1><span class="mark-brand">Minimal CSS Framework</span> <small>for</small> Semantic HTML</h1>
+<h1><b class="mark-brand">Minimal CSS Framework</b> <small>for</small> Semantic HTML</h1>
 
 <big>Fully compatible and actively maintained successor to [Pico CSS](//blades.ninja/css/pico/).</big>
 
