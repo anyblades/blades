@@ -82,9 +82,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 ---
 
-## Base HTML
-
-### Static HTML template <!-- from /index.html -->
+## Starter HTML template <!-- from /index.html -->
 
 ```html
 <!doctype html>
@@ -104,9 +102,9 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 </html>
 ```
 
-### Dynamic HTML template
+### Dynamic templates
 
-[Available for Nunjucks, Twig or Liquid ↗](https://blades.ninja/html/base/)<!--{role=button .outline}-->
+[Available for Nunjucks, Twig or Liquid ↗](https://blades.ninja/tpl/html/)<!--{role=button .outline}-->
 
 <!--section:gh-only-->
 
