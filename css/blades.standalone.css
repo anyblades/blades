@@ -105,17 +105,17 @@
 
 /* @TODO: add to tricks-wiki why `*` works here, but `&` fails */
 
-.breakout-all > *:is(h2, h3, h4, h5, h6):not([class]):where(hr + *)::before {
+.breakout-all > *:is(h2, h3, h4, h5, h6):not([class]):where(hr:not([class]) + *)::before {
         display: none !important;
       }
 
-.breakout-all > *:is(hr) {
+.breakout-all > *:is(hr):not([class]) {
     height: 0.5rem;
     overflow: visible;
     border: none;
   }
 
-.breakout-all > *:is(hr)::before {
+.breakout-all > *:is(hr):not([class])::before {
       left: 50%;
       width: 100dvw;
       height: 100%;
