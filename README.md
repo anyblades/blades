@@ -42,13 +42,13 @@ Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with oth
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
-  https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/blades.min.css
+  https://cdn.jsdelivr.net/npm/@anyblades/blades@^3.0.0-0/css/blades.min.css
 "/>
 ```
 
 Live example: https://github.com/pallets/website/blob/main/src/pallets/templates/layout.html
 
-Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/
+Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades/blades@^3.0.0-0/css/
 
 ### <mark>C.</mark> Install with NPM
 
