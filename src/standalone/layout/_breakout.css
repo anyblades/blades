@@ -67,13 +67,13 @@
     }
 
     /* @TODO: add to tricks-wiki why `*` works here, but `&` fails */
-    &:where(hr + *) {
+    &:where(hr:not([class]) + *) {
       &::before {
         display: none !important;
       }
     }
   }
-  &:is(hr) {
+  &:is(hr):not([class]) {
     height: 0.5rem;
     border: none;
     overflow: visible;
