@@ -104,7 +104,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 ### Dynamic templates
 
-[Available for Nunjucks, Twig and Liquid ↗](https://blades.ninja/tpl/)<!--{role=button .outline}-->
+[Available for Nunjucks, Liquid and Twig ↗](https://blades.ninja/tpl/)<!--{role=button .outline}-->
 
 <!--section:gh-only-->
 
