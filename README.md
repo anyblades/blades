@@ -56,7 +56,7 @@ Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades
 npm install @anyblades/blades
 ```
 
-Then, `@import` Blades into your CSS file:
+Then, `@import` sources into your CSS file:
 
 ```css
 @import "@anyblades/blades";
