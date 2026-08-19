@@ -205,6 +205,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 - [awesome-css](https://github.com/uhub/awesome-css)
 - [awesome-css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
+- [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
 - [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
 
 <!--{.markerless .columns}-->
