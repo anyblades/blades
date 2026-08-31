@@ -189,9 +189,10 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 ---
 
-## <sup style>Trusted by</sup><!-- DRY with featured -->
+## <sup style>Trusted by</sup>
 
-- <b hidden>🐍</b> [Flask & Jinja community website](https://palletsprojects.com/)
+- 🐍 [Flask & Jinja community website](https://palletsprojects.com/)
+- 🪐 [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades)
 
 <!--section:info-->
 
