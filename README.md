@@ -216,6 +216,6 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 ## <sup style>Credits</sup>
 
 - https://picocss.com/ for [inspiration](//blades.ninja/css/pico/)
-- https://11ty.dev/ for site generation
+- https://11ty.dev/ for [site generation](//buildawesome.one/)
 
 <!--{.markerless}-->
