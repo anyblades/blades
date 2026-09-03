@@ -199,8 +199,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 ## <sup style>Featured by</sup>
 
 - [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades)
-- [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
-- [sveltiacms.app](https://sveltiacms.app/en/docs/start#:~:text=anyblades) <!--Z-A-->
+- [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413) <!--Z-A-->
 - [libhunt.com](https://www.libhunt.com/r/blades)
 - [context7.com](https://context7.com/anyblades/blades)
 - [awesome-css](https://github.com/uhub/awesome-css)
