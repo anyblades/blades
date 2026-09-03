@@ -4,8 +4,7 @@
  * Copyright 2019-2025 (https://picocss.com)
  * Copyright 2026 (https://blades.ninja/css/pico/)
  * Licensed under MIT
- */
-/**
+ *//**
  * Variables
  */
 :scope,
@@ -676,6 +675,7 @@ progress,
 [type="range"] {
   accent-color: var(--pico-primary);
 }
+
 /**
  * Document
  * Content-box & Responsive typography
@@ -1413,6 +1413,7 @@ template {
 canvas {
   display: inline-block;
 }
+
 /**
  * Basics form elements
  */

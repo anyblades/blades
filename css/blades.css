@@ -2,14 +2,12 @@
  * Blades CSS v3 with Pico CSS 🥷✨
  * Copyright 2026 (https://blades.ninja/)
  * Licensed under MIT
- */
-/*!
+ *//*!
  * Blades CSS' Pico fork v2.5 🥷✨
  * Copyright 2019-2025 (https://picocss.com)
  * Copyright 2026 (https://blades.ninja/css/pico/)
  * Licensed under MIT
- */
-/**
+ *//**
  * Variables
  */
 :scope,
@@ -680,6 +678,7 @@ progress,
 [type="range"] {
   accent-color: var(--pico-primary);
 }
+
 /**
  * Document
  * Content-box & Responsive typography
@@ -1417,6 +1416,7 @@ template {
 canvas {
   display: inline-block;
 }
+
 /**
  * Basics form elements
  */
@@ -3220,6 +3220,7 @@ textarea,
 }
 
 /* Layout */
+
 /*
 \3c !--section:code-->
 ```css */
@@ -3386,7 +3387,6 @@ Useful for tables of contents and long lists.
   bottom: 0;
   padding-top: 50vh;
 }
-
 /* Content */
 /*\3c !--section:docs-->
 
@@ -3650,6 +3650,7 @@ code[data-caption]::before {
     }
 
 /* Forms */
+
 /*!
  * Float Label CSS v2 by Blades CSS 🥷🏷️
  * Copyright 2016–2026 (https://blades.ninja/css/float-label/)
@@ -3750,7 +3751,6 @@ The `:has(*:placeholder-shown:not(:focus))` trick allows this input state inform
 Historically, this was not possible: the float label had to be placed after the input field to be targeted using the `input:focus + label` selector.
 
 */
-
 /* Components */
 /* Extends https://github.com/picocss/pico/blob/main/scss/content/_link.scss
 \3c !--section:code-->
@@ -3830,7 +3830,6 @@ dl.timeline dd, .has-timeline > dl dd {
     padding: 0.25rem 0 0.75rem 1rem;
     border-inline-start: 0.25rem solid var(--blades-timeline-border-color);
   }
-
 /* Utilities */
 /*\3c !--section:docs-->
 
@@ -3926,7 +3925,6 @@ label:has(> span):has(input:not([type="checkbox"], [type="radio"], [type="range"
     .has-float-label:has(*:placeholder-shown:not(:focus)) label {
       padding-block: 0.75rem; /* match Pico */
     }
-
 html {
   /* Prevent horizontal overflow and scrolling, modern way. */
   overflow-x: clip;
