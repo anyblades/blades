@@ -207,7 +207,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
 - [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
-- [@adamdjbrett](https://github.com/adamdjbrett/11ty-wisp#features:~:text=blades)
+- [@adamdjbrett](https://github.com/adamdjbrett/11ty-wisp#features:~:text=blades) [↗](https://github.com/adamdjbrett/000000076#:~:text=blades)
 
 <!--{.markerless .columns}-->
 <!--[hostfurl.com, @johnheenan]-->
