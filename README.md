@@ -201,6 +201,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 - [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades)
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
 - [<i class="fa-brands fa-build-awesome mark-brand"></i> buildawesome.one](https://buildawesome.one/#:~:text=blades)
+- https://github.com/dbohdan/classless-css
 - https://github.com/uhub/awesome-css
 - [/gabrielizalo/awesome-css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - https://github.com/eggplantpasta/greenroom
