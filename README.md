@@ -209,6 +209,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 - [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
 - [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
 - [@infotexture](https://mastodon.social/@infotexture@indieweb.social/117294194740314396)
+- [@lazarus](https://fosstodon.org/@lazarus/117384358792615667)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 
 <!--{.markerless .columns}-->
