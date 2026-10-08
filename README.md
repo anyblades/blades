@@ -207,6 +207,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 - https://github.com/eggplantpasta/greenroom
 - [/adamdjbrett/11ty-wisp](https://github.com/adamdjbrett/11ty-wisp#features:~:text=blades) [↗](https://github.com/adamdjbrett/000000076#:~:text=blades)
 - [doany.io](https://doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css)
+- [@draupnerdata](https://www.youtube.com/watch?v=yDjArj9HSjs&t=180s)
 - [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
 - [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
 - [@infotexture](https://mastodon.social/@infotexture@indieweb.social/117294194740314396)
