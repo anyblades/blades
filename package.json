@@ -4,6 +4,16 @@
   "exports": {
     ".": "./src/blades.css",
     "./pico": "./src/pico.css",
+    "./pico/variables": "./src/pico/_variables.css",
+    "./pico/layout": "./src/pico/_layout.css",
+    "./pico/layout/*": "./src/pico/layout/_*.css",
+    "./pico/content": "./src/pico/_content.css",
+    "./pico/content/*": "./src/pico/content/_*.css",
+    "./pico/forms": "./src/pico/_forms.css",
+    "./pico/forms/*": "./src/pico/forms/_*.css",
+    "./pico/components": "./src/pico/_components.css",
+    "./pico/components/*": "./src/pico/components/_*.css",
+    "./pico/utilities": "./src/pico/_utilities.css",
     "./standalone": "./src/blades.standalone.css",
     "./float-label": "./src/standalone/forms/_float-label.css",
     "./ninja": "./src/ninja.css"

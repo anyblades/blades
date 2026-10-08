@@ -1,0 +1,19 @@
+/**
+ * Misc
+ */
+hr {
+  height: 0;
+  margin: var(--pico-typography-spacing-vertical) 0;
+  border: 0;
+  border-top: 1px solid var(--pico-muted-border-color);
+  color: inherit;
+}
+
+[hidden],
+template {
+  display: none !important;
+}
+
+canvas {
+  display: inline-block;
+}
