@@ -196,7 +196,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 <!--section:info-->
 
-## <sup style>Featured by</sup> <!-- [1] big projects [2] awesome [3] new projects [4] ppl -->
+## <sup style>Featured by</sup> <!-- [1] big projects [2] awesome [3] smaller projects [4] blogs/social -->
 
 - [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades)
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
@@ -206,6 +206,7 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 - [/gabrielizalo/awesome-css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - https://github.com/eggplantpasta/greenroom
 - [/adamdjbrett/11ty-wisp](https://github.com/adamdjbrett/11ty-wisp#features:~:text=blades) [↗](https://github.com/adamdjbrett/000000076#:~:text=blades)
+- [doany.io](https://doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css)
 - [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
 - [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
 - [@infotexture](https://mastodon.social/@infotexture@indieweb.social/117294194740314396)
