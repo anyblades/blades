@@ -10,11 +10,12 @@
   },
   "=== DEV ONLY": "Z-A",
   "scripts": {
-    "build": "clear; npm run lint && npm run build:css && npm run build:minify && npm run build:conditional",
+    "build": "clear; npm run lint && npm run build:css && npm run build:minify && npm run build:conditional && npm run build:layered",
     "lint": "prettier --write --log-level silent ./src/**/*.css",
     "build:css": "postcss --config css './src/!(_)*.css' --dir css --no-map",
-    "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix .min ./css/*.css !./css/*.min.css !./css/pico.conditional.*",
+    "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix .min ./css/*.css !./css/*.min.css !./css/pico.conditional.* !./css/pico.layered.*",
     "build:conditional": "for f in '' .min; do { printf '@scope (.pico) {\\n'; cat ./css/pico${f}.css; printf '\\n}\\n'; } > ./css/pico.conditional${f}.css; done",
+    "build:layered": "for f in '' .min; do { printf '@layer pico {\\n'; cat ./css/pico${f}.css; printf '\\n}\\n'; } > ./css/pico.layered${f}.css; done",
     "start": "npm run build:css -- --watch",
     "prepublishOnly": "npm run build"
   },

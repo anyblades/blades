@@ -50,6 +50,8 @@ Live example: https://github.com/pallets/website/blob/main/src/pallets/templates
 
 Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/
 
+`pico.layered.min.css` is Pico wrapped in `@layer pico { }`, so any unlayered styles of yours win over it without specificity fights. Note that inside a layer Pico's own `!important` declarations (form validation, reduced motion) beat your unlayered `!important`, and your `@keyframes` of the same name as Pico's win regardless of load order. When you can use `@import`, `@import url("…/pico.min.css") layer(pico);` does the same without this file.
+
 ### <mark>C.</mark> Install with NPM
 
 ```sh
