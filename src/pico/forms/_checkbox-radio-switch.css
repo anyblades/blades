@@ -1,0 +1,148 @@
+/**
+ * Checkboxes, Radios and Switches
+ */
+label:has([type="checkbox"], [type="radio"]) {
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: -0.125em;
+  margin-inline-end: 0.5em;
+  border-width: var(--pico-border-width);
+  vertical-align: middle;
+  cursor: pointer;
+}
+[type="checkbox"]::-ms-check,
+[type="radio"]::-ms-check {
+  display: none;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:checked:active,
+[type="checkbox"]:checked:focus,
+[type="radio"]:checked,
+[type="radio"]:checked:active,
+[type="radio"]:checked:focus {
+  --pico-background-color: var(--pico-primary-background);
+  --pico-border-color: var(--pico-primary-border);
+  background-image: var(--pico-icon-checkbox);
+  background-position: center;
+  background-size: 0.75em auto;
+  background-repeat: no-repeat;
+}
+[type="checkbox"] ~ label,
+[type="radio"] ~ label {
+  display: inline-block;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+[type="checkbox"] ~ label:not(:last-of-type),
+[type="radio"] ~ label:not(:last-of-type) {
+  margin-inline-end: 1em;
+}
+
+[type="checkbox"]:indeterminate {
+  --pico-background-color: var(--pico-primary-background);
+  --pico-border-color: var(--pico-primary-border);
+  background-image: var(--pico-icon-minus);
+  background-position: center;
+  background-size: 0.75em auto;
+  background-repeat: no-repeat;
+}
+
+[type="radio"] {
+  border-radius: 50%;
+}
+[type="radio"]:checked,
+[type="radio"]:checked:active,
+[type="radio"]:checked:focus {
+  --pico-background-color: var(--pico-primary-inverse);
+  border-width: 0.35em;
+  background-image: none;
+}
+
+[type="checkbox"][role="switch"] {
+  --pico-background-color: var(--pico-switch-background-color);
+  --pico-color: var(--pico-switch-color);
+  width: 2.25em;
+  height: 1.25em;
+  border: var(--pico-border-width) solid var(--pico-border-color);
+  border-radius: 1.25em;
+  background-color: var(--pico-background-color);
+  line-height: 1.25em;
+}
+[type="checkbox"][role="switch"]:not([aria-invalid]) {
+  --pico-border-color: var(--pico-switch-background-color);
+}
+[type="checkbox"][role="switch"]:before {
+  display: block;
+  aspect-ratio: 1;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--pico-color);
+  box-shadow: var(--pico-switch-thumb-box-shadow);
+  content: "";
+  transition: margin 0.1s ease-in-out;
+}
+[type="checkbox"][role="switch"]:focus {
+  --pico-background-color: var(--pico-switch-background-color);
+  --pico-border-color: var(--pico-switch-background-color);
+}
+[type="checkbox"][role="switch"]:checked {
+  --pico-background-color: var(--pico-switch-checked-background-color);
+  --pico-border-color: var(--pico-switch-checked-background-color);
+  background-image: none;
+}
+[type="checkbox"][role="switch"]:checked::before {
+  margin-inline-start: calc(2.25em - 1.25em);
+}
+[type="checkbox"][role="switch"][disabled] {
+  --pico-background-color: var(--pico-border-color);
+}
+
+[type="checkbox"][aria-invalid="false"]:checked,
+[type="checkbox"][aria-invalid="false"]:checked:active,
+[type="checkbox"][aria-invalid="false"]:checked:focus,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked:active,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked:focus {
+  --pico-background-color: var(--pico-form-element-valid-border-color);
+}
+[type="checkbox"]:checked[aria-invalid="true"],
+[type="checkbox"]:checked:active[aria-invalid="true"],
+[type="checkbox"]:checked:focus[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked:active[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked:focus[aria-invalid="true"] {
+  --pico-background-color: var(--pico-form-element-invalid-border-color);
+}
+
+[type="checkbox"][aria-invalid="false"]:checked,
+[type="checkbox"][aria-invalid="false"]:checked:active,
+[type="checkbox"][aria-invalid="false"]:checked:focus,
+[type="radio"][aria-invalid="false"]:checked,
+[type="radio"][aria-invalid="false"]:checked:active,
+[type="radio"][aria-invalid="false"]:checked:focus,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked:active,
+[type="checkbox"][role="switch"][aria-invalid="false"]:checked:focus {
+  --pico-border-color: var(--pico-form-element-valid-border-color);
+}
+[type="checkbox"]:checked[aria-invalid="true"],
+[type="checkbox"]:checked:active[aria-invalid="true"],
+[type="checkbox"]:checked:focus[aria-invalid="true"],
+[type="radio"]:checked[aria-invalid="true"],
+[type="radio"]:checked:active[aria-invalid="true"],
+[type="radio"]:checked:focus[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked:active[aria-invalid="true"],
+[type="checkbox"][role="switch"]:checked:focus[aria-invalid="true"] {
+  --pico-border-color: var(--pico-form-element-invalid-border-color);
+}

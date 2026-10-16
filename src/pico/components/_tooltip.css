@@ -1,0 +1,167 @@
+/**
+ * Tooltip ([data-tooltip])
+ */
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]:not(a, button, input, [role="button"]) {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  cursor: help;
+}
+[data-tooltip][data-placement="top"]::before,
+[data-tooltip][data-placement="top"]::after,
+[data-tooltip]::before,
+[data-tooltip]::after {
+  display: block;
+  z-index: 99;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  padding: 0.25rem 0.5rem;
+  overflow: hidden;
+  transform: translate(-50%, -0.25rem);
+  border-radius: var(--pico-border-radius);
+  background: var(--pico-tooltip-background-color);
+  content: attr(data-tooltip);
+  color: var(--pico-tooltip-color);
+  font-style: normal;
+  font-weight: var(--pico-font-weight);
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+[data-tooltip][data-placement="top"]::after,
+[data-tooltip]::after {
+  padding: 0;
+  transform: translate(-50%, 0rem);
+  border-top: 0.3rem solid;
+  border-right: 0.3rem solid transparent;
+  border-left: 0.3rem solid transparent;
+  border-radius: 0;
+  background-color: transparent;
+  content: "";
+  color: var(--pico-tooltip-background-color);
+}
+[data-tooltip][data-placement="bottom"]::before,
+[data-tooltip][data-placement="bottom"]::after {
+  top: 100%;
+  bottom: auto;
+  transform: translate(-50%, 0.25rem);
+}
+[data-tooltip][data-placement="bottom"]:after {
+  transform: translate(-50%, -0.3rem);
+  border: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid;
+}
+[data-tooltip][data-placement="left"]::before,
+[data-tooltip][data-placement="left"]::after {
+  top: 50%;
+  right: 100%;
+  bottom: auto;
+  left: auto;
+  transform: translate(-0.25rem, -50%);
+}
+[data-tooltip][data-placement="left"]:after {
+  transform: translate(0.3rem, -50%);
+  border: 0.3rem solid transparent;
+  border-left: 0.3rem solid;
+}
+[data-tooltip][data-placement="right"]::before,
+[data-tooltip][data-placement="right"]::after {
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 100%;
+  transform: translate(0.25rem, -50%);
+}
+[data-tooltip][data-placement="right"]:after {
+  transform: translate(-0.3rem, -50%);
+  border: 0.3rem solid transparent;
+  border-right: 0.3rem solid;
+}
+[data-tooltip]:focus::before,
+[data-tooltip]:focus::after,
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+  opacity: 1;
+}
+@media (hover: hover) and (pointer: fine) {
+  [data-tooltip]:focus::before,
+  [data-tooltip]:focus::after,
+  [data-tooltip]:hover::before,
+  [data-tooltip]:hover::after {
+    --pico-tooltip-slide-to: translate(-50%, -0.25rem);
+    transform: translate(-50%, 0.75rem);
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-name: tooltip-slide;
+    opacity: 0;
+  }
+  [data-tooltip]:focus::after,
+  [data-tooltip]:hover::after {
+    --pico-tooltip-caret-slide-to: translate(-50%, 0rem);
+    transform: translate(-50%, -0.25rem);
+    animation-name: tooltip-caret-slide;
+  }
+  [data-tooltip][data-placement="bottom"]:focus::before,
+  [data-tooltip][data-placement="bottom"]:focus::after,
+  [data-tooltip][data-placement="bottom"]:hover::before,
+  [data-tooltip][data-placement="bottom"]:hover::after {
+    --pico-tooltip-slide-to: translate(-50%, 0.25rem);
+    transform: translate(-50%, -0.75rem);
+    animation-name: tooltip-slide;
+  }
+  [data-tooltip][data-placement="bottom"]:focus::after,
+  [data-tooltip][data-placement="bottom"]:hover::after {
+    --pico-tooltip-caret-slide-to: translate(-50%, -0.3rem);
+    transform: translate(-50%, -0.5rem);
+    animation-name: tooltip-caret-slide;
+  }
+  [data-tooltip][data-placement="left"]:focus::before,
+  [data-tooltip][data-placement="left"]:focus::after,
+  [data-tooltip][data-placement="left"]:hover::before,
+  [data-tooltip][data-placement="left"]:hover::after {
+    --pico-tooltip-slide-to: translate(-0.25rem, -50%);
+    transform: translate(0.75rem, -50%);
+    animation-name: tooltip-slide;
+  }
+  [data-tooltip][data-placement="left"]:focus::after,
+  [data-tooltip][data-placement="left"]:hover::after {
+    --pico-tooltip-caret-slide-to: translate(0.3rem, -50%);
+    transform: translate(0.05rem, -50%);
+    animation-name: tooltip-caret-slide;
+  }
+  [data-tooltip][data-placement="right"]:focus::before,
+  [data-tooltip][data-placement="right"]:focus::after,
+  [data-tooltip][data-placement="right"]:hover::before,
+  [data-tooltip][data-placement="right"]:hover::after {
+    --pico-tooltip-slide-to: translate(0.25rem, -50%);
+    transform: translate(-0.75rem, -50%);
+    animation-name: tooltip-slide;
+  }
+  [data-tooltip][data-placement="right"]:focus::after,
+  [data-tooltip][data-placement="right"]:hover::after {
+    --pico-tooltip-caret-slide-to: translate(-0.3rem, -50%);
+    transform: translate(-0.05rem, -50%);
+    animation-name: tooltip-caret-slide;
+  }
+}
+@keyframes tooltip-slide {
+  to {
+    transform: var(--pico-tooltip-slide-to);
+    opacity: 1;
+  }
+}
+@keyframes tooltip-caret-slide {
+  50% {
+    opacity: 0;
+  }
+  to {
+    transform: var(--pico-tooltip-caret-slide-to);
+    opacity: 1;
+  }
+}

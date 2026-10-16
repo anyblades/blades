@@ -1,0 +1,17 @@
+/**
+ * Input type color
+ */
+[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+[type="color"]::-moz-focus-inner {
+  padding: 0;
+}
+[type="color"]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--pico-border-radius) * 0.5);
+}
+[type="color"]::-moz-color-swatch {
+  border: 0;
+  border-radius: calc(var(--pico-border-radius) * 0.5);
+}

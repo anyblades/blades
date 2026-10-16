@@ -737,7 +737,6 @@ body > footer {
 section {
   margin-bottom: var(--pico-block-spacing-vertical);
 }
-
 /**
  * Container
  */
@@ -777,7 +776,6 @@ section {
     max-width: 1450px;
   }
 }
-
 /**
  * Grid
  * Minimal grid system with auto-layout columns
@@ -797,7 +795,6 @@ section {
   min-width: 0;
   margin-bottom: 0; /* https://github.com/picocss/pico/issues/738 */
 }
-
 /**
  * Overflow auto
  */
@@ -1393,7 +1390,6 @@ figure figcaption {
   padding: calc(var(--pico-spacing) * 0.5) 0;
   color: var(--pico-muted-color);
 }
-
 /**
  * Misc
  */
@@ -1898,7 +1894,6 @@ label:has([type="checkbox"], [type="radio"]) {
 [type="checkbox"][role="switch"]:checked:focus[aria-invalid="true"] {
   --pico-border-color: var(--pico-form-element-invalid-border-color);
 }
-
 /**
  * Input type color
  */
@@ -1916,7 +1911,6 @@ label:has([type="checkbox"], [type="radio"]) {
   border: 0;
   border-radius: calc(var(--pico-border-radius) * 0.5);
 }
-
 /**
  * Input type datetime
  */
@@ -1965,7 +1959,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   :is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {
   text-align: end;
 }
-
 /**
  * Input type file
  */
@@ -1992,7 +1985,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
     var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
     0 0 0 var(--pico-outline-width) var(--pico-secondary-focus);
 }
-
 /**
  * Input type range
  */
@@ -2102,7 +2094,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
 [type="range"]:active::-ms-thumb {
   transform: scale(1.25);
 }
-
 /**
  * Input type search
  */
@@ -2235,7 +2226,6 @@ details[open] > summary::after {
   float: left;
   background-position: left center;
 }
-
 /**
  * Card (<article>)
  */
@@ -2267,7 +2257,6 @@ article > footer {
   border-bottom-right-radius: var(--pico-border-radius);
   border-bottom-left-radius: var(--pico-border-radius);
 }
-
 /**
  * Dropdown (details.dropdown)
  */
@@ -2615,7 +2604,6 @@ label > details.dropdown {
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
 }
-
 /**
  * Loading ([aria-busy=true])
  */
@@ -2966,6 +2954,7 @@ progress::-moz-progress-bar {
     background-position: -200% 0;
   }
 }
+
 /**
  * Tooltip ([data-tooltip])
  */

@@ -5,8 +5,8 @@
  * Licensed under MIT
  */
 @import "./_variables";
-@import "./_layout";
-@import "./_content";
-@import "./_forms";
-@import "./_components";
+@import "./layout/_index";
+@import "./content/_index";
+@import "./forms/_index";
+@import "./components/_index";
 @import "./_utilities";

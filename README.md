@@ -4,9 +4,9 @@
 
 <!--section:summary-->
 
-<h1><b class="mark-brand">Minimal CSS Framework</b> <small>for</small> Semantic HTML</h1>
+<h1><span class="mark-brand">Minimal CSS Framework</span> <small>for</small> Semantic HTML</h1>
 
-<big>Fully compatible and actively maintained successor to [Pico CSS](//blades.ninja/css/pico/).</big>
+<big>Fully compatible and actively maintained successor to [Pico CSS](https://picocss.com/).</big>
 
 Introduces [float labels](//blades.ninja/css/float-label/), [breakout container](//blades.ninja/css/breakout/) and other modern, opt-out [helpers](//blades.ninja/#docs).
 Simply switch `pico.css` to `blades.css` OR use `blades.standalone.css` with other frameworks.
@@ -50,6 +50,8 @@ Live example: https://github.com/pallets/website/blob/main/src/pallets/templates
 
 Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/
 
+`pico.layered.min.css` is Pico wrapped in `@layer pico { }`, so any unlayered styles of yours win over it without specificity fights. Note that inside a layer Pico's own `!important` declarations (form validation, reduced motion) beat your unlayered `!important`, and your `@keyframes` of the same name as Pico's win regardless of load order. When you can use `@import`, `@import url("…/pico.min.css") layer(pico);` does the same without this file.
+
 ### <mark>C.</mark> Install with NPM
 
 ```sh
@@ -71,6 +73,21 @@ Alternatively, import [standalone](//blades.ninja/css/standalone/) Blades CSS so
 ```
 
 Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://github.com/anyblades/buildawesome-micro-starters/blob/main/tailwind/styles.css
+
+<div><hr></div>
+
+Or import only the [Pico CSS](//blades.ninja/css/pico/) parts you need, e.g. per page or per component:
+
+```css
+@import "@anyblades/blades/pico/variables";
+@import "@anyblades/blades/pico/layout/document";
+@import "@anyblades/blades/pico/content/typography";
+@import "@anyblades/blades/pico/components/modal";
+```
+
+- `variables` and `layout/document` are the minimum; keep the same order as [`src/pico/_index.css`](https://github.com/anyblades/blades/blob/main/src/pico/_index.css) (variables → layout → content → forms → components → utilities).
+- Some parts build on others, e.g. `components/group` and `components/dropdown` expect `forms/basics` and `content/button`.
+- Available parts are the files under [`src/pico/`](https://github.com/anyblades/blades/tree/main/src/pico): `layout/*`, `content/*`, `forms/*`, `components/*` (or a whole category, e.g. `@anyblades/blades/pico/components`) and `utilities`.
 
 ### <mark>D.</mark> Official starters
 
@@ -196,18 +213,23 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 <!--section:info-->
 
-## <sup style>Featured by</sup> <!-- [1] big projects [2] awesome [3] new projects [4] ppl -->
+## <sup style>Featured by</sup> <!-- [1] big projects [2] awesome [3] smaller projects [4] blogs/social -->
 
 - [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades)
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
 - [<i class="fa-brands fa-build-awesome mark-brand"></i> buildawesome.one](https://buildawesome.one/#:~:text=blades)
+- https://github.com/dbohdan/classless-css
 - https://github.com/uhub/awesome-css
 - [/gabrielizalo/awesome-css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - https://github.com/eggplantpasta/greenroom
 - [/adamdjbrett/11ty-wisp](https://github.com/adamdjbrett/11ty-wisp#features:~:text=blades) [↗](https://github.com/adamdjbrett/000000076#:~:text=blades)
+- [doany.io](https://doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css)
+- [@draupnerdata](https://www.youtube.com/watch?v=yDjArj9HSjs&t=180s)
 - [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
 - [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
 - [@infotexture](https://mastodon.social/@infotexture@indieweb.social/117294194740314396)
+- [@lazarus](https://fosstodon.org/@lazarus/117384358792615667)
+- [@matthewmorete](https://bsky.app/profile/matthewmorete.com/post/3mx5wvywixc2l)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 
 <!--{.markerless .columns}-->

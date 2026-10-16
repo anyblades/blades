@@ -1,0 +1,26 @@
+/**
+ * Input type file
+ */
+[type="file"] {
+  --pico-color: var(--pico-muted-color);
+  margin-left: calc(var(--pico-outline-width) * -1);
+  padding: calc(var(--pico-form-element-spacing-vertical) * 0.5) 0;
+  padding-left: var(--pico-outline-width);
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+[type="file"]::file-selector-button {
+  margin-right: calc(var(--pico-spacing) / 2);
+  padding: calc(var(--pico-form-element-spacing-vertical) * 0.5)
+    var(--pico-form-element-spacing-horizontal);
+}
+[type="file"]:is(:hover, :active, :focus)::file-selector-button {
+  --pico-background-color: var(--pico-secondary-hover-background);
+  --pico-border-color: var(--pico-secondary-hover-border);
+}
+[type="file"]:focus::file-selector-button {
+  --pico-box-shadow:
+    var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+    0 0 0 var(--pico-outline-width) var(--pico-secondary-focus);
+}
