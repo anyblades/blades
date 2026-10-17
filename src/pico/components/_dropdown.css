@@ -1,6 +1,15 @@
 /**
  * Dropdown (details.dropdown)
  */
+:where(:scope, [data-theme="light"], [data-theme="dark"]),
+:host {
+  --pico-dropdown-background-color: light-dark(#fff, #181c25);
+  --pico-dropdown-border-color: light-dark(#eff1f4, #202632);
+  --pico-dropdown-box-shadow: var(--pico-box-shadow);
+  --pico-dropdown-color: var(--pico-color);
+  --pico-dropdown-hover-background-color: light-dark(#eff1f4, #202632);
+}
+
 details.dropdown {
   position: relative;
   border-bottom: none;

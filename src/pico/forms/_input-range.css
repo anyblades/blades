@@ -1,6 +1,15 @@
 /**
  * Input type range
  */
+:where(:scope, [data-theme="light"], [data-theme="dark"]),
+:host {
+  --pico-range-border-color: light-dark(#dfe3eb, #202632);
+  --pico-range-active-border-color: light-dark(#bfc7d9, #2a3140);
+  --pico-range-thumb-border-color: var(--pico-background-color);
+  --pico-range-thumb-color: var(--pico-secondary-background);
+  --pico-range-thumb-active-color: var(--pico-primary-background);
+}
+
 [type="range"] {
   -webkit-appearance: none;
   -moz-appearance: none;

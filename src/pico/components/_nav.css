@@ -1,6 +1,12 @@
 /**
  * Nav
  */
+:where(:scope),
+:host {
+  --pico-nav-element-spacing-horizontal: 0.5rem;
+  --pico-nav-breadcrumb-divider: ">";
+}
+
 :where(nav li)::before {
   float: left;
   content: "​";

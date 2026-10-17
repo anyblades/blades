@@ -1,6 +1,20 @@
 /**
  * Card (<article>)
  */
+:where(:scope, [data-theme="light"], [data-theme="dark"]),
+:host {
+  --pico-card-background-color: light-dark(var(--pico-background-color), #181c25);
+  --pico-card-border-color: light-dark(
+    var(--pico-muted-border-color),
+    var(--pico-card-background-color)
+  );
+  --pico-card-box-shadow: var(--pico-box-shadow);
+  --pico-card-sectioning-background-color: light-dark(
+    rgb(251, 251.5, 252.25),
+    rgb(26, 30.5, 40.25)
+  );
+}
+
 article {
   margin-bottom: var(--pico-block-spacing-vertical);
   padding: var(--pico-block-spacing-vertical) var(--pico-block-spacing-horizontal);
