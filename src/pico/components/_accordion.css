@@ -1,6 +1,14 @@
 /**
  * Accordion (<details>)
  */
+:where(:scope, [data-theme="light"], [data-theme="dark"]),
+:host {
+  --pico-accordion-border-color: var(--pico-muted-border-color);
+  --pico-accordion-active-summary-color: var(--pico-primary-hover);
+  --pico-accordion-close-summary-color: var(--pico-color);
+  --pico-accordion-open-summary-color: var(--pico-muted-color);
+}
+
 details {
   display: block;
   margin-bottom: var(--pico-spacing);

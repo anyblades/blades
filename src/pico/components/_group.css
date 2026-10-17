@@ -1,6 +1,14 @@
 /**
  * Group ([role="group"], [role="search"])
  */
+:where(:scope),
+:host {
+  --pico-group-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width)
+    var(--pico-primary-focus);
+  --pico-group-box-shadow-focus-with-input: 0 0 0 0.0625rem var(--pico-form-element-border-color);
+}
+
 [role="search"],
 [role="group"] {
   display: inline-flex;

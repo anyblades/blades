@@ -1,6 +1,12 @@
 /**
  * Progress
  */
+:where(:scope, [data-theme="light"], [data-theme="dark"]),
+:host {
+  --pico-progress-background-color: light-dark(#dfe3eb, #202632);
+  --pico-progress-color: var(--pico-primary-background);
+}
+
 progress {
   display: inline-block;
   vertical-align: baseline;

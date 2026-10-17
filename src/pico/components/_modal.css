@@ -1,6 +1,19 @@
 /**
  * Modal (<dialog>)
  */
+:where(:scope),
+:host {
+  --pico-modal-overlay-backdrop-filter: blur(0.375rem);
+  --pico-icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+}
+:where(:scope, [data-theme="light"], [data-theme="dark"]),
+:host {
+  --pico-modal-overlay-background-color: light-dark(
+    rgba(232, 234, 237, 0.75),
+    rgba(7.5, 8.5, 10, 0.75)
+  );
+}
+
 :scope,
 :host {
   --pico-scrollbar-width: 0px;

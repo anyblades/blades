@@ -1,6 +1,12 @@
 /**
  * Tooltip ([data-tooltip])
  */
+:where(:scope, [data-theme="light"], [data-theme="dark"]),
+:host {
+  --pico-tooltip-background-color: var(--pico-contrast-background);
+  --pico-tooltip-color: var(--pico-contrast-inverse);
+}
+
 [data-tooltip] {
   position: relative;
 }
