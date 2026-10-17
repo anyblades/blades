@@ -151,7 +151,7 @@ import "@anyblades/blades/pico/components/modal";
 
 ## Dark mode without a flash
 
-With the Pico-based builds, Blades follows the OS setting by default, with no JavaScript and no flash (see [Dark scheme](//blades.ninja/css/color-schemes/)). To force a theme, set `data-theme="light"` or `"dark"` on `<html>`. On a nested element, it also works for elements that paint their own background, such as `<article>`. For other elements, add `background-color: var(--pico-background-color); color: var(--pico-color);`.
+With the Pico-based builds, Blades follows the OS setting by default, with no JavaScript and no flash (see [Dark scheme](//blades.ninja/css/color-schemes/)). To force a theme, set `data-theme="light"` or `"dark"` on `<html>`. On a nested element it works when the element paints its own background, such as `<article>`; otherwise add `background-color: var(--pico-background-color); color: var(--pico-color);`.
 
 If you persist the user's choice, e.g. under the `localStorage` key `theme`, set the attribute **before the first paint** with a small inline script in `<head>`, e.g. in SvelteKit's `src/app.html`:
 
@@ -165,7 +165,7 @@ If you persist the user's choice, e.g. under the `localStorage` key `theme`, set
 ```
 
 - Setting it later, e.g. in `onMount` or `useEffect`, renders the OS theme first and then switches.
-- In a Next.js App Router layout, pass the same code via `<script dangerouslySetInnerHTML={{ __html: "…" }} />` and add `suppressHydrationWarning` to `<html>`, because the attribute changes before hydration.
+- In a Next.js App Router layout, pass the same code as a template literal, ``<script dangerouslySetInnerHTML={{ __html: `try { … } catch {}` }} />``, and add `suppressHydrationWarning` to `<html>`, because the attribute changes before hydration.
 
 ---
 
