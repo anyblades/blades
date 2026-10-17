@@ -89,6 +89,38 @@ Or import only the [Pico CSS](//blades.ninja/css/pico/) parts you need, e.g. per
 - Some parts build on others, e.g. `components/group` and `components/dropdown` expect `forms/basics` and `content/button`.
 - Available parts are the files under [`src/pico/`](https://github.com/anyblades/blades/tree/main/src/pico): `layout/*`, `content/*`, `forms/*`, `components/*` (or a whole category, e.g. `@anyblades/blades/pico/components`) and `utilities`.
 
+#### In component frameworks (Vite, SvelteKit, Next.js, Nuxt, Astro, …)
+
+Import the parts from JavaScript, i.e. the root layout and the components that use them, rather than with `@import` inside a component's `<style>` block:
+
+```js
+// root layout, once
+import "@anyblades/blades/pico/variables";
+import "@anyblades/blades/pico/layout/document";
+
+// in the component that renders a <dialog>
+import "@anyblades/blades/pico/components/modal";
+```
+
+- Bundlers dedupe JS-side CSS imports and split them per route, so each part is downloaded and cached once and only where it's used.
+- An `@import` inside a scoped `<style>` (Svelte, Vue `scoped`) is processed as that component's own styles. The rules get scoped or pruned to the component's markup and are duplicated in every component that imports them.
+- Many frameworks wrap the page in an element, e.g. SvelteKit (`<div style="display: contents">`), Next.js pages router (`#__next`), Nuxt (`#__nuxt`) or a SPA's `#root`. Under such a wrapper, `body > header`, `body > main` and `body > footer` don't match, so these landmarks lose their vertical padding. Add it in your layout if you rely on it.
+
+#### Dark mode without a flash
+
+Blades follows the OS setting by default, with no JavaScript and no flash. To force a theme, set `data-theme="light"` or `"dark"` on `<html>`, or on any element for a section. If you persist the user's choice, set the attribute **before the first paint** with a small inline script in `<head>`, e.g. SvelteKit's `src/app.html` or Next.js's root layout:
+
+```html
+<script>
+  {
+    const theme = localStorage.getItem("theme");
+    if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+  }
+</script>
+```
+
+Setting it later, e.g. in `onMount` or `useEffect`, renders the OS theme first and then switches.
+
 ### <mark>D.</mark> Official starters
 
 - https://github.com/buildawesome-one/starter
@@ -209,6 +241,7 @@ Or import only the [Pico CSS](//blades.ninja/css/pico/) parts you need, e.g. per
 
 - 🐍 [Flask & Jinja](https://palletsprojects.com/) community website
 - 🪐 [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme [↗](https://www.followthatcar.com/)
+
 <!--https://pulsar-wildlife.club/-->
 
 <!--section:info-->
