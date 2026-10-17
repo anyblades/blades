@@ -1,6 +1,7 @@
 {
   "name": "@anyblades/blades",
   "version": "3.1.0-alpha.1",
+  "style": "./src/blades.css",
   "exports": {
     ".": "./src/blades.css",
     "./pico": "./src/pico.css",
@@ -16,8 +17,16 @@
     "./pico/utilities": "./src/pico/_utilities.css",
     "./standalone": "./src/blades.standalone.css",
     "./float-label": "./src/standalone/forms/_float-label.css",
-    "./ninja": "./src/ninja.css"
+    "./ninja": "./src/ninja.css",
+    "./css/*.css": "./css/*.css",
+    "./package.json": "./package.json"
   },
+  "files": [
+    "src",
+    "css/*.css",
+    "_includes",
+    ".prettierrc.json"
+  ],
   "=== DEV ONLY": "Z-A",
   "scripts": {
     "build": "clear; npm run lint && npm run build:css && npm run build:minify && npm run build:conditional && npm run build:layered",
