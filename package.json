@@ -18,13 +18,14 @@
     "./standalone": "./src/blades.standalone.css",
     "./float-label": "./src/standalone/forms/_float-label.css",
     "./ninja": "./src/ninja.css",
-    "./css/*": "./css/*",
+    "./css/*.css": "./css/*.css",
     "./package.json": "./package.json"
   },
   "files": [
     "src",
     "css/*.css",
-    "_includes"
+    "_includes",
+    ".prettierrc.json"
   ],
   "=== DEV ONLY": "Z-A",
   "scripts": {
@@ -38,7 +39,7 @@
     "prepublishOnly": "npm run build"
   },
   "publishConfig": {
-    "tag": "canary"
+    "tag": "next"
   },
   "devDependencies": {
     "autoprefixer": "^10.5.0",
