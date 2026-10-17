@@ -29,10 +29,8 @@
   --pico-form-element-spacing-vertical: 0.75rem;
   --pico-form-element-spacing-horizontal: 1rem;
   --pico-nav-element-spacing-vertical: 1rem;
-  --pico-nav-element-spacing-horizontal: 0.5rem;
   --pico-nav-link-spacing-vertical: 0.5rem;
   --pico-nav-link-spacing-horizontal: 0.5rem;
-  --pico-nav-breadcrumb-divider: ">";
   --pico-icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
 @media (min-width: 576px) {
@@ -179,36 +177,6 @@ nav details.dropdown summary:focus-visible {
   --pico-border-radius: 5rem;
 }
 
-[role="search"]:has(
-  button.secondary:focus,
-  [type="submit"].secondary:focus,
-  [type="button"].secondary:focus,
-  [role="button"].secondary:focus
-),
-[role="group"]:has(
-  button.secondary:focus,
-  [type="submit"].secondary:focus,
-  [type="button"].secondary:focus,
-  [role="button"].secondary:focus
-) {
-  --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width)
-    var(--pico-secondary-focus);
-}
-[role="search"]:has(
-  button.contrast:focus,
-  [type="submit"].contrast:focus,
-  [type="button"].contrast:focus,
-  [role="button"].contrast:focus
-),
-[role="group"]:has(
-  button.contrast:focus,
-  [type="submit"].contrast:focus,
-  [type="button"].contrast:focus,
-  [role="button"].contrast:focus
-) {
-  --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width)
-    var(--pico-contrast-focus);
-}
 [role="search"] button,
 [role="search"] [type="submit"],
 [role="search"] [type="button"],
