@@ -89,6 +89,29 @@ Or import only the [Pico CSS](//blades.ninja/css/pico/) parts you need, e.g. per
 - Some parts build on others, e.g. `components/group` and `components/dropdown` expect `forms/basics` and `content/button`.
 - Available parts are the files under [`src/pico/`](https://github.com/anyblades/blades/tree/main/src/pico): `layout/*`, `content/*`, `forms/*`, `components/*` (or a whole category, e.g. `@anyblades/blades/pico/components`) and `utilities`.
 
+#### With bundlers and component frameworks (SvelteKit, Next.js, Nuxt, Astro, …)
+
+Import the parts from JavaScript, i.e. the root layout and the components that use them, rather than with `@import` inside a component's `<style>` block:
+
+```js
+// root layout, once
+import "@anyblades/blades/pico/variables";
+import "@anyblades/blades/pico/layout/document";
+
+// in the component that renders a <dialog>
+import "@anyblades/blades/pico/components/modal";
+```
+
+- Bundlers dedupe JS-side CSS imports and split them per route, so each part is downloaded and cached once and only where it's used.
+- An `@import` inside a scoped `<style>` (Svelte, Astro, Vue `scoped`) is processed as that component's own styles. The rules get scoped to the component's markup (Svelte also prunes the unused ones) and are duplicated in every component that imports them.
+- Pico's landmark padding uses `body > header`, `body > main` and `body > footer`. These don't match when the framework wraps the page in an element: SvelteKit's `<div style="display: contents">`, Next.js pages router `#__next`, Nuxt `#__nuxt`, or a SPA's `#root` / `#app`. Next.js App Router doesn't wrap the page. If you rely on the padding, add it for your wrapper, e.g.:
+
+  ```css
+  #__next > :is(header, main, footer) {
+    padding-block: var(--pico-block-spacing-vertical);
+  }
+  ```
+
 ### <mark>D.</mark> Official starters
 
 - https://github.com/buildawesome-one/starter
@@ -123,6 +146,26 @@ Or import only the [Pico CSS](//blades.ninja/css/pico/) parts you need, e.g. per
 [Available for Nunjucks, Liquid and Twig ↗](https://blades.ninja/tpl/)<!--{role=button .outline}-->
 
 <!--section:gh-only-->
+
+---
+
+## Dark mode without a flash
+
+With the Pico-based builds, Blades follows the OS setting by default, with no JavaScript and no flash (see [Dark scheme](//blades.ninja/css/color-schemes/)). To force a theme, set `data-theme="light"` or `"dark"` on `<html>`. On a nested element it works when the element paints its own background, such as `<article>`; otherwise add `background-color: var(--pico-background-color); color: var(--pico-color);`.
+
+If you persist the user's choice, e.g. under the `localStorage` key `theme`, set the attribute **before the first paint** with a small inline script in `<head>`, e.g. in SvelteKit's `src/app.html`:
+
+```html
+<script>
+  try {
+    const theme = localStorage.getItem("theme");
+    if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+  } catch {}
+</script>
+```
+
+- Setting it later, e.g. in `onMount` or `useEffect`, renders the OS theme first and then switches.
+- In a Next.js App Router layout, pass the same code as a template literal, ``<script dangerouslySetInnerHTML={{ __html: `try { … } catch {}` }} />``, and add `suppressHydrationWarning` to `<html>`, because the attribute changes before hydration.
 
 ---
 
@@ -209,6 +252,7 @@ Or import only the [Pico CSS](//blades.ninja/css/pico/) parts you need, e.g. per
 
 - 🐍 [Flask & Jinja](https://palletsprojects.com/) community website
 - 🪐 [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme [↗](https://www.followthatcar.com/)
+
 <!--https://pulsar-wildlife.club/-->
 
 <!--section:info-->
