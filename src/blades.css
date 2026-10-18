@@ -5,3 +5,4 @@
  */
 @import "./pico";
 @import "./blades.standalone";
+@import "./pico/_compact";

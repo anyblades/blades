@@ -1,0 +1,51 @@
+/*
+ * Compact: opt-in denser sizing and a more current look, applied under `data-compact` on
+ * <html> (whole page) or on any element such as a single <form>. Without the attribute it
+ * changes nothing. Part of blades.css and pico.compact.css; with per-part imports, import it
+ * last (in the same layer as the other parts).
+ *
+ * The extra selectors keep the values winning where Pico re-declares them at the same
+ * specificity: nested [data-theme] sections, the `.pico` root when combined with the conditional build,
+ * and a shadow host.
+ */
+[data-compact],
+[data-compact] :is([data-theme], .pico),
+.pico[data-compact],
+:host([data-compact]),
+:host([data-compact]) [data-theme] {
+  --pico-border-radius: 0.5rem;
+  --pico-outline-width: 0.1875rem;
+  --pico-block-spacing-vertical: 1.5rem;
+  --pico-block-spacing-horizontal: 1.5rem;
+  --pico-form-element-spacing-vertical: 0.375rem;
+  --pico-form-element-spacing-horizontal: 0.75rem;
+  --pico-form-label-font-weight: 500;
+  --pico-button-font-weight: 500;
+  --pico-form-element-background-color: light-dark(#fff, rgb(28, 33, 43.5));
+  --pico-card-border-color: var(--pico-muted-border-color);
+  --pico-card-box-shadow:
+    0 0 0 var(--pico-border-width) var(--pico-card-border-color), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --pico-card-sectioning-background-color: var(--pico-card-background-color);
+}
+
+/* Search fields keep their pill shape */
+[data-compact]:is([role="search"], [type="search"]) {
+  --pico-border-radius: 5rem;
+}
+
+/* Page-level only: everything is sized in rem, so the root size can't change per element */
+:root[data-compact],
+:host([data-compact]) {
+  --pico-font-size: 100%;
+}
+
+[data-compact] :is(h1, h2, h3, h4, h5, h6),
+:host([data-compact]) :is(h1, h2, h3, h4, h5, h6) {
+  --pico-font-weight: 600;
+}
+
+/* Keep helper text at the normal weight under the 500-weight labels */
+[data-compact] :where(input, select, textarea, fieldset, .grid) + small,
+:host([data-compact]) :where(input, select, textarea, fieldset, .grid) + small {
+  font-weight: var(--pico-font-weight);
+}

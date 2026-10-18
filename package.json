@@ -18,6 +18,7 @@
     "./standalone": "./src/blades.standalone.css",
     "./float-label": "./src/standalone/forms/_float-label.css",
     "./ninja": "./src/ninja.css",
+    "./pico/compact": "./src/pico/_compact.css",
     "./css/*.css": "./css/*.css",
     "./package.json": "./package.json"
   },

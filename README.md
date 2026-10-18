@@ -169,6 +169,26 @@ If you persist the user's choice, e.g. under the `localStorage` key `theme`, set
 
 ---
 
+## Compact sizing (opt-in)
+
+Add `<html data-compact>` for the whole page, or put the attribute on a single element, e.g. `<form data-compact>` for one form. Without the attribute nothing changes.
+
+- **Where it ships:**
+  - included in `blades.css`
+  - for Pico only, use the separate full build `pico.compact.css` instead of `pico.css`
+  - with per-part imports, add `@import "@anyblades/blades/pico/compact";` after the other parts
+  - with `pico.layered.css`, use `@import url("…/pico.compact.min.css") layer(pico);` instead; with `pico.conditional.css`, add `@anyblades/blades/pico/compact` after it
+- **What changes:**
+  - smaller control padding and 1.5rem block spacing
+  - a 0.5rem radius and a 3px focus ring
+  - 500-weight labels and buttons, 600-weight headings
+  - a white field background in light mode
+  - a 1px card ring instead of the blurred shadow, with no grey card header/footer bands
+- **Root font size:** on `<html>`, it also keeps the root font size at 100% instead of growing with the viewport. At 1280px wide, controls are then 38px instead of 62px. On a single element they are about 48px, because everything is sized in `rem` and the root stays as it is.
+- **Field text size:** form controls stay at 16px, because below that iOS Safari zooms in on focus.
+
+---
+
 ## Documentation
 
 <!-- ToC as is from https://blades.ninja/#docs -->
