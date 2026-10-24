@@ -52,10 +52,10 @@
   },
   "contributors": [
     "Lucas Larroche (https://picocss.com/)",
-    "Anton Staroverov (https://blades.ninja/)"
+    "Anton Staroverov (https://blades.dev/)"
   ],
   "description": "Fully compatible and actively maintained successor to Pico CSS.",
-  "homepage": "https://blades.ninja/",
+  "homepage": "https://blades.dev/",
   "keywords": [
     "blades",
     "classless",
