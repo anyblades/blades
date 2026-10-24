@@ -22,7 +22,7 @@ We recommend that you first [suggest your feature idea in our discussion forums]
 
 The documentation is maintained inline as part of the source files in [`src/`](https://github.com/anyblades/blades/tree/main/src).
 
-Good example of our doc style: [float-label/_core.css](https://github.com/anyblades/blades/blob/main/src/blades/float-label/_core.css) → published directly to https://blades.dev/css/float-label/ page.
+Good example of our doc style: https://github.com/anyblades/blades/blob/main/src/blades/forms/float-label/_core.css → published directly to https://blades.dev/css/float-label/ page.
 
 Feel free to inline more comments and documentation within the source files. But please keep it consice and to the point.
 
