@@ -49,6 +49,86 @@ import "@anyblades/blades/layered/components/modal-modern"; // optional: open an
 - Bundlers dedupe JS-side CSS imports and split them per route, so each part is downloaded and cached once and only where it's used.
 - An `@import` inside a scoped `<style>` (Svelte, Astro, Vue `scoped`) is processed as that component's own styles. The rules get scoped to the component's markup (Svelte also prunes the unused ones) and are duplicated in every component that imports them.
 
+### Framework examples
+
+A confirm dialog component, with the root layout importing the base parts as above. The component imports `card` and `modal` and overrides Blades in its own styles. Blades' `dialog > article > footer button:not(:first-of-type)` is more specific than the component's rules, but it is in `@layer blades`, so the component's rules win. With the non-layered parts (`@anyblades/blades/components/modal`), the second button would keep Blades' `margin-left`.
+
+Svelte, `Confirm.svelte`:
+
+```svelte
+<script>
+  import "@anyblades/blades/layered/components/card";
+  import "@anyblades/blades/layered/components/modal";
+</script>
+
+<dialog open>
+  <article>
+    <p>Delete this item?</p>
+    <footer>
+      <button class="secondary">Cancel</button>
+      <button>Delete</button>
+    </footer>
+  </article>
+</dialog>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  button {
+    margin: 0;
+  }
+</style>
+```
+
+Vue (`<script setup>` and `<style scoped>`) and Astro (the imports in the frontmatter, `<style>` in the component) work the same way.
+
+React, `Confirm.jsx` with a CSS module:
+
+```jsx
+import "@anyblades/blades/layered/components/card";
+import "@anyblades/blades/layered/components/modal";
+import styles from "./Confirm.module.css";
+
+export default function Confirm() {
+  return (
+    <dialog open>
+      <article>
+        <p>Delete this item?</p>
+        <footer className={styles.footer}>
+          <button className="secondary">Cancel</button>
+          <button>Delete</button>
+        </footer>
+      </article>
+    </dialog>
+  );
+}
+```
+
+```css
+/* Confirm.module.css */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.footer button {
+  margin: 0;
+}
+```
+
+Per-page CSS in a SvelteKit production build of this example, next to the whole `blades.layered.min.css` (gzip sizes in parentheses):
+
+|                                                                          | CSS                 |
+| ------------------------------------------------------------------------ | ------------------- |
+| `blades.layered.min.css`, for comparison                                 | 76.9 kB (12.4 kB)   |
+| Every page: the root layout's parts                                      | 25.5 kB (4.7 kB)    |
+| The page with `Confirm`: plus `card`, `modal` and the component's styles | + 4.7 kB (+ 1.4 kB) |
+
+The sizes are from a build with `build: { cssTarget: "esnext" }` in `vite.config.js`. With Vite's default browser targets, `light-dark()` is lowered to fallback custom properties, which adds about 4 kB to the root layout's CSS.
+
 ### Available parts
 
 The files under [`css/layered/`](https://github.com/anyblades/blades/tree/main/css/layered):
