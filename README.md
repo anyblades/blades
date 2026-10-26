@@ -5,7 +5,7 @@
 [V]: https://img.shields.io/npm/v/@anyblades/blades?label=&color=brightgreen
 [NEXT_V]: https://img.shields.io/github/v/release/anyblades/blades?include_prereleases&label=next&color=blue
 [LIC]: https://img.shields.io/badge/license-MIT-blue
-[X]:  https://img.shields.io/badge/78-white?logo=x&style=social
+[X]:  https://img.shields.io/badge/82-white?logo=x&style=social
 [X_URL]: https://x.com/BladesCSS
 [B]: https://img.shields.io/bluesky/followers/blades.dev?label=
 [B_URL]: https://bsky.app/profile/blades.dev
@@ -263,18 +263,21 @@ Blades CSS is a lightweight, minimal CSS framework for semantic HTML designed as
 
 ---
 
+<!--section:info-->
+
 ## <sup style>Trusted by</sup>
 
 - 🐍 [Flask & Jinja](https://palletsprojects.com/) community website
-- 🪐 [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme [↗](https://www.followthatcar.com/)
+- 🪐 [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme
 
 <!--https://pulsar-wildlife.club/-->
 
-<!--section:info-->
+## <sup style>Also used by</sup>
+
+- https://www.followthatcar.com/
 
 ## <sup style>Featured by</sup> <!-- [1] big projects [2] awesome [3] smaller projects [4] blogs/social -->
 
-- [getgrav.org](https://getgrav.org/migrate-to-2#:~:text=blades)
 - https://usehadron.dev/
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
 - [<i class="fa-brands fa-build-awesome mark-brand"></i> buildawesome.one](https://buildawesome.one/#:~:text=blades)
