@@ -84,7 +84,7 @@
  [role="search"] button, [role="search"] [type="submit"], [role="search"] [type="button"], [role="search"] [role="button"], [role="group"] button, [role="group"] [type="submit"], [role="group"] [type="button"], [role="group"] [role="button"] {
    --pico-form-element-spacing-horizontal: 2rem;
  }
-@@ -173,337 +158,99 @@
+@@ -173,339 +158,101 @@
    filter: brightness(0) invert();
  }
  
@@ -350,12 +350,12 @@
 -    --pico-tooltip-color: var(--pico-contrast-inverse);
 -    --pico-icon-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(42, 123, 111)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
 -    --pico-icon-invalid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(149.5, 74, 80)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
--  }
--
--  :root:not([data-theme]) input:is([type="submit"], [type="button"], [type="reset"], [type="checkbox"], [type="radio"], [type="file"]), :host(:not([data-theme])) input:is([type="submit"], [type="button"], [type="reset"], [type="checkbox"], [type="radio"], [type="file"]) {
--    --pico-form-element-focus-color: var(--pico-primary-focus);
    }
  
+-  :root:not([data-theme]) input:is([type="submit"], [type="button"], [type="reset"], [type="checkbox"], [type="radio"], [type="file"]), :host(:not([data-theme])) input:is([type="submit"], [type="button"], [type="reset"], [type="checkbox"], [type="radio"], [type="file"]) {
+-    --pico-form-element-focus-color: var(--pico-primary-focus);
+-  }
+-
 -  :root:not([data-theme]) details summary[role="button"].contrast:not(.outline):after, :host(:not([data-theme])) details summary[role="button"].contrast:not(.outline):after, :root:not([data-theme]) [aria-busy="true"]:not(input, select, textarea).contrast:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]):not(.outline):before, :host(:not([data-theme])) [aria-busy="true"]:not(input, select, textarea).contrast:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]):not(.outline):before {
 +  :scope:not([data-theme]) details summary[role="button"].contrast:not(.outline):after, :host(:not([data-theme])) details summary[role="button"].contrast:not(.outline):after, :scope:not([data-theme]) [aria-busy="true"]:not(input, select, textarea).contrast:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]):not(.outline):before, :host(:not([data-theme])) [aria-busy="true"]:not(input, select, textarea).contrast:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]):not(.outline):before {
      filter: brightness(0);
@@ -465,13 +465,15 @@
 -  --pico-tooltip-color: var(--pico-contrast-inverse);
 -  --pico-icon-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(42, 123, 111)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
 -  --pico-icon-invalid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(149.5, 74, 80)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
--}
--
--[data-theme="dark"] input:is([type="submit"], [type="button"], [type="reset"], [type="checkbox"], [type="radio"], [type="file"]) {
--  --pico-form-element-focus-color: var(--pico-primary-focus);
  }
  
+-[data-theme="dark"] input:is([type="submit"], [type="button"], [type="reset"], [type="checkbox"], [type="radio"], [type="file"]) {
+-  --pico-form-element-focus-color: var(--pico-primary-focus);
+-}
+-
  [data-theme="dark"] details summary[role="button"].contrast:not(.outline):after, [data-theme="dark"] [aria-busy="true"]:not(input, select, textarea).contrast:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]):not(.outline):before {
+   filter: brightness(0);
+ }
 @@ -524,7 +271,7 @@
    vertical-align: inherit;
  }
@@ -574,10 +576,12 @@
    margin: 0;
    margin-bottom: var(--pico-spacing);
    border: 0;
-@@ -1312,6 +1059,18 @@
-   margin-top: calc(var(--pico-spacing) * .25);
- }
+@@ -1310,6 +1057,18 @@
  
+ label > :where(input, select, textarea) {
+   margin-top: calc(var(--pico-spacing) * .25);
++}
++
 +:where(:scope), :host {
 +  --pico-icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
 +  --pico-icon-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
@@ -588,11 +592,9 @@
 +  --pico-switch-checked-background-color: var(--pico-primary-background);
 +  --pico-switch-color: #fff;
 +  --pico-switch-thumb-box-shadow: 0 0 0 #0000;
-+}
-+
+ }
+ 
  label:has([type="checkbox"], [type="radio"]) {
-   cursor: pointer;
-   width: fit-content;
 @@ -1451,6 +1210,11 @@
    border: 0;
  }
@@ -637,17 +639,17 @@
  [type="range"] {
    -webkit-appearance: none;
    -moz-appearance: none;
-@@ -1599,6 +1372,10 @@
-   transform: scale(1.25);
- }
+@@ -1597,6 +1370,10 @@
  
-+:where(:scope), :host {
-+  --pico-icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+ [type="range"]:active::-ms-thumb {
+   transform: scale(1.25);
 +}
 +
++:where(:scope), :host {
++  --pico-icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+ }
+ 
  input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type="search"] {
-   background-image: var(--pico-icon-search);
-   background-position: center left calc(var(--pico-form-element-spacing-horizontal) + .125rem);
 @@ -1628,6 +1405,13 @@
    background-position: right 1.125rem center, .75rem;
  }
@@ -718,10 +720,12 @@
  }
  
  nav details.dropdown > summary:after {
-@@ -1917,6 +1716,20 @@
-   margin-top: calc(var(--pico-spacing) * .25);
- }
+@@ -1915,8 +1714,22 @@
  
+ label > details.dropdown {
+   margin-top: calc(var(--pico-spacing) * .25);
++}
++
 +:where(:scope), :host {
 +  --pico-group-box-shadow: 0 0 0 #0000;
 +  --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
@@ -730,8 +734,8 @@
 +
 +[role="search"]:has(button.secondary:focus, [type="submit"].secondary:focus, [type="button"].secondary:focus, [role="button"].secondary:focus), [role="group"]:has(button.secondary:focus, [type="submit"].secondary:focus, [type="button"].secondary:focus, [role="button"].secondary:focus) {
 +  --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width) var(--pico-secondary-focus);
-+}
-+
+ }
+ 
 +[role="search"]:has(button.contrast:focus, [type="submit"].contrast:focus, [type="button"].contrast:focus, [role="button"].contrast:focus), [role="group"]:has(button.contrast:focus, [type="submit"].contrast:focus, [type="button"].contrast:focus, [role="button"].contrast:focus) {
 +  --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width) var(--pico-contrast-focus);
 +}
@@ -800,18 +804,18 @@
  }
  
  dialog > article > footer button, dialog > article > footer [role="button"] {
-@@ -2153,6 +2000,11 @@
+@@ -2151,6 +1998,11 @@
+     opacity: 0;
+     transform: translateY(-100%);
    }
- }
- 
++}
++
 +:where(:scope), :host {
 +  --pico-nav-element-spacing-horizontal: .5rem;
 +  --pico-nav-breadcrumb-divider: ">";
-+}
-+
+ }
+ 
  :where(nav li):before {
-   float: left;
-   content: "​";
 @@ -2256,10 +2108,15 @@
    margin: inherit;
  }
