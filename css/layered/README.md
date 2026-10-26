@@ -21,20 +21,20 @@ When you can use `@import`, `@import url("…/blades.min.css") layer(blades);` d
 
 ### With bundlers and component frameworks (SvelteKit, Next.js, Nuxt, Astro, …)
 
-Import the parts from JavaScript, i.e. the root layout and the components that use them, rather than with `@import` inside a component's `<style>` block. Use the layered parts, `@anyblades/blades/layered/*`: they are the same parts wrapped in `@layer blades`, which a JS `import` can't add by itself.
+Import the parts from JavaScript, i.e. the root layout and the components that use them, rather than with `@import` inside a component's `<style>` block. The parts, `@anyblades/blades/<part>`, come wrapped in `@layer blades`, which a JS `import` can't add by itself.
 
 ```js
 // root layout, once: the base and every part that others build on
-import "@anyblades/blades/layered/variables";
-import "@anyblades/blades/layered/layout/document";
-import "@anyblades/blades/layered/content/typography";
-import "@anyblades/blades/layered/content/button";
-import "@anyblades/blades/layered/forms/basics";
+import "@anyblades/blades/variables";
+import "@anyblades/blades/layout/document";
+import "@anyblades/blades/content/typography";
+import "@anyblades/blades/content/button";
+import "@anyblades/blades/forms/basics";
 
 // in the component that renders a <dialog>
-import "@anyblades/blades/layered/components/card";
-import "@anyblades/blades/layered/components/modal";
-import "@anyblades/blades/layered/components/modal-modern"; // optional: open animation without JS
+import "@anyblades/blades/components/card";
+import "@anyblades/blades/components/modal";
+import "@anyblades/blades/components/modal-modern"; // optional: open animation without JS
 ```
 
 ```html
@@ -51,14 +51,14 @@ import "@anyblades/blades/layered/components/modal-modern"; // optional: open an
 
 ### Framework examples
 
-A confirm dialog component, with the root layout importing the base parts as above. The component imports `card` and `modal` and overrides Blades in its own styles. Blades' `dialog > article > footer button:not(:first-of-type)` is more specific than the component's rules, but it is in `@layer blades`, so the component's rules win. With the non-layered parts (`@anyblades/blades/components/modal`), the second button would keep Blades' `margin-left`.
+A confirm dialog component, with the root layout importing the base parts as above. The component imports `card` and `modal` and overrides Blades in its own styles. Blades' `dialog > article > footer button:not(:first-of-type)` is more specific than the component's rules, but it is in `@layer blades`, so the component's rules win. With the non-layered source (`@anyblades/blades/src/components/modal`), the second button would keep Blades' `margin-left`.
 
 Svelte, `Confirm.svelte`:
 
 ```svelte
 <script>
-  import "@anyblades/blades/layered/components/card";
-  import "@anyblades/blades/layered/components/modal";
+  import "@anyblades/blades/components/card";
+  import "@anyblades/blades/components/modal";
 </script>
 
 <dialog open>
@@ -88,8 +88,8 @@ Vue (`<script setup>` and `<style scoped>`) and Astro (the imports in the frontm
 React, `Confirm.jsx` with a CSS module:
 
 ```jsx
-import "@anyblades/blades/layered/components/card";
-import "@anyblades/blades/layered/components/modal";
+import "@anyblades/blades/components/card";
+import "@anyblades/blades/components/modal";
 import styles from "./Confirm.module.css";
 
 export default function Confirm() {
@@ -131,14 +131,15 @@ The sizes are from a build with `build: { cssTarget: "esnext" }` in `vite.config
 
 ### Available parts
 
-The files under [`css/layered/`](https://github.com/anyblades/blades/tree/main/css/layered):
+`@anyblades/blades/<part>` is the file under [`css/layered/`](https://github.com/anyblades/blades/tree/main/css/layered):
 
-- Pico's parts, the same as for [non-layered imports](//blades.dev/css/#c-install-with-npm): `variables`, `layout/*`, `content/*`, `forms/*`, `components/*` and `utilities`. A whole category is one import, e.g. `@anyblades/blades/layered/components` (Pico's parts of that category only; `layout` without `landmarks`).
+- Pico's parts: `variables`, `layout/*`, `content/*`, `forms/*`, `components/*` and `utilities`. A whole category is one import, e.g. `@anyblades/blades/components` (Pico's parts of that category only; `layout` without `landmarks`).
 - Blades' own parts, mostly in the same folders as Pico's:
   - `components/modal-modern` adds the CSS-only open animation for `showModal()` on top of `components/modal` ([No-JS transitions](//blades.dev/css/modal/#no-js-transitions-new))
   - `components/dropdown-popover` styles `<ul popover>` / `<menu popover>` menus opened by a button ([Modern Popover API](//blades.dev/css/dropdown/#modern-popover-api-new))
   - `variables-blades`, `layout/columns`, `content/code-block`, `content/icon`, `forms/float-label`, `components/timeline`
   - `compact`: import it last (see [Compact sizing](https://github.com/anyblades/blades#compact-sizing-opt-in))
+- The same names under `@anyblades/blades/src/…` are the sources without the layer, e.g. `@anyblades/blades/src/components/card`, to put them in a layer of your own (`@import "@anyblades/blades/src/components/card" layer(ui);`) or to run your own build. `@anyblades/blades/src` on its own is the source of the whole `blades.css`.
 
 ### Order and dependencies
 
@@ -152,7 +153,7 @@ The files under [`css/layered/`](https://github.com/anyblades/blades/tree/main/c
 
   If they did, every route chunk would carry its own copy. Import those shared parts once, at the root or next to the part that needs them; bundlers dedupe the imports.
 
-- Landmark padding: `pico.css` and `blades.ninja.css` pad `body > header`, `body > main` and `body > footer` like Pico, which doesn't match when the framework wraps the page in an element (SvelteKit's `<div style="display: contents">`, Next.js pages router `#__next`, Nuxt `#__nuxt`, a SPA's `#root` / `#app`). `blades.css` doesn't pad them; add `layered/layout/landmarks` for Pico's `body >` padding.
+- Landmark padding: `pico.css` and `blades.ninja.css` pad `body > header`, `body > main` and `body > footer` like Pico, which doesn't match when the framework wraps the page in an element (SvelteKit's `<div style="display: contents">`, Next.js pages router `#__next`, Nuxt `#__nuxt`, a SPA's `#root` / `#app`). `blades.css` doesn't pad them; add `layout/landmarks` for Pico's `body >` padding.
 
 ## Overrides and caveats
 
@@ -160,4 +161,4 @@ Override in your component's `<style>` or `app.css`, or set `--pico-*` variables
 
 - Blades' own `!important` declarations (form validation, reduced motion) beat your unlayered `!important`.
 - Your `@keyframes` of the same name as Blades' win regardless of load order.
-- If you use other layered CSS, declare the order once, before anything else is loaded, because the first `@layer` the browser sees fixes the order. For Tailwind v4 that is `@layer theme, base, blades, components, utilities;` at the top of the CSS file you import first (before `@import "tailwindcss"`), and that file has to be imported before any `layered/*` part.
+- If you use other layered CSS, declare the order once, before anything else is loaded, because the first `@layer` the browser sees fixes the order. For Tailwind v4 that is `@layer theme, base, blades, components, utilities;` at the top of the CSS file you import first (before `@import "tailwindcss"`), and that file has to be imported before any Blades part.

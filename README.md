@@ -67,7 +67,7 @@ Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades
 npm install @anyblades/blades
 ```
 
-Then, `@import` sources into your CSS file:
+Then, `@import` the built `css/blades.css` into your CSS file:
 
 ```css
 @import "@anyblades/blades";
@@ -85,24 +85,21 @@ Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://g
 
 <div><hr></div>
 
-Or import only the [Pico CSS](//blades.ninja/css/pico/) parts you need, e.g. per page or per component:
+Or import only the parts you need, e.g. per page or per component. They come wrapped in `@layer blades`, so your unlayered styles win over them:
 
 ```css
-@import "@anyblades/blades/pico/variables";
-@import "@anyblades/blades/pico/layout/document";
-@import "@anyblades/blades/pico/content/typography";
-@import "@anyblades/blades/pico/components/card";
-@import "@anyblades/blades/pico/components/modal";
+@import "@anyblades/blades/variables";
+@import "@anyblades/blades/layout/document";
+@import "@anyblades/blades/content/typography";
+@import "@anyblades/blades/components/card";
+@import "@anyblades/blades/components/modal";
 ```
 
 - `variables` and `layout/document` are the minimum; keep the same order as [`src/pico/_index.css`](https://github.com/anyblades/blades/blob/main/src/pico/_index.css) (variables → layout → content → forms → components → utilities).
 - `layout` doesn't pad `body > header/main/footer`. Add `layout/landmarks` for Pico's behaviour.
 - Some parts build on others, e.g. `components/modal` expects `components/card`, and `components/group` and `components/dropdown` expect `forms/basics` and `content/button`.
-- Available parts are the files under [`src/pico/`](https://github.com/anyblades/blades/tree/main/src/pico): `layout/*`, `content/*`, `forms/*`, `components/*` (or a whole category, e.g. `@anyblades/blades/pico/components`) and `utilities`.
-
-#### With bundlers and component frameworks (SvelteKit, Next.js, Nuxt, Astro, …)
-
-Import the layered parts, `@anyblades/blades/layered/*`, from JavaScript: see [Layered modules](//blades.dev/css/layered/).
+- See [Layered modules](//blades.dev/css/layered/) for the available parts, and for importing them from JavaScript in bundlers and component frameworks (SvelteKit, Next.js, Nuxt, Astro, …).
+- The same parts without the layer are under `@anyblades/blades/src/…`, e.g. `@anyblades/blades/src/components/card`, to put them in a layer of your own (`@import "@anyblades/blades/src/components/card" layer(ui);`) or to run your own build. `@anyblades/blades/src` on its own is the source of the whole `blades.css`.
 
 ### <mark>D.</mark> Official starters
 
@@ -168,8 +165,8 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - **Where it ships:**
   - included in `blades.css`
   - also in `blades.layered.css`
-  - with per-part imports, add `@import "@anyblades/blades/compact";` after the other parts, or `import "@anyblades/blades/layered/compact";` with the layered parts
-  - with `pico.conditional.css`, add `@anyblades/blades/compact` after it
+  - with per-part imports, add `@anyblades/blades/compact` after the other parts
+  - with `pico.conditional.css`, add `@anyblades/blades/src/compact` after it
 - **What changes:**
   - smaller control padding and 1.5rem block spacing
   - a 0.5rem radius and a 3px focus ring
