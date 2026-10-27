@@ -4,7 +4,7 @@
 
 [V]: https://img.shields.io/npm/v/@anyblades/blades?label=&color=brightgreen
 [NEXT_V]: https://img.shields.io/github/v/release/anyblades/blades?include_prereleases&label=next&color=blue
-[LIC]: https://img.shields.io/badge/license-MIT-blue
+[LIC]: https://img.shields.io/badge/🅻_MIT-gray
 [X]:  https://img.shields.io/badge/82-white?logo=x&style=social
 [X_URL]: https://x.com/BladesCSS
 [B]: https://img.shields.io/bluesky/followers/blades.dev?label=
@@ -13,6 +13,8 @@
 [M_URL]: https://mastodon.social/@BladesCSS
 [D]: https://img.shields.io/badge/%23blades-white?logo=discord&style=social
 [D_URL]: https://discord.gg/mg8f26C
+
+![](https://trendshift.io/api/badge/trendshift/repositories/154122/daily?language=CSS)
 
 <!--section:summary-->
 
