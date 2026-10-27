@@ -5,7 +5,7 @@
 [V]: https://img.shields.io/npm/v/@anyblades/blades?label=&color=brightgreen
 [NEXT_V]: https://img.shields.io/github/v/release/anyblades/blades?include_prereleases&label=^&labelColor=blue&color=blue
 [LIC]: https://img.shields.io/badge/🄻_MIT-gray
-[X]:  https://img.shields.io/badge/83-white?logo=x&style=social
+[X]: https://img.shields.io/badge/83-white?logo=x&style=social
 [X_URL]: https://x.com/BladesCSS
 [B]: https://img.shields.io/bluesky/followers/blades.dev?label=
 [B_URL]: https://bsky.app/profile/blades.dev
@@ -36,7 +36,7 @@ Just switch `pico.css` to `blades.css`— and voilà!
 
 ## Quick start
 
-<!--section:install-all,install--><!-- for https://blades.ninja/css/ and https://blades.ninja/css/standalone/ -->
+<!--section:install-all,install-->
 
 <big>There are 4 ways to get started:</big>
 
@@ -61,33 +61,19 @@ Live example: https://github.com/pallets/website/blob/main/src/pallets/templates
 
 Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/
 
-`layered/blades.layered.min.css` is Blades wrapped in `@layer blades { }`. See [Layered modules](//blades.dev/css/layered/).
-
 ### <mark>C.</mark> Install with NPM
 
 ```sh
 npm install @anyblades/blades
 ```
 
-Then, `@import` the built `css/blades.css` into your CSS file:
+Then, `@import` Blades into your CSS file:
 
 ```css
 @import "@anyblades/blades";
 ```
 
-<div><hr></div>
-
-Alternatively, import [standalone](//blades.ninja/css/standalone/) Blades CSS sources only (without underlying [Pico CSS](//blades.ninja/css/pico/) base styles):
-
-```css
-@import "@anyblades/blades/standalone";
-```
-
-Live example using <i class="fa-brands fa-tailwind-css"></i> Tailwind: https://github.com/anyblades/buildawesome-micro-starters/blob/main/tailwind/styles.css
-
-<div><hr></div>
-
-Or import only the parts you need, e.g. per page or per component. They come wrapped in `@layer blades`, so your unlayered styles win over them:
+Alternatively, import only the parts you need, e.g. per page or per component. They come wrapped in `@layer blades`, so your unlayered styles win over them:
 
 ```css
 @import "@anyblades/blades/variables";
@@ -97,11 +83,10 @@ Or import only the parts you need, e.g. per page or per component. They come wra
 @import "@anyblades/blades/components/modal";
 ```
 
-- `variables` and `layout/document` are the minimum; keep the same order as [`src/pico/_index.css`](https://github.com/anyblades/blades/blob/main/src/pico/_index.css) (variables → layout → content → forms → components → utilities).
-- `layout` doesn't pad `body > header/main/footer`. Add `layout/landmarks` for Pico's behaviour.
+- `variables` and `layout/document` are the minimum; keep the same order as [src/pico/_index.css](https://github.com/anyblades/blades/blob/main/src/pico/_index.css).
 - Some parts build on others, e.g. `components/modal` expects `components/card`, and `components/group` and `components/dropdown` expect `forms/basics` and `content/button`.
 - See [Layered modules](//blades.dev/css/layered/) for the available parts, and for importing them from JavaScript in bundlers and component frameworks (SvelteKit, Next.js, Nuxt, Astro, …).
-- The same parts without the layer are under `@anyblades/blades/src/…`, e.g. `@anyblades/blades/src/components/card`, to put them in a layer of your own (`@import "@anyblades/blades/src/components/card" layer(ui);`) or to run your own build. `@anyblades/blades/src` on its own is the source of the whole `blades.css`.
+- See [package.json](https://github.com/anyblades/blades/blob/main/package.json) for a list of all exported parts.
 
 ### <mark>D.</mark> Official starters
 
@@ -132,11 +117,12 @@ Or import only the parts you need, e.g. per page or per component. They come wra
 </html>
 ```
 
-### Dynamic templates
-
-[Available for Nunjucks, Liquid and Twig ↗](https://blades.ninja/tpl/)<!--{role=button .outline}-->
+Using Nunjucks, Twig or Liquid? Check out the built-in [Base HTML templates](//blades.dev/tpl/html/) for each engine, ready to be used in your project.
 
 <!--section:gh-only-->
+
+> [!IMPORTANT]
+> **Work in progress** — information below is under review:
 
 ---
 
@@ -298,3 +284,6 @@ Blades CSS is a lightweight, minimal CSS framework for semantic HTML designed as
 
 <!--{.markerless .columns}-->
 <!--[hostfurl.com, @johnheenan]-->
+
+<!--
+-->
