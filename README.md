@@ -119,10 +119,7 @@ Alternatively, import only the parts you need, e.g. per page or per component. T
 
 Using Nunjucks, Twig or Liquid? Check out the built-in [Base HTML templates](//blades.dev/tpl/html/) for each engine, ready to be used in your project.
 
-<!--section:gh-only-->
-
-> [!IMPORTANT]
-> **Work in progress** — information below is under review:
+<!--section:dark-mode-->
 
 ---
 
@@ -143,6 +140,11 @@ If you persist the user's choice, e.g. under the `localStorage` key `theme`, set
 
 - Setting it later, e.g. in `onMount` or `useEffect`, renders the OS theme first and then switches.
 - In a Next.js App Router layout, pass the same code as a template literal, ``<script dangerouslySetInnerHTML={{ __html: `try { … } catch {}` }} />``, and add `suppressHydrationWarning` to `<html>`, because the attribute changes before hydration.
+
+<!--section:gh-only-->
+
+> [!IMPORTANT]
+> **Work in progress** — information below is under review:
 
 ---
 
@@ -168,7 +170,7 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 ## Documentation
 
-Blades CSS is a lightweight, minimal CSS framework for semantic HTML designed as a modern, drop-in successor to Pico CSS.
+If you know Pico — you already know Blades:
 
 <!-- ToC as is from https://blades.dev/#docs -->
 <ul class="columns">
