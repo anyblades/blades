@@ -53,7 +53,7 @@
   ],
   "=== DEV ONLY": "Z-A",
   "scripts": {
-    "build": "clear; npm run lint && npm run build:css && npm run build:minify && npm run build:conditional && npm run build:layered",
+    "build": "clear; npm run lint && npm run build:css && npm run build:minify && npm run build:conditional && npm run build:layered && npm run diff",
     "lint": "prettier --write --log-level silent './src/**/*.css'",
     "build:css": "for f in src/[!_]*.css; do RAYON_NUM_THREADS=1 lightningcss --bundle $f -o css/${f#src/} || exit 1; done",
     "build:minify": "for f in css/*.css; do case $f in *.min.css|css/pico.conditional.*) ;; *) lightningcss --minify $f -o ${f%.css}.min.css || exit 1;; esac; done",
@@ -62,12 +62,16 @@
     "build:layered:css": "rm -rf css/layered && for d in pico blades; do for f in $(find src/$d -name '_*.css' ! -path src/$d/_index.css); do o=css/layered/${f#src/$d/}; mkdir -p ${o%/*} && RAYON_NUM_THREADS=1 lightningcss --bundle $f -o $o || exit 1; done; done",
     "build:layered:wrap": "for f in css/blades.css css/blades.min.css $(find css/layered -name '_*.css'); do case $f in css/blades*) n=${f##*/}; o=css/layered/${n%%.*}.layered.${n#*.};; *) d=${f%/*}; n=${f##*/_}; [ $n = index.css ] && o=$d.css || o=$d/$n;; esac; { printf '@layer blades {\\n'; cat $f; printf '\\n}\\n'; } > $o || exit 1; done",
     "build:layered:clean": "find css/layered -name '_*.css' -delete",
+    "diff": "npm run diff:css || true && npm run diff:unmin || true",
+    "diff:css": "diff -u --label @picocss/pico/css/pico.css --label @anyblades/blades/css/pico.css css/pico.canonical.css css/pico.css > css/pico.css.diff",
+    "diff:unmin": "lightningcss css/pico.canonical.min.css -o css/pico.canonical.unmin.css && lightningcss css/pico.min.css -o css/pico.unmin.css && diff -u --label @picocss/pico/css/pico.css --label @anyblades/blades/css/pico.css css/pico.canonical.unmin.css css/pico.unmin.css > css/pico.min.css.diff",
     "prepublishOnly": "npm run build"
   },
   "publishConfig": {
     "tag": "next"
   },
   "devDependencies": {
+    "@picocss/pico": "^2.1.1",
     "lightningcss-cli": "^1.33.0",
     "prettier": "^3.5.3"
   },
