@@ -3,4 +3,5 @@ _includes/package-lock.json
 *.log
 css/*.canonical.*
 css/*.unmin.*
+css/layered/**/_*.css
 node_modules/
