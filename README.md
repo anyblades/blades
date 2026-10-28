@@ -135,29 +135,28 @@ If you know Pico — you already know Blades:
 <ul><li><a href="//blades.dev/css/">Quick start</a></li>
 <li><a href="//blades.dev/css/color-schemes/">Dark scheme</a></li>
 <li><a href="//blades.dev/css/variables/">CSS variables</a></li>
+<li><a href="//blades.dev/css/compact/">Compact version <mark>NEW</mark></a></li>
 <li><a href="//blades.dev/css/layered/">Layered modules <mark>NEW</mark></a></li>
-<li><a href="//blades.dev/css/conditional/">Conditional styling <mark>NEW</mark></a></li>
-<li><a href="//blades.dev/css/standalone/">Standalone version <mark>NEW</mark></a></li></ul>
+<li><a href="//blades.dev/css/pico/">Inspired by Pico ✨</a></li>
+<li><a href="//blades.dev/css/conditional/">Conditional styling</a></li></ul>
 </li>
 
 <li>
 <strong><a href="//blades.dev/css/layout/">Layout</a></strong>
 <ul><li><a href="//blades.dev/css/landmarks-section/">Landmarks &amp; section</a></li>
 <li><a href="//blades.dev/css/container/">Container</a></li>
-<li><a href="//blades.dev/css/breakout/">Breakout container <mark>NEW</mark></a></li>
 <li><a href="//blades.dev/css/grid/">Grid</a></li>
-<li><a href="//blades.dev/css/columns/">Text columns <mark>NEW</mark></a></li></ul>
+<li><a href="//blades.dev/css/columns/">Text columns <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/utils/#overflow-auto">Overflow auto</a></li></ul>
 </li>
 
 <li>
 <strong><a href="//blades.dev/css/content/">Content</a></strong>
-<ul><li><a href="//blades.dev/css/typography/">Typography <mark>UPD</mark></a></li>
+<ul><li><a href="//blades.dev/css/typography/">Typography</a></li>
 <li><a href="//blades.dev/css/link/">Link</a></li>
+<li><a href="//blades.dev/css/icon/">Icon <mark>NEW</mark></a></li>
 <li><a href="//blades.dev/css/button/">Button</a></li>
-<li><a href="//blades.dev/css/icon/"><code style="padding: 0">‹i›</code>con helper <mark>NEW</mark></a></li>
-<li><a href="//blades.dev/css/list/">List <mark>UPD</mark></a></li>
-<li><a href="//blades.dev/css/table/">Table <mark>UPD</mark></a></li>
-<li><a href="//blades.dev/css/responsive-table/">Responsive table <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/table/">Table</a></li>
 <li><a href="//blades.dev/css/code/">Code blocks <mark>NEW</mark></a></li></ul>
 </li>
 
@@ -178,27 +177,25 @@ If you know Pico — you already know Blades:
 <strong><a href="//blades.dev/css/components/">Components</a></strong>
 <ul><li><a href="//blades.dev/css/accordion/">Accordion</a></li>
 <li><a href="//blades.dev/css/card/">Card</a></li>
-<li><a href="//blades.dev/css/dropdown/">Dropdown</a></li>
+<li><a href="//blades.dev/css/dropdown/">Dropdown <mark>UPD</mark></a></li>
 <li><a href="//blades.dev/css/group/">Group</a></li>
 <li><a href="//blades.dev/css/loading/">Loading</a></li>
-<li><a href="//blades.dev/css/modal/">Modal</a></li>
+<li><a href="//blades.dev/css/modal/">Modal <mark>UPD</mark></a></li>
 <li><a href="//blades.dev/css/nav/">Navigation</a></li>
 <li><a href="//blades.dev/css/progress/">Progress</a></li>
 <li><a href="//blades.dev/css/tooltip/">Tooltip</a></li>
 <li><a href="//blades.dev/css/timeline/">Timeline <mark>NEW</mark></a></li>
-<li><a href="//blades.dev/css/jump/">Jump to... <mark>NEW</mark></a></li>
-<li><a href="//blades.dev/css/utils/">Utilities <mark>NEW</mark></a></li></ul>
+<li><a href="//blades.dev/css/utils/">Utilities</a></li></ul>
 </li>
 
 <li>
 <strong><a href="//blades.dev/more/">More</a></strong>
-<ul><li><a href="//blades.dev/css/pico/">Pico CSS <mark>NEW</mark> <sub style="">(underlying fork)</sub></a></li>
+<ul><li><a href="//blades.dev/tpl/">Dynamic templates <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/tpl/html/">Base HTML <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/tpl/sitemap/">Sitemap XML <mark>NEW</mark></a></li>
 <li><a href="//blades.dev/css/ninja/">Ninja CSS <mark>NEW</mark> <sub style="">(experimental add-ons)</sub></a></li>
-<li><a href="//blades.dev/html/">Dynamic templates <mark>NEW</mark></a></li>
-<li><a href="//blades.dev/html/base/">Base HTML <mark>NEW</mark></a></li>
-<li><a href="//blades.dev/html/links/">Links snippet <mark>NEW</mark></a></li>
-<li><a href="//blades.dev/html/sitemap/">Sitemap XML <mark>NEW</mark></a></li>
-<li><a href="//blades.dev/css/frameworks/">CSS frameworks <mark>2026–2040</mark></a></li></ul>
+<li><a href="//blades.dev/css/frameworks/">CSS frameworks <mark>2026–2040</mark></a></li>
+<li><a href="//buildawesome.one/">11ty / Build Awesome kit ↗</a></li></ul>
 </li>
 
 </ul>
