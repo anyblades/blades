@@ -244,17 +244,19 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 <!--section:info-->
 
-## <sup style>Trusted by</sup> <!--A-Z-->
+## <sup style>Trusted by</sup>
 
 <big>
 
 - [<i>🐍</i> Flask & Jinja](https://palletsprojects.com/) community website
 - [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme
-- [FastHTML](https://www.fastht.ml/docs/api/pico.html) Pico components [↗](//blades.dev/css/pico/)
+- [FastHTML](https://www.fastht.ml/docs/api/pico.html) Pico components [↗](https://github.com/AnswerDotAI/fasthtml/blob/main/fasthtml/pico.py)
 
 <!--{.markerless}-->
 
 </big>
+
+## <sup style>Showcase</sup> <!--A-Z-->
 
 - [000000076.xyz](//000000076.xyz/)
 - [1k.football](//1k.football/)
