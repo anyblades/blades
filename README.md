@@ -260,11 +260,13 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 </big>
 
 - [000000076.xyz](//000000076.xyz/)
+- [1k.football](//1k.football/)
 - [buildawesome.one](//buildawesome.one/)
 - [doany.io](//doany.io/) [↗](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
 - [followthatcar.com](//followthatcar.com/)
 - [greenroom.pudiga.org](//greenroom.pudiga.org/)
 - [knives.ajitpanigrahi.com](//knives.ajitpanigrahi.com/)
+- [robotics.spprep.org](//robotics.spprep.org/)
 - [usehadron.dev](//usehadron.dev/#:~:text=blades)
 
 <!--{.columns}-->
