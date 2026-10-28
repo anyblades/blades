@@ -128,7 +128,7 @@ Using Nunjucks, Twig or Liquid? Check out the built-in [Base HTML templates](//b
 
 ## Dark mode without a flash
 
-With the Pico-based builds, Blades follows the OS setting by default, with no JavaScript and no flash (see [Dark scheme](//blades.ninja/css/color-schemes/)). To force a theme, set `data-theme="light"` or `"dark"` on `<html>`. On a nested element it works when the element paints its own background, such as `<article>`; otherwise add `background-color: var(--pico-background-color); color: var(--pico-color);`.
+With the Pico-based builds, Blades follows the OS setting by default, with no JavaScript and no flash (see [Dark scheme](//blades.dev/css/color-schemes/)). To force a theme, set `data-theme="light"` or `"dark"` on `<html>`. On a nested element it works when the element paints its own background, such as `<article>`; otherwise add `background-color: var(--pico-background-color); color: var(--pico-color);`.
 
 If you persist the user's choice, e.g. under the `localStorage` key `theme`, set the attribute **before the first paint** with a small inline script in `<head>`, e.g. in SvelteKit's `src/app.html`:
 
@@ -170,78 +170,78 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 Blades CSS is a lightweight, minimal CSS framework for semantic HTML designed as a modern, drop-in successor to Pico CSS.
 
-<!-- ToC as is from https://blades.ninja/#docs -->
+<!-- ToC as is from https://blades.dev/#docs -->
 <ul class="columns">
 
 <li>
-<strong><a href="//blades.ninja/css/">Get started</a></strong>
-<ul><li><a href="//blades.ninja/css/">Quick start</a></li>
-<li><a href="//blades.ninja/css/color-schemes/">Dark scheme</a></li>
-<li><a href="//blades.ninja/css/variables/">CSS variables</a></li>
-<li><a href="//blades.ninja/css/layered/">Layered modules <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/css/conditional/">Conditional styling <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/css/standalone/">Standalone version <mark>NEW</mark></a></li></ul>
+<strong><a href="//blades.dev/css/">Get started</a></strong>
+<ul><li><a href="//blades.dev/css/">Quick start</a></li>
+<li><a href="//blades.dev/css/color-schemes/">Dark scheme</a></li>
+<li><a href="//blades.dev/css/variables/">CSS variables</a></li>
+<li><a href="//blades.dev/css/layered/">Layered modules <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/conditional/">Conditional styling <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/standalone/">Standalone version <mark>NEW</mark></a></li></ul>
 </li>
 
 <li>
-<strong><a href="//blades.ninja/css/layout/">Layout</a></strong>
-<ul><li><a href="//blades.ninja/css/landmarks-section/">Landmarks &amp; section</a></li>
-<li><a href="//blades.ninja/css/container/">Container</a></li>
-<li><a href="//blades.ninja/css/breakout/">Breakout container <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/css/grid/">Grid</a></li>
-<li><a href="//blades.ninja/css/columns/">Text columns <mark>NEW</mark></a></li></ul>
+<strong><a href="//blades.dev/css/layout/">Layout</a></strong>
+<ul><li><a href="//blades.dev/css/landmarks-section/">Landmarks &amp; section</a></li>
+<li><a href="//blades.dev/css/container/">Container</a></li>
+<li><a href="//blades.dev/css/breakout/">Breakout container <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/grid/">Grid</a></li>
+<li><a href="//blades.dev/css/columns/">Text columns <mark>NEW</mark></a></li></ul>
 </li>
 
 <li>
-<strong><a href="//blades.ninja/css/content/">Content</a></strong>
-<ul><li><a href="//blades.ninja/css/typography/">Typography <mark>UPD</mark></a></li>
-<li><a href="//blades.ninja/css/link/">Link</a></li>
-<li><a href="//blades.ninja/css/button/">Button</a></li>
-<li><a href="//blades.ninja/css/icon/"><code style="padding: 0">‹i›</code>con helper <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/css/list/">List <mark>UPD</mark></a></li>
-<li><a href="//blades.ninja/css/table/">Table <mark>UPD</mark></a></li>
-<li><a href="//blades.ninja/css/responsive-table/">Responsive table <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/css/code/">Code blocks <mark>NEW</mark></a></li></ul>
+<strong><a href="//blades.dev/css/content/">Content</a></strong>
+<ul><li><a href="//blades.dev/css/typography/">Typography <mark>UPD</mark></a></li>
+<li><a href="//blades.dev/css/link/">Link</a></li>
+<li><a href="//blades.dev/css/button/">Button</a></li>
+<li><a href="//blades.dev/css/icon/"><code style="padding: 0">‹i›</code>con helper <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/list/">List <mark>UPD</mark></a></li>
+<li><a href="//blades.dev/css/table/">Table <mark>UPD</mark></a></li>
+<li><a href="//blades.dev/css/responsive-table/">Responsive table <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/code/">Code blocks <mark>NEW</mark></a></li></ul>
 </li>
 
 <li>
-<strong><a href="//blades.ninja/css/forms/">Forms</a></strong>
-<ul><li><a href="//blades.ninja/css/forms/">Overview</a></li>
-<li><a href="//blades.ninja/css/input/">Input</a></li>
-<li><a href="//blades.ninja/css/textarea/">Textarea</a></li>
-<li><a href="//blades.ninja/css/select/">Select</a></li>
-<li><a href="//blades.ninja/css/checkboxes/">Checkboxes</a></li>
-<li><a href="//blades.ninja/css/radios/">Radios</a></li>
-<li><a href="//blades.ninja/css/switch/">Switch</a></li>
-<li><a href="//blades.ninja/css/range/">Range</a></li>
-<li><a href="//blades.ninja/css/float-label/">Float labels <mark>NEW</mark></a></li></ul>
+<strong><a href="//blades.dev/css/forms/">Forms</a></strong>
+<ul><li><a href="//blades.dev/css/forms/">Overview</a></li>
+<li><a href="//blades.dev/css/input/">Input</a></li>
+<li><a href="//blades.dev/css/textarea/">Textarea</a></li>
+<li><a href="//blades.dev/css/select/">Select</a></li>
+<li><a href="//blades.dev/css/checkboxes/">Checkboxes</a></li>
+<li><a href="//blades.dev/css/radios/">Radios</a></li>
+<li><a href="//blades.dev/css/switch/">Switch</a></li>
+<li><a href="//blades.dev/css/range/">Range</a></li>
+<li><a href="//blades.dev/css/float-label/">Float labels <mark>NEW</mark></a></li></ul>
 </li>
 
 <li>
-<strong><a href="//blades.ninja/css/components/">Components</a></strong>
-<ul><li><a href="//blades.ninja/css/accordion/">Accordion</a></li>
-<li><a href="//blades.ninja/css/card/">Card</a></li>
-<li><a href="//blades.ninja/css/dropdown/">Dropdown</a></li>
-<li><a href="//blades.ninja/css/group/">Group</a></li>
-<li><a href="//blades.ninja/css/loading/">Loading</a></li>
-<li><a href="//blades.ninja/css/modal/">Modal</a></li>
-<li><a href="//blades.ninja/css/nav/">Navigation</a></li>
-<li><a href="//blades.ninja/css/progress/">Progress</a></li>
-<li><a href="//blades.ninja/css/tooltip/">Tooltip</a></li>
-<li><a href="//blades.ninja/css/timeline/">Timeline <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/css/jump/">Jump to... <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/css/utils/">Utilities <mark>NEW</mark></a></li></ul>
+<strong><a href="//blades.dev/css/components/">Components</a></strong>
+<ul><li><a href="//blades.dev/css/accordion/">Accordion</a></li>
+<li><a href="//blades.dev/css/card/">Card</a></li>
+<li><a href="//blades.dev/css/dropdown/">Dropdown</a></li>
+<li><a href="//blades.dev/css/group/">Group</a></li>
+<li><a href="//blades.dev/css/loading/">Loading</a></li>
+<li><a href="//blades.dev/css/modal/">Modal</a></li>
+<li><a href="//blades.dev/css/nav/">Navigation</a></li>
+<li><a href="//blades.dev/css/progress/">Progress</a></li>
+<li><a href="//blades.dev/css/tooltip/">Tooltip</a></li>
+<li><a href="//blades.dev/css/timeline/">Timeline <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/jump/">Jump to... <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/utils/">Utilities <mark>NEW</mark></a></li></ul>
 </li>
 
 <li>
-<strong><a href="//blades.ninja/more/">More</a></strong>
-<ul><li><a href="//blades.ninja/css/pico/">Pico CSS <mark>NEW</mark> <sub style="">(underlying fork)</sub></a></li>
-<li><a href="//blades.ninja/css/ninja/">Ninja CSS <mark>NEW</mark> <sub style="">(experimental add-ons)</sub></a></li>
-<li><a href="//blades.ninja/html/">Dynamic templates <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/html/base/">Base HTML <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/html/links/">Links snippet <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/html/sitemap/">Sitemap XML <mark>NEW</mark></a></li>
-<li><a href="//blades.ninja/css/frameworks/">CSS frameworks <mark>2026–2040</mark></a></li></ul>
+<strong><a href="//blades.dev/more/">More</a></strong>
+<ul><li><a href="//blades.dev/css/pico/">Pico CSS <mark>NEW</mark> <sub style="">(underlying fork)</sub></a></li>
+<li><a href="//blades.dev/css/ninja/">Ninja CSS <mark>NEW</mark> <sub style="">(experimental add-ons)</sub></a></li>
+<li><a href="//blades.dev/html/">Dynamic templates <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/html/base/">Base HTML <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/html/links/">Links snippet <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/html/sitemap/">Sitemap XML <mark>NEW</mark></a></li>
+<li><a href="//blades.dev/css/frameworks/">CSS frameworks <mark>2026–2040</mark></a></li></ul>
 </li>
 
 </ul>
