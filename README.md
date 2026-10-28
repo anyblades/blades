@@ -119,52 +119,7 @@ Alternatively, import only the parts you need, e.g. per page or per component. T
 
 Using Nunjucks, Twig or Liquid? Check out the built-in [Base HTML templates](//blades.dev/tpl/html/) for each engine, ready to be used in your project.
 
-<!--section:dark-mode-->
-
----
-
-## Dark mode without a flash
-
-With the Pico-based builds, Blades follows the OS setting by default, with no JavaScript and no flash (see [Dark scheme](//blades.dev/css/color-schemes/)). To force a theme, set `data-theme="light"` or `"dark"` on `<html>`. On a nested element it works when the element paints its own background, such as `<article>`; otherwise add `background-color: var(--pico-background-color); color: var(--pico-color);`.
-
-If you persist the user's choice, e.g. under the `localStorage` key `theme`, set the attribute **before the first paint** with a small inline script in `<head>`, e.g. in SvelteKit's `src/app.html`:
-
-```html
-<script>
-  try {
-    const theme = localStorage.getItem("theme");
-    if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
-  } catch {}
-</script>
-```
-
-- Setting it later, e.g. in `onMount` or `useEffect`, renders the OS theme first and then switches.
-- In a Next.js App Router layout, pass the same code as a template literal, ``<script dangerouslySetInnerHTML={{ __html: `try { … } catch {}` }} />``, and add `suppressHydrationWarning` to `<html>`, because the attribute changes before hydration.
-
 <!--section:gh-only-->
-
-> [!IMPORTANT]
-> **Work in progress** — information below is under review:
-
----
-
-## Compact sizing (opt-in)
-
-Add `<html data-compact>` for the whole page, or put the attribute on a single element, e.g. `<form data-compact>` for one form. Without the attribute nothing changes.
-
-- **Where it ships:**
-  - included in `blades.css`
-  - also in `blades.layered.css`
-  - with per-part imports, add `@anyblades/blades/compact` after the other parts
-  - with `pico.conditional.css`, add `@anyblades/blades/src/compact` after it
-- **What changes:**
-  - smaller control padding and 1.5rem block spacing
-  - a 0.5rem radius and a 3px focus ring
-  - 500-weight labels and buttons, 600-weight headings
-  - a white field background in light mode
-  - a 1px card ring instead of the blurred shadow, with no grey card header/footer bands
-- **Root font size:** on `<html>`, it also keeps the root font size at 100% instead of growing with the viewport. At 1280px wide, controls are then 38px instead of 62px. On a single element they are about 48px, because everything is sized in `rem` and the root stays as it is.
-- **Field text size:** form controls stay at 16px, because below that iOS Safari zooms in on focus.
 
 ---
 
@@ -248,7 +203,52 @@ If you know Pico — you already know Blades:
 
 </ul>
 
----
+<!--section:dark-mode-->
+
+### Dark mode without a flash
+
+With the Pico-based builds, Blades follows the OS setting by default, with no JavaScript and no flash (see [Dark scheme](//blades.dev/css/color-schemes/)). To force a theme, set `data-theme="light"` or `"dark"` on `<html>`. On a nested element it works when the element paints its own background, such as `<article>`; otherwise add `background-color: var(--pico-background-color); color: var(--pico-color);`.
+
+If you persist the user's choice, e.g. under the `localStorage` key `theme`, set the attribute **before the first paint** with a small inline script in `<head>`, e.g. in SvelteKit's `src/app.html`:
+
+```html
+<script>
+  try {
+    const theme = localStorage.getItem("theme");
+    if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+  } catch {}
+</script>
+```
+
+- Setting it later, e.g. in `onMount` or `useEffect`, renders the OS theme first and then switches.
+- In a Next.js App Router layout, pass the same code as a template literal, ``<script dangerouslySetInnerHTML={{ __html: `try { … } catch {}` }} />``, and add `suppressHydrationWarning` to `<html>`, because the attribute changes before hydration.
+
+<!--section:gh-only-->
+
+### Compact sizing (opt-in)
+
+<!--section:compact-->
+
+Add `<html data-compact>` for the whole page, or put the attribute on a single element, e.g. `<form data-compact>` for one form. Without the attribute nothing changes.
+
+- **Where it ships:**
+  - included in `blades.css`
+  - also in `blades.layered.css`
+  - with per-part imports, add `@anyblades/blades/compact` after the other parts
+  - with `pico.conditional.css`, add `@anyblades/blades/src/compact` after it
+- **What changes:**
+  - smaller control padding and 1.5rem block spacing
+  - a 0.5rem radius and a 3px focus ring
+  - 500-weight labels and buttons, 600-weight headings
+  - a white field background in light mode
+  - a 1px card ring instead of the blurred shadow, with no grey card header/footer bands
+- **Root font size:** on `<html>`, it also keeps the root font size at 100% instead of growing with the viewport. At 1280px wide, controls are then 38px instead of 62px. On a single element they are about 48px, because everything is sized in `rem` and the root stays as it is.
+- **Field text size:** form controls stay at 16px, because below that iOS Safari zooms in on focus.
+
+<!--section:gh-only-->
+
+> [!IMPORTANT]
+> **Work in progress** — information below is under review:
 
 <!--section:info-->
 
@@ -259,9 +259,9 @@ If you know Pico — you already know Blades:
 
 <!--https://pulsar-wildlife.club/-->
 
-## <sup style>Also used by</sup>
-
 - https://www.followthatcar.com/
+
+<!--{.markerless .columns}-->
 
 ## <sup style>Featured by</sup> <!-- [1] big projects [2] awesome [3] smaller projects [4] blogs/social -->
 
