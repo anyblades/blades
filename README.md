@@ -245,47 +245,46 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - **Root font size:** on `<html>`, it also keeps the root font size at 100% instead of growing with the viewport. At 1280px wide, controls are then 38px instead of 62px. On a single element they are about 48px, because everything is sized in `rem` and the root stays as it is.
 - **Field text size:** form controls stay at 16px, because below that iOS Safari zooms in on focus.
 
-<!--section:gh-only-->
-
-> [!IMPORTANT]
-> **Work in progress** — information below is under review:
-
 <!--section:info-->
 
-## <sup style>Trusted by</sup>
+## <sup style>Trusted by</sup> <!--A-Z-->
 
-- 🐍 [Flask & Jinja](https://palletsprojects.com/) community website
-- 🪐 [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme
+<big>
 
-<!--https://pulsar-wildlife.club/-->
+- [<i>🐍</i> Flask & Jinja](https://palletsprojects.com/) community website
+- [<i>🪐</i> Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme
 
-- https://www.followthatcar.com/
+<!--{.markerless}-->
 
-<!--{.markerless .columns}-->
+</big>
 
-## <sup style>Featured by</sup> <!-- [1] big projects [2] awesome [3] smaller projects [4] blogs/social -->
+- [000000076.xyz](//000000076.xyz/)
+- [buildawesome.one](//buildawesome.one/)
+- [doany.io](//doany.io/) [↗](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
+- [followthatcar.com](//followthatcar.com/)
+- [greenroom.pudiga.org](//greenroom.pudiga.org/)
+- [knives.ajitpanigrahi.com](//knives.ajitpanigrahi.com/)
+- [usehadron.dev](//usehadron.dev/#:~:text=blades)
 
-- https://usehadron.dev/
+<!--{.columns}-->
+
+## <sup style>Featured by</sup> <!--by host-->
+
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
-- [<i class="fa-brands fa-build-awesome mark-brand"></i> buildawesome.one](https://buildawesome.one/#:~:text=blades)
-- https://github.com/dbohdan/classless-css
-- https://github.com/uhub/awesome-css
-- [/gabrielizalo/awesome-css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
-- https://github.com/eggplantpasta/greenroom
-- [/adamdjbrett/11ty-wisp](https://github.com/adamdjbrett/11ty-wisp#features:~:text=blades) [↗](https://github.com/adamdjbrett/000000076#:~:text=blades)
-- https://knives.ajitpanigrahi.com/
-- [doany.io](https://doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
+- [@matthewmorete](https://bsky.app/profile/matthewmorete.com/post/3mx5wvywixc2l)
 - [@box464](https://mastodon.social/@box464/117442493473921346)
-- [@draupnerdata](https://www.youtube.com/watch?v=yDjArj9HSjs&t=180s)
+- [@lazarus](https://fosstodon.org/@lazarus/117384358792615667)
+- [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
 - [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
 - [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
-- [@infotexture](https://mastodon.social/@infotexture@indieweb.social/117294194740314396)
-- [@lazarus](https://fosstodon.org/@lazarus/117384358792615667)
-- [@matthewmorete](https://bsky.app/profile/matthewmorete.com/post/3mx5wvywixc2l)
-- [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
+- [@dbohdan/classless-css](https://github.com/dbohdan/classless-css)
+- [@gabrielizalo/css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
+- [@uhub/awesome-css](https://github.com/uhub/awesome-css)
+- [@draupnerdata](https://www.youtube.com/watch?v=yDjArj9HSjs&t=180s)
 
 <!--{.markerless .columns}-->
-<!--[hostfurl.com, @johnheenan]-->
 
 <!--
+> [!IMPORTANT]
+> **Work in progress** — information below is under review:
 -->
