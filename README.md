@@ -25,7 +25,7 @@
 Just switch `pico.css` to `blades.css`— and voilà!
 
 <nav>
-  <a href="//blades.dev/css/" role="button">Get started</a>
+  <a href="//blades.dev/css/" role="button">Get started ›</a>
   <b hidden>&nbsp;•&nbsp;</b>
   <a href="//blades.dev/css/pico/" role="button" class="outline">Inspired by Pico ✨</a>
 </nav>
