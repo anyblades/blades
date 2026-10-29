@@ -82,10 +82,10 @@
     "Lucas Larroche (https://picocss.com/)",
     "Anton Staroverov (https://blades.dev/)"
   ],
-  "description": "Fully compatible and actively maintained successor to Pico CSS.",
+  "description": "A modern drop‑in successor to Pico CSS.",
   "homepage": "https://blades.dev/",
   "keywords": [
-    "blades",
+    "blades-css",
     "classless",
     "css-framework",
     "css",
