@@ -286,6 +286,12 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 <!--{.markerless .columns}-->
 
+<!--section:gh-only-->
+
+<br>
+
+### 🥷✨
+
 <!--
 > [!IMPORTANT]
 > **Work in progress** — information below is under review:
