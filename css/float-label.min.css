@@ -1,6 +1,6 @@
 /*!
  * Float Label CSS v2 by Blades CSS 🥷🏷️
- * Copyright 2016–2026 (https://blades.ninja/css/float-label/)
+ * Copyright 2016–2026 (https://blades.dev/css/float-label/)
  * Licensed under MIT
  */
 label:has(>span):has(input:not([type=checkbox],[type=radio],[type=range]),textarea,select),.has-float-label{display:block;position:relative;&>span,& label{cursor:text;font-size:75%;position:absolute;top:0;left:0}& :placeholder-shown:not(:focus)::placeholder{opacity:0}&:has(:placeholder-shown:not(:focus)){&>span,& label{font-size:inherit;opacity:.5}}}label:has(>span):has(input:not([type=checkbox],[type=radio],[type=range]),textarea,select),.has-float-label{&>span,& label{opacity:.75;padding-block-start:.25rem;padding-inline-start:calc(1rem + 1px);transition:all .25s}& input,& textarea,& select{margin-block-start:0;padding-block:1.125rem .375rem;padding-inline-start:1rem;&::placeholder{opacity:1;transition:all .25s}}&:has(:placeholder-shown:not(:focus)){&>span,& label{padding-block:.75rem}}}

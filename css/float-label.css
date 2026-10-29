@@ -1,6 +1,6 @@
 /*!
  * Float Label CSS v2 by Blades CSS 🥷🏷️
- * Copyright 2016–2026 (https://blades.ninja/css/float-label/)
+ * Copyright 2016–2026 (https://blades.dev/css/float-label/)
  * Licensed under MIT
  */
 label:has( > span):has(input:not([type="checkbox"], [type="radio"], [type="range"]), textarea, select), .has-float-label {
