@@ -283,7 +283,7 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - [@retr0id](https://news.ycombinator.com/item?id=50299098)
 - [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
 - [@dbohdan/classless-css](https://github.com/dbohdan/classless-css)
-- [@gabrielizalo/css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
+- [@gabrielizalo/css-frameworks](https://github.com/gabrielizalo/Awesome-CSS-Frameworks-and-UI-Libraries/blob/master/Lightweight/README.md)
 - [@uhub/awesome-css](https://github.com/uhub/awesome-css)
 - [@5yuim](https://x.com/5yuim/status/2111650695451668682) [↗](https://x.com/5yuim/status/2114540993739657595)
 - [@draupnerdata](https://www.youtube.com/watch?v=yDjArj9HSjs&t=180s)
