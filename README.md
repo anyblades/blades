@@ -261,7 +261,7 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - [000000076.xyz](//000000076.xyz/)
 - [1k.football](//1k.football/)
 - [buildawesome.one](//buildawesome.one/)
-- [doany.io](//doany.io/) [↗](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
+- [doany.io](//doany.io/)
 - [followthatcar.com](//followthatcar.com/)
 - [greenroom.pudiga.org](//greenroom.pudiga.org/)
 - [knives.ajitpanigrahi.com](//knives.ajitpanigrahi.com/)
@@ -272,6 +272,8 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 ## <sup style>Featured by</sup> <!--by host-->
 
+- [doany.io](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
+- [linuxlinks.com](https://www.linuxlinks.com/blades-minimal-css-framework/)
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
 - [@matthewmorete](https://bsky.app/profile/matthewmorete.com/post/3mx5wvywixc2l)
 - [@box464](https://mastodon.social/@box464/117442493473921346)
@@ -283,6 +285,7 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - [@dbohdan/classless-css](https://github.com/dbohdan/classless-css)
 - [@gabrielizalo/css-frameworks](https://github.com/gabrielizalo/awesome-css-frameworks-and-ui-libraries/tree/master/Lightweight)
 - [@uhub/awesome-css](https://github.com/uhub/awesome-css)
+- [@5yuim](https://x.com/5yuim/status/2111650695451668682) [↗](https://x.com/5yuim/status/2114540993739657595)
 - [@draupnerdata](https://www.youtube.com/watch?v=yDjArj9HSjs&t=180s)
 
 <!--{.markerless .columns}-->
