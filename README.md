@@ -272,10 +272,10 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 ## <sup style>Featured by</sup> <!--by host-->
 
-- [<i>🔗</i> doany.io](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
-- [linuxlinks.com](https://www.linuxlinks.com/blades-minimal-css-framework/)
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
 - [@matthewmorete](https://bsky.app/profile/matthewmorete.com/post/3mx5wvywixc2l)
+- [<i>🔗</i> doany.io](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
+- [linuxlinks.com](https://www.linuxlinks.com/blades-minimal-css-framework/)
 - [@box464](https://mastodon.social/@box464/117442493473921346)
 - [@lazarus](https://fosstodon.org/@lazarus/117384358792615667)
 - [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
