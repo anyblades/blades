@@ -256,21 +256,22 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 </big>
 
-## <sup style>Showcase</sup> <!--A-Z-->
+## <sup style>Showcase</sup> <!-- sites & projects using Blades, A-Z -->
 
-- [000000076.xyz](//000000076.xyz/)
-- [1k.football](//1k.football/)
-- [buildawesome.one](//buildawesome.one/)
-- [doany.io](//doany.io/)
-- [followthatcar.com](//followthatcar.com/)
-- [greenroom.pudiga.org](//greenroom.pudiga.org/)
-- [knives.ajitpanigrahi.com](//knives.ajitpanigrahi.com/)
-- [robotics.spprep.org](//robotics.spprep.org/)
+- [doany.io](//doany.io/en/#:~:text=blades)
 - [usehadron.dev](//usehadron.dev/#:~:text=blades)
+- https://000000076.xyz/
+- https://1k.football/
+- https://buildawesome.one/
+- https://followthatcar.com/
+- https://github.com/danything/denpa
+- https://greenroom.pudiga.org/
+- https://knives.ajitpanigrahi.com/
+- https://robotics.spprep.org/
 
-<!--{.columns}-->
+<!--{.columns .showcase}-->
 
-## <sup style>Featured by</sup> <!--by host-->
+## <sup style>Featured by</sup> <!-- by host, A-Z -->
 
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
 - [@matthewmorete](https://bsky.app/profile/matthewmorete.com/post/3mx5wvywixc2l)
