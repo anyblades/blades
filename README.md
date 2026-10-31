@@ -258,19 +258,26 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 ## <sup style>Showcase</sup> <!-- sites & projects using Blades, A-Z -->
 
-- [doany.io](https:////doany.io/en/#:~:text=blades) [↗](https://github.com/danything/denpa) [↗](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
+- [doany.io](https:////doany.io/en/#:~:text=blades)
+  [↗](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
+  [↗](https://github.com/danything/denpa)
+  [↗](https://github.com/danything/mado)
+  [↗](https://github.com/danything/xool)
 - [usehadron.dev](https:////usehadron.dev/#:~:text=blades)
-- https://000000076.xyz/
+- https://000000076.xyz/ [↗](https://wisp.000000076.xyz/)
 - https://1k.football/
 - https://buildawesome.one/
 - https://followthatcar.com/
 - https://github.com/5ym/noren
+- https://github.com/johnheenan/minform [↗](https://github.com/hostfurl/minformhf)
 - https://greenroom.pudiga.org/
 - https://knives.ajitpanigrahi.com/
 - https://robotics.spprep.org/
 
 <!--{.columns .showcase}-->
 <!-- new candidates, add after demo/screenshots/etc:
+- https://github.com/adamdjbrett/11ty-kb
+- https://github.com/dhhyi/recipe-db
 - https://github.com/flippant-heron/wollee
 - https://github.com/hugoh/hs-mock
 - https://github.com/joefg/uv-fasthtml
