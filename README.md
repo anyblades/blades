@@ -248,8 +248,8 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 <big>
 
-- [<i>🐍</i> Flask & Jinja](https://palletsprojects.com/) community website
-- [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme
+- [<i>🐍</i> Flask & Jinja](https://palletsprojects.com/) community website [↗](https://github.com/pallets/website/blob/main/src/pallets/templates/layout.html)
+- [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme [↗](https://github.com/getgrav/grav-theme-quark2)
 - [FastHTML](https://www.fastht.ml/docs/api/pico.html) Pico components [↗](https://github.com/AnswerDotAI/fasthtml/blob/main/fasthtml/pico.py)
 
 <!--{.markerless}-->
@@ -264,11 +264,21 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - https://1k.football/
 - https://buildawesome.one/
 - https://followthatcar.com/
+- https://github.com/5ym/noren
 - https://greenroom.pudiga.org/
 - https://knives.ajitpanigrahi.com/
 - https://robotics.spprep.org/
 
 <!--{.columns .showcase}-->
+<!-- new candidates, add after demo/screenshots/etc:
+- https://github.com/flippant-heron/wollee
+- https://github.com/hugoh/hs-mock
+- https://github.com/joefg/uv-fasthtml
+- https://github.com/kugeleis/expyri
+- https://github.com/l30dr01d/files-set-diversity-experiments
+- https://github.com/oddcelot/meowter
+- https://github.com/yaal-coop/wtforms-htmx
+-->
 
 ## <sup style>Featured by</sup> <!-- group by host 1st letter, A-Z -->
 
