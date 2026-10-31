@@ -258,36 +258,42 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 
 ## <sup style>Showcase</sup> <!-- sites & projects using Blades, A-Z -->
 
-- [doany.io](//doany.io/en/#:~:text=blades)
-- [usehadron.dev](//usehadron.dev/#:~:text=blades)
+- [doany.io](https:////doany.io/en/#:~:text=blades) [↗](https://github.com/danything/denpa) [↗](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
+- [usehadron.dev](https:////usehadron.dev/#:~:text=blades)
 - https://000000076.xyz/
 - https://1k.football/
 - https://buildawesome.one/
 - https://followthatcar.com/
-- https://github.com/danything/denpa
 - https://greenroom.pudiga.org/
 - https://knives.ajitpanigrahi.com/
 - https://robotics.spprep.org/
 
 <!--{.columns .showcase}-->
 
-## <sup style>Featured by</sup> <!-- by host, A-Z -->
+## <sup style>Featured by</sup> <!-- group by host 1st letter, A-Z -->
 
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
 - [@matthewmorete](https://bsky.app/profile/matthewmorete.com/post/3mx5wvywixc2l)
-- [<i>🔗</i> doany.io](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
+  <!--^B^-->
 - [linuxlinks.com](https://www.linuxlinks.com/blades-minimal-css-framework/)
-- [@box464](https://mastodon.social/@box464/117442493473921346)
-- [@lazarus](https://fosstodon.org/@lazarus/117384358792615667)
-- [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
-- [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
-- [@retr0id](https://news.ycombinator.com/item?id=50299098)
-- [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
+  <!--^L^-->
 - [@dbohdan/classless-css](https://github.com/dbohdan/classless-css)
 - [@gabrielizalo/css-frameworks](https://github.com/gabrielizalo/Awesome-CSS-Frameworks-and-UI-Libraries/blob/master/Lightweight/README.md)
 - [@uhub/awesome-css](https://github.com/uhub/awesome-css)
+  <!--^G^-->
+- [@box464](https://mastodon.social/@box464/117442493473921346)
+- [@lazarus](https://fosstodon.org/@lazarus/117384358792615667)
+- [@pauleveritt](https://fosstodon.org/@pauleveritt/116387278969347700)
+  <!--^M^-->
+- [@cantdutchthis](https://news.ycombinator.com/item?id=48729467)
+- [@retr0id](https://news.ycombinator.com/item?id=50299098)
+  <!--^N^-->
+- [@daviding](https://www.reddit.com/r/Wordpress/comments/1vnfhkr/comment/p3k9z1c/#:~:text=blades)
+  <!--^R^-->
 - [@5yuim](https://x.com/5yuim/status/2111650695451668682) [↗](https://x.com/5yuim/status/2114540993739657595)
+  <!--^X^-->
 - [@draupnerdata](https://www.youtube.com/watch?v=yDjArj9HSjs&t=180s)
+  <!--^Y^-->
 
 <!--{.markerless .columns}-->
 
