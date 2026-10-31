@@ -272,6 +272,7 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - https://followthatcar.com/
 - https://github.com/5ym/noren
 - https://github.com/johnheenan/minform [↗](https://github.com/hostfurl/minformhf)
+- https://github.com/kezabelle/django-nestingdolls
 - https://greenroom.pudiga.org/
 - https://knives.ajitpanigrahi.com/
 - https://robotics.spprep.org/
@@ -285,6 +286,7 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - https://github.com/joefg/uv-fasthtml
 - https://github.com/kugeleis/expyri
 - https://github.com/l30dr01d/files-set-diversity-experiments
+- https://github.com/memowe/dts-frontend
 - https://github.com/oddcelot/meowter
 - https://github.com/yaal-coop/wtforms-htmx
 -->
