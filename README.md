@@ -261,11 +261,13 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - [doany.io](https:////doany.io/en/#:~:text=blades)
   [↗](https://b.doany.io/en/posts/svelte-bun-sqlite/#on-biome-and-css:~:text=anyblades)
   [↗](https://github.com/danything/denpa)
+  [↗](https://github.com/danything/lgtm)
   [↗](https://github.com/danything/mado)
   [↗](https://github.com/danything/xool)
 - [usehadron.dev](https:////usehadron.dev/#:~:text=blades)
 - https://000000076.xyz/ [↗](https://wisp.000000076.xyz/)
 - https://1k.football/
+- https://awesome-jj.larve.net/
 - https://buildawesome.one/
 - https://followthatcar.com/
 - https://github.com/5ym/noren
