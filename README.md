@@ -285,6 +285,7 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - https://github.com/hugoh/hs-mock
 - https://github.com/joefg/uv-fasthtml
 - https://github.com/kugeleis/expyri
+- https://github.com/kylebavis/boh
 - https://github.com/l30dr01d/files-set-diversity-experiments
 - https://github.com/memowe/dts-frontend
 - https://github.com/oddcelot/meowter
