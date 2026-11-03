@@ -15,6 +15,7 @@
 [D_URL]: https://discord.gg/mg8f26C
 
 ![](https://trendshift.io/api/badge/trendshift/repositories/154122/daily?language=CSS)
+![](https://trendshift.io/api/badge/trendshift/repositories/154122/weekly?language=CSS)
 
 <!--section:summary-->
 
