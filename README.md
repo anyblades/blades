@@ -298,6 +298,8 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - [@11ty/buildawesome](https://bsky.app/profile/11ty.dev/post/3mp75r53ccv2b) [↗](https://mastodon.social/@11ty@neighborhood.11ty.dev/116816881367741413)
 - [@matthewmorete](https://bsky.app/profile/matthewmorete.com/post/3mx5wvywixc2l)
   <!--^B^-->
+- [@techdevfun](https://dev.to/techdevfun/pico-css-is-archived-i-built-the-exit-plan-c9h#:~:text=blades)
+  <!--^D^-->
 - [linuxlinks.com](https://www.linuxlinks.com/blades-minimal-css-framework/)
   <!--^L^-->
 - [@dbohdan/classless-css](https://github.com/dbohdan/classless-css)
