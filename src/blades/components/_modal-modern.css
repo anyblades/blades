@@ -1,6 +1,6 @@
 /*<!--section:docs-->
 
-## No-JS transitions <mark>NEW</mark>
+## CSS-only transitions <mark>NEW</mark>
 
 A `<dialog>` opened with `dialog.showModal()` fades in and its `<article>` zooms in, without JS classes.
 Pico's modal JS (`.modal-is-open`, `.modal-is-opening`, `.modal-is-closing`) still works on top of it.
@@ -9,7 +9,7 @@ Pico's modal JS (`.modal-is-open`, `.modal-is-opening`, `.modal-is-closing`) sti
 - `<dialog open>` in markup and non-modal `dialog.show()` aren't animated.
 - Browsers without `@starting-style`, and reduced motion, open it at once.
 
-<!--section:code-->```css */
+```css */
 dialog:modal {
   transition: opacity var(--pico-transition);
 
@@ -27,7 +27,35 @@ dialog:modal {
   }
 }
 /*```
-<!--section:docs-->
+
+## Open and close without JS <mark>NEW</mark>
+
+The Invoker Commands API lets a `<button>` open and close a dialog with attributes only. Give the button a `command` and a `commandfor` that holds the dialog's `id`:
+
+```html
+<button command="show-modal" commandfor="my-dialog">Open</button>
+
+<dialog id="my-dialog" closedby="any">
+  <article>
+    <header>
+      <button aria-label="Close" rel="prev" command="close" commandfor="my-dialog"></button>
+      <h3>Title</h3>
+    </header>
+    <p>Content.</p>
+    <footer>
+      <button class="secondary" command="request-close" commandfor="my-dialog">Cancel</button>
+      <button command="close" commandfor="my-dialog" value="confirm">Confirm</button>
+    </footer>
+  </article>
+</dialog>
+```
+
+- `show-modal` is the same as `dialog.showModal()`, so the transitions above apply.
+- `close` is the same as `dialog.close()`. It closes at once, and the button's `value` becomes `dialog.returnValue`.
+- `request-close` fires a `cancel` event first, as Escape does, so a listener can stop it with `preventDefault()`.
+- The button must be a `<button>` (or `<input type="button">`), not inside a `<form>` that it would submit, unless it has `type="button"`.
+- The dialog gets a `command` event, and `event.source` is the button that invoked it.
+- Browsers without support ignore the attributes and nothing opens. Add a `click` listener that calls `showModal()` and `close()` as a fallback if you need them.
 
 ## Click outside to close <mark>NEW</mark>
 
