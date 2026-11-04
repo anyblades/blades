@@ -1,6 +1,6 @@
 {
   "name": "@anyblades/blades",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "style": "./css/blades.css",
   "exports": {
     ".": "./css/blades.css",
