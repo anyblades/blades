@@ -21,9 +21,9 @@
 
 <h1><span class="mark-brand">Minimal CSS Framework</span> <small>for</small> Semantic HTML</h1>
 
-<big>Blades CSS is a modern drop&#8209;in successor to [Pico CSS](//picocss.com/docs/maintenance).</big>
+<big>Blades CSS is a modern, direct fork of [Pico CSS](//picocss.com/docs/maintenance).</big>
 
-Just switch `pico.css` to `blades.css`— and voilà!
+Just swap `pico.css` to `blades.css` without changing your `--pico-*` vars, and voilà!
 
 <nav>
   <a href="//blades.dev/css/" role="button">Get started ›</a>
