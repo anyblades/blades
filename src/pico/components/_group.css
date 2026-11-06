@@ -67,8 +67,8 @@
 [role="group"] input:not([type="checkbox"], [type="radio"]):not(:first-child),
 [role="group"] select:not(:first-child) {
   margin-left: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
 }
 [role="search"] > *:not(:last-child),
 [role="search"] input:not([type="checkbox"], [type="radio"]):not(:last-child),
@@ -76,8 +76,8 @@
 [role="group"] > *:not(:last-child),
 [role="group"] input:not([type="checkbox"], [type="radio"]):not(:last-child),
 [role="group"] select:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
 }
 [role="search"] > *:focus,
 [role="search"] input:not([type="checkbox"], [type="radio"]):focus,
@@ -196,10 +196,10 @@
 }
 
 [role="search"] > *:first-child {
-  border-top-left-radius: 5rem;
-  border-bottom-left-radius: 5rem;
+  border-start-start-radius: 5rem;
+  border-end-start-radius: 5rem;
 }
 [role="search"] > *:last-child {
-  border-top-right-radius: 5rem;
-  border-bottom-right-radius: 5rem;
+  border-start-end-radius: 5rem;
+  border-end-end-radius: 5rem;
 }
