@@ -23,7 +23,7 @@
 
 <big>Blades CSS is a modern, direct fork of [Pico CSS](//picocss.com/docs/maintenance).</big>
 
-Just swap `pico.css` to `blades.css` with same `--pico-*` vars, and voilà!
+Switch `pico.css` to `blades.css` with the same ⁠`‑⁠⁠‑⁠pico‑⁠*` vars, and voilà!
 
 <nav>
   <a href="//blades.dev/css/" role="button">Get started ›</a>
