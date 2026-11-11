@@ -5,8 +5,7 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 ```treeview {data-caption="Blades CSS ships:"}
 /css/
 ├── blades.css  (Pico CSS successor)
-├── blades.standalone.css  (framework-agnostic)
-├── ninja.css  (experimental add-ons)
+├── blades.ninja.css  (experimental add-ons)
 └── pico.css  (underlying fork)
 ```
 
@@ -15,6 +14,10 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 pre {
   @media (width < 768px) {
     border-radius: 0;
+  }
+  /* Prism-only: force background to use CSS vars */
+  &.prismjs:has(code) {
+    background: var(--pico-code-background-color) !important;
   }
 }
 
