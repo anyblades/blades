@@ -576,12 +576,10 @@
    margin: 0;
    margin-bottom: var(--pico-spacing);
    border: 0;
-@@ -1310,6 +1057,18 @@
- 
- label > :where(input, select, textarea) {
+@@ -1312,6 +1059,18 @@
    margin-top: calc(var(--pico-spacing) * .25);
-+}
-+
+ }
+ 
 +:where(:scope), :host {
 +  --pico-icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
 +  --pico-icon-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
@@ -592,9 +590,11 @@
 +  --pico-switch-checked-background-color: var(--pico-primary-background);
 +  --pico-switch-color: #fff;
 +  --pico-switch-thumb-box-shadow: 0 0 0 #0000;
- }
- 
++}
++
  label:has([type="checkbox"], [type="radio"]) {
+   cursor: pointer;
+   width: fit-content;
 @@ -1451,6 +1210,11 @@
    border: 0;
  }
@@ -673,7 +673,7 @@
    width: 100%;
  }
  
-@@ -1707,7 +1491,7 @@
+@@ -1707,12 +1491,19 @@
  }
  
  [dir="rtl"] details summary {
@@ -682,20 +682,18 @@
  }
  
  [dir="rtl"] details summary:after {
-@@ -1715,6 +1499,13 @@
+   float: left;
    background-position: 0;
- }
- 
++}
++
 +:where(:scope, [data-theme="light"], [data-theme="dark"]), :host {
 +  --pico-card-background-color: light-dark(var(--pico-background-color), #181c25);
 +  --pico-card-border-color: light-dark(var(--pico-muted-border-color), var(--pico-card-background-color));
 +  --pico-card-box-shadow: var(--pico-box-shadow);
 +  --pico-card-sectioning-background-color: light-dark(#fbfcfc, #1a1f28);
-+}
-+
+ }
+ 
  article {
-   margin-bottom: var(--pico-block-spacing-vertical);
-   padding: var(--pico-block-spacing-vertical) var(--pico-block-spacing-horizontal);
 @@ -1746,6 +1537,14 @@
    border-bottom-left-radius: var(--pico-border-radius);
  }
@@ -743,8 +741,50 @@
  [role="search"], [role="group"] {
    width: 100%;
    margin-bottom: var(--pico-spacing);
-@@ -1990,7 +1803,15 @@
-   border-bottom-right-radius: 5rem;
+@@ -1935,14 +1748,14 @@
+ }
+ 
+ [role="search"] > :not(:first-child), [role="search"] input:not([type="checkbox"], [type="radio"]):not(:first-child), [role="search"] select:not(:first-child), [role="group"] > :not(:first-child), [role="group"] input:not([type="checkbox"], [type="radio"]):not(:first-child), [role="group"] select:not(:first-child) {
+-  border-top-left-radius: 0;
+-  border-bottom-left-radius: 0;
+-  margin-left: 0;
++  border-start-start-radius: 0;
++  border-end-start-radius: 0;
++  margin-inline-start: 0;
+ }
+ 
+ [role="search"] > :not(:last-child), [role="search"] input:not([type="checkbox"], [type="radio"]):not(:last-child), [role="search"] select:not(:last-child), [role="group"] > :not(:last-child), [role="group"] input:not([type="checkbox"], [type="radio"]):not(:last-child), [role="group"] select:not(:last-child) {
+-  border-top-right-radius: 0;
+-  border-bottom-right-radius: 0;
++  border-start-end-radius: 0;
++  border-end-end-radius: 0;
+ }
+ 
+ [role="search"] > :focus, [role="search"] input:not([type="checkbox"], [type="radio"]):focus, [role="search"] select:focus, [role="group"] > :focus, [role="group"] input:not([type="checkbox"], [type="radio"]):focus, [role="group"] select:focus {
+@@ -1950,7 +1763,7 @@
+ }
+ 
+ [role="search"] button:not(:first-child), [role="search"] [type="submit"]:not(:first-child), [role="search"] [type="reset"]:not(:first-child), [role="search"] [type="button"]:not(:first-child), [role="search"] [role="button"]:not(:first-child), [role="search"] input:not([type="checkbox"], [type="radio"]):not(:first-child), [role="search"] select:not(:first-child), [role="group"] button:not(:first-child), [role="group"] [type="submit"]:not(:first-child), [role="group"] [type="reset"]:not(:first-child), [role="group"] [type="button"]:not(:first-child), [role="group"] [role="button"]:not(:first-child), [role="group"] input:not([type="checkbox"], [type="radio"]):not(:first-child), [role="group"] select:not(:first-child) {
+-  margin-left: calc(var(--pico-border-width) * -1);
++  margin-inline-start: calc(var(--pico-border-width) * -1);
+ }
+ 
+ [role="search"] button, [role="search"] [type="submit"], [role="search"] [type="reset"], [role="search"] [type="button"], [role="search"] [role="button"], [role="group"] button, [role="group"] [type="submit"], [role="group"] [type="reset"], [role="group"] [type="button"], [role="group"] [role="button"] {
+@@ -1981,16 +1794,24 @@
+ }
+ 
+ [role="search"] > :first-child {
+-  border-top-left-radius: 5rem;
+-  border-bottom-left-radius: 5rem;
++  border-start-start-radius: 5rem;
++  border-end-start-radius: 5rem;
+ }
+ 
+ [role="search"] > :last-child {
+-  border-top-right-radius: 5rem;
+-  border-bottom-right-radius: 5rem;
++  border-start-end-radius: 5rem;
++  border-end-end-radius: 5rem;
  }
  
 -[aria-busy="true"]:not(input, select, textarea, html, form) {
@@ -816,23 +856,21 @@
  }
  
  :where(nav li):before {
-@@ -2256,10 +2108,15 @@
+@@ -2256,8 +2108,13 @@
    margin: inherit;
  }
  
 -[dir="rtl"] nav[aria-label="breadcrumb"] ul li:not(:last-child) :after {
 +[dir="rtl"] nav[aria-label="breadcrumb"] ul li:not(:last-child):after {
    content: "\\";
- }
- 
++}
++
 +:where(:scope, [data-theme="light"], [data-theme="dark"]), :host {
 +  --pico-progress-background-color: light-dark(#dfe3eb, #202632);
 +  --pico-progress-color: var(--pico-primary-background);
-+}
-+
+ }
+ 
  progress {
-   vertical-align: baseline;
-   -webkit-appearance: none;
 @@ -2320,6 +2177,11 @@
    }
  }
@@ -845,14 +883,16 @@
  [data-tooltip] {
    position: relative;
  }
-@@ -2482,25 +2344,12 @@
-   cursor: not-allowed;
- }
+@@ -2480,27 +2342,14 @@
  
--[aria-hidden="false"][hidden] {
--  display: initial;
+ [aria-disabled="true"], [disabled] {
+   cursor: not-allowed;
 -}
 -
+-[aria-hidden="false"][hidden] {
+-  display: initial;
+ }
+ 
 -[aria-hidden="false"][hidden]:not(:focus) {
 -  clip: rect(0, 0, 0, 0);
 -  position: absolute;

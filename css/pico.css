@@ -1798,14 +1798,14 @@ label > details.dropdown {
 }
 
 [role="search"] > :not(:first-child), [role="search"] input:not([type="checkbox"], [type="radio"]):not(:first-child), [role="search"] select:not(:first-child), [role="group"] > :not(:first-child), [role="group"] input:not([type="checkbox"], [type="radio"]):not(:first-child), [role="group"] select:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  margin-left: 0;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+  margin-inline-start: 0;
 }
 
 [role="search"] > :not(:last-child), [role="search"] input:not([type="checkbox"], [type="radio"]):not(:last-child), [role="search"] select:not(:last-child), [role="group"] > :not(:last-child), [role="group"] input:not([type="checkbox"], [type="radio"]):not(:last-child), [role="group"] select:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
 }
 
 [role="search"] > :focus, [role="search"] input:not([type="checkbox"], [type="radio"]):focus, [role="search"] select:focus, [role="group"] > :focus, [role="group"] input:not([type="checkbox"], [type="radio"]):focus, [role="group"] select:focus {
@@ -1813,7 +1813,7 @@ label > details.dropdown {
 }
 
 [role="search"] button:not(:first-child), [role="search"] [type="submit"]:not(:first-child), [role="search"] [type="reset"]:not(:first-child), [role="search"] [type="button"]:not(:first-child), [role="search"] [role="button"]:not(:first-child), [role="search"] input:not([type="checkbox"], [type="radio"]):not(:first-child), [role="search"] select:not(:first-child), [role="group"] button:not(:first-child), [role="group"] [type="submit"]:not(:first-child), [role="group"] [type="reset"]:not(:first-child), [role="group"] [type="button"]:not(:first-child), [role="group"] [role="button"]:not(:first-child), [role="group"] input:not([type="checkbox"], [type="radio"]):not(:first-child), [role="group"] select:not(:first-child) {
-  margin-left: calc(var(--pico-border-width) * -1);
+  margin-inline-start: calc(var(--pico-border-width) * -1);
 }
 
 [role="search"] button, [role="search"] [type="submit"], [role="search"] [type="reset"], [role="search"] [type="button"], [role="search"] [role="button"], [role="group"] button, [role="group"] [type="submit"], [role="group"] [type="reset"], [role="group"] [type="button"], [role="group"] [role="button"] {
@@ -1844,13 +1844,13 @@ label > details.dropdown {
 }
 
 [role="search"] > :first-child {
-  border-top-left-radius: 5rem;
-  border-bottom-left-radius: 5rem;
+  border-start-start-radius: 5rem;
+  border-end-start-radius: 5rem;
 }
 
 [role="search"] > :last-child {
-  border-top-right-radius: 5rem;
-  border-bottom-right-radius: 5rem;
+  border-start-end-radius: 5rem;
+  border-end-end-radius: 5rem;
 }
 
 :where(:scope), :host {

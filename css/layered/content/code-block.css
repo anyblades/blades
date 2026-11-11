@@ -3,6 +3,10 @@ pre {
   @media (width < 768px) {
     border-radius: 0;
   }
+
+  &.prismjs:has(code) {
+    background: var(--pico-code-background-color) !important;
+  }
 }
 
 code {
