@@ -3068,7 +3068,7 @@ pre {
   }
 
   &:has(code) {
-    background: var(--pico-code-background-color);
+    background: #181c25 !important;
   }
 }
 
