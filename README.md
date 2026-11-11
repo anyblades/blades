@@ -251,6 +251,7 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - [<i>🐍</i> Flask & Jinja](https://palletsprojects.com/) community website [↗](https://github.com/pallets/website/blob/main/src/pallets/templates/layout.html)
 - [Grav CMS v2](https://getgrav.org/migrate-to-2#:~:text=blades) default theme [↗](https://github.com/getgrav/grav-theme-quark2)
 - [FastHTML](https://www.fastht.ml/docs/api/pico.html) Pico components [↗](https://github.com/AnswerDotAI/fasthtml/blob/main/fasthtml/pico.py)
+- [Authlib](https://authlib.org/) Playground [↗](https://github.com/authlib/auth-playground)
 
 <!--{.markerless}-->
 
