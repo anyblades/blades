@@ -448,18 +448,18 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
 
 [type="file"] {
   --pico-color: var(--pico-muted-color);
-  margin-left: calc(var(--pico-outline-width) * -1);
   padding: calc(var(--pico-form-element-spacing-vertical) * .5) 0;
-  padding-left: var(--pico-outline-width);
   background: none;
   border: 0;
   border-radius: 0;
+  margin-inline-start: calc(var(--pico-outline-width) * -1);
+  padding-inline-start: var(--pico-outline-width);
 }
 
 [type="file"]::file-selector-button {
-  margin-right: calc(var(--pico-spacing) / 2);
   padding: calc(var(--pico-form-element-spacing-vertical) * .5)
     var(--pico-form-element-spacing-horizontal);
+  margin-inline-end: calc(var(--pico-spacing) / 2);
 }
 
 [type="file"]:is(:hover, :active, :focus)::file-selector-button {

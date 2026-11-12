@@ -109,8 +109,7 @@ article {
 }
 
 article > header, article > footer {
-  margin-right: calc(var(--pico-block-spacing-horizontal) * -1);
-  margin-left: calc(var(--pico-block-spacing-horizontal) * -1);
+  margin-inline: calc(var(--pico-block-spacing-horizontal) * -1);
   padding: calc(var(--pico-block-spacing-vertical) * .66) var(--pico-block-spacing-horizontal);
   background-color: var(--pico-card-sectioning-background-color);
 }
@@ -119,16 +118,16 @@ article > header {
   margin-top: calc(var(--pico-block-spacing-vertical) * -1);
   margin-bottom: var(--pico-block-spacing-vertical);
   border-bottom: var(--pico-border-width) solid var(--pico-card-border-color);
-  border-top-right-radius: var(--pico-border-radius);
-  border-top-left-radius: var(--pico-border-radius);
+  border-start-start-radius: var(--pico-border-radius);
+  border-start-end-radius: var(--pico-border-radius);
 }
 
 article > footer {
   margin-top: var(--pico-block-spacing-vertical);
   margin-bottom: calc(var(--pico-block-spacing-vertical) * -1);
   border-top: var(--pico-border-width) solid var(--pico-card-border-color);
-  border-bottom-right-radius: var(--pico-border-radius);
-  border-bottom-left-radius: var(--pico-border-radius);
+  border-end-end-radius: var(--pico-border-radius);
+  border-end-start-radius: var(--pico-border-radius);
 }
 
 :where(:scope, [data-theme="light"], [data-theme="dark"]), :host {

@@ -4,8 +4,16 @@ pre {
     border-radius: 0;
   }
 
-  &.prismjs:has(code) {
-    background: var(--pico-code-background-color) !important;
+  &:has(code) {
+    @media (prefers-color-scheme: dark) {
+      &:where(:not([data-theme], [data-theme] *)) {
+        background: var(--pico-code-background-color) !important;
+      }
+    }
+
+    &:where([data-theme="dark"], [data-theme="dark"] *) {
+      background: var(--pico-code-background-color) !important;
+    }
   }
 }
 

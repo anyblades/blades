@@ -323,17 +323,14 @@ section {
 
 .container, .container-fluid {
   width: 100%;
-  padding-right: var(--pico-spacing);
-  padding-left: var(--pico-spacing);
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: var(--pico-spacing);
+  margin-inline: auto;
 }
 
 @media (width >= 576px) {
   .container {
     max-width: 510px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline: 0;
   }
 }
 
@@ -1289,18 +1286,18 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
 
 [type="file"] {
   --pico-color: var(--pico-muted-color);
-  margin-left: calc(var(--pico-outline-width) * -1);
   padding: calc(var(--pico-form-element-spacing-vertical) * .5) 0;
-  padding-left: var(--pico-outline-width);
   background: none;
   border: 0;
   border-radius: 0;
+  margin-inline-start: calc(var(--pico-outline-width) * -1);
+  padding-inline-start: var(--pico-outline-width);
 }
 
 [type="file"]::file-selector-button {
-  margin-right: calc(var(--pico-spacing) / 2);
   padding: calc(var(--pico-form-element-spacing-vertical) * .5)
     var(--pico-form-element-spacing-horizontal);
+  margin-inline-end: calc(var(--pico-spacing) / 2);
 }
 
 [type="file"]:is(:hover, :active, :focus)::file-selector-button {
@@ -1568,8 +1565,7 @@ article {
 }
 
 article > header, article > footer {
-  margin-right: calc(var(--pico-block-spacing-horizontal) * -1);
-  margin-left: calc(var(--pico-block-spacing-horizontal) * -1);
+  margin-inline: calc(var(--pico-block-spacing-horizontal) * -1);
   padding: calc(var(--pico-block-spacing-vertical) * .66) var(--pico-block-spacing-horizontal);
   background-color: var(--pico-card-sectioning-background-color);
 }
@@ -1578,16 +1574,16 @@ article > header {
   margin-top: calc(var(--pico-block-spacing-vertical) * -1);
   margin-bottom: var(--pico-block-spacing-vertical);
   border-bottom: var(--pico-border-width) solid var(--pico-card-border-color);
-  border-top-right-radius: var(--pico-border-radius);
-  border-top-left-radius: var(--pico-border-radius);
+  border-start-start-radius: var(--pico-border-radius);
+  border-start-end-radius: var(--pico-border-radius);
 }
 
 article > footer {
   margin-top: var(--pico-block-spacing-vertical);
   margin-bottom: calc(var(--pico-block-spacing-vertical) * -1);
   border-top: var(--pico-border-width) solid var(--pico-card-border-color);
-  border-bottom-right-radius: var(--pico-border-radius);
-  border-bottom-left-radius: var(--pico-border-radius);
+  border-end-end-radius: var(--pico-border-radius);
+  border-end-start-radius: var(--pico-border-radius);
 }
 
 :where(:scope, [data-theme="light"], [data-theme="dark"]), :host {
@@ -2455,8 +2451,16 @@ pre {
     border-radius: 0;
   }
 
-  &.prismjs:has(code) {
-    background: var(--pico-code-background-color) !important;
+  &:has(code) {
+    @media (prefers-color-scheme: dark) {
+      &:where(:not([data-theme], [data-theme] *)) {
+        background: var(--pico-code-background-color) !important;
+      }
+    }
+
+    &:where([data-theme="dark"], [data-theme="dark"] *) {
+      background: var(--pico-code-background-color) !important;
+    }
   }
 }
 

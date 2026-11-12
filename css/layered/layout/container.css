@@ -1,17 +1,14 @@
 @layer blades {
 .container, .container-fluid {
   width: 100%;
-  padding-right: var(--pico-spacing);
-  padding-left: var(--pico-spacing);
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: var(--pico-spacing);
+  margin-inline: auto;
 }
 
 @media (width >= 576px) {
   .container {
     max-width: 510px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline: 0;
   }
 }
 
