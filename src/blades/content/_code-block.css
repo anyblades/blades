@@ -9,15 +9,29 @@ The `<pre><code>` blocks are Prism-compatible and support captions via `data-cap
 └── pico.css  (underlying fork)
 ```
 
+Preformatted blocks:
+
+```
+stay untouched by Prism themes.
+```
+
 <!--section:code-->
 ```css */
 pre {
   @media (width < 768px) {
     border-radius: 0;
   }
-  /* Prism-only: force background to use CSS vars */
-  &.prismjs:has(code) {
-    background: var(--pico-code-background-color) !important;
+  /* Override Prism theme background in dark scheme (!important beats
+     Prism's `pre[class*="language-"]` and unlayered CSS when layered) */
+  &:has(code) {
+    @media (prefers-color-scheme: dark) {
+      &:where(:not([data-theme], [data-theme] *)) {
+        background: var(--pico-code-background-color) !important;
+      }
+    }
+    &:where([data-theme="dark"], [data-theme="dark"] *) {
+      background: var(--pico-code-background-color) !important;
+    }
   }
 }
 
