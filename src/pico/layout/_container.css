@@ -4,17 +4,14 @@
 .container,
 .container-fluid {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--pico-spacing);
-  padding-left: var(--pico-spacing);
+  margin-inline: auto;
+  padding-inline: var(--pico-spacing);
 }
 
 @media (min-width: 576px) {
   .container {
     max-width: 510px;
-    padding-right: 0;
-    padding-left: 0;
+    padding-inline: 0;
   }
 }
 @media (min-width: 768px) {
