@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Blades CSS examples: a live demo, a community showcase, and official starters." />
+    <title>Examples · Blades CSS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/blades.min.css" />
+  </head>
+  <body>
+    <main class="container">
+      <nav>
+        <ul>
+          <li><strong>Blades CSS</strong></li>
+        </ul>
+        <ul>
+          <li><a href="https://blades.dev/css/">Docs</a></li>
+          <li><a href="https://github.com/anyblades/blades" role="button" class="outline">GitHub</a></li>
+        </ul>
+      </nav>
+
+      <h1>Examples</h1>
+      <p>
+        Blades is a minimal, classless CSS framework with semantic HTML. This page is itself a Blades example — it uses
+        <code>css/blades.min.css</code> and nothing else to style every element below.
+      </p>
+
+      <section aria-label="Live demo">
+        <h2>Live demo</h2>
+        <div class="grid">
+          <article>
+            <h3>Sign up</h3>
+            <form>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Ada Lovelace" aria-label="Name" required />
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ada@example.com"
+                aria-label="Email"
+                autocomplete="email"
+                required
+              />
+              <label for="plan">Plan</label>
+              <select id="plan" name="plan" aria-label="Plan">
+                <option>Personal</option>
+                <option>Team</option>
+                <option>Enterprise</option>
+              </select>
+              <label for="terms"
+                ><input type="checkbox" id="terms" name="terms" role="switch" /> Accept the terms</label
+              >
+              <button type="submit">Subscribe</button>
+            </form>
+          </article>
+          <article>
+            <h3>Roadmap</h3>
+            <table role="grid">
+              <thead>
+                <tr>
+                  <th scope="col">Quarter</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Q1</td>
+                  <td>Examples</td>
+                  <td><mark>Done</mark></td>
+                </tr>
+                <tr>
+                  <td>Q2</td>
+                  <td>Documentation</td>
+                  <td>In progress</td>
+                </tr>
+                <tr>
+                  <td>Q3</td>
+                  <td>Release</td>
+                  <td>Planned</td>
+                </tr>
+              </tbody>
+            </table>
+            <progress value="60" max="100"></progress>
+          </article>
+        </div>
+      </section>
+
+      <section aria-label="Community showcase">
+        <h2>Community showcase</h2>
+        <p>Real projects built with Blades, lifted from the project's <em>Trusted by</em> and showcase notes:</p>
+        <ul>
+          <li><a href="https://github.com/pallets/website">Flask &amp; Jinja community website</a></li>
+          <li><a href="https://github.com/getgrav/grav-theme-quark2">Grav CMS v2 default theme</a></li>
+          <li><a href="https://github.com/AnswerDotAI/fasthtml">FastHTML Pico components</a></li>
+          <li><a href="https://buildawesome.one/">Build Awesome kit</a></li>
+        </ul>
+      </section>
+
+      <section aria-label="Official starters">
+        <h2>Official starters</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/anyblades/blades/tree/main/_includes"
+              >Base HTML templates (Nunjucks, Twig, Liquid)</a
+            >
+          </li>
+          <li><a href="https://github.com/buildawesome-one/starter">buildawesome-one/starter</a></li>
+          <li><a href="https://github.com/buildawesome-one/examples">buildawesome-one/examples</a></li>
+        </ul>
+      </section>
+
+      <footer>
+        <small>
+          Styled with
+          <a href="https://github.com/anyblades/blades">Blades</a>
+          — a modern drop-in successor to Pico CSS.
+        </small>
+      </footer>
+    </main>
+  </body>
+</html>

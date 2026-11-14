@@ -118,6 +118,10 @@ Alternatively, import only the parts you need, e.g. per page or per component. T
 </html>
 ```
 
+### Examples
+
+Open a finished, self-contained example — a live demo, community showcase, and official starters — right in your browser at [examples/index.html](examples/index.html). Example pages are styled with the CDN build and need no build step.
+
 Using Nunjucks, Twig or Liquid? Check out the built-in [Base HTML templates](//blades.dev/tpl/html/) for each engine, ready to be used in your project.
 
 <!--section:gh-only-->
