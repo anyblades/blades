@@ -2548,7 +2548,7 @@ dialog:modal {
   }
 }
 
-dialog:modal[closedby="any"] {
+dialog:modal[closedby] {
   width: calc(100% - var(--pico-spacing) * 2);
   min-width: 0;
   max-width: none;
@@ -2560,6 +2560,14 @@ dialog:modal[closedby="any"] {
   margin: auto;
   padding: 0;
 
+  @media (width >= 576px) {
+    width: min(510px, calc(100% - var(--pico-spacing) * 2));
+  }
+
+  @media (width >= 768px) {
+    width: min(700px, calc(100% - var(--pico-spacing) * 2));
+  }
+
   & > article {
     width: 100%;
     max-width: none;
@@ -2567,38 +2575,22 @@ dialog:modal[closedby="any"] {
     max-height: calc(100dvh - var(--pico-spacing) * 2);
     margin: 0;
   }
-}
 
-@media (width >= 576px) {
-  dialog:modal[closedby="any"] {
-    width: min(510px, calc(100% - var(--pico-spacing) * 2));
-  }
-}
+  &::backdrop {
+    background: var(--pico-modal-overlay-background-color);
+    backdrop-filter: var(--pico-modal-overlay-backdrop-filter);
+    transition: background-color var(--pico-transition),
+      -webkit-backdrop-filter var(--pico-transition),
+      backdrop-filter var(--pico-transition);
 
-@media (width >= 768px) {
-  dialog:modal[closedby="any"] {
-    width: min(700px, calc(100% - var(--pico-spacing) * 2));
-  }
-}
+    @starting-style {
+      backdrop-filter: none;
+      background-color: #0000;
+    }
 
-dialog:modal[closedby="any"]::backdrop {
-  background: var(--pico-modal-overlay-background-color);
-  backdrop-filter: var(--pico-modal-overlay-backdrop-filter);
-  transition: background-color var(--pico-transition),
-    -webkit-backdrop-filter var(--pico-transition),
-    backdrop-filter var(--pico-transition);
-}
-
-@starting-style {
-  dialog:modal[closedby="any"]::backdrop {
-    backdrop-filter: none;
-    background-color: #0000;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  dialog:modal[closedby="any"]::backdrop {
-    transition: none;
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 }
 
