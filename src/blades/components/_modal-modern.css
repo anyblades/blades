@@ -61,16 +61,16 @@ The Invoker Commands API lets a `<button>` open and close a dialog with attribut
 
 `<dialog closedby="any">` closes when the user clicks outside its box. The browser does this, so the click itself needs no JS.
 The dim and blur are on `::backdrop`, and they fade in over `--pico-transition`.
-Dialogs without `closedby="any"` are unchanged.
+`closedby="closerequest"` and `closedby="none"` get the same `::backdrop` and box styles while keeping their native close behavior; dialogs without `closedby` are unchanged.
 
-- Escape and an outside click both close the dialog. An outside click fires the `close` event once.
+- Escape and an outside click both close the dialog when `closedby="any"`. An outside click fires the `close` event once.
 - The box uses Pico's article widths: the viewport width minus `--pico-spacing` on each side below 576px, 510px from 576px, and 700px from 768px.
-- To change the width, set `width` on the dialog with a selector more specific than `dialog:modal[closedby="any"]` (or equally specific and loaded after Blades), such as `dialog:modal[closedby="any"].wide`. Setting `max-width` on the article leaves the box as it is, and a click on the space inside the box does not close the dialog.
+- To change the width, set `width` on the dialog with a selector more specific than `dialog:modal[closedby]` (or equally specific and loaded after Blades), such as `dialog:modal[closedby].wide`. Setting `max-width` on the article leaves the box as it is, and a click on the space inside the box does not close the dialog.
 - Browsers without `closedby` support are expected to keep the dialog open on an outside click. The box and backdrop styles still apply, and the fade-in also needs `@starting-style`.
 - If your page locks scroll with `.modal-is-open`, clear the class in a `close` listener too, since the browser can close the dialog without your buttons.
 
 <!--section:code-->```css */
-dialog:modal[closedby="any"] {
+dialog:modal[closedby] {
   width: calc(100% - var(--pico-spacing) * 2);
   max-width: none;
   min-width: 0;
@@ -83,6 +83,13 @@ dialog:modal[closedby="any"] {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 
+  @media (min-width: 576px) {
+    width: min(510px, calc(100% - var(--pico-spacing) * 2));
+  }
+  @media (min-width: 768px) {
+    width: min(700px, calc(100% - var(--pico-spacing) * 2));
+  }
+
   > article {
     width: 100%;
     max-width: none;
@@ -90,35 +97,24 @@ dialog:modal[closedby="any"] {
     max-height: calc(100dvh - var(--pico-spacing) * 2);
     margin: 0;
   }
-}
-@media (min-width: 576px) {
-  dialog:modal[closedby="any"] {
-    width: min(510px, calc(100% - var(--pico-spacing) * 2));
-  }
-}
-@media (min-width: 768px) {
-  dialog:modal[closedby="any"] {
-    width: min(700px, calc(100% - var(--pico-spacing) * 2));
-  }
-}
-dialog:modal[closedby="any"]::backdrop {
-  background: var(--pico-modal-overlay-background-color);
-  -webkit-backdrop-filter: var(--pico-modal-overlay-backdrop-filter);
-  backdrop-filter: var(--pico-modal-overlay-backdrop-filter);
-  transition:
-    background-color var(--pico-transition),
-    -webkit-backdrop-filter var(--pico-transition),
-    backdrop-filter var(--pico-transition);
-}
-@starting-style {
-  dialog:modal[closedby="any"]::backdrop {
-    background-color: transparent;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  dialog:modal[closedby="any"]::backdrop {
-    transition: none;
+
+  &::backdrop {
+    background: var(--pico-modal-overlay-background-color);
+    -webkit-backdrop-filter: var(--pico-modal-overlay-backdrop-filter);
+    backdrop-filter: var(--pico-modal-overlay-backdrop-filter);
+    transition:
+      background-color var(--pico-transition),
+      -webkit-backdrop-filter var(--pico-transition),
+      backdrop-filter var(--pico-transition);
+
+    @starting-style {
+      background-color: transparent;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 }
