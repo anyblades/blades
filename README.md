@@ -2,7 +2,7 @@
 
 ![][V] ![][NEXT_V] ![][LIC] [![][X]][X_URL] [![][B]][B_URL] [![][M]][M_URL] [![][D]][D_URL]
 
-[V]: https://img.shields.io/npm/v/@anyblades/blades?label=&color=brightgreen
+[V]: https://img.shields.io/npm/v/@sveti/blades?label=&color=brightgreen
 [NEXT_V]: https://img.shields.io/github/v/release/anyblades/blades?include_prereleases&label=^&labelColor=blue&color=blue
 [LIC]: https://img.shields.io/badge/🄻_MIT-gray
 [X]: https://img.shields.io/badge/89-white?logo=x&style=social
@@ -42,7 +42,7 @@ Switch `pico.css` to `blades.css` with the same ⁠<var>‑⁠⁠‑⁠pico‑�
 
 ### <mark>A.</mark> Install manually
 
-[Download CSS archive](https://github.com/anyblades/blades/archive/refs/heads/main.zip) and link `css/blades.css` in the `<head>` of your website.
+[Download CSS archive](https://github.com/open-sveti/blades/archive/refs/heads/main.zip) and link `css/blades.css` in the `<head>` of your website.
 
 ```html
 <link rel="stylesheet" href="css/blades.css" />
@@ -53,40 +53,40 @@ Switch `pico.css` to `blades.css` with the same ⁠<var>‑⁠⁠‑⁠pico‑�
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
-  https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/blades.min.css
+  https://cdn.jsdelivr.net/npm/@sveti/blades@3/css/blades.min.css
 "/>
 ```
 
 Live example: https://github.com/pallets/website/blob/main/src/pallets/templates/layout.html
 
-Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/
+Full list of CSS files available on CDN: https://cdn.jsdelivr.net/npm/@sveti/blades@3/css/
 
 ### <mark>C.</mark> Install with NPM
 
 ```sh
-npm install @anyblades/blades
+npm install @sveti/blades
 ```
 
 Then, `@import` Blades into your CSS file:
 
 ```css
-@import "@anyblades/blades";
+@import "@sveti/blades";
 ```
 
 Alternatively, import only the parts you need, e.g. per page or per component. They come wrapped in `@layer blades`, so your unlayered styles win over them:
 
 ```css
-@import "@anyblades/blades/variables";
-@import "@anyblades/blades/layout/document";
-@import "@anyblades/blades/content/typography";
-@import "@anyblades/blades/components/card";
-@import "@anyblades/blades/components/modal";
+@import "@sveti/blades/variables";
+@import "@sveti/blades/layout/document";
+@import "@sveti/blades/content/typography";
+@import "@sveti/blades/components/card";
+@import "@sveti/blades/components/modal";
 ```
 
-- `variables` and `layout/document` are the minimum; keep the same order as [src/pico/_index.css](https://github.com/anyblades/blades/blob/main/src/pico/_index.css).
+- `variables` and `layout/document` are the minimum; keep the same order as [src/pico/_index.css](https://github.com/open-sveti/blades/blob/main/src/pico/_index.css).
 - Some parts build on others, e.g. `components/modal` expects `components/card`, and `components/group` and `components/dropdown` expect `forms/basics` and `content/button`.
 - See [Layered modules](//blades.dev/css/layered/) for the available parts, and for importing them from JavaScript in bundlers and component frameworks (SvelteKit, Next.js, Nuxt, Astro, …).
-- See [package.json](https://github.com/anyblades/blades/blob/main/package.json) for a list of all exported parts.
+- See [package.json](https://github.com/open-sveti/blades/blob/main/package.json) for a list of all exported parts.
 
 ### <mark>D.</mark> Official starters
 
@@ -231,8 +231,8 @@ Add `<html data-compact>` for the whole page, or put the attribute on a single e
 - **Where it ships:**
   - included in `blades.css`
   - also in `blades.layered.css`
-  - with per-part imports, add `@anyblades/blades/compact` after the other parts
-  - with `pico.conditional.css`, add `@anyblades/blades/src/compact` after it
+  - with per-part imports, add `@sveti/blades/compact` after the other parts
+  - with `pico.conditional.css`, add `@sveti/blades/src/compact` after it
 - **What changes:**
   - smaller control padding and 1.5rem block spacing
   - a 0.5rem radius and a 3px focus ring

@@ -11,7 +11,7 @@ Blades CSS, whole or part by part, is also available wrapped in `@layer blades {
 <!--prettier-ignore-->
 ```html
 <link rel="stylesheet" href="
-  https://cdn.jsdelivr.net/npm/@anyblades/blades@3/css/layered/blades.layered.min.css
+  https://cdn.jsdelivr.net/npm/@sveti/blades@3/css/layered/blades.layered.min.css
 "/>
 ```
 
@@ -21,20 +21,20 @@ When you can use `@import`, `@import url("…/blades.min.css") layer(blades);` d
 
 ### With bundlers and component frameworks (SvelteKit, Next.js, Nuxt, Astro, …)
 
-Import the parts from JavaScript, i.e. the root layout and the components that use them, rather than with `@import` inside a component's `<style>` block. The parts, `@anyblades/blades/<part>`, come wrapped in `@layer blades`, which a JS `import` can't add by itself.
+Import the parts from JavaScript, i.e. the root layout and the components that use them, rather than with `@import` inside a component's `<style>` block. The parts, `@sveti/blades/<part>`, come wrapped in `@layer blades`, which a JS `import` can't add by itself.
 
 ```js
 // root layout, once: the base and every part that others build on
-import "@anyblades/blades/variables";
-import "@anyblades/blades/layout/document";
-import "@anyblades/blades/content/typography";
-import "@anyblades/blades/content/button";
-import "@anyblades/blades/forms/basics";
+import "@sveti/blades/variables";
+import "@sveti/blades/layout/document";
+import "@sveti/blades/content/typography";
+import "@sveti/blades/content/button";
+import "@sveti/blades/forms/basics";
 
 // in the component that renders a <dialog>
-import "@anyblades/blades/components/card";
-import "@anyblades/blades/components/modal";
-import "@anyblades/blades/components/modal-modern"; // optional: open animation without JS
+import "@sveti/blades/components/card";
+import "@sveti/blades/components/modal";
+import "@sveti/blades/components/modal-modern"; // optional: open animation without JS
 ```
 
 ```html
@@ -51,14 +51,14 @@ import "@anyblades/blades/components/modal-modern"; // optional: open animation 
 
 ### Framework examples
 
-A confirm dialog component, with the root layout importing the base parts as above. The component imports `card` and `modal` and overrides Blades in its own styles. Blades' `dialog > article > footer button:not(:first-of-type)` is more specific than the component's rules, but it is in `@layer blades`, so the component's rules win. With the non-layered source (`@anyblades/blades/src/components/modal`), the second button would keep Blades' `margin-left`.
+A confirm dialog component, with the root layout importing the base parts as above. The component imports `card` and `modal` and overrides Blades in its own styles. Blades' `dialog > article > footer button:not(:first-of-type)` is more specific than the component's rules, but it is in `@layer blades`, so the component's rules win. With the non-layered source (`@sveti/blades/src/components/modal`), the second button would keep Blades' `margin-left`.
 
 Svelte, `Confirm.svelte`:
 
 ```svelte
 <script>
-  import "@anyblades/blades/components/card";
-  import "@anyblades/blades/components/modal";
+  import "@sveti/blades/components/card";
+  import "@sveti/blades/components/modal";
 </script>
 
 <dialog open>
@@ -88,8 +88,8 @@ Vue (`<script setup>` and `<style scoped>`) and Astro (the imports in the frontm
 React, `Confirm.jsx` with a CSS module:
 
 ```jsx
-import "@anyblades/blades/components/card";
-import "@anyblades/blades/components/modal";
+import "@sveti/blades/components/card";
+import "@sveti/blades/components/modal";
 import styles from "./Confirm.module.css";
 
 export default function Confirm() {
@@ -131,19 +131,19 @@ The sizes are from a build with `build: { cssTarget: "esnext" }` in `vite.config
 
 ### Available parts
 
-`@anyblades/blades/<part>` is the file under [`css/layered/`](https://github.com/anyblades/blades/tree/main/css/layered):
+`@sveti/blades/<part>` is the file under [`css/layered/`](https://github.com/open-sveti/blades/tree/main/css/layered):
 
-- Pico's parts: `variables`, `layout/*`, `content/*`, `forms/*`, `components/*` and `utilities`. A whole category is one import, e.g. `@anyblades/blades/components` (Pico's parts of that category only; `layout` without `landmarks`).
+- Pico's parts: `variables`, `layout/*`, `content/*`, `forms/*`, `components/*` and `utilities`. A whole category is one import, e.g. `@sveti/blades/components` (Pico's parts of that category only; `layout` without `landmarks`).
 - Blades' own parts, mostly in the same folders as Pico's:
   - `components/modal-modern` adds the CSS-only open animation for `showModal()` on top of `components/modal` ([No-JS transitions](//blades.dev/css/modal/#no-js-transitions-new))
   - `components/dropdown-popover` styles `<ul popover>` / `<menu popover>` menus opened by a button ([Modern Popover API](//blades.dev/css/dropdown/#modern-popover-api-new))
   - `variables-blades`, `layout/columns`, `content/code-block`, `content/icon`, `forms/float-label`, `components/timeline`
-  - `compact`: import it last (see [Compact sizing](https://github.com/anyblades/blades#compact-sizing-opt-in))
-- The same names under `@anyblades/blades/src/…` are the sources without the layer, e.g. `@anyblades/blades/src/components/card`, to put them in a layer of your own (`@import "@anyblades/blades/src/components/card" layer(ui);`) or to run your own build. `@anyblades/blades/src` on its own is the source of the whole `blades.css`.
+  - `compact`: import it last (see [Compact sizing](https://github.com/open-sveti/blades#compact-sizing-opt-in))
+- The same names under `@sveti/blades/src/…` are the sources without the layer, e.g. `@sveti/blades/src/components/card`, to put them in a layer of your own (`@import "@sveti/blades/src/components/card" layer(ui);`) or to run your own build. `@sveti/blades/src` on its own is the source of the whole `blades.css`.
 
 ### Order and dependencies
 
-- `variables` and `layout/document` are the minimum. Inside the layer, later parts still win over earlier ones, so keep the order of [`src/pico/_index.css`](https://github.com/anyblades/blades/blob/main/src/pico/_index.css) (variables → layout → content → forms → components → utilities). Blades' own parts come after Pico's, in the order of [`src/blades/_index.css`](https://github.com/anyblades/blades/blob/main/src/blades/_index.css), with `compact` last.
+- `variables` and `layout/document` are the minimum. Inside the layer, later parts still win over earlier ones, so keep the order of [`src/pico/_index.css`](https://github.com/open-sveti/blades/blob/main/src/pico/_index.css) (variables → layout → content → forms → components → utilities). Blades' own parts come after Pico's, in the order of [`src/blades/_index.css`](https://github.com/open-sveti/blades/blob/main/src/blades/_index.css), with `compact` last.
 - Parts don't `@import` the parts they build on:
   - `components/modal` expects `components/card`
   - `components/group` and `components/dropdown` expect `content/button` and `forms/basics`
