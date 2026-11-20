@@ -3,7 +3,7 @@
 ![][V] ![][NEXT_V] ![][LIC] [![][X]][X_URL] [![][B]][B_URL] [![][M]][M_URL] [![][D]][D_URL]
 
 [V]: https://img.shields.io/npm/v/@sveti/blades?label=&color=brightgreen
-[NEXT_V]: https://img.shields.io/github/v/release/anyblades/blades?include_prereleases&label=^&labelColor=blue&color=blue
+[NEXT_V]: https://img.shields.io/github/v/release/open-sveti/blades?include_prereleases&label=^&labelColor=blue&color=blue
 [LIC]: https://img.shields.io/badge/🄻_MIT-gray
 [X]: https://img.shields.io/badge/89-white?logo=x&style=social
 [X_URL]: https://x.com/BladesCSS
@@ -90,8 +90,8 @@ Alternatively, import only the parts you need, e.g. per page or per component. T
 
 ### <mark>D.</mark> Official starters
 
-- https://github.com/buildawesome-one/starter
-- https://github.com/buildawesome-one/examples
+- https://github.com/open-sveti/one-starter
+- https://github.com/open-sveti/one-examples
 - https://github.com/getgrav/grav-theme-quark2
 - https://github.com/getgrav/grav-plugin-devtools
 
