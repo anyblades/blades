@@ -4,8 +4,8 @@
 
 [V]: https://img.shields.io/npm/v/@sveti/blades?label=&color=brightgreen
 [NEXT_V]: https://img.shields.io/github/v/release/open-sveti/blades?include_prereleases&label=^&labelColor=blue&color=blue
-[LIC]: https://img.shields.io/badge/🄻_MIT-gray
-[X]: https://img.shields.io/badge/89-white?logo=x&style=social
+[LIC]: https://img.shields.io/badge/MIT-gray
+[X]: https://img.shields.io/badge/101-white?logo=x&style=social
 [X_URL]: https://x.com/BladesCSS
 [B]: https://img.shields.io/bluesky/followers/blades.dev?label=
 [B_URL]: https://bsky.app/profile/blades.dev
